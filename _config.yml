@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Various tutorials on important techniques in topological data analysis.
   Tutorials made with the final goal in mind to use the R package TDA in
   order to actually implement each technique.
-baseurl: /rpackage_tutorials/
+baseurl: /t4ds/
 url: https://comptag.github.io
 github_username:  benholmgren
 permalink: /:year/:month/:title.html
