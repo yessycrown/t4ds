@@ -26,7 +26,7 @@ permalink: /:year/:month/:title.html
 
 # Build settings
 markdown: kramdown
-theme: jekyll-swiss
+# theme: jekyll-swiss
 urlimg: /images/
 plugins:
   - jekyll-feed
