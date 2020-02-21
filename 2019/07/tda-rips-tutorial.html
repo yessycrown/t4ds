@@ -25,6 +25,99 @@
     <link href="https://comptag.github.io/t4ds//css/tocbot.css" rel='stylesheet' type="text/css"/>
     <link href="https://comptag.github.io/t4ds//css/lightbox.css" rel='stylesheet' type="text/css"/>
 
+    <style type="text/css">
+    .main-container {
+      max-width: 940px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    code {
+      color: inherit;
+      background-color: rgba(1, 1, 1, 0.54);
+    }
+    img {
+      max-width:100%;
+    }
+    .tabbed-pane {
+      padding-top: 12px;
+    }
+    .html-widget {
+      margin-bottom: 20px;
+    }
+    button.code-folding-btn:focus {
+      outline: none;
+    }
+    summary {
+      display: list-item;
+    }
+
+.highlight code, .highlight pre {
+color:#fdce93;
+background-color:#3f3f3f;
+}
+.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #aaaaaa; font-style: italic } /* Comment */
+.highlight .err { color: #F00000; background-color: #F0A0A0 } /* Error */
+.highlight .k { color: #0000aa } /* Keyword */
+.highlight .cm { color: #aaaaaa; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #4c8317 } /* Comment.Preproc */
+.highlight .c1 { color: #aaaaaa; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #0000aa; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #aa0000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00aa00 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { color: #0000aa } /* Keyword.Constant */
+.highlight .kd { color: #0000aa } /* Keyword.Declaration */
+.highlight .kn { color: #0000aa } /* Keyword.Namespace */
+.highlight .kp { color: #0000aa } /* Keyword.Pseudo */
+.highlight .kr { color: #0000aa } /* Keyword.Reserved */
+.highlight .kt { color: #00aaaa } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #aa5500 } /* Literal.String */
+.highlight .na { color: #1e90ff } /* Name.Attribute */
+.highlight .nb { color: #00aaaa } /* Name.Builtin */
+.highlight .nc { color: #00aa00; text-decoration: underline } /* Name.Class */
+.highlight .no { color: #aa0000 } /* Name.Constant */
+.highlight .nd { color: #888888 } /* Name.Decorator */
+.highlight .ni { color: #800000; font-weight: bold } /* Name.Entity */
+.highlight .nf { color: #00aa00 } /* Name.Function */
+.highlight .nn { color: #00aaaa; text-decoration: underline } /* Name.Namespace */
+.highlight .nt { color: #1e90ff; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #aa0000 } /* Name.Variable */
+.highlight .ow { color: #0000aa } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #aa5500 } /* Literal.String.Backtick */
+.highlight .sc { color: #aa5500 } /* Literal.String.Char */
+.highlight .sd { color: #aa5500 } /* Literal.String.Doc */
+.highlight .s2 { color: #aa5500 } /* Literal.String.Double */
+.highlight .se { color: #aa5500 } /* Literal.String.Escape */
+.highlight .sh { color: #aa5500 } /* Literal.String.Heredoc */
+.highlight .si { color: #aa5500 } /* Literal.String.Interpol */
+.highlight .sx { color: #aa5500 } /* Literal.String.Other */
+.highlight .sr { color: #009999 } /* Literal.String.Regex */
+.highlight .s1 { color: #aa5500 } /* Literal.String.Single */
+.highlight .ss { color: #0000aa } /* Literal.String.Symbol */
+.highlight .bp { color: #00aaaa } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #aa0000 } /* Name.Variable.Class */
+.highlight .vg { color: #aa0000 } /* Name.Variable.Global */
+.highlight .vi { color: #aa0000 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+    </style>
+
+
+
 </head>
 <body>
 
@@ -48,7 +141,7 @@
             <div class="tab-pane text-sm-center active animated fadeIn" id="sidebar-home-content">
                 <img class="site-author-image" itemprop="image" src="https://raw.githubusercontent.com/comptag/t4ds/master/img/klein_bottle.jpg">
                 <div class="text-warning">T4DS</div>
-                <div class="text-white">All models are wrong. Some are useful</div>
+                <div class="text-white">Learning how to do data science is like learning to ski. You have to do it.</div>
                 <ul class="sidebar-nav">
     <li data-toggle="tooltip" data-placement="left" data-original-title="Homepage">
         <a href="https://comptag.github.io/t4ds//index.html">
@@ -145,7 +238,6 @@
                     <h1 class="text-primary">
                         Rips Filtration Tutorial for the R-TDA Package
                     </h1>
-                    2019-07-22
                 </div>
                 <div id="page-content">
                     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
@@ -440,13 +532,6 @@ own distance metric.</p>
      </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">mt_range</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">.1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">yrange</span><span class="p">,</span><span class="w"> </span><span class="n">mt_range</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">.1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">yrange</span><span class="p">),</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">16</span><span class="p">)</span><span class="w">
 </span><span class="n">map</span><span class="p">(</span><span class="s2">"state"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Montana"</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">## Warning in svg("../../assets/tda-rips/bigfoot.svg", height = 7, width = xrange/
-## yrange * : cairo error 'error while writing to output stream'</code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text">## Error in svg("../../assets/tda-rips/bigfoot.svg", height = 7, width = xrange/yrange * : unable to start device 'svg'</code></pre></figure>
-
-<p><img src="/t4ds/figure/source/tda-rips-tutorial/2019-07-24-tda-rips-tutorial/bigfootdataplot_hide-1.png" alt="plot of chunk bigfootdataplot_hide" /></p>
-
 <center>
 <embed width="100%" src="../../assets/tda-rips/bigfoot.svg" type="image/svg+xml" />
 </center>
@@ -493,7 +578,7 @@ own distance metric.</p>
 </div>
 <!-- /#page-content-wrapper -->
 
-        <hr>
+   <!-- <hr>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -501,7 +586,7 @@ own distance metric.</p>
       [Put your comments plugin here]
     </div>
   </div>
-</div>
+</div> -->
         <footer class="mt-5 pt-5">
   <div class="container w-100">
     <div class="row">
@@ -596,7 +681,7 @@ own distance metric.</p>
    <script src="https://comptag.github.io/t4ds//js/post.js" type="text/javascript"></script>
    <script src="https://comptag.github.io/t4ds//js/tocbot.min.js" type="text/javascript"></script>
    <script src="https://comptag.github.io/t4ds//js/lightbox.js" type="text/javascript"></script>
-   
+
 
 
 
