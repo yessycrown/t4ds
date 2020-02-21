@@ -46,6 +46,7 @@ use_package('beanplot') # For beanplot
 use_package('car') # For beanplot
 use_package('png') # For importing pngs
 use_package('gridExtra') # For grid arrange
+use_package('datasets')
 
 # Knitr/rmarkdown Settings
 ##########################
@@ -54,6 +55,7 @@ use_package('gridExtra') # For grid arrange
 
 ```{r analysis, echo = FALSE, results = 'hide', fig.keep='none', message = FALSE, error = FALSE}
 # Subset the data
+data(iris)
 iris_sub <- subset(iris, iris$Species == "setosa" |
                    iris$Species == "versicolor")
 iris_sub$Species <- factor(iris_sub$Species)
