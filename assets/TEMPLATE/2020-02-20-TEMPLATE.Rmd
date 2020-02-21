@@ -276,11 +276,19 @@ use_package('TDA')
 use_package('ggplot2') # For some nice plots based in the grid package
 </code></pre></div></div>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="overview">Overview</h2>
 
 <p>Blibbity blah blah, here is my sweet intro, add yours here.</p>
 
-<h2 id="objectives">Objectives</h2>
+<h3 id="questions">Questions</h3>
+
+<p>What defines meaning? 
+Does P = NP? 
+Are we alone in the universe?</p>
+
+<p>//Add your big questions here</p>
+
+<h3 id="objectives">Objectives</h3>
 
 <p>By the end of this tutorial you should be able to:</p>
 
