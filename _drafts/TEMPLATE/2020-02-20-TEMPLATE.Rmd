@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Analysis of Iris Dataset"
-author: "Ben Holmgren, Supreme Undergrad"
+author: "Benjamin Holmgren, Undergrad Supreme"
 date: "February 20, 2020"
 ---
-
-{% include lib/mathjax.html %}
 
 ```{r setup, echo = FALSE, message = FALSE}
 library(knitr)
@@ -39,9 +37,21 @@ library(grid)
 use_package('png') # For importing pngs
 use_package('grImport2') # For importing svg graphics
 use_package('TDA')
+use_package('ggplot2') # For some nice plots based in the grid package
 ```
 
 ## Introduction
 
-Blibbity blah blah, here is my sweet intro
+Blibbity blah blah, here is my sweet intro, add yours here.
+
+
+## Objectives
+
+By the end of this tutorial you should be able to:
+* Parallel park a train
+* End world hunger
+* 
+
+
+
 
