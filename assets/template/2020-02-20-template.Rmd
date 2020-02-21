@@ -8,24 +8,24 @@
     <!-- Put encrypt ahead of all other includes -->
     
     <!-- Bootstrap CSS -->
-<link href="https://comptag.github.io/t4ds//css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
-<link href="https://comptag.github.io/t4ds//css/sidebar.css" rel='stylesheet' type='text/css'/>
-<link href="https://comptag.github.io/t4ds//css/font-awesome.min.css" rel='stylesheet' type='text/css'/>
-<link href="https://comptag.github.io/t4ds//css/font-extra.css" rel='stylesheet' type='text/css'/>
-<link href="https://comptag.github.io/t4ds//css/global.css" rel='stylesheet' type='text/css'/>
-<link href="https://comptag.github.io/t4ds//css/footer.css" rel='stylesheet' type='text/css'/>
-<link href="https://comptag.github.io/t4ds//css/animate.css" rel='stylesheet' type='text/css'/>
+<link href="/t4ds//css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+<link href="/t4ds//css/sidebar.css" rel='stylesheet' type='text/css'/>
+<link href="/t4ds//css/font-awesome.min.css" rel='stylesheet' type='text/css'/>
+<link href="/t4ds//css/font-extra.css" rel='stylesheet' type='text/css'/>
+<link href="/t4ds//css/global.css" rel='stylesheet' type='text/css'/>
+<link href="/t4ds//css/footer.css" rel='stylesheet' type='text/css'/>
+<link href="/t4ds//css/animate.css" rel='stylesheet' type='text/css'/>
 
 <!-- icon  -->
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> 
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
-    <link rel="stylesheet" href="https://comptag.github.io/t4ds//css/highlight/atom-one-dark-reasonable.css">
-    <link href="https://comptag.github.io/t4ds//css/post.css" rel='stylesheet' type="text/css"/>
-    <link href="https://comptag.github.io/t4ds//css/md-post-header-collapse.css" rel='stylesheet' type="text/css"/>
-    <link href="https://comptag.github.io/t4ds//css/tocbot.css" rel='stylesheet' type="text/css"/>
-    <link href="https://comptag.github.io/t4ds//css/lightbox.css" rel='stylesheet' type="text/css"/>
+    <link rel="stylesheet" href="/t4ds//css/highlight/atom-one-dark-reasonable.css">
+    <link href="/t4ds//css/post.css" rel='stylesheet' type="text/css"/>
+    <link href="/t4ds//css/md-post-header-collapse.css" rel='stylesheet' type="text/css"/>
+    <link href="/t4ds//css/tocbot.css" rel='stylesheet' type="text/css"/>
+    <link href="/t4ds//css/lightbox.css" rel='stylesheet' type="text/css"/>
 
     <style type="text/css">
     .main-container {
@@ -146,13 +146,13 @@ background-color:#3f3f3f;
                 <div class="text-white">Learning how to do data science is like learning to ski. You have to do it.</div>
                 <ul class="sidebar-nav">
     <li data-toggle="tooltip" data-placement="left" data-original-title="Homepage">
-        <a href="https://comptag.github.io/t4ds//index.html">
+        <a href="/t4ds//index.html">
             <i class="fa fa-home" aria-hidden="true"></i>
             Home
         </a>
     </li>
     <li data-toggle="tooltip" data-placement="left" data-original-title="Workshops">
-        <a href="https://comptag.github.io/t4ds//index.html#workshops">
+        <a href="/t4ds//index.html#workshops">
             <i class="fa fa-file-code-o" aria-hidden="true"></i>
             Workshops
             <span class="pull-right ">1</span>
@@ -160,7 +160,7 @@ background-color:#3f3f3f;
     </li>
 
     <li data-toggle="tooltip" data-placement="left" data-original-title="Schedule">
-        <a href="https://comptag.github.io/t4ds//index.html#schedule">
+        <a href="/t4ds//index.html#schedule">
             <i class="fa fa-file-code-o" aria-hidden="true"></i>
             Schedule
             <span class="pull-right ">1</span>
@@ -168,7 +168,7 @@ background-color:#3f3f3f;
     </li>
 
     <li data-toggle="tooltip" data-placement="left" data-original-title="Instructions">
-        <a href="https://comptag.github.io/t4ds//index.html#instructions">
+        <a href="/t4ds//index.html#instructions">
             <i class="fa fa-file-code-o" aria-hidden="true"></i>
             Instructions
             <span class="pull-right ">1</span>
@@ -194,13 +194,13 @@ background-color:#3f3f3f;
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="sidebar-nav">
     <li data-toggle="tooltip" data-placement="left" data-original-title="Homepage">
-        <a href="https://comptag.github.io/t4ds//index.html">
+        <a href="/t4ds//index.html">
             <i class="fa fa-home" aria-hidden="true"></i>
             Home
         </a>
     </li>
     <li data-toggle="tooltip" data-placement="left" data-original-title="Workshops">
-        <a href="https://comptag.github.io/t4ds//index.html#workshops">
+        <a href="/t4ds//index.html#workshops">
             <i class="fa fa-file-code-o" aria-hidden="true"></i>
             Workshops
             <span class="pull-right ">1</span>
@@ -208,7 +208,7 @@ background-color:#3f3f3f;
     </li>
 
     <li data-toggle="tooltip" data-placement="left" data-original-title="Schedule">
-        <a href="https://comptag.github.io/t4ds//index.html#schedule">
+        <a href="/t4ds//index.html#schedule">
             <i class="fa fa-file-code-o" aria-hidden="true"></i>
             Schedule
             <span class="pull-right ">1</span>
@@ -216,7 +216,7 @@ background-color:#3f3f3f;
     </li>
 
     <li data-toggle="tooltip" data-placement="left" data-original-title="Instructions">
-        <a href="https://comptag.github.io/t4ds//index.html#instructions">
+        <a href="/t4ds//index.html#instructions">
             <i class="fa fa-file-code-o" aria-hidden="true"></i>
             Instructions
             <span class="pull-right ">1</span>
@@ -450,22 +450,22 @@ plot(Nice_Cycle, pch = 18, xlab = “”, ylab = “”)
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://comptag.github.io/t4ds//js/jquery-3.1.1.min.js"></script>
-<script src="https://comptag.github.io/t4ds//js/tether.min.js"></script>
-<script src="https://comptag.github.io/t4ds//js/popper.min.js"></script>
-<script src="https://comptag.github.io/t4ds//js/bootstrap.min.js"></script>
-<script src="https://comptag.github.io/t4ds//js/global.js"></script>
+<script src="/t4ds//js/jquery-3.1.1.min.js"></script>
+<script src="/t4ds//js/tether.min.js"></script>
+<script src="/t4ds//js/popper.min.js"></script>
+<script src="/t4ds//js/bootstrap.min.js"></script>
+<script src="/t4ds//js/global.js"></script>
 
 
 
-   <script src="https://comptag.github.io/t4ds//js/highlight.pack.js"></script>
+   <script src="/t4ds//js/highlight.pack.js"></script>
 
    <!-- Header collapse -->
-   <script src="https://comptag.github.io/t4ds//js/md-post-header-collapse.js" type="text/javascript"></script>
-   <script src="https://comptag.github.io/t4ds//js/sidebar.js" type="text/javascript"></script>
-   <script src="https://comptag.github.io/t4ds//js/post.js" type="text/javascript"></script>
-   <script src="https://comptag.github.io/t4ds//js/tocbot.min.js" type="text/javascript"></script>
-   <script src="https://comptag.github.io/t4ds//js/lightbox.js" type="text/javascript"></script>
+   <script src="/t4ds//js/md-post-header-collapse.js" type="text/javascript"></script>
+   <script src="/t4ds//js/sidebar.js" type="text/javascript"></script>
+   <script src="/t4ds//js/post.js" type="text/javascript"></script>
+   <script src="/t4ds//js/tocbot.min.js" type="text/javascript"></script>
+   <script src="/t4ds//js/lightbox.js" type="text/javascript"></script>
 
 
 
