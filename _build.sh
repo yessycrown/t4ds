@@ -2,4 +2,4 @@
 
 set -ev
 
-Rscript -e "gen_blog()"
+Rscript -e "gen_workshops()"
