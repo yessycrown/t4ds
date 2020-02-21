@@ -1,4 +1,6 @@
-source("~/.Rprofile")
+if(file.exists("~/.Rprofile")){
+  source("~/.Rprofile")
+}
 
 gen_blog <- function(input = c(".", list.dirs("_source")), output =
                      c(".", rep("rmd_posts/_posts", length(list.dirs("_source")))),
