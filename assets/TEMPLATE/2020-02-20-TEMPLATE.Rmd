@@ -1,0 +1,58 @@
+---
+layout: post
+title: "Supreme title //TITLE HERE"
+author: "The supreme undergrad //AUTHOR HERE"
+date: "February 20, 2020 at exactly 20 seconds after 2:20 pm (woah) //date here, not shown in actual page"
+---
+
+```{r setup, echo = FALSE, message = FALSE}
+library(knitr)
+```
+
+```{r pkgs, echo = FALSE, message = FALSE}
+# Initialize Environment
+#########################
+
+# Set CRAN location for installing packages
+############################################
+r <- getOption("repos")
+r["CRAN"] <- "http://cran.wustl.edu"
+options(repos = r)
+rm(r)
+
+## Helper function to install a CRAN package if not installed and load
+######################################################################
+use_package <- function(p) {
+if (!is.element(p, installed.packages()[,1]))
+  install.packages(p, dep = TRUE)
+library(p, character.only = TRUE)
+}
+
+# Load base R libraries (no need to install)
+#############################################
+library(grid)
+
+# Check and install CRAN packages (may need more)!!!!!!
+#######################################################
+use_package('png') # For importing pngs
+use_package('grImport2') # For importing svg graphics
+use_package('TDA')
+use_package('ggplot2') # For some nice plots based in the grid package
+```
+
+## Introduction
+
+Blibbity blah blah, here is my sweet intro, add yours here.
+
+
+## Objectives
+
+By the end of this tutorial you should be able to:
+
+* Parallel park a train
+* End world hunger
+* Develop your entire own R package 'TDA'
+
+
+
+
