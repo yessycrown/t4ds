@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Tutorials made with the final goal in mind to use the R package TDA in
   order to actually implement each technique.
 baseurl: /t4ds/
-url: https://comptag.github.io
+# url: https://comptag.github.io
 github_username:  benholmgren
 permalink: /:year/:month/:title.html
 
