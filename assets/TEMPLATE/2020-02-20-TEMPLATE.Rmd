@@ -40,12 +40,19 @@ use_package('TDA')
 use_package('ggplot2') # For some nice plots based in the grid package
 ```
 
-## Introduction
+## Overview
 
 Blibbity blah blah, here is my sweet intro, add yours here.
 
+### Questions
+  
+What defines meaning? 
+Does P = NP? 
+Are we alone in the universe?
 
-## Objectives
+//Add your big questions here
+
+### Objectives
 
 By the end of this tutorial you should be able to:
 
