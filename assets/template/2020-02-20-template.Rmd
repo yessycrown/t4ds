@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Post - Supreme title //TITLE HERE</title>
+    <title>Post - Episode I: The Phantom Menace //TITLE HERE</title>
 
     <!-- Put encrypt ahead of all other includes -->
     
@@ -238,7 +238,7 @@ background-color:#3f3f3f;
                 </div>
                 <div class="page-header">
                     <h1 class="text-primary">
-                        Supreme title //TITLE HERE
+                        Episode I: The Phantom Menace //TITLE HERE
                     </h1>
                 </div>
                 <div id="page-content">
@@ -278,13 +278,13 @@ use_package('ggplot2') # For some nice plots based in the grid package
 
 <h2 id="overview">Overview</h2>
 
-<p>Blibbity blah blah, here is my sweet intro, add yours here.</p>
-
 <h3 id="questions">Questions</h3>
 
-<p>What defines meaning? 
-Does P = NP? 
-Are we alone in the universe?</p>
+<ul>
+  <li>What defines meaning?</li>
+  <li>Does P = NP?</li>
+  <li>Are we alone in the universe?</li>
+</ul>
 
 <p>//Add your big questions here</p>
 
@@ -295,9 +295,62 @@ Are we alone in the universe?</p>
 <ul>
   <li>Parallel park a train</li>
   <li>End world hunger</li>
-  <li>Develop your entire own R package ‘TDA’</li>
+  <li>Develop your very own R package ‘TDA’</li>
 </ul>
 
+<!--- the syntax '---' creates a line seperator, a nice way to split up concepts -->
+
+<hr />
+
+<h2 id="content">Content</h2>
+<p>Blibbity blah blah, here is my sweet content, add yours here.</p>
+
+<h3 id="subsections">Subsections</h3>
+<p>Blibbity blah blah, this is a subsection, make as many or as few as you’d like using increasing numbers of # symbols.</p>
+
+<h3 id="subsection-with-code-chunk">Subsection with code chunk</h3>
+<p>Here’s how to add a code chunk:</p>
+
+<p>```{r plot_two_Circles, message=FALSE, echo=TRUE}
+library(‘TDA’)
+library(‘spatstat’)</p>
+
+<p>x &lt;- circleUnif(50,10)
+plot(x, pch = 18, xlab = “”, ylab = “”)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Or if we just want plots and not the code that generated them:
+
+```{r plot_two_Circles_Again, message=FALSE, echo=FALSE}
+library('TDA')
+library('spatstat')
+x &lt;- circleUnif(100,1.5)
+Nice_Cycle &lt;- as.ppp.data.frame(x,c(-2,2,-2,2))
+plot(Nice_Cycle, pch = 18, xlab = "", ylab = "")
+
+xppp &lt;- as.ppp.data.frame(Nice_Cycle,c(-2,2,-2,2))
+Angsty_Cycle &lt;-rjitter(xppp,0.25)
+plot(Angsty_Cycle, pch = 16, xlab = "", ylab = "")
+</code></pre></div></div>
+
+<hr />
+<h2 id="another-section-with-a-challenge">Another Section With a Challenge</h2>
+
+<p>Yada yada yada, clustering, manifolds</p>
+
+<h3 id="challenge">Challenge</h3>
+<ol>
+  <li>Create your own cycle with 10 points and radius = 10.</li>
+  <li>Make sure that the axes are not labeled with a range of numbers.</li>
+</ol>
+
+<h3 id="solution">Solution</h3>
+<p>```{r plot_one_Circle, message=FALSE, echo=TRUE}</p>
+
+<p>x &lt;- circleUnif(10, 10)
+Nice_Cycle &lt;- as.ppp.data.frame(x,c(-10,10,-10,10))
+plot(Nice_Cycle, pch = 18, xlab = “”, ylab = “”)
+```</p>
 
                 </div>
 
