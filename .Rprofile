@@ -2,6 +2,16 @@ if(file.exists("~/.Rprofile")){
   source("~/.Rprofile")
 }
 
+new_draft <- function(draftname = "new_draft") {
+  destination_folder <- paste("_drafts/", draftname, sep = "")
+  dir.create(destination_folder)
+  template_location <- "assets/template/"
+  template_files <- list.files(template_location)
+  for(i in template_files) {
+    file.copy(paste(template_location, i, sep = ""), destination_folder)
+  }
+}
+
 gen_blog <- function(input = c(".", list.dirs("_source")), output =
                      c(".", rep("rmd_posts/_posts", length(list.dirs("_source")))),
                      command = "bundle exec jekyll build", ...) {
