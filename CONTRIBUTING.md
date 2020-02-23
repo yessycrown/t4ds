@@ -28,7 +28,8 @@ variable is set so that it can find your ruby gems . This may have been done
 automatically when you installed RubyGems, but double check via the method for
 your operating system. On Linux or MacOS you can run `echo $PATH` in your
 terminal to check what is in your path or put something like
-`PATH='$PATH:/path/to/your/ruby/gems'` in your `.bashrc` file.
+`PATH='$PATH:/path/to/your/ruby/gems'` in your `.bashrc` file if you need to
+ammend your `PATH` environment variable with the location of your ruby gems.
 
 Whereas on windows you can follow the instructions [here](https://www.computerhope.com/issues/ch000549.htm).
 
