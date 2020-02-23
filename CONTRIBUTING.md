@@ -103,7 +103,7 @@ When you are ready to post the workshop, you can move the folder from the
 `_drafts` folder into the `_source` folder. When you commit and push, travis.ci
 should automatically build the .Rmd file, run jekyll build in a temporary
 directory and push the results to the gh-pages branch so that the workshops are
-live on comptag.io/t4ds site.
+live on the [https://comptag.github.io/t4ds](site).
 
 A couple of general notes:
  - If you use an external package, make sure to add it to as an import in the
