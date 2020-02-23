@@ -110,3 +110,10 @@ A couple of general notes:
    DESCRIPTION file, otherwise travis.ci will not have access to the (unless
    perhaps you are using the `use_package()` function defined in .Rprofile which
    automatically installs the package if it doesn't exist).
+- Do not manually edit the gh-pages repo, travis.ci should be the only thing
+  that pushes to this repo.
+- If it doesn't appear that your push to the master branch is being updated to
+  the website, double check that the build badge is passing on the README page
+  in github. If the build is failing, ask Jordan to look into it to see what the
+  error is.
+
