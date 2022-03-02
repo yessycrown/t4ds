@@ -43,8 +43,8 @@ provides more details on the theory {% cite edelsbrunner:2010 %}.
 ### Triangle Appreciation
 
 We construct a Rips complex from simplices of varying dimensions that are generalizations of triangles
-of varying dimensions. More specifically, an *n-simplex* is the smallest convex set of $$n-1$$ points,
-$$v_0,...,v_{n-1}$$ where $$v_1-v_0,...,v_{n-1}-v_0$$ are linearly independent.
+of varying dimensions. More specifically, an *n-simplex* is the smallest convex set of $$n+1$$ points,
+$$v_0,...,v_{n+1}$$ where $$v_0-v_1, ...,v_{n}-v_0$$ are linearly independent.
 
 <center>
 <embed width="70%" src="../../assets/tda-rips/simplices.svg" type="image/svg+xml" />
