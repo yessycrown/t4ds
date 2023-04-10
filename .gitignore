@@ -8,3 +8,4 @@ rmd_posts/_posts/*.md
 rmd_drafts/_posts/*.md
 init.r
 figure/
+.DS_Store
