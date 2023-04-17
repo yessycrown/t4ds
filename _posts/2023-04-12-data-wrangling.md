@@ -63,7 +63,7 @@ class(glacier_data)
 ```
 
 <details>
-<summary>Expected Output</summary>
+<summary><h4>Expected Output</h4></summary>
 <br>
 <pre>
 <code>
@@ -151,6 +151,37 @@ we can do with them.
 
 
 ### Fundamental data structures in R
+
+We can get a sense of the size of our data running:
+
+```
+dim(glacier_data)
+```
+
+<details>
+<summary><h4>Expected Output</h4></summary>
+<br>
+<pre>
+<code>
+> dim(glacier_data)
+[1] 70  3
+</code>
+</pre>
+</details>
+
+Telling us that our data has 70 rows, and 3 columns. We can grab
+entries by row, column index as follows:
+
+```
+# row 1, column 1
+glacier_data[1,1]
+
+# row 27, column 3
+glacier_data[27,3]
+```
+
+Note that in R, indices start at 1, and not at 0!
+
 
 
 ### Fundamental visualizations in R
