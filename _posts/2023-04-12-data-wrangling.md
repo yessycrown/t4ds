@@ -7,17 +7,20 @@ tags:
 - gis
 ---
 
+---
 ## Overview
 
 After this session, we hope you will take away the following:
 
 ### Objectives
-- Learn how to read data into R
-- Learn basic R functionalities and data structures
-- Visualize data with R
-- Be able to use R on GIS data
-- Understand early stages of the data analysis pipeline, by playing with data
-- Prepare GIS data for the topological data analysis pipeline
+> - Learn how to read data into R
+> - Learn basic R functionalities and data structures
+> - Visualize data with R
+> - Be able to use R on GIS data
+> - Understand early stages of the data analysis pipeline, by playing with data
+> - Prepare GIS data for the topological data analysis pipeline
+
+---
 
 ## Getting Started
 
