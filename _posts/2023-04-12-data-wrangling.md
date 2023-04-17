@@ -181,8 +181,38 @@ glacier_data[27,3]
 ```
 
 Note that in R, indices start at 1, and not at 0!
+If we're working with large data and want to get a feel for things, the
+`head` method is quite useful:
 
+```
+# grab the first 5 rows of glacier_data
+head(glacier_data, 5)
+```
 
+We can pull multiple entries out
+of a dataframe with `c()` the ``combine" method in R as well, that is,
+
+```
+# grab rows 2,3,5 and columns 2,3
+glacier_data[c(2, 3, 5), c(2, 3)]
+```
+
+If we want contiguous rows and columns, we can also use:
+
+```
+# grab rows 4 through 10, and all 3 columns
+glacier_data[4:10, 1:3]
+```
+
+Finally, if we want all rows or all columns,
+we can leave indices blank:
+
+```
+# grab only row 2
+glacier_data[2,]
+```
+
+Therein lies R data manipulation in a nutshell!
 
 ### Fundamental visualizations in R
 
