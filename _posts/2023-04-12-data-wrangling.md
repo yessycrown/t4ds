@@ -161,8 +161,8 @@ dim(glacier_data)
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
-<pre>
-<code style="background-color:lightblue">
+<pre style="background-color:lightblue">
+<code>
 > dim(glacier_data)
 [1] 70  3
 </code>
@@ -236,7 +236,15 @@ For a more comprehensive summary, we can use the `summary` function.
 summary(glacier_data)
 ```
 
+If we want to visualize our data in a plot, we can do so using the `plot`
+function, which is intended for scatterplots. Let's plot
+the cumulative mass balance vs. year, with year on the x-axis and 
+average cumulative mass balance on the y-axis:
 
+```
+# view cumulative mass balance vs year
+plot(x=glacier_data[,1], y=glacier_data[,2])
+```
 
 ## Working with GIS Data in R
 
