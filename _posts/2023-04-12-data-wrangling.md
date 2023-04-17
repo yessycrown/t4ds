@@ -341,7 +341,19 @@ average cumulative mass balance on the y-axis:
 plot(x=glacier_data[,1], y=glacier_data[,2])
 ```
 
+We can make the plot prettier by labelling axes and giving a title:
 
+```
+plot(x=glacier_data[,1], y=glacier_data[,2], xlab="Year", ylab = "Cumulative Mass Balance", main ="Glacier Health vs. Time")
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/glacierplot1.jpg" alt="Flowers in Chania">
+</pre>
+</details>
 
 ## Working with GIS Data in R
 
