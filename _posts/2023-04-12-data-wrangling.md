@@ -65,7 +65,8 @@ class(glacier_data)
 <details>
 <summary>Expected Output</summary>
 <br>
-```
+<pre>
+<code>
 > glacier_data <- read.csv(file=glacier_csv, header = TRUE)
 > glacier_data
    Year Mean.cumulative.mass.balance Number.of.observations
@@ -141,7 +142,8 @@ class(glacier_data)
 70 2014                      -28.652                     24
 > class(glacier_data)
 [1] "data.frame"
-```
+</code>
+</pre>
 </details>
 
 Data frames are a central concept in R programming, and the next section shows us some of the things
