@@ -49,12 +49,21 @@ glacier_csv <- 'https://pkgstore.datahub.io/core/glacier-mass-balance/glaciers_c
 glacier_data <- read.csv(file=glacier_csv, header = TRUE)
 
 ```
+</br>
+
 
 Go ahead and take a look at the result by running:
 
 ```
 glacier_data
 ```
+</br>
+
+
+This data is a collection, on average, of the cumulative mass balance of glaciers worldwide.
+The cumulative mass balance is a measure of the health of a glacier, and is a weighted difference
+between yearly mass gain (snow accumulation), and yearly mass loss (melting).
+We can see that each entry is comprised of a year, an average value, and the number of observations. 
 
 And see what class the data is with:
 
@@ -145,6 +154,8 @@ class(glacier_data)
 </code>
 </pre>
 </details>
+</br>
+
 
 Data frames are a central concept in R programming, and the next section shows us some of the things
 we can do with them.
@@ -168,6 +179,8 @@ dim(glacier_data)
 </code>
 </pre>
 </details>
+</br>
+
 
 Telling us that our data has 70 rows, and 3 columns. We can grab
 entries by row, column index as follows:
@@ -192,6 +205,8 @@ glacier_data[27,3]
 </code>
 </pre>
 </details>
+</br>
+
 
 Note that in R, indices start at 1, and not at 0!
 If we're working with large data and want to get a feel for things, the
@@ -217,6 +232,8 @@ head(glacier_data, 5)
 </code>
 </pre>
 </details>
+</br>
+
 
 We can pull multiple entries out
 of a dataframe with `c()` the ``combine" method in R as well, that is,
@@ -239,6 +256,8 @@ glacier_data[c(2, 3, 5), c(2, 3)]
 </code>
 </pre>
 </details>
+</br>
+
 
 If we want contiguous rows and columns, we can also use:
 
@@ -246,6 +265,7 @@ If we want contiguous rows and columns, we can also use:
 # grab rows 4 through 10, and all 3 columns
 glacier_data[4:10, 1:3]
 ```
+</br>
 
 Finally, if we want all rows or all columns,
 we can leave indices blank:
