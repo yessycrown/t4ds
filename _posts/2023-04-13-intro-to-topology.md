@@ -26,16 +26,10 @@ ___
 
 **Objectives**
 
+After this session, we hope you will be able to:
 > - Define `shape` of data
 > - Describe topological and geometric properties of a space/shape
 ___
-
-### Objectives
-
-After this session, we hope you will be able to:
-
-- Define `shape` of data
-- Describe topological and geometric properties of a space/shape
 
 ## Getting Started
 
