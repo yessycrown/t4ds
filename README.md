@@ -44,6 +44,15 @@ This is how you dropdown.
 
 </details>
 
+If you want to put text in a box, try this html:
+
+___
+**Objectives**
+> - Learn stuff
+> - Have fun
+> - Eat bagels
+___
+
 
 If you want to see the built site, check it out 
 [here](https://comptag.github.io/t4ds/). It normally takes 3 ish minutes to build.
