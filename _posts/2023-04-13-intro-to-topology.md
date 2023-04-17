@@ -22,14 +22,9 @@ data scientists alike.
 
 This session is presented by Brittany.
 
-___
-
-**Objectives**
-
-After this session, we hope you will be able to:
+***Objectives***: After this session, we hope you will be able to:
 > - Define `shape` of data
 > - Describe topological and geometric properties of a space/shape
-___
 
 ## Getting Started
 
