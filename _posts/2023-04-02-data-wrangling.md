@@ -7,10 +7,9 @@ tags:
 - gis
 ---
 
-Before we really get going with topology and topological data analysis, 
-we first need a basic understanding of how to handle data in R.
-
 ## Overview
+
+After this session, we hope you will take away the following:
 
 ### Objectives
 - Learn how to read data into R
@@ -22,7 +21,19 @@ we first need a basic understanding of how to handle data in R.
 
 ## Getting Started
 
+Before we really get going with topology and topological data analysis, 
+we first need a basic understanding of how to handle data in R.
+
+We will be working with R online in [R Studio Cloud](https://login.rstudio.cloud/),
+though if you'd prefer to work in R Studio locally that is fine too. Create an account,
+this is probably easiest using your google account, and start working in the `posit cloud`.
+
+Once in your workspace, begin by clicking `new project` and selecting an `RStudio` project.
+Name the project whatever you'd like, perhaps something like `R-Intro`.
+
 ### Reading data into R
+
+
 
 ### Fundamental data structures in R
 
