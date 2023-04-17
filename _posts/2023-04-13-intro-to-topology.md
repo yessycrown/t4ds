@@ -20,6 +20,16 @@ applications in data analysis that makes it an interesting subject to applied
 mathematicians, statisticians, computer scientists, data scientists, and other
 data scientists alike.
 
+This session is presented by Brittany.
+
+___
+
+**Objectives**
+
+> - Define `shape` of data
+> - Describe topological and geometric properties of a space/shape
+___
+
 ### Objectives
 
 After this session, we hope you will be able to:
