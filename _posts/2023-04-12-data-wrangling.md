@@ -29,13 +29,45 @@ though if you'd prefer to work in R Studio locally that is fine too. Create an a
 this is probably easiest using your google account, and start working in the `posit cloud`.
 
 Once in your workspace, begin by clicking `new project` and selecting an `RStudio` project.
-Name the project whatever you'd like, perhaps something like `R-Intro`.
+Name the project whatever you'd like, perhaps something like `R-Intro`. Then use
+`File -> New File -> R Script` to create a new R script.
 
 ### Reading data into R
 
+Let's get started with some basic CSV data. It turns out, there is a really easy command
+to import csv data in R, and we can even do it directly from a webpage.
+In this workshop, we like glaciers a lot,
+and we can download some glacier data natively in R as follows:
+
+```
+glacier_csv <- 'https://pkgstore.datahub.io/core/glacier-mass-balance/glaciers_csv/data/c04ec0dab848ef8f9b179a2cca11b616/glaciers_csv.csv'
+
+# this data has a header, so we set header=TRUE to keep it out of the rest of our data
+glacier_data <- read.csv(file=glacier_csv, header = TRUE)
+
+```
+
+Go ahead and take a look at the result by running:
+
+```
+glacier_data
+```
+
+And see what class the data is by running
+
+```
+class(glacier_data)
+```
+
+Data frames are a central concept in R programming, which leads us into the next section
+to see what we can do with them.
+
+When data already exists for us, and is in a nice format,
+we can typically directly import it into R in this manner. Pretty nice and simple!
 
 
 ### Fundamental data structures in R
+
 
 ### Fundamental visualizations in R
 
