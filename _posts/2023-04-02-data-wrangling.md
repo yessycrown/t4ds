@@ -22,7 +22,16 @@ we first need a basic understanding of how to handle data in R.
 
 ## Getting Started
 
-###
+### Reading data into R
+
+### Fundamental data structures in R
+
+### Fundamental visualizations in R
+
+
+## Working with GIS Data in R
+
+### Getting Started with GIS Data in R
 
 For this tutorial we will use GIS data from Glacier National Park in Northwestern Montana.
 The data can be downloaded from the USGS at [this address](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542).
@@ -126,4 +135,7 @@ plot(X, pch=20, cex=.5)
 ```
 
 ![glacier3](../assets/images/glacier3.png)
+
+
+### Preparing Data for the Topological Data Analysis Pipeline
 
