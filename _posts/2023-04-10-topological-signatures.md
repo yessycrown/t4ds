@@ -5,6 +5,29 @@ post-image: "https://www.nps.gov/npgallery/GetAsset/99BDDE56-1DD8-B71B-0BF0D34E8
 description: Gaining topological signatures from data, and comparing them
 tags:
 - persistence
+- TODO
 ---
 
-TODO: Ben's workin on this too
+## Overview
+
+TODO: write brief summary
+
+This session is presented by Ben.
+
+### Objectives
+
+After this session, we hope that you will  be able to:
+
+- TODO
+
+## Getting Started
+
+TODO
+
+## TODO:content here
+
+TODO
+
+## Wrapping Up
+
+TODO

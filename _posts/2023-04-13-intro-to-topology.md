@@ -20,6 +20,8 @@ applications in data analysis that makes it an interesting subject to applied
 mathematicians, statisticians, computer scientists, data scientists, and other
 data scientists alike.
 
+This session is presented by Brittany.
+
 ### Objectives
 
 After this session, we hope you will be able to:
