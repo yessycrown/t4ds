@@ -62,10 +62,10 @@ And see what class the data is with:
 class(glacier_data)
 ```
 
-<details>
+<details style="color:blue">
 <summary>Expected Output</summary>
 <br>
-<pre>
+<pre style="background-color:lightblue">
 <code>
 > glacier_data <- read.csv(file=glacier_csv, header = TRUE)
 > glacier_data
