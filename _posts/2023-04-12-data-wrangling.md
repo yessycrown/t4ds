@@ -63,7 +63,7 @@ class(glacier_data)
 ```
 
 <details>
-<summary><h4>Expected Output</h4></summary>
+<summary>Expected Output</summary>
 <br>
 <pre>
 <code>
@@ -159,7 +159,7 @@ dim(glacier_data)
 ```
 
 <details>
-<summary><h4>Expected Output</h4></summary>
+<summary style="color:blue">Expected Output</summary>
 <br>
 <pre>
 <code>
@@ -215,6 +215,21 @@ glacier_data[2,]
 Therein lies R data manipulation in a nutshell!
 
 ### Fundamental visualizations in R
+
+As the language of choice for statisticians, it should come as no surprise that one can also
+easily get statistical summaries from data.
+
+Basic functions like `min`, `max`, `sd`, and `mean` allow us to grab statistical properties from our
+data. For example:
+
+```
+# get min cumulative mass balance
+min(glacier_data[,2])
+
+# get mean
+mean(glacier_data[,2])
+```
+
 
 
 ## Working with GIS Data in R
