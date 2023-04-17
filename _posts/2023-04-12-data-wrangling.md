@@ -162,7 +162,7 @@ dim(glacier_data)
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre>
-<code>
+<code style="background-color:lightblue">
 > dim(glacier_data)
 [1] 70  3
 </code>
@@ -228,6 +228,12 @@ min(glacier_data[,2])
 
 # get mean
 mean(glacier_data[,2])
+```
+
+For a more comprehensive summary, we can use the `summary` function.
+
+```
+summary(glacier_data)
 ```
 
 
