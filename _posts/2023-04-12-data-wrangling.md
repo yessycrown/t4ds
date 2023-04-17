@@ -179,6 +179,19 @@ glacier_data[1,1]
 # row 27, column 3
 glacier_data[27,3]
 ```
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> glacier_data[1,1]
+[1] 1945
+> # row 27, column 3
+> glacier_data[27,3]
+[1] 32
+</code>
+</pre>
+</details>
 
 Note that in R, indices start at 1, and not at 0!
 If we're working with large data and want to get a feel for things, the
@@ -189,6 +202,22 @@ If we're working with large data and want to get a feel for things, the
 head(glacier_data, 5)
 ```
 
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> head(glacier_data, 5)
+  Year Mean.cumulative.mass.balance Number.of.observations
+1 1945                         0.00                     NA
+2 1946                        -1.13                      1
+3 1947                        -3.19                      1
+4 1948                        -3.19                      1
+5 1949                        -3.82                      3
+</code>
+</pre>
+</details>
+
 We can pull multiple entries out
 of a dataframe with `c()` the ``combine" method in R as well, that is,
 
@@ -196,6 +225,20 @@ of a dataframe with `c()` the ``combine" method in R as well, that is,
 # grab rows 2,3,5 and columns 2,3
 glacier_data[c(2, 3, 5), c(2, 3)]
 ```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> glacier_data[c(2, 3, 5), c(2, 3)]
+  Mean.cumulative.mass.balance Number.of.observations
+2                        -1.13                      1
+3                        -3.19                      1
+5                        -3.82                      3
+</code>
+</pre>
+</details>
 
 If we want contiguous rows and columns, we can also use:
 
@@ -230,11 +273,43 @@ min(glacier_data[,2])
 mean(glacier_data[,2])
 ```
 
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> min(glacier_data[,2])
+[1] -28.652
+> mean(glacier_data[,2])
+[1] -12.84216
+</code>
+</pre>
+</details>
+
+
 For a more comprehensive summary, we can use the `summary` function.
 
 ```
 summary(glacier_data)
 ```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> summary(glacier_data)
+      Year      Mean.cumulative.mass.balance Number.of.observations
+ Min.   :1945   Min.   :-28.652              Min.   : 1.00         
+ 1st Qu.:1962   1st Qu.:-16.338              1st Qu.:22.00         
+ Median :1980   Median :-11.223              Median :36.00         
+ Mean   :1980   Mean   :-12.842              Mean   :27.75         
+ 3rd Qu.:1997   3rd Qu.: -9.136              3rd Qu.:37.00         
+ Max.   :2014   Max.   :  0.000              Max.   :37.00         
+                                             NA's   :1  
+</code>
+</pre>
+</details>
 
 If we want to visualize our data in a plot, we can do so using the `plot`
 function, which is intended for scatterplots. Let's plot
@@ -245,6 +320,8 @@ average cumulative mass balance on the y-axis:
 # view cumulative mass balance vs year
 plot(x=glacier_data[,1], y=glacier_data[,2])
 ```
+
+
 
 ## Working with GIS Data in R
 
