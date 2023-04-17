@@ -53,17 +53,96 @@ Go ahead and take a look at the result by running:
 glacier_data
 ```
 
-And see what class the data is by running
+And see what class the data is with:
 
 ```
 class(glacier_data)
 ```
 
-Data frames are a central concept in R programming, which leads us into the next section
-to see what we can do with them.
+<details>
+<summary>Expected Output</summary>
+<br>
+```
+> glacier_data <- read.csv(file=glacier_csv, header = TRUE)
+> glacier_data
+   Year Mean.cumulative.mass.balance Number.of.observations
+1  1945                        0.000                     NA
+2  1946                       -1.130                      1
+3  1947                       -3.190                      1
+4  1948                       -3.190                      1
+5  1949                       -3.820                      3
+6  1950                       -4.887                      3
+7  1951                       -5.217                      3
+8  1952                       -5.707                      3
+9  1953                       -6.341                      7
+10 1954                       -6.825                      6
+11 1955                       -6.575                      7
+12 1956                       -6.814                      7
+13 1957                       -6.989                      9
+14 1958                       -7.693                      9
+15 1959                       -8.325                     11
+16 1960                       -8.688                     14
+17 1961                       -8.935                     15
+18 1962                       -9.109                     20
+19 1963                       -9.567                     22
+20 1964                       -9.699                     22
+21 1965                       -9.298                     24
+22 1966                       -9.436                     27
+23 1967                       -9.303                     29
+24 1968                       -9.219                     31
+25 1969                       -9.732                     31
+26 1970                      -10.128                     32
+27 1971                      -10.288                     32
+28 1972                      -10.441                     32
+29 1973                      -10.538                     32
+30 1974                      -10.613                     32
+31 1975                      -10.534                     33
+32 1976                      -10.633                     35
+33 1977                      -10.682                     37
+34 1978                      -10.754                     37
+35 1979                      -11.127                     37
+36 1980                      -11.318                     36
+37 1981                      -11.394                     35
+38 1982                      -11.849                     36
+39 1983                      -11.846                     37
+40 1984                      -11.902                     37
+41 1985                      -12.238                     37
+42 1986                      -12.782                     37
+43 1987                      -12.795                     37
+44 1988                      -13.260                     37
+45 1989                      -13.343                     37
+46 1990                      -13.687                     37
+47 1991                      -14.255                     37
+48 1992                      -14.501                     36
+49 1993                      -14.695                     37
+50 1994                      -15.276                     37
+51 1995                      -15.486                     37
+52 1996                      -15.890                     37
+53 1997                      -16.487                     37
+54 1998                      -17.310                     37
+55 1999                      -17.697                     37
+56 2000                      -17.727                     37
+57 2001                      -18.032                     37
+58 2002                      -18.726                     37
+59 2003                      -19.984                     37
+60 2004                      -20.703                     37
+61 2005                      -21.405                     37
+62 2006                      -22.595                     37
+63 2007                      -23.255                     37
+64 2008                      -23.776                     37
+65 2009                      -24.459                     37
+66 2010                      -25.158                     37
+67 2011                      -26.294                     37
+68 2012                      -26.930                     36
+69 2013                      -27.817                     31
+70 2014                      -28.652                     24
+> class(glacier_data)
+[1] "data.frame"
+```
+</details>
 
-When data already exists for us, and is in a nice format,
-we can typically directly import it into R in this manner. Pretty nice and simple!
+Data frames are a central concept in R programming, and the next section shows us some of the things
+we can do with them.
 
 
 ### Fundamental data structures in R
