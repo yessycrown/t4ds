@@ -45,6 +45,11 @@ This is how you dropdown.
 </details>
 
 
+If you want to see the built site, check it out 
+[here](https://comptag.github.io/t4ds/). It normally takes 3 ish minutes to build.
+You can also do this locally using jekyll, though it's not the easiest to set up. 
+In a time crunch, I recommend just doing this online.
+
 ---
 
 Dependencies: Uses **WhatATheme**, an awesome Jekyll theme. You can checkout the [**Demo Here**](https://thedevslot.github.io/WhatATheme/) :boom:
