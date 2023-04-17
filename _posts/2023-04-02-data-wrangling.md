@@ -7,7 +7,23 @@ tags:
 - gis
 ---
 
-Before we can understand the topology of data, we need to get some interesting data to work with.
+Before we really get going with topology and topological data analysis, 
+we first need a basic understanding of how to handle data in R.
+
+## Overview
+
+### Objectives
+- Learn how to read data into R
+- Learn basic R functionalities and data structures
+- Visualize data with R
+- Be able to use R on GIS data
+- Understand early stages of the data analysis pipeline, by playing with data
+- Prepare GIS data for the topological data analysis pipeline
+
+## Getting Started
+
+###
+
 For this tutorial we will use GIS data from Glacier National Park in Northwestern Montana.
 The data can be downloaded from the USGS at [this address](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542).
 
