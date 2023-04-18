@@ -636,3 +636,13 @@ Thanks for following along in session 2! To look back on our accomplishments bef
 Enjoy a long lunch in downtown Bozeman! If you have any questions about the above topics, don't hesitate 
 to ask. And if you have muddy points, post them!
 ---
+
+### Credits
+
+- For a more in depth introduction to R, check out the [software carpentries](http://swcarpentry.github.io/r-novice-inflammation/)
+tutorials, which are a big inspiration for the style of this workshop
+- The glacier CSV data was taken from [datahub.io](https://datahub.io/core/glacier-mass-balance#data) and studies the average mass balance of glaciers worldwide between 1945 and 2014. This data was sourced from the US EPA and the World Glacier Monitoring Service.
+- The Montana county shape data was sourced from the Montana state government's website with data
+on [administrative boundaries](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/)
+
+
