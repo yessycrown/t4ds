@@ -36,6 +36,7 @@ a type of data that holds intrinsic topological meaning.
 ### Triangle appreciation
 
 Of course we are all familiar with triangles, and to understand the Rips filtration, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from 0 to n. (Where the -1th dimensional triangle being a null value).
+
 ![n dimensional triangles](https://i.stack.imgur.com/O6xtg.png)
 
 A simplex is synonymous with an n dimensional triangle, that is it is just a triangle of any dimension.
@@ -47,9 +48,11 @@ or a face of both.
 
 <center>
 
-![](images/simplicialcomplex.svg){width=450px}
+![](../assets/images/simplicialcomplex.svg){width=450px}
 
 </center>
+
+### From Point Cloud Data to Simplicial Complexes
 
 
 
