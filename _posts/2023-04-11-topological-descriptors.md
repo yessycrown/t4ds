@@ -89,7 +89,7 @@ myFirstList <- list(1, TRUE, "There's a string in my list too!")
 Knowing this, we can create a simplicial complex using only the `list()`
 and `c()` functions to create a list object and `combine` objects, which we saw earlier.
 Typically, we label each vertex in a simplicial complex with an integer, and build the
-complex accordingly.
+complex accordingly. Here's how to do it for two vertices joined by an edge.
 
 ```
 simpleK <- list(1, 2, c(1,2))
