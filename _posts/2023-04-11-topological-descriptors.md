@@ -9,7 +9,7 @@ tags:
 - vietoris-rips filtration
 ---
 
-## Overview
+## Overview 
 
 To round off day 1, we will combine what you learned in the first two sessions to cover
 the basics of computational topology. After learning the requisite theory,
