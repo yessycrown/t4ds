@@ -1,18 +1,22 @@
 ---
 title: Topological Descriptors
 layout: post
-post-image: "TODO add an image url here"
-description: TODO add description
+post-image: "https://www.nps.gov/npgallery/GetAsset/99BDDE56-1DD8-B71B-0BF0D34E843D9014/proxy/hires?"
+description: The theory behind computational topology, along with intuitive examples
 tags:
-- persistence
-- TODO
+- persistent homology
+- height filtration
+- vietoris-rips filtration
 ---
 
 ## Overview
 
-TODO: write brief summary
+To round off day 1, we will combine what you learned in the first two sessions to cover
+the basics of computational topology. After learning the requisite theory,
+we will present relevant examples in R for students to gain hands on experience.
 
-This session is presented by Brittany.
+This session is presented jointly by Brittany and Ben. Brittany will cover most of the
+theory, and Ben will lead R programming sections.
 
 ### Objectives
 
