@@ -358,10 +358,50 @@ plot(x=glacier_data[,1], y=glacier_data[,2], xlab="Year", ylab = "Cumulative Mas
 
 ## Working with GIS Data in R
 
-
+Now that we have some basic data analysis in R under our belt, we'll start working with GIS data,
+which is a bit more complex!
 
 ### Some GIS Data to Play With: Montana Counties
 
+For this tutorial we'll work with GIS data coming from Montana county boundaries.
+We will download the data directly into R as before, which comes from
+[Montana.gov](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/).
+
+Unfortunately, it is less easy to do so with GIS data than with a standard CSV.
+First, we download the .zip file into `MontanaCounties.zip`, and then unzip it in our cloud project:
+
+```
+download.file("https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/MontanaCounties_shp.zip", destfile = "/cloud/project/MontanaCounties.zip")
+system("unzip /cloud/project/MontanaCounties.zip")
+```
+
+You should see the .zip file be downloaded in your working directory, and then
+the directory `MontanaCounties_shp` should be created after it is unzipped.
+
+To manipulate shape data, we will use the `rgdal` and the `spatial polygons` library.
+Download and import the library `gdal` library, and import `sp` which is a built-in library in R:
+
+```
+install.packages("rgdal")
+library(rgdal)
+library(sp)
+```
+
+Now open the shapefile using the `rgdal` method `readOGR`:
+
+```
+counties <- readOGR(dsn="/cloud/project/MontanaCounties_shp/County.shp")
+# understand the format of our data
+class(counties)
+dim(counties)
+```
+
+Unlike our CSV data, shapefile data is much more unweildy.
+For a sense of this, take a look at the first few entries of `counties`:
+
+```
+head(counties, 3)
+```
 
 ### Preparing Data for the Topological Data Analysis Pipeline
 
