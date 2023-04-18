@@ -37,9 +37,9 @@ unknot ourselves?
 
 Knot theory is fun!  If we can unknot ourselves and are one connected component,
 then we have formed **the unknot**, or the most basic/fundamental of all knots.
-If we created two cycles (each unknotted or not), then we have formed a link.
+If we created two cycles (each an unknot or not), then we have formed a link.
 
-[![unknotting](https://img.youtube.com/vi/UmF0-Tz1oWc/maxresdefault.jpg)](https://www.youtube.com/watch?v=UmF0-Tz1oWc)
+[![unknotting](https://img.youtube.com/vi/UmF0-Tz1oWc/hqdefault.jpg)](https://www.youtube.com/watch?v=UmF0-Tz1oWc)
 
 Other knots that are interesting (and not equivelent to the unknot) are the
 trefoil knot and the figure 8 knot.
@@ -53,9 +53,10 @@ Variants to try (in smaller groups):
 2. Can you form the trefoil knot?
 3. What about the figure 8 knot?
 
-## 1. What is Shame (in Data Science)?
+## 1. What is Shape (in Data Science)?
 
-Write down your answer to the question: what is shape?
+Write down your answer to the question: what is shape?  Write three words that
+come to mind [in this Slido poll](https://app.sli.do/event/jq8wgrEpgBwThxABcHRxja)
 
 Discuss with your neighbors.
 
@@ -70,26 +71,97 @@ Discuss with your neighbors.
 </details>
 
 <details>
+<br>
 <summary>A: Brittany</summary>
 <br>
 Shape is your interpretation of the connections in data.
+<br>
 </details>
+
+Often, when we think of shapes, we think of their **geometry**: length, witdth,
+angles, curvature, area, etc.  In this workshop, we explore the **topology** of
+shape/data.  Topology studies the connectivity between and among data.
 
 ## 2. Koenigsberg
 
-The [bridges of Koenigsberg][1]
+The ![bridges of Koenigsberg][1] 
+
+![Koenigsberg](../assets/images/bridges.jpg)
+
+<details>
+<br>
+<summary>A: the graphs!</summary>
+<br>
+![google](../assets/images/bridges-map-and-graph.png)
+![google](../assets/images/bridges-graph.png)
+<br>
+</details>
+
+## 3. Are Two Shapes the Same or Different?
+
+This is a question that we will come back to tomorrow.
+
+First, we need to understand what a **topological space** is.  It is a set
+(e.g., the real line) with a notion of what **open sets** are that follow the
+following two rules:
+
+1. The intersection of a finite number of open sets is open.
+2. Any (potentially infinite) union of open sets is open.
+
+An example is the real line, with open sets as we know them (in fact, this is
+called the standard topology on the reals).  From now on, when we say "shape",
+we mean a topological space.
+
+### Maps and Homeomorphisms
+
+Knowing this, we can define a **continuous map** as:
+
+> $ f : A \to B$ is continuous iff for all open sets $U$ in $B$, $f^{-1}(U)$ is open in $A$.
+
+The strongest form of shape equivalence is that of a homeomorphism:
+
+> Two shapes, A and B, are homeomorphic iff there exists a bi-continuous
+> bijective map $H:A \to B$.
+
+What this means is the perspective of $a \in A$ "looks like" the perspective of $b \in B$.
+
+[![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph_frame.png)](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
+
+### Topological Invariants
+
+Can we explore every map $A \to B$? Nope!  Instead, we study topological
+invariants.
+
+TODO: topological invariants
+
+TODO: homotopy
+
+TODO: homology
 
 ## Wrapping Up
 
-TODO
+Congrats! We've made it through the first session.  A quick recap:
+
+> - We made a human knot, unknot, or link! 
+> - We discussed the meaning of shape.
+> - We saw an example where an everyday problem (finding a walking path
+>   satisfying some constraints) can be turned into a graph problem.
+> - We defined some topological invariants (more on these later ...)
+
+We have a break coming up.  If you have any "muddy points" write them down and
+post it to the "muddy point board".
 
 ### Credits
 
 * The human knot is a popular ice breaking game (it even has a [Wikipedia][2]
   page!)  However, most do not realize that realizing the unknot is not always
   feasible. Whoops!  See a [math blog post][3] explaining.
-* Koenigsberg Bridge photo: [Wikimedia][1]
+* Koenigsberg Bridge photo (teaser): [Wikimedia][1], CC BY-SA 3.0
+* Euler's maps: from Euler's solution to the Bridges of Koenigsberg problem in
+  Solutio Problematis ad Geometriam Situs Pertinentis (The solution of a problem
+  Relating to the Geometry of Position), [Euler Arxiv, Enestrom Number 53][4].
 
-[1]: https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png (bridges of Koenigsberg)
+[1]: <https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png> (bridges of Koenigsberg)
 [2]: https://en.wikipedia.org/wiki/Human_knot 
 [3]: https://mathlesstraveled.com/2010/11/19/the-mathematics-of-human-knots/
+[4]: <https://scholarlycommons.pacific.edu/euler-works/53/> 
