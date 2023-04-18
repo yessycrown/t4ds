@@ -76,11 +76,12 @@ TODO: Ben
 
 ### From Point Cloud Data to Simplicial Complexes
 
-Now, you might be wondering, "if simplicial complexes are so great, why have I never seen data
-that looked like one?"
+Now, you might be wondering, "how could I go from typical data,
+like a set of points, to a simplicial complex?"
 
 This gets at a major area of study in topological data analysis: finding topology in point cloud data.
-It turns out that there are tons of ways to convert point cloud data into a simplicial complex. One popular method is called the Vietoris-Rips complex.
+It turns out that there are tons of ways to study topology in point cloud data. 
+One simple method uses what is called the Vietoris-Rips complex.
 
 Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The Rips complex of $S$
 and $r$ is the abstract simplicial complex of $\text{VR}(S, r)$ consisting of all subsets
