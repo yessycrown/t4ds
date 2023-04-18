@@ -226,7 +226,8 @@ $(1,3),(2,-1),(3,2)$.
 * When $r=\sqrt{17}$, we add a 3-simplex.
 * When $r>\sqrt{17}$, $\text{VR}(S,r)=\text{VR}(S, \sqrt{17}).$
 
-Hopefully this makes sense! 
+Hopefully the Vietoris-Rips filtration, and the idea behind filtrations more generally, is clearer
+with an example in mind.
 
 <details>
 <summary style="color:blue">If not, we also made a movie:</summary>
@@ -240,8 +241,88 @@ Hopefully this makes sense!
 
 #### A Rips Filtration in R
 
-In practice, we can create Rips complexes in R via a Rips filtration. These complexes are
-in the same format as 
+In R, we can use the `ripsFiltration` function in the TDA package to conduct filtrations.
+Let's try it out for $r<\sqrt{5}$, using the same 4 example points from above.
+
+```
+# create our cloud of four points
+x <- c(0,1,2,3)
+y <- c(0,3,-1,2)
+X <- cbind(x,y)
+
+# set largest allowed radius of balls < sqrt(5)
+maxscale <- 2
+
+# set other necessary parameters (more on those to come)
+maxdimension <- 4
+dist <- "euclidean"
+library <- "Dionysus"
+
+# conduct Rips filtration
+FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
+                          maxscale = maxscale, dist = "euclidean", library = "Dionysus",
+                          printProgress = TRUE)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
++                           maxscale = maxscale, dist = dist, library = library,
++                           printProgress = TRUE)
+# Generated complex of size: 4 
+</code>
+</pre>
+</details>
+
+
+Try on your own to view the resulting Rips complex, and see if it confirms what
+we thought the complex should be above. (HINT: to view the Rips complex, you will need
+to use the `$` syntax for attributes of the filtration)
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+> FltRips$cmplx
+[[1]]
+[1] 1
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] 3
+
+[[4]]
+[1] 4
+</code>
+</pre>
+</details>
+
+You should see that the complex is 4 points, as we expected! Let's try increasing the
+radius further:
+
+
+
+---
+
+### Introduction to Persistence Barcodes
+
+TODO: Brittany, if we want to do barcodes still
+
+---
+### Introduction to Persistence Diagrams
+
+TODO: Brittany and Ben jointly here
+
+In the example above, it would be convenient if we could store the changes resulting from
+a filtration in some way. This is the purpose of persistence diagrams, which keep track of
+the "times" at which topological features are created or destroyed.
+
 
 ---
 
