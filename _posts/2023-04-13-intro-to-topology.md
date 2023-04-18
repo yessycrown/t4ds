@@ -101,7 +101,36 @@ The ![bridges of Koenigsberg][1]
 
 This is a question that we will come back to tomorrow.
 
-TODO:homeomorphism
+First, we need to understand what a **topological space** is.  It is a set
+(e.g., the real line) with a notion of what **open sets** are that follow the
+following two rules:
+
+1. The intersection of a finite number of open sets is open.
+2. Any (potentially infinite) union of open sets is open.
+
+An example is the real line, with open sets as we know them (in fact, this is
+called the standard topology on the reals).  From now on, when we say "shape",
+we mean a topological space.
+
+### Maps and Homeomorphisms
+
+Knowing this, we can define a **continuous map** as:
+
+> $ f : A \to B$ is continuous iff for all open sets $U$ in $B$, $f^{-1}(U)$ is open in $A$.
+
+The strongest form of shape equivalence is that of a homeomorphism:
+
+> Two shapes, A and B, are homeomorphic iff there exists a bi-continuous
+> bijective map $H:A \to B$.
+
+What this means is the perspective of $a \in A$ "looks like" the perspective of $b \in B$.
+
+![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
+
+### Topological Invariants
+
+Can we explore every map $A \to B$? Nope!  Instead, we study topological
+invariants.
 
 TODO: topological invariants
 
