@@ -30,7 +30,13 @@ After this session, we hope that you will  be able to:
 
 ## Getting Started
 
-TODO
+We begin this session by introducing simplicial complexes, which are 
+a type of data that holds intrinsic topological meaning.
+
+### Triangle appreciation
+
+
+
 
 ## TODO:content here
 
