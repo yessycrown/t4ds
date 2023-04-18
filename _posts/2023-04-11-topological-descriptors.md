@@ -620,7 +620,7 @@ plot(lakeSample, pch=20, cex=.5)
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre>
-<img src="https://comptag.github.io/t4ds/assets/images/lakensample.jpg" alt="lake">
+<img src="https://comptag.github.io/t4ds/assets/images/lakesample.jpg" alt="lake">
 </pre>
 </details>
 
