@@ -624,6 +624,43 @@ plot(lakeSample, pch=20, cex=.5)
 </pre>
 </details>
 
+Now let's try a Rips filtration on this GIS data. Intuitively, we should expect to find
+a cycle in the place of Lake County. Though, now we are working with huge data!
+This is where the parameters we've set really come into play. For a few minutes,
+discuss shortcomings of the Rips filtration in this setting, and potential remedies.
+
+```
+# be sure to cast lakeSample as a data frame
+X <- as.data.frame(lakeSample)
+persistDiag <- ripsDiag(X, ... ) # how should we compute this?
+```
+
+<details>
+<summary style="color:red">See Possible R Solution</summary>
+<br>
+One remedy is to cap the size of r, as well as the dimension that we're allowed to compute.
+If we set maxdimension=1 and maxscale=20000, we should be able to compute this ok, while still detecting a cycle. There is no perfect solution!
+
+<pre style="background-color:lightcoral">
+<code>
+> X <- as.data.frame(lakeSample)
+> persistDiag <- ripsDiag(X, maxdimension=1, maxscale=20000, dist = "euclidean",
++                         printProgress = TRUE)
+# Generated complex of size: 9907872 
+# Persistence timer: Elapsed time [ 0.000000 ] seconds
+> plot(persistDiag[["diagram"]])
+</code>
+</pre>
+</details>
+
+<details>
+<summary style="color:red">See Resulting Persistence Diagram</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/persistdiag1.jpg" alt="rips pts">
+</pre>
+</details>
+
 ---
 
 
