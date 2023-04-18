@@ -58,7 +58,8 @@ is a finite collection of simplices, such that:
 
 
 
-![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/simplicialcomplex.svg)
+![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/asc.svg)
+
 
 Using a simplicial complex, we can interpret topological features in a computational setting.
 
