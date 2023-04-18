@@ -26,14 +26,18 @@ This session is presented by Brittany.
 > - Define `shape` of data
 > - Describe topological and geometric properties of a space/shape
 
-## Getting Started
+## 0. Getting Started
 
-TODO
+We are glad that you are here with us for this workshop!
 
-## TODO:Content here
+## 1. What is Shame?
 
 TODO
 
 ## Wrapping Up
 
 TODO
+
+### Credits
+
+* Koenigsberg Bridge photo: [Wikimedia](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)
