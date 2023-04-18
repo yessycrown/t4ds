@@ -673,4 +673,11 @@ Another common filtration in TDA is the height filtration.
 
 ## Wrapping Up
 
-TODO
+Thanks for your attention to end today's workshop materials! To summarize our accomplishments
+this afternoon:
+
+> - We learned about simplicial complexes, and worked with them in R
+> - We learned about Vietoris-Rips complexes, and used them in R
+> - We learned about filtrations
+> - We learned about persistence diagrams and barcodes, and implemented them in R
+> - We learned about the height filtration
