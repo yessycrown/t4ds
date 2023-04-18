@@ -35,6 +35,8 @@ Once in your workspace, begin by clicking `new project` and selecting an `RStudi
 Name the project whatever you'd like, perhaps something like `R-Intro`. Then use
 `File -> New File -> R Script` to create a new R script.
 
+---
+
 ### Reading data into R
 
 Let's get started with some basic CSV data. It turns out, there is a really easy command
@@ -160,6 +162,7 @@ class(glacier_data)
 Data frames are a central concept in R programming, and the next section shows us some of the things
 we can do with them.
 
+---
 
 ### Fundamental data structures in R
 
@@ -278,6 +281,8 @@ glacier_data[2,]
 
 Therein lies R data manipulation in a nutshell!
 
+---
+
 ### Fundamental visualizations in R
 
 As the language of choice for statisticians, it should come as no surprise that one can also
@@ -352,18 +357,22 @@ plot(x=glacier_data[,1], y=glacier_data[,2], xlab="Year", ylab = "Cumulative Mas
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre>
-<img src="https://comptag.github.io/t4ds/assets/images/glacierplot1.jpg" alt="Flowers in Chania">
+<img src="https://comptag.github.io/t4ds/assets/images/glacierplot1.jpg" alt="sad glaciers">
 </pre>
 </details>
+
+---
 
 ## Working with GIS Data in R
 
 Now that we have some basic data analysis in R under our belt, we'll start working with GIS data,
 which is a bit more complex!
 
+---
+
 ### Some GIS Data to Play With: Montana Counties
 
-For this tutorial we'll work with GIS data coming from Montana county boundaries.
+For this tutorial we'll work with GIS data coming from Montana County boundaries.
 We will download the data directly into R as before, which comes from
 [Montana.gov](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/).
 
@@ -396,6 +405,21 @@ class(counties)
 dim(counties)
 ```
 
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> class(counties)
+[1] "SpatialPolygonsDataFrame"
+attr(,"package")
+[1] "sp"
+> dim(counties)
+[1] 56 15                                      NA's   :1  
+</code>
+</pre>
+</details>
+
 Unlike our CSV data, shapefile data is much more unweildy.
 For a sense of this, take a look at the first few entries of `counties`:
 
@@ -403,5 +427,95 @@ For a sense of this, take a look at the first few entries of `counties`:
 head(counties, 3)
 ```
 
+However, don't despair, many others have come before you and successfully dealt with GIS data in R.
+In fact, R has a built-in method to plot GIS data which is quite satisfying:
+
+```
+plot(counties)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/montanacounties.jpg" alt="The Big Sky">
+</pre>
+</details>
+
+Let's get a better feel for the data. Intuitively, with this shapefile data there should be, well, a 
+shape... defining each County.
+
+We can get the attributes of spatial polygons data (and most labelled data in R) as follows:
+
+```
+names(counties)
+```
+
+
+
+Knowing this, we can get the name of every County using the following syntax:
+
+```
+counties$NAME
+```
+
+In fact, we can do this with any attribute of the counties data. Play around and get a feel for it!
+
+Knowing an attribute of data, we can also find its index. For example, we can find the index of
+Choteau county by:
+
+```
+which(counties$NAME=="CHOUTEAU")
+```
+
+The `which` method also has attributes `max` and `min`. This allows us to find polygons maximizing and minimizing different attributes. For instance, the index of the county in Montana with smallest perimeter is:
+
+```
+which.min(counties$PERIMETER)
+```
+
+Using what you know about indexing in R and dataframes, see if you can find the largest county (by acres) in Montana.
+
+
+
+
+Let's try to select Gallatin County specifically. From the above output, we can see that Gallatin County
+is at index 9:
+
+```
+counties$NAME[9]
+
+# save Gallatin County sp object
+gallatin <- counties[9,]
+```
+
+And visualize Gallatin County:
+
+```
+plot(gallatin)
+```
+
+There are tons of things we can do now with an isolated spatial polygon.
+It should be noted that polygons are defined just as a set of points and a set of edges.
+We can extract the set of points defining a polygon using some careful syntax:
+
+```
+coords <- gallatin@polygons[[1]]@Polygons[[1]]@coords
+coords
+```
+
+We can also test whether not a given point lies within Gallatin County:
+
+
+
+We could sample uniformly from the space:
+
+
+
+---
+
 ### Preparing Data for the Topological Data Analysis Pipeline
 
+TODO
+
+---
