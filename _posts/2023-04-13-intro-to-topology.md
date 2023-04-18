@@ -37,7 +37,7 @@ unknot ourselves?
 
 Knot theory is fun!  If we can unknot ourselves and are one connected component,
 then we have formed **the unknot**, or the most basic/fundamental of all knots.
-If we created two cycles (each unknotted or not), then we have formed a link.
+If we created two cycles (each an unknot or not), then we have formed a link.
 
 [![unknotting](https://img.youtube.com/vi/UmF0-Tz1oWc/hqdefault.jpg)](https://www.youtube.com/watch?v=UmF0-Tz1oWc)
 
@@ -71,9 +71,11 @@ Discuss with your neighbors.
 </details>
 
 <details>
+<br>
 <summary>A: Brittany</summary>
 <br>
 Shape is your interpretation of the connections in data.
+<br>
 </details>
 
 Often, when we think of shapes, we think of their **geometry**: length, witdth,
@@ -82,19 +84,40 @@ shape/data.  Topology studies the connectivity between and among data.
 
 ## 2. Koenigsberg
 
-The [bridges of Koenigsberg][1]
+The ![bridges of Koenigsberg][1] 
+
+## 3. Are Two Shapes the Same or Different?
+
+This is a question that we will come back to tomorrow.
+
+TODO:homeomorphism
+
+TODO: topological invariants
+
+TODO: homotopy
+
+TODO: homology
 
 ## Wrapping Up
 
-TODO
+Congrats! We've made it through the first session.  A quick recap:
+
+> - We made a human knot, unknot, or link! 
+> - We discussed the meaning of shape.
+> - We saw an example where an everyday problem (finding a walking path
+>   satisfying some constraints) can be turned into a graph problem.
+> - We defined some topological invariants (more on these later ...)
+
+We have a break coming up.  If you have any "muddy points" write them down and
+post it to the "muddy point board".
 
 ### Credits
 
 * The human knot is a popular ice breaking game (it even has a [Wikipedia][2]
   page!)  However, most do not realize that realizing the unknot is not always
   feasible. Whoops!  See a [math blog post][3] explaining.
-* Koenigsberg Bridge photo: [Wikimedia][1]
+* Koenigsberg Bridge photo: [Wikimedia][1], CC BY-SA 3.0
 
-[1]: https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png (bridges of Koenigsberg)
+[1]: <https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png> (bridges of Koenigsberg)
 [2]: https://en.wikipedia.org/wiki/Human_knot 
 [3]: https://mathlesstraveled.com/2010/11/19/the-mathematics-of-human-knots/
