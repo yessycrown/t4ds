@@ -86,14 +86,14 @@ shape/data.  Topology studies the connectivity between and among data.
 
 The ![bridges of Koenigsberg][1] 
 
-![Koenigsberg](../assets/images/bridges.png)
+![Koenigsberg](../assets/images/bridges.jpg)
 
 <details>
 <br>
 <summary>A: the graphs!</summary>
 <br>
-![google](../assets/images/bridges-map-and-graph.png)
-![google](../assets/images/bridges-graph.png)
+![google](../assets/images/bridges-map-and-graph.pdf)
+![google](../assets/images/bridges-graph.pdf)
 <br>
 </details>
 
