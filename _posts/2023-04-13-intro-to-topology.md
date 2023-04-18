@@ -64,21 +64,19 @@ come to mind [in this Slido poll](https://app.sli.do/event/jq8wgrEpgBwThxABcHRxj
 Discuss with your neighbors.
 
 <details>
-<summary>A: Meriam Webster</summary>
+<summary>See the Answer</summary>
 <br>
+<pre style="background-color:lightcoral">
+From Meriam Webster:
 <ul>
   <li>The visible makeup characteristic of a particular item or kind of items</li>
   <li>Spatial form or contour</li>
   <li>A standard or universally recognized spatial form</li>
-</ul> 
-</details>
-
-<details>
+</ul>
 <br>
-<summary>A: Brittany</summary>
+From Brittany: shape is a way of putting meaning or interpretability to a set. 
 <br>
-Shape is your interpretation of the connections in data.
-<br>
+</pre>
 </details>
 
 Often, when we think of shapes, we think of their **geometry**: length, witdth,
@@ -90,14 +88,14 @@ shape/data.  Topology studies the connectivity between and among data.
 
 The ![bridges of Koenigsberg][1] 
 
-![Koenigsberg](../assets/images/bridges.jpg)
+![Koenigsberg](https://github.com/compTAG/t4ds/blob/gh-pages/assets/images/bridges.jpg)
 
-<details>
+<summary>See the Answer</summary>
 <br>
-<summary>A: the graphs!</summary>
+<pre style="background-color:lightcoral">
 <br>
-![bridges with map](../assets/images/bridges-map-and-graph.png)
-![just map](../assets/images/bridges-graph.png)
+![bridges with map](https://github.com/compTAG/t4ds/blob/gh-pages/assets/images/bridges-map-and-graph.png)
+![just map](https://github.com/compTAG/t4ds/blob/gh-pages/assets/images/bridges-graph.png)
 <br>
 </details>
 
@@ -163,8 +161,9 @@ What is the Euler characteristic of the sphere?
 
 <details>
 <br>
-<summary>Answer</summary>
+<summary style="color:red">See the Answer</summary>
 <br>
+<pre style="background-color:lightcoral">
     The Euler characteristic of the sphere is 2.  One topological model of the
     sphere is that of a box: it has 8 corners, 12 edges, and 6 squares. 8-12+6=2.
     Alternatively, we can think of it as the surface of a tetrahedron, which has
@@ -173,6 +172,7 @@ What is the Euler characteristic of the sphere?
     Fun fact: the sphwere is the one-point "compactification" of the plane
     $\mathbb{R}^2$.  Add one point (equal to the limit point in every direction) and we
     can construct a homeomorphism between $\mathbb{S}^2$ and $\mathbb{R}^1$.
+</pre>
 <br>
 </details>
 
