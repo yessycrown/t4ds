@@ -514,6 +514,26 @@ $diagram
 </pre>
 </details>
 
+As an object this is not particularly helpful, though we can get insight into birth/death times.
+Let's use the built in plotting functionality for persistence diagrams to get a better look:
+
+```
+plot(persistDiag[["diagram"]])
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/persistdiag1.jpg" alt="rips pts">
+</pre>
+</details>
+
+We can see that the persistence diagram picks up on the birth and death of
+all four individual points, as well as the cycle created at $r=\sqrt{10}$
+and destroyed at $r=\sqrt{13}$. By the end of the filtration,
+there is one 0-dimensional homology group (connected component) persisting as well.
+
 ---
 
 ### The Height Filtration
