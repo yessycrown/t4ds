@@ -38,10 +38,9 @@ unknot ourselves?
 Knot theory is fun!  If we can unknot, then we have formed "the unknot", or the
 most basic/fundamental of all knots.
 
-<video src="https://youtu.be/pryFNjwdL5U" controls="controls" style="max-width: 730px;">
-</video>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zWh3CShX_do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Final video of fixing issues in your code in VS Code]
+(https://img.youtube.com/vi/JLMbpiywVxQ/maxresdefault.jpg)]
+(https://www.youtube.com/watch?v=JLMbpiywVxQ)
 
 Other knots that are interesting (and not equivelent to the unknot) are the
 trefoil knot and the figure 8 knot.
