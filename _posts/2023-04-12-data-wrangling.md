@@ -17,8 +17,7 @@ After this session, we hope you will take away the following:
 > - Learn basic R functionalities and data structures
 > - Visualize data with R
 > - Be able to use R on GIS data
-> - Understand early stages of the data analysis pipeline, by playing with data
-> - Prepare GIS data for the topological data analysis pipeline
+> - Understand early stages of the data analysis pipeline by playing with data
 
 ---
 
@@ -543,7 +542,7 @@ county (by acres) in Montana.
 <details>
 <summary style="color:red">See the Answer</summary>
 <br>
-<pre style="background-color:lightred">
+<pre style="background-color:lightcoral">
 <code>
 > counties$NAME[which.max(counties$ACRES)]
 [1] "BEAVERHEAD"
@@ -563,7 +562,7 @@ gallatin <- # HINT: Get the index of Gallatin county, which corresponds to a row
 <details>
 <summary style="color:red">See the Answer</summary>
 <br>
-<pre style="background-color:lightred">
+<pre style="background-color:lightcoral">
 <code>
 gallatin <- counties[which(counties$NAME=="GALLATIN"),]
 </code>
@@ -602,18 +601,38 @@ plot(coords)
 </pre>
 </details>
 
-We can also test whether not a given point lies within Gallatin County:
 
+We can also test whether not a given point lies within Gallatin County using the `point.in.polygon` function:
 
+```
+point.in.polygon(460000,150000,coords[,1],coords[,2])
+point.in.polygon(1,2,coords[,1],coords[,2])
+```
 
-We could sample uniformly from the space:
-
-
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> point.in.polygon(460000,150000,coords[,1],coords[,2])
+[1] 1
+> point.in.polygon(1,2,coords[,1],coords[,2])
+[1] 0
+</code>
+</pre>
+</details>
 
 ---
 
-### Preparing Data for the Topological Data Analysis Pipeline
+### Wrapping Up
 
-TODO
+Thanks for following along in session 2! To look back on our accomplishments before lunch:
 
+> We learned about basic R programming, data structures, and visualization
+> We dealt with GIS data, which is often quite large and contains many fields
+> We visualized and played with GIS data
+> We extracted the core components in GIS data, the points defining polygons
+
+Enjoy a long lunch in downtown Bozeman! If you have any questions about the above topics, don't hesitate 
+to ask. And if you have muddy points, post them!
 ---
