@@ -70,7 +70,10 @@ Using a simplicial complex, we can interpret topological features in a computati
 For a quick example to drive home the intuition, let's
 create a simplicial complex object in R.
 
-TODO: Ben
+Create a new R script for this session in your project, and call it something like
+`TDA-Intro`.
+
+TODO:Ben
 
 ---
 
