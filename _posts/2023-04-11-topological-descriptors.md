@@ -65,6 +65,15 @@ Using a simplicial complex, we can interpret topological features in a computati
 
 ---
 
+#### Simplicial Complexes in R
+
+For a quick example to drive home the intuition, let's
+create a simplicial complex object in R.
+
+TODO: Ben
+
+---
+
 ### From Point Cloud Data to Simplicial Complexes
 
 Now, you might be wondering, "if simplicial complexes are so great, why have I never seen data
@@ -91,7 +100,13 @@ intersect. The Rips complex is a generalization of contact graphs.
 
 Here are some examples of Rips complexes:
 
+![rips complexes](../assets/images/tda-rips/ripscomplex.svg)
 
+---
+
+#### A Rips complex in R
+
+TODO: Ben
 
 ---
 
