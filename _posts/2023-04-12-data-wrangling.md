@@ -49,7 +49,7 @@ glacier_csv <- 'https://pkgstore.datahub.io/core/glacier-mass-balance/glaciers_c
 glacier_data <- read.csv(file=glacier_csv, header = TRUE)
 
 ```
-</br>
+
 
 
 Go ahead and take a look at the result by running:
@@ -57,7 +57,7 @@ Go ahead and take a look at the result by running:
 ```
 glacier_data
 ```
-</br>
+
 
 
 This data is a collection, on average, of the cumulative mass balance of glaciers worldwide.
@@ -154,7 +154,7 @@ class(glacier_data)
 </code>
 </pre>
 </details>
-</br>
+
 
 
 Data frames are a central concept in R programming, and the next section shows us some of the things
@@ -179,7 +179,7 @@ dim(glacier_data)
 </code>
 </pre>
 </details>
-</br>
+
 
 
 Telling us that our data has 70 rows, and 3 columns. We can grab
@@ -205,7 +205,7 @@ glacier_data[27,3]
 </code>
 </pre>
 </details>
-</br>
+
 
 
 Note that in R, indices start at 1, and not at 0!
@@ -232,7 +232,7 @@ head(glacier_data, 5)
 </code>
 </pre>
 </details>
-</br>
+
 
 
 We can pull multiple entries out
@@ -256,7 +256,7 @@ glacier_data[c(2, 3, 5), c(2, 3)]
 </code>
 </pre>
 </details>
-</br>
+
 
 
 If we want contiguous rows and columns, we can also use:
@@ -265,7 +265,8 @@ If we want contiguous rows and columns, we can also use:
 # grab rows 4 through 10, and all 3 columns
 glacier_data[4:10, 1:3]
 ```
-</br>
+
+
 
 Finally, if we want all rows or all columns,
 we can leave indices blank:
@@ -356,6 +357,8 @@ plot(x=glacier_data[,1], y=glacier_data[,2], xlab="Year", ylab = "Cumulative Mas
 </details>
 
 ## Working with GIS Data in R
+
+
 
 ### Some GIS Data to Play With: Montana Counties
 
