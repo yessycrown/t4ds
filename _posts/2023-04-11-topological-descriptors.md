@@ -57,7 +57,7 @@ is a finite collection of simplices, such that:
 
 <center>
 
-![complex subsets](../assets/images/tda-rips/simplicialcomplex.svg){width=450px}
+![complex subsets](../assets/images/tda-rips/simplicialcomplex.svg)
 
 </center>
 
@@ -70,9 +70,10 @@ Using a simplicial complex, we can interpret topological features in a computati
 Now, you might be wondering, "if simplicial complexes are so great, why have I never seen data
 that looked like one?"
 
-This gets at a central task in topological data analysis- finding topology in point cloud data.
-It turns out that there are tons of ways to convert point cloud data, like the simple glacier data we 
-saw in R, into a simplicial complex. One popular method is called the Vietoris-Rips complex.
+This gets at a major area of study in topological data analysis: finding topology in point cloud data.
+It turns out that there are tons of ways to convert point cloud data into a simplicial complex. One popular method is called the Vietoris-Rips complex.
+
+
 
 ---
 
