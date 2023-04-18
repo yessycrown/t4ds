@@ -35,10 +35,11 @@ We will stand in a circle.  Then, raise right hands and grab someone's hand from
 across the circle.  Then, raise left hands and grab someone else's hand.  Can we
 unknot ourselves?
 
-Knot theory is fun!  If we can unknot, then we have formed "the unknot", or the
-most basic/fundamental of all knots.
+Knot theory is fun!  If we can unknot ourselves and are one connected component,
+then we have formed **the unknot**, or the most basic/fundamental of all knots.
+If we created two cycles (each unknotted or not), then we have formed a link.
 
-[![testing](https://img.youtube.com/vi/JLMbpiywVxQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=JLMbpiywVxQ)
+[![unknotting](https://img.youtube.com/vi/UmF0-Tz1oWc/maxresdefault.jpg)](https://www.youtube.com/watch?v=UmF0-Tz1oWc)
 
 Other knots that are interesting (and not equivelent to the unknot) are the
 trefoil knot and the figure 8 knot.
