@@ -59,19 +59,6 @@ Go ahead and take a look at the result by running:
 glacier_data
 ```
 
-
-
-This data is a collection, on average, of the cumulative mass balance of glaciers worldwide.
-The cumulative mass balance is a measure of the health of a glacier, and is a weighted difference
-between yearly mass gain (snow accumulation), and yearly mass loss (melting).
-We can see that each entry is comprised of a year, an average value, and the number of observations. 
-
-And see what class the data is with:
-
-```
-class(glacier_data)
-```
-
 <details style="color:blue">
 <summary>Expected Output</summary>
 <br>
@@ -150,6 +137,28 @@ class(glacier_data)
 68 2012                      -26.930                     36
 69 2013                      -27.817                     31
 70 2014                      -28.652                     24
+</code>
+</pre>
+</details>
+
+
+
+This data is a collection, on average, of the cumulative mass balance of glaciers worldwide.
+The cumulative mass balance is a measure of the health of a glacier, and is a weighted difference
+between yearly mass gain (snow accumulation), and yearly mass loss (melting).
+We can see that each entry is comprised of a year, an average value, and the number of observations. 
+
+And see what class the data is with:
+
+```
+class(glacier_data)
+```
+
+<details style="color:blue">
+<summary>Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
 > class(glacier_data)
 [1] "data.frame"
 </code>
@@ -419,13 +428,18 @@ attr(,"package")
 </pre>
 </details>
 
+We can see that we're working now with a new type of data: `sp` data or "spatial data".
+Thankfully, this data inherits lots of the same funtionality from dataframes. We can see
+that we're working with a more complex matrix as well; this one has 56 rows and 15 columns.
+
 Unlike our CSV data, shapefile data is much more unweildy.
-For a sense of this, take a look at the first few entries of `counties`:
+For a better sense of this, take a look at the first few entries of `counties`:
 
 ```
 head(counties, 3)
 ```
 
+Clearly, this GIS data is more involved to wrap one's mind around.
 However, don't despair, many others have come before you and successfully dealt with GIS data in R.
 In fact, R has a built-in function to plot GIS data which is quite satisfying:
 
@@ -621,6 +635,10 @@ point.in.polygon(1,2,coords[,1],coords[,2])
 </code>
 </pre>
 </details>
+
+If a point is assigned a 1, then the point lies within the polygon, and if it is a 0, the point lies
+outside of the polygon. This will be of great importance later on, when we conduct segmentation tasks
+for topological data analysis. Stay tuned!
 
 ---
 
