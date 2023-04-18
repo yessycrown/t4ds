@@ -35,12 +35,11 @@ We will stand in a circle.  Then, raise right hands and grab someone's hand from
 across the circle.  Then, raise left hands and grab someone else's hand.  Can we
 unknot ourselves?
 
-Knot theory is fun!  If we can unknot, then we have formed "the unknot", or the
-most basic/fundamental of all knots.
+Knot theory is fun!  If we can unknot ourselves and are one connected component,
+then we have formed **the unknot**, or the most basic/fundamental of all knots.
+If we created two cycles (each unknotted or not), then we have formed a link.
 
-<video src="https://www.youtube.com/watch?v=UmF0-Tz1oWc" controls="controls" style="max-width: 730px;">
-</video>
-
+[![unknotting](https://img.youtube.com/vi/UmF0-Tz1oWc/maxresdefault.jpg)](https://www.youtube.com/watch?v=UmF0-Tz1oWc)
 
 Other knots that are interesting (and not equivelent to the unknot) are the
 trefoil knot and the figure 8 knot.
@@ -54,10 +53,24 @@ Variants to try (in smaller groups):
 2. Can you form the trefoil knot?
 3. What about the figure 8 knot?
 
-## 1. What is Shame?
+## 1. What is Shame (in Data Science)?
+
+Write down your answer to the question: what is shape?
+
+Discuss with your neighbors.
 
 <details>
-<summary>What is "shape" (in data science)?</summary>
+<summary>A: Meriam Webster</summary>
+<br>
+<ul>
+  <li>The visible makeup characteristic of a particular item or kind of items</li>
+  <li>Spatial form or contour</li>
+  <li>A standard or universally recognized spatial form</li>
+</ul> 
+</details>
+
+<details>
+<summary>A: Brittany</summary>
 <br>
 Shape is your interpretation of the connections in data.
 </details>
