@@ -536,13 +536,108 @@ there is one 0-dimensional homology group (connected component) persisting as we
 
 ---
 
+#### A Rips Filtration On GIS Data
+
+So far, we have mostly only been working with toy examples. Let's work now with a
+big data set, which will illuminate some of the considerations that data scientists
+must make in practice. 
+
+We will again use the Montana County data from this morning. You should be able to access
+it while working in the same project, even if you are working in a different R script.
+Try accessing it in your current script.
+
+```
+names(counties)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> names(counties)
+ [1] "NAME"       "NAMEABBR"   "COUNTYNUMB" "PKEY"      
+ [5] "SQMILES"    "PERIMETER"  "ACRES"      "ALLFIPS"   
+ [9] "FIPS"       "LAST_UPDAT" "NAMELABEL"  "BAS_ID"    
+[13] "ID_UK"      "Shape_Leng" "Shape_Area"
+</code>
+</pre>
+</details>
+
+On your own, try selecting the spatial data corresponding to Flathead, Missoula, and Sanders county.
+(HINT: Remember we can use the `which()` function to get the index of a given element)
+
+```
+# get the three counties surrounding Lake county, and Flathead lake.
+lakeNeighbors <- # select Flathead, Missoula, and Sanders county
+```
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+lakeNeighbors <- counties[c(which(counties$NAME=="FLATHEAD"), which(counties$NAME=="MISSOULA"), which(counties$NAME=="SANDERS")), ]
+</code>
+</pre>
+</details>
+
+If you did this correctly, you should be able to achieve the following plot:
+
+```
+plot(lakeNeighbors)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/lakeneighbors.jpg" alt="lake">
+</pre>
+</details>
+
+Now that we have these counties selected, use the `spsample` function to sample 4000
+points at random from the three counties, and save the sample in a new variable
+`lakeSample`.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+lakeSample <- spsample(lakeNeighbors, n=4000, "random")
+</code>
+</pre>
+</details>
+
+You can plot the result, which should match the shape of the three counties you've selected.
+
+```
+plot(lakeSample, pch=20, cex=.5)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/lakensample.jpg" alt="lake">
+</pre>
+</details>
+
+---
+
+
+### Other Filtrations
+
+We now discuss slightly more complex filtrations, now that we have some TDA under our belt.
+
+---
+
 ### The Height Filtration
 
 TODO: Brittany discuss the theory behind this, Ben create examples.
 
 Another common filtration in TDA is the height filtration.
-
-
 
 ---
 
