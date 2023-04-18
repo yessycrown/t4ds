@@ -53,7 +53,7 @@ Variants to try (in smaller groups):
 2. Can you form the trefoil knot?
 3. What about the figure 8 knot?
 
-## 1. What is Shame (in Data Science)?
+## 1. What is Shape (in Data Science)?
 
 Write down your answer to the question: what is shape?  Write three words that
 come to mind [in this Slido poll](https://app.sli.do/event/jq8wgrEpgBwThxABcHRxja)
@@ -86,6 +86,19 @@ shape/data.  Topology studies the connectivity between and among data.
 
 The ![bridges of Koenigsberg][1] 
 
+:![Koenigsberg](../assets/images/bridges.png)
+
+<details>
+<br>
+<summary>A: the graphs!</summary>
+<br>
+:![google](../assets/images/bridges-map-and-graph.png)
+:![google](../assets/images/bridges-graph.png)
+<br>
+</details>
+
+
+
 ## 3. Are Two Shapes the Same or Different?
 
 This is a question that we will come back to tomorrow.
@@ -116,8 +129,12 @@ post it to the "muddy point board".
 * The human knot is a popular ice breaking game (it even has a [Wikipedia][2]
   page!)  However, most do not realize that realizing the unknot is not always
   feasible. Whoops!  See a [math blog post][3] explaining.
-* Koenigsberg Bridge photo: [Wikimedia][1], CC BY-SA 3.0
+* Koenigsberg Bridge photo (teaser): [Wikimedia][1], CC BY-SA 3.0
+* Euler's maps: from Euler's solution to the Bridges of Koenigsberg problem in
+  Solutio Problematis ad Geometriam Situs Pertinentis (The solution of a problem
+  Relating to the Geometry of Position), [Euler Arxiv, Enestrom Number 53][4].
 
 [1]: <https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png> (bridges of Koenigsberg)
 [2]: https://en.wikipedia.org/wiki/Human_knot 
 [3]: https://mathlesstraveled.com/2010/11/19/the-mathematics-of-human-knots/
+[4]: <https://scholarlycommons.pacific.edu/euler-works/53/> 
