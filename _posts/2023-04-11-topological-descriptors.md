@@ -87,7 +87,7 @@ myFirstList <- list(1, TRUE, "There's a string in my list too!")
 ```
 
 Knowing this, we can create a simplicial complex using only the `list()`
-and `c()` functions to create a list object and `combine` objects, which we saw earlier.
+and `c()` functions to create a list object and `combine` function, which we saw earlier.
 Typically, we label each vertex in a simplicial complex with an integer, and build the
 complex accordingly. Here's how to do it for two vertices joined by an edge.
 
@@ -175,9 +175,45 @@ Here are some examples of Rips complexes:
 
 ---
 
-#### A Rips complex in R
+### The Vietoris-Rips Filtration
 
-TODO: Ben
+A *filtration* of a simplicial complex, $K$, is a nested sequence of subcomplexes starting at the
+empty set and ending with the full simplicial complex, i.e.,
+
+$\emptyset \subset K_0 \subset K_1 \subset ... \subset K_n=K.$
+
+Going back to the Rips complex, we consider $r$ to be a free parameter. If we vary $r$, we
+get different Rips complexes. In many data analysis situations, the value of $r$ that best describes
+the data is unknown or does not exist, so why not look at all of them!? Observe if we increase $r$
+continuously, then we get a family of nested Rips complexes; the *Rips filtration*.
+
+Let's work through an example. Let $S:=\{(0,0),(1,3),(2,-1),(3,2)\}\subset \mathbb{R}^2$. We
+want to compute a Rips filtration on $S$ for all $r\geq 0$.
+
+![rips filtration](../assets/images/tda-rips/ripsfilt.svg)
+
+Observe:
+
+* When $r<\sqrt{5}$, none of the balls of radius $\frac{r}{2}$ intersect and so $\text{VR}(S,r$) is
+four points.
+* When $r=\sqrt{5}$, the balls of radius $\frac{\sqrt{5}}{2}$ centered at $(0,0)$ and
+$(2,-1)$ intersect which means we add a 1-simplex between $(0,0)$ and $(2,-1)$. Similarly,
+we add a 1-simplex between $(1,3)$ and $(3,2)$.
+* When $r\in (\sqrt{5},\sqrt{10})$, no additional balls of radius $\frac{r}{2}$ intersect which means $\text{VR}(S, r)=\text{VR}(S, \sqrt{5}$).
+* When $r=\sqrt{10}$, we add a two more 1-simplices between $(0,0), (1,3)$, and $(2,-1),
+(3,2)$.
+* When $r \in (\sqrt{10},\sqrt{13})$, $\text{VR}(S,r)=\text{VR}(S, \sqrt{10}).$
+* When $r=\sqrt{13}$, we add two 2-simplices between $(0,0),(1,3),(2,-1)$ and
+$(1,3),(2,-1),(3,2)$.
+* When $r \in (\sqrt{13},\sqrt{17})$, $\text{VR}(S,r)=\text{VR}(S, \sqrt{13}).$
+* When $r=\sqrt{17}$, we add a 3-simplex.
+* When $r>\sqrt{17}$, $\text{VR}(S,r)=\text{VR}(S, \sqrt{17}).$
+
+---
+
+#### A Rips Filtration
+
+In practice, we can create Rips complexes in R
 
 ---
 
