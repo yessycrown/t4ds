@@ -209,6 +209,16 @@ $(1,3),(2,-1),(3,2)$.
 * When $r=\sqrt{17}$, we add a 3-simplex.
 * When $r>\sqrt{17}$, $\text{VR}(S,r)=\text{VR}(S, \sqrt{17}).$
 
+Hopefully this makes sense! 
+
+<details>
+<summary style="color:blue">If not, we also made a movie:</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/rips_example.gif" alt="gallatin plot">
+</pre>
+</details>
+
 ---
 
 #### A Rips Filtration
