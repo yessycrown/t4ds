@@ -22,7 +22,11 @@ theory, and Ben will lead R programming sections.
 
 After this session, we hope that you will  be able to:
 
-- TODO
+> - Understand how topological shape can exist in data
+> - Gain a working knowledge of persistence barcodes and diagrams
+> - Gain exposure to the Vietoris-Rips and other complexes
+> - Know how to begin the topological data analysis pipeline in R
+> - Know how to conduct the Vietoris-Rips and the height filtration in R
 
 ## Getting Started
 
