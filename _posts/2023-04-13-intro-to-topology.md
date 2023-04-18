@@ -125,7 +125,7 @@ The strongest form of shape equivalence is that of a homeomorphism:
 
 What this means is the perspective of $a \in A$ "looks like" the perspective of $b \in B$.
 
-![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
+[![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph_frame.png)](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
 
 ### Topological Invariants
 
