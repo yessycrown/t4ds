@@ -48,16 +48,18 @@ Intuitively, we call an $n$-dimensional triangle an *n-simplex*.
 More rigorously,
 an *n-simplex* is the smallest convex set of $n+1$ points,
 $v_0,...,v_{n}$ where $v_1-v_0,...,v_{n}-v_0$ are linearly independent.
+An $n$-simplex has $n+1$ *faces* of dimension $n-1$. For example,
+a 2-simplex has three 1-dimensional faces (edges).
 
 We can link simplices together to form a *simplicial complex*. In particular, a *simplicial complex* $K$
 is a finite collection of simplices, such that:
-1. If $\sigma \in K$ and $\tau \subset \sigma$, then $$\tau \in K$.
+1. If $\sigma \in K$ and $\tau \subset \sigma$, then $\tau \in K$.
 2. If $\sigma, \sigma'\in K$, then $\sigma \cap \sigma'$ is either empty or a face of both $\sigma, \sigma'$.
 
 
 <center>
 
-![complex subsets](../assets/images/tda-rips/simplicialcomplex.svg)
+![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/simplicialcomplex.svg)
 
 </center>
 
