@@ -463,6 +463,9 @@ the same results that we found by hand.
 </pre>
 </details>
 
+Now that we have a good sense of Vietoris-Rips complexes,
+and the filtration that results treating $r>0$ as a free variable,
+we now will discuss useful data structures to store and interpret filtrations.
 
 ---
 
