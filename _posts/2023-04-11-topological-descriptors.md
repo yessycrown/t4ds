@@ -39,11 +39,11 @@ a type of data that holds intrinsic topological meaning.
 
 ### Triangle appreciation
 
-Of course we are all familiar with triangles, and to understand the Rips filtration, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from 0 to n. (Where the -1th dimensional triangle being a null value).
+Of course we are all familiar with triangles, and to understand computational topology, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from 0 to n. (Where the -1th dimensional triangle being a null value).
 
 ![n dimensional triangles](https://i.stack.imgur.com/O6xtg.png)
 
-You can think of a simplex as synonymous with an $n$ dimensional triangle. 
+Intuitively, we call an $n$-dimensional triangle an *n-simplex*.
 
 More rigorously,
 an *n-simplex* is the smallest convex set of $n+1$ points,
@@ -57,7 +57,7 @@ is a finite collection of simplices, such that:
 
 <center>
 
-![](../assets/images/tda-rips/simplicialcomplex.svg){width=450px}
+![complex subsets](../assets/images/tda-rips/simplicialcomplex.svg){width=450px}
 
 </center>
 
