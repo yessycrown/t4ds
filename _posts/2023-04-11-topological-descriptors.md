@@ -28,10 +28,14 @@ After this session, we hope that you will  be able to:
 > - Know how to begin the topological data analysis pipeline in R
 > - Know how to conduct the Vietoris-Rips and the height filtration in R
 
+---
+
 ## Getting Started
 
 We begin this session by introducing simplicial complexes, which are 
 a type of data that holds intrinsic topological meaning.
+
+---
 
 ### Triangle appreciation
 
@@ -39,26 +43,41 @@ Of course we are all familiar with triangles, and to understand the Rips filtrat
 
 ![n dimensional triangles](https://i.stack.imgur.com/O6xtg.png)
 
-A simplex is synonymous with an n dimensional triangle, that is it is just a triangle of any dimension.
+You can think of a simplex as synonymous with an $n$ dimensional triangle. 
 
-We can link simplices together to form a *simplicial complex*. In particular, a *simplicial complex*
-is a finite collection of simplices, ```math K```, such that (1) if $$\sigma \in K$$ and $$\tau\leq \sigma$$,
-then $$\tau \in K$$, and (2) if $$\sigma, \sigma'\in K$$, then $$\sigma\cap \sigma'$$ is either empty
-or a face of both.
+More rigorously,
+an *n-simplex* is the smallest convex set of $n+1$ points,
+$v_0,...,v_{n}$ where $v_1-v_0,...,v_{n}-v_0$ are linearly independent.
+
+We can link simplices together to form a *simplicial complex*. In particular, a *simplicial complex* $K$
+is a finite collection of simplices, such that:
+1. If $\sigma \in K$ and $\tau \subset \sigma$, then $$\tau \in K$.
+2. If $\sigma, \sigma'\in K$, then $\sigma \cap \sigma'$ is either empty or a face of both $\sigma, \sigma'$.
+
 
 <center>
 
-![](../assets/images/simplicialcomplex.svg){width=450px}
+![](../assets/images/tda-rips/simplicialcomplex.svg){width=450px}
 
 </center>
 
+Using a simplicial complex, we can interpret topological features in a computational setting.
+
+---
+
 ### From Point Cloud Data to Simplicial Complexes
 
+Now, you might be wondering, "if simplicial complexes are so great, why have I never seen data
+that looked like one?"
+
+This gets at a central task in topological data analysis- finding topology in point cloud data.
+It turns out that there are tons of ways to convert point cloud data, like the simple glacier data we 
+saw in R, into a simplicial complex. One popular method is called the Vietoris-Rips complex.
+
+---
 
 
-## TODO:content here
 
-TODO
 
 ## Wrapping Up
 
