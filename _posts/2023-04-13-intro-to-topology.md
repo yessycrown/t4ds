@@ -28,16 +28,23 @@ This session is presented by Brittany.
 
 ## 0. Getting Started
 
-We are glad that you are here with us for this workshop!
+We are glad that you are here with us for this workshop!  The first activity is
+hands-on, literally.
 
 ## 1. What is Shame?
 
 TODO
+
+## 2. Koenigsberg
+
+The [bridges of Koenigsberg][1]
 
 ## Wrapping Up
 
 TODO
 
 ### Credits
+
+[1]: <https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png> (the bridge)
 
 * Koenigsberg Bridge photo: [Wikimedia](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)
