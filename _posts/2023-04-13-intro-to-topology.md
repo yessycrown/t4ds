@@ -12,6 +12,7 @@ tags:
 - data
 ---
 
+---
 ## Overview
 
 In this session, we will have a light and fast introduction to the subject of
@@ -26,7 +27,8 @@ This session is presented by Brittany.
 > - Define `shape` of data
 > - Describe topological and geometric properties of a space/shape
 
-## 0. Getting Started
+---
+## 1. Getting Started
 
 We are glad that you are here with us for this workshop!  The first activity is
 hands-on, literally.
