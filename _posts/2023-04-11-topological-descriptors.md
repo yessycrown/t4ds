@@ -668,6 +668,49 @@ If we set maxdimension=1 and maxscale=20000, we should be able to compute this o
 TODO: Brittany discuss the theory behind this, Ben create examples.
 
 Another common filtration in TDA is the height filtration.
+This takes a different form from the Vietoris-Rips filtration,
+in that all data is not born from the onset of the filtration.
+In contrast, we can intuitively think of the height filtration as a
+curtain rising on a simplicial complex.
+
+TODO: Brittany add theory here, and perhaps motivate the height filtration a bit
+
+TODO: Ben expand/improve this example. Maybe use toy example chosen by Brittany.
+
+One especially useful function in the TDA package is `circleunif`, which creates
+a point cloud by randomly sampling on the unit circle. This is handy when getting familiar
+with TDA as an easy way to create data with interesting topology.
+We will randomly sample in this way from the unit circle, and then create a Rips complex.
+Once we've done that, we will conduct a height filtration on the Rips complex.
+
+```
+X <- circleUnif(n=6, r=1)
+```
+
+Then we create a rips complex:
+
+```
+FltRips <- ripsFiltration(X = X, maxdimension = 2,
+                          maxscale = 1.5, dist = "euclidean", library = "Dionysus",
+                          printProgress = TRUE)
+```
+
+Assign height function values to each vertex,
+and conduct a height filtration:
+
+```
+FUNvalues <- X[, 1] + X[, 2]
+FltFun <- funFiltration(FUNvalues = FUNvalues, cmplx = FltRips[["cmplx"]])
+```
+
+Be sure to visualize your resulting simplicial complex after the filtration:
+
+```
+FltFun$cmplx
+```
+
+
+
 
 ---
 
