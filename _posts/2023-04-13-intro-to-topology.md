@@ -55,7 +55,8 @@ Variants to try (in smaller groups):
 
 ## 1. What is Shame (in Data Science)?
 
-Write down your answer to the question: what is shape?
+Write down your answer to the question: what is shape?  Write three words that
+come to mind [in this Slido poll](https://app.sli.do/event/jq8wgrEpgBwThxABcHRxja)
 
 Discuss with your neighbors.
 
@@ -74,6 +75,10 @@ Discuss with your neighbors.
 <br>
 Shape is your interpretation of the connections in data.
 </details>
+
+Often, when we think of shapes, we think of their **geometry**: length, witdth,
+angles, curvature, area, etc.  In this workshop, we explore the **topology** of
+shape/data.  Topology studies the connectivity between and among data.
 
 ## 2. Koenigsberg
 
