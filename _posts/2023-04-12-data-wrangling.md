@@ -628,10 +628,10 @@ point.in.polygon(1,2,coords[,1],coords[,2])
 
 Thanks for following along in session 2! To look back on our accomplishments before lunch:
 
-> We learned about basic R programming, data structures, and visualization
-> We dealt with GIS data, which is often quite large and contains many fields
-> We visualized and played with GIS data
-> We extracted the core components in GIS data, the points defining polygons
+> - We learned about basic R programming, data structures, and visualization
+> - We dealt with GIS data, which is often quite large and contains many fields
+> - We visualized and played with GIS data
+> - We extracted the core components in GIS data, the points defining polygons
 
 Enjoy a long lunch in downtown Bozeman! If you have any questions about the above topics, don't hesitate 
 to ask. And if you have muddy points, post them!
