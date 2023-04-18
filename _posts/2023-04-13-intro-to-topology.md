@@ -114,7 +114,7 @@ we mean a topological space.
 
 ### Maps and Homeomorphisms
 
-Knowing this, we can define a **continuous map** as:
+If we have an understanding of open sets, we can define a **continuous map** as:
 
 > $ f : A \to B$ is continuous iff for all open sets $U$ in $B$, $f^{-1}(U)$ is open in $A$.
 
@@ -123,7 +123,9 @@ The strongest form of shape equivalence is that of a homeomorphism:
 > Two shapes, A and B, are homeomorphic iff there exists a bi-continuous
 > bijective map $H:A \to B$.
 
-What this means is the perspective of $a \in A$ "looks like" the perspective of $b \in B$.
+What this means is the perspective of $a \in A$ "looks like" the perspective of
+$b \in B$.  In other words, the two shapes are "the same" if all you care about
+are the neigghborhoods.
 
 [![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph_frame.png)](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
 
@@ -132,11 +134,49 @@ What this means is the perspective of $a \in A$ "looks like" the perspective of 
 Can we explore every map $A \to B$? Nope!  Instead, we study topological
 invariants.
 
-TODO: topological invariants
+The first invariant we consider is that of a homotopy.
 
-TODO: homotopy
+> TODO: define homotopy
 
-TODO: homology
+The isotopy we saw above of the donut and the coffee mug is a homotopy.  Also,
+deformation retracts (think: continuously morphing by contracting) are homotopies!
+
+Herea are a couple examples:
+
+* [deformation retract of a punctured torus](https://www.youtube.com/watch?v=j2HxBUaoaPU)
+* [homotopy between two curves](https://www.youtube.com/watch?v=o7p9AJ5VCHo)
+
+The problem with classifying shapes up to homotopy is that they are $\#P$-hard
+to compute.  So, we need to be able to compute some things.
+
+The **Euler characteristic** of a shape is found by first representing the shape
+as a cellular structure (for us, this means finding a parttition into vertices,
+edges (that do not include their endpoints), and triangles or squares (that do
+not include their boundaries). 
+
+What is the Euler characteristic of the sphere?
+
+<details>
+<br>
+<summary>Answer</summary>
+<br>
+    The Euler characteristic of the sphere is 2.  One topological model of the
+    sphere is that of a box: it has 8 corners, 12 edges, and 6 squares. 8-12+6=2.
+    Alternatively, we can think of it as the surface of a tetrahedron, which has
+    4 vertices, 6 edges, and 4 triangles. 4-6+4+2.
+
+    Fun fact: the sphwere is the one-point "compactification" of the plane
+    $\mathbb{R}^2$.  Add one point (equal to the limit point in every direction) and we
+    can construct a homeomorphism between $\mathbb{S}^2$ and $\mathbb{R}^1$.
+<br>
+</details>
+
+Finally, we come to **homology**, a topological invaraint that we'll use quite a
+bit in our exploration.
+
+> TODO: define homology
+
+TODO: a question on homology
 
 ## Wrapping Up
 
