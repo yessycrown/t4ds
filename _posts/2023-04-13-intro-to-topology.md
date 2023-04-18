@@ -92,8 +92,8 @@ The ![bridges of Koenigsberg][1]
 <br>
 <summary>A: the graphs!</summary>
 <br>
-![google](../assets/images/bridges-map-and-graph.pdf)
-![google](../assets/images/bridges-graph.pdf)
+![google](../assets/images/bridges-map-and-graph.png)
+![google](../assets/images/bridges-graph.png)
 <br>
 </details>
 
