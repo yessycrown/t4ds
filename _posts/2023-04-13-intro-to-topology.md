@@ -39,7 +39,7 @@ Knot theory is fun!  If we can unknot ourselves and are one connected component,
 then we have formed **the unknot**, or the most basic/fundamental of all knots.
 If we created two cycles (each unknotted or not), then we have formed a link.
 
-[![unknotting](https://img.youtube.com/vi/UmF0-Tz1oWc/maxresdefault.jpg)](https://www.youtube.com/watch?v=UmF0-Tz1oWc)
+[![unknotting](https://img.youtube.com/vi/UmF0-Tz1oWc/hqdefault.jpg)](https://www.youtube.com/watch?v=UmF0-Tz1oWc)
 
 Other knots that are interesting (and not equivelent to the unknot) are the
 trefoil knot and the figure 8 knot.
