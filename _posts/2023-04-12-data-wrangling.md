@@ -11,7 +11,10 @@ tags:
 
 ## Overview
 
-TODO:write short overview
+In this session we give a basic introduction to R, and its usefulness
+when handling data. We cover fundamental data structures in R, 
+along with basic visualizations. We extend these techniques to work with
+larger GIS data.
 
 This session is presented by Ben.
 
