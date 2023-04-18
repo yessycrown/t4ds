@@ -8,11 +8,14 @@ tags:
 ---
 
 ---
+
 ## Overview
 
-After this session, we hope you will take away the following:
+TODO:write short overview
 
-### Objectives
+This session is presented by Ben.
+
+***Objectives***: After this session, we hope you will be able to:
 > - Learn how to read data into R
 > - Learn basic R functionalities and data structures
 > - Visualize data with R
@@ -21,7 +24,7 @@ After this session, we hope you will take away the following:
 
 ---
 
-## Getting Started
+## 1. Getting Started
 
 Before we really get going with topology and topological data analysis, 
 we first need a basic understanding of how to handle data in R.
@@ -371,7 +374,7 @@ plot(x=glacier_data[,1], y=glacier_data[,2], xlab="Year", ylab = "Cumulative Mas
 
 ---
 
-## Working with GIS Data in R
+## 2. Working with GIS Data in R
 
 Now that we have some basic data analysis in R under our belt, we'll start working with GIS data,
 which is a bit more complex!
