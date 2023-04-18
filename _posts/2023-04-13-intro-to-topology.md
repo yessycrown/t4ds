@@ -31,9 +31,42 @@ This session is presented by Brittany.
 We are glad that you are here with us for this workshop!  The first activity is
 hands-on, literally.
 
+We will stand in a circle.  Then, raise right hands and grab someone's hand from
+across the circle.  Then, raise left hands and grab someone else's hand.  Can we
+unknot ourselves?
+
+Knot theory is fun!  If we can unknot, then we have formed "the unknot", or the
+most basic/fundamental of all knots.
+
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/watch?v=UmF0-Tz1oWc"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+
+Other knots that are interesting (and not equivelent to the unknot) are the
+trefoil knot and the figure 8 knot.
+
+TODO:figure
+
+Variants to try (in smaller groups):
+
+1. If you start facing each other and hold your neighbor's hands, can you
+   turn your circle "inside-out" and have your backs facing inward?
+2. Can you form the trefoil knot?
+3. What about the figure 8 knot?
+
 ## 1. What is Shame?
 
-TODO
+<details>
+<summary>What is "shape" (in data science)?</summary>
+<br>
+Shape is your interpretation of the connections in data.
+</details>
 
 ## 2. Koenigsberg
 
@@ -45,6 +78,11 @@ TODO
 
 ### Credits
 
-[1]: <https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png> (the bridge)
+* The human knot is a popular ice breaking game (it even has a [Wikipedia][2]
+  page!)  However, most do not realize that realizing the unknot is not always
+  feasible. Whoops!  See a [math blog post][3] explaining.
+* Koenigsberg Bridge photo: [Wikimedia][1]
 
-* Koenigsberg Bridge photo: [Wikimedia](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)
+[1]: https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png (bridges of Koenigsberg)
+[2]: https://en.wikipedia.org/wiki/Human_knot 
+[3]: https://mathlesstraveled.com/2010/11/19/the-mathematics-of-human-knots/
