@@ -68,12 +68,79 @@ Using a simplicial complex, we can interpret topological features in a computati
 #### Simplicial Complexes in R
 
 For a quick example to drive home the intuition, let's
-create a simplicial complex object in R.
+create a simplicial complex in R.
 
 Create a new R script for this session in your project, and call it something like
-`TDA-Intro`.
+`TDA-Intro`. This afternoon we're getting our feet wet with topological data analysis,
+so we'll need to install and import the R TDA package.
 
-TODO:Ben
+```
+install.packages("TDA")
+library(TDA)
+```
+
+In the R TDA package, simplicial complexes are typically represented as lists.
+We haven't seen lists yet, but they are quite simple to create:
+
+```
+myFirstList <- list(1, TRUE, "There's a string in my list too!")
+```
+
+Knowing this, we can create a simplicial complex using only the `list()`
+and `c()` functions to create a list object and `combine` objects, which we saw earlier.
+Typically, we label each vertex in a simplicial complex with an integer, and build the
+complex accordingly. Here's how to do it for two vertices joined by an edge.
+
+```
+simpleK <- list(1, 2, c(1,2))
+```
+
+Try it yourself! See if you can create the simplicial complex in the example above,
+combinatorially defined by the set $A$.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+> K <- list(1,2,3,4,c(1,2),c(1,3),c(1,4),c(2,3),c(2,4),c(3,4),c(1,2,3))
+> K
+[[1]]
+[1] 1
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] 3
+
+[[4]]
+[1] 4
+
+[[5]]
+[1] 1 2
+
+[[6]]
+[1] 1 3
+
+[[7]]
+[1] 1 4
+
+[[8]]
+[1] 2 3
+
+[[9]]
+[1] 2 4
+
+[[10]]
+[1] 3 4
+
+[[11]]
+[1] 1 2 3
+</code>
+</pre>
+</details>
+
 
 ---
 
