@@ -480,7 +480,39 @@ TODO: Brittany and Ben jointly here
 
 In the example above, it would be convenient if we could store the changes resulting from
 a filtration in some way. This is the purpose of persistence diagrams, which keep track of
-the "times" at which topological features are created or destroyed.
+the "times" at which topological features are created or destroyed. That is, persistence
+diagrams record the persistence of homology in different dimensions.
+
+If we wanted to record the filtration from earlier in a persistence diagram, we can 
+do so in R using the `ripsDiag` function, where `X` is the dataset of four points and maxscale
+is $\sqrt{17}$:
+
+```
+persistDiag <- ripsDiag(X, maxdimension, maxscale=maxscale, dist = dist,
+                    printProgress = TRUE)
+persistDiag
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> persistDiag <- ripsDiag(X, maxdimension, maxscale=maxscale, dist = dist,
++                     printProgress = TRUE)
+# Generated complex of size: 15 
+# Persistence timer: Elapsed time [ 0.000000 ] seconds
+> persistDiag
+$diagram
+     dimension    Birth    Death
+[1,]         0 0.000000 4.123106
+[2,]         0 0.000000 3.162278
+[3,]         0 0.000000 2.236068
+[4,]         0 0.000000 2.236068
+[5,]         1 3.162278 3.605551
+</code>
+</pre>
+</details>
 
 ---
 
