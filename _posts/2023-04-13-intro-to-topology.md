@@ -38,7 +38,7 @@ unknot ourselves?
 Knot theory is fun!  If we can unknot, then we have formed "the unknot", or the
 most basic/fundamental of all knots.
 
-<video src="https://www.youtube.com/watch?v=UmF0-Tz1oWc" controls="controls" style="max-width: 730px;">
+<video src="https://youtu.be/pryFNjwdL5U" controls="controls" style="max-width: 730px;">
 </video>
 
 
