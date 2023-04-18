@@ -644,5 +644,5 @@ tutorials, which are a big inspiration for the style of this workshop
 - The glacier CSV data was taken from [datahub.io](https://datahub.io/core/glacier-mass-balance#data) and studies the average mass balance of glaciers worldwide between 1945 and 2014. This data was sourced from the US EPA and the World Glacier Monitoring Service.
 - The Montana county shape data was sourced from the Montana state government's website with data
 on [administrative boundaries](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/)
-
+- The heroic mountainscape at the top of the page comes from the National Parks Service, in Glacier National Park.
 
