@@ -55,7 +55,8 @@ Variants to try (in smaller groups):
 2. Can you form the trefoil knot?
 3. What about the figure 8 knot?
 
-## 1. What is Shape (in Data Science)?
+---
+## 2. What is Shape (in Data Science)?
 
 Write down your answer to the question: what is shape?  Write three words that
 come to mind [in this Slido poll](https://app.sli.do/event/jq8wgrEpgBwThxABcHRxja)
@@ -84,7 +85,8 @@ Often, when we think of shapes, we think of their **geometry**: length, witdth,
 angles, curvature, area, etc.  In this workshop, we explore the **topology** of
 shape/data.  Topology studies the connectivity between and among data.
 
-## 2. Koenigsberg
+---
+## 3. Koenigsberg
 
 The ![bridges of Koenigsberg][1] 
 
@@ -99,7 +101,8 @@ The ![bridges of Koenigsberg][1]
 <br>
 </details>
 
-## 3. Are Two Shapes the Same or Different?
+---
+## 4. Are Two Shapes the Same or Different?
 
 This is a question that we will come back to tomorrow.
 
@@ -180,7 +183,8 @@ bit in our exploration.
 
 TODO: a question on homology
 
-## Wrapping Up
+---
+## 5. Wrapping Up
 
 Congrats! We've made it through the first session.  A quick recap:
 

@@ -645,7 +645,7 @@ for topological data analysis. Stay tuned!
 
 ---
 
-### Wrapping Up
+## 3. Wrapping Up
 
 Thanks for following along in session 2! To look back on our accomplishments before lunch:
 
