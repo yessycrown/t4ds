@@ -171,7 +171,7 @@ intersect. The Rips complex is a generalization of contact graphs.
 
 Here are some examples of Rips complexes:
 
-![rips complexes](../assets/images/tda-rips/ripscomplex.svg)
+![rips complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/ripscomplex.svg)
 
 ---
 
@@ -207,7 +207,7 @@ plot(x=x, y=y)
 
 We want to compute a Rips filtration on $S$ for all $r\geq 0$.
 
-![rips filtration](../assets/images/tda-rips/ripsfilt.svg)
+![rips filtration](https://comptag.github.io/t4ds/assets/images/tda-rips/ripsfilt.svg)
 
 Observe:
 
