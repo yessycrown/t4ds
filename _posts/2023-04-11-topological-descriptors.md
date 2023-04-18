@@ -657,7 +657,7 @@ If we set maxdimension=1 and maxscale=20000, we should be able to compute this o
 <summary style="color:red">See Resulting Persistence Diagram</summary>
 <br>
 <pre>
-<img src="https://comptag.github.io/t4ds/assets/images/persistdiag1.jpg" alt="rips pts">
+<img src="https://comptag.github.io/t4ds/assets/images/bigripspd.jpg" alt="rips pts">
 </pre>
 </details>
 
