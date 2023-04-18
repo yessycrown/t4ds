@@ -41,6 +41,7 @@ most basic/fundamental of all knots.
 <video src="https://youtu.be/pryFNjwdL5U" controls="controls" style="max-width: 730px;">
 </video>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zWh3CShX_do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Other knots that are interesting (and not equivelent to the unknot) are the
 trefoil knot and the figure 8 knot.
@@ -54,10 +55,24 @@ Variants to try (in smaller groups):
 2. Can you form the trefoil knot?
 3. What about the figure 8 knot?
 
-## 1. What is Shame?
+## 1. What is Shame (in Data Science)?
+
+Write down your answer to the question: what is shape?
+
+Discuss with your neighbors.
 
 <details>
-<summary>What is "shape" (in data science)?</summary>
+<summary>A: Meriam Webster</summary>
+<br>
+<ul>
+  <li>The visible makeup characteristic of a particular item or kind of items</li>
+  <li>Spatial form or contour</li>
+  <li>A standard or universally recognized spatial form</li>
+</ul> 
+</details>
+
+<details>
+<summary>A: Brittany</summary>
 <br>
 Shape is your interpretation of the connections in data.
 </details>
