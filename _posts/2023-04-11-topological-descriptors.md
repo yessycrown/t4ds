@@ -57,11 +57,8 @@ is a finite collection of simplices, such that:
 2. If $\sigma, \sigma'\in K$, then $\sigma \cap \sigma'$ is either empty or a face of both $\sigma, \sigma'$.
 
 
-<center>
 
 ![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/simplicialcomplex.svg)
-
-</center>
 
 Using a simplicial complex, we can interpret topological features in a computational setting.
 
@@ -74,6 +71,24 @@ that looked like one?"
 
 This gets at a major area of study in topological data analysis: finding topology in point cloud data.
 It turns out that there are tons of ways to convert point cloud data into a simplicial complex. One popular method is called the Vietoris-Rips complex.
+
+Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The Rips complex of $S$
+and $r$ is the abstract simplicial complex of $\text{VR}(S, r)$ consisting of all subsets
+of diameter at most $r$:
+
+$ \text{VR}(S, r):=\{\sigma\subset S \mid \text{ diam}(\sigma)\leq r\} $
+
+where the *diameter* of a set of points is the maximum distance between any two points in the set.
+
+Geometrically, we can constuct the Rips complex by considering balls of radius $\frac{r}{2}$,
+centered at each point in $S$. Whenever $n$-balls have pairwise intersections, we add an $n-1$
+dimensional simplex.
+
+You may be familiar with *contact graphs* where the vertices represent a geometric object such as a
+circle, curve, or polygon, and an edge between two vertices exists if the corresponding two objects
+intersect. The Rips complex is a generalization of contact graphs.
+
+Here are some examples of Rips complexes:
 
 
 
