@@ -306,6 +306,162 @@ to use the `$` syntax for attributes of the filtration)
 You should see that the complex is 4 points, as we expected! Let's try increasing the
 radius further:
 
+```
+# set largest allowed radius of balls = sqrt(5)
+maxscale <- sqrt(5)
+
+# conduct Rips filtration
+FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
+                          maxscale = maxscale, dist = "euclidean", library = "Dionysus",
+                          printProgress = TRUE)
+FltRips$cmplx
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> maxscale <- sqrt(5)
+> # conduct Rips filtration
+> FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
++                           maxscale = maxscale, dist = "euclidean", library = "Dionysus",
++                           printProgress = TRUE)
+# Generated complex of size: 6 
+> FltRips$cmplx
+[[1]]
+[1] 1
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] 3
+
+[[4]]
+[1] 4
+
+[[5]]
+[1] 1 3
+
+[[6]]
+[1] 2 4
+</code>
+</pre>
+</details>
+
+On your own, try doing this setting $r=\sqrt{13}$ and $r=\sqrt{17}$. You should get
+the same results that we found by hand.
+
+<details>
+<summary style="color:red">See the Answer for sqrt(13)</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+> maxscale <- sqrt(13)
+> # conduct Rips filtration
+> FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
++                           maxscale = maxscale, dist = "euclidean", library = "Dionysus",
++                           printProgress = TRUE)
+# Generated complex of size: 11 
+> FltRips$cmplx
+[[1]]
+[1] 1
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] 3
+
+[[4]]
+[1] 4
+
+[[5]]
+[1] 1 3
+
+[[6]]
+[1] 2 4
+
+[[7]]
+[1] 1 2
+
+[[8]]
+[1] 3 4
+
+[[9]]
+[1] 1 4
+
+[[10]]
+[1] 1 2 4
+
+[[11]]
+[1] 1 3 4
+
+</code>
+</pre>
+</details>
+
+<details>
+<summary style="color:red">See the Answer for sqrt(17)</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+> maxscale <- sqrt(17)
+> # conduct Rips filtration
+> FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
++                           maxscale = maxscale, dist = "euclidean", library = "Dionysus",
++                           printProgress = TRUE)
+# Generated complex of size: 15 
+> FltRips$cmplx
+[[1]]
+[1] 1
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] 3
+
+[[4]]
+[1] 4
+
+[[5]]
+[1] 1 3
+
+[[6]]
+[1] 2 4
+
+[[7]]
+[1] 1 2
+
+[[8]]
+[1] 3 4
+
+[[9]]
+[1] 1 4
+
+[[10]]
+[1] 1 2 4
+
+[[11]]
+[1] 1 3 4
+
+[[12]]
+[1] 2 3
+
+[[13]]
+[1] 1 2 3
+
+[[14]]
+[1] 2 3 4
+
+[[15]]
+[1] 1 2 3 4
+
+</code>
+</pre>
+</details>
 
 
 ---
@@ -325,8 +481,6 @@ the "times" at which topological features are created or destroyed.
 
 
 ---
-
-
 
 
 ## Wrapping Up
