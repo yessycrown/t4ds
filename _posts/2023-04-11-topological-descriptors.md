@@ -482,9 +482,17 @@ In the example above, it would be convenient if we could store the changes resul
 a filtration in some way. This is the purpose of persistence diagrams, which keep track of
 the "times" at which topological features are created or destroyed.
 
-
 ---
 
+### The Height Filtration
+
+TODO: Brittany discuss the theory behind this, Ben create examples.
+
+Another common filtration in TDA is the height filtration.
+
+
+
+---
 
 ## Wrapping Up
 
