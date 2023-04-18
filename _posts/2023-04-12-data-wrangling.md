@@ -32,8 +32,8 @@ though if you'd prefer to work in R Studio locally that is fine too. Create an a
 this is probably easiest using your google account, and start working in the `posit cloud`.
 
 Once in your workspace, begin by clicking `new project` and selecting an `RStudio` project.
-Name the project whatever you'd like, perhaps something like `R-Intro`. Then use
-`File -> New File -> R Script` to create a new R script.
+Name the project whatever you'd like, perhaps something like `T4DS-Workshop-2023`. Then use
+`File -> New File -> R Script` to create a new R script, and title it `R-Intro`.
 
 ---
 
@@ -213,7 +213,7 @@ glacier_data[27,3]
 
 Note that in R, indices start at 1, and not at 0!
 If we're working with large data and want to get a feel for things, the
-`head` method is quite useful:
+`head` function is quite useful:
 
 ```
 # grab the first 5 rows of glacier_data
@@ -239,7 +239,7 @@ head(glacier_data, 5)
 
 
 We can pull multiple entries out
-of a dataframe with `c()` the ``combine" method in R as well, that is,
+of a dataframe with `c()` the "combine" function in R as well, that is,
 
 ```
 # grab rows 2,3,5 and columns 2,3
@@ -396,7 +396,7 @@ library(rgdal)
 library(sp)
 ```
 
-Now open the shapefile using the `rgdal` method `readOGR`:
+Now open the shapefile using the `rgdal` function `readOGR`:
 
 ```
 counties <- readOGR(dsn="/cloud/project/MontanaCounties_shp/County.shp")
@@ -428,7 +428,7 @@ head(counties, 3)
 ```
 
 However, don't despair, many others have come before you and successfully dealt with GIS data in R.
-In fact, R has a built-in method to plot GIS data which is quite satisfying:
+In fact, R has a built-in function to plot GIS data which is quite satisfying:
 
 ```
 plot(counties)
@@ -451,7 +451,18 @@ We can get the attributes of spatial polygons data (and most labelled data in R)
 names(counties)
 ```
 
-
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> names(counties)
+ [1] "NAME"       "NAMEABBR"   "COUNTYNUMB" "PKEY"       "SQMILES"    "PERIMETER" 
+ [7] "ACRES"      "ALLFIPS"    "FIPS"       "LAST_UPDAT" "NAMELABEL"  "BAS_ID"    
+[13] "ID_UK"      "Shape_Leng" "Shape_Area"                                      NA's   :1  
+</code>
+</pre>
+</details>
 
 Knowing this, we can get the name of every County using the following syntax:
 
@@ -459,8 +470,37 @@ Knowing this, we can get the name of every County using the following syntax:
 counties$NAME
 ```
 
-In fact, we can do this with any attribute of the counties data. Play around and get a feel for it!
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> counties$NAME
+ [1] "CARBON"          "POWDER RIVER"    "MADISON"         "BEAVERHEAD"     
+ [5] "BIG HORN"        "STILLWATER"      "PARK"            "GALLATIN"       
+ [9] "SWEET GRASS"     "SILVER BOW"      "CARTER"          "DEER LODGE"     
+[13] "TREASURE"        "YELLOWSTONE"     "JEFFERSON"       "GOLDEN VALLEY"  
+[17] "WHEATLAND"       "RAVALLI"         "MUSSELSHELL"     "FALLON"         
+[21] "BROADWATER"      "ROSEBUD"         "GRANITE"         "CUSTER"         
+[25] "MEAGHER"         "PRAIRIE"         "JUDITH BASIN"    "WIBAUX"         
+[29] "PETROLEUM"       "MINERAL"         "POWELL"          "MISSOULA"       
+[33] "CASCADE"         "FERGUS"          "LEWIS AND CLARK" "GARFIELD"       
+[37] "LAKE"            "MCCONE"          "TETON"           "CHOUTEAU"       
+[41] "SANDERS"         "PONDERA"         "ROOSEVELT"       "HILL"           
+[45] "BLAINE"          "LIBERTY"         "PHILLIPS"        "TOOLE"          
+[49] "VALLEY"          "DANIELS"         "GLACIER"         "FLATHEAD"       
+[53] "SHERIDAN"        "LINCOLN"         "DAWSON"          "RICHLAND"  
+</code>
+</pre>
+</details>
 
+We can also look up the associated data given a county's index. Try this with Carbon county, at index 1.
+
+```
+counties[1,]
+```
+
+In fact, we can do this with any attribute of the counties data. Play around and get a feel for it!
 Knowing an attribute of data, we can also find its index. For example, we can find the index of
 Choteau county by:
 
@@ -468,26 +508,68 @@ Choteau county by:
 which(counties$NAME=="CHOUTEAU")
 ```
 
-The `which` method also has attributes `max` and `min`. This allows us to find polygons maximizing and minimizing different attributes. For instance, the index of the county in Montana with smallest perimeter is:
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> which(counties$NAME=="CHOUTEAU")
+[1] 40
+</code>
+</pre>
+</details>
+
+The `which` function also has attributes `max` and `min`. This allows us to find polygons maximizing and minimizing different attributes. For instance, the index of the county in Montana with smallest perimeter is:
 
 ```
-which.min(counties$PERIMETER)
+counties$NAME[which.min(counties$PERIMETER)]
 ```
 
-Using what you know about indexing in R and dataframes, see if you can find the largest county (by acres) in Montana.
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> counties$NAME[which.min(counties$PERIMETER)]
+[1] "WHEATLAND"
+</code>
+</pre>
+</details>
 
 
+Using what you know about indexing in R, dataframes, and spatial polygons, see if you can find the largest 
+county (by acres) in Montana.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightred">
+<code>
+> counties$NAME[which.max(counties$ACRES)]
+[1] "BEAVERHEAD"
+</code>
+</pre>
+</details>
 
 
-Let's try to select Gallatin County specifically. From the above output, we can see that Gallatin County
-is at index 9:
+Let's try to select Gallatin County specifically (which is where you are currently!). Try using the
+`which` function to get the associated spatial polygons object.
 
 ```
-counties$NAME[9]
-
 # save Gallatin County sp object
-gallatin <- counties[9,]
+gallatin <- # HINT: Get the index of Gallatin county, which corresponds to a row in the dataframe
 ```
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightred">
+<code>
+gallatin <- counties[which(counties$NAME=="GALLATIN"),]
+</code>
+</pre>
+</details>
+
 
 And visualize Gallatin County:
 
@@ -495,14 +577,30 @@ And visualize Gallatin County:
 plot(gallatin)
 ```
 
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/gallatin.jpg" alt="gallatin plot">
+</pre>
+</details>
+
 There are tons of things we can do now with an isolated spatial polygon.
 It should be noted that polygons are defined just as a set of points and a set of edges.
 We can extract the set of points defining a polygon using some careful syntax:
 
 ```
 coords <- gallatin@polygons[[1]]@Polygons[[1]]@coords
-coords
+plot(coords)
 ```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/coords.jpg" alt="gallatin coords">
+</pre>
+</details>
 
 We can also test whether not a given point lies within Gallatin County:
 
