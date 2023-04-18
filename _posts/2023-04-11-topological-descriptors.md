@@ -663,13 +663,6 @@ If we set maxdimension=1 and maxscale=20000, we should be able to compute this o
 
 ---
 
-
-### Other Filtrations
-
-We now discuss slightly more complex filtrations, now that we have some TDA under our belt.
-
----
-
 ### The Height Filtration
 
 TODO: Brittany discuss the theory behind this, Ben create examples.
