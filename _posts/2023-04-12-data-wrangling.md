@@ -618,6 +618,22 @@ plot(coords)
 </pre>
 </details>
 
+We can also sample within a polygon using the `spsample` function.
+Here's the syntax to do that, and subsequently plot the result:
+
+```
+gallatinSample <- spsample(gallatin,n=1000,"random")
+plot(gallatinSample,pch=20,cex=.5)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/gallatinsample.jpg" alt="gallatin coords">
+</pre>
+</details>
+
 
 We can also test whether not a given point lies within Gallatin County using the `point.in.polygon` function:
 
