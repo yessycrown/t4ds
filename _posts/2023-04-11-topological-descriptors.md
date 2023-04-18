@@ -187,8 +187,25 @@ get different Rips complexes. In many data analysis situations, the value of $r$
 the data is unknown or does not exist, so why not look at all of them!? Observe if we increase $r$
 continuously, then we get a family of nested Rips complexes; the *Rips filtration*.
 
-Let's work through an example. Let $S:=\{(0,0),(1,3),(2,-1),(3,2)\}\subset \mathbb{R}^2$. We
-want to compute a Rips filtration on $S$ for all $r\geq 0$.
+Let's work through an example. Let $S:=\{(0,0),(1,3),(2,-1),(3,2)\}\subset \mathbb{R}^2$. 
+For a visualization, this is easy to plot in R:
+
+```
+x <- c(0,1,2,3)
+y <- c(0,3,-1,2)
+plot(x=x, y=y)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/rips-pts-basic.jpg" alt="rips pts">
+</pre>
+</details>
+
+
+We want to compute a Rips filtration on $S$ for all $r\geq 0$.
 
 ![rips filtration](../assets/images/tda-rips/ripsfilt.svg)
 
@@ -221,9 +238,10 @@ Hopefully this makes sense!
 
 ---
 
-#### A Rips Filtration
+#### A Rips Filtration in R
 
-In practice, we can create Rips complexes in R
+In practice, we can create Rips complexes in R via a Rips filtration. These complexes are
+in the same format as 
 
 ---
 
