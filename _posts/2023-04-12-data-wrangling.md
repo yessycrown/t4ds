@@ -11,7 +11,10 @@ tags:
 
 ## Overview
 
-TODO:write short overview
+In this session we give a basic introduction to R, and its usefulness
+when handling data. We cover fundamental data structures in R, 
+along with basic visualizations. We extend these techniques to work with
+larger GIS data.
 
 This session is presented by Ben.
 
@@ -615,6 +618,22 @@ plot(coords)
 <br>
 <pre>
 <img src="https://comptag.github.io/t4ds/assets/images/coords.jpg" alt="gallatin coords">
+</pre>
+</details>
+
+We can also sample within a polygon using the `spsample` function.
+Here's the syntax to do that, and subsequently plot the result:
+
+```
+gallatinSample <- spsample(gallatin,n=1000,"random")
+plot(gallatinSample,pch=20,cex=.5)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/gallatinsample.jpg" alt="gallatin coords">
 </pre>
 </details>
 

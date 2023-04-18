@@ -663,13 +663,6 @@ If we set maxdimension=1 and maxscale=20000, we should be able to compute this o
 
 ---
 
-
-### Other Filtrations
-
-We now discuss slightly more complex filtrations, now that we have some TDA under our belt.
-
----
-
 ### The Height Filtration
 
 TODO: Brittany discuss the theory behind this, Ben create examples.
@@ -680,4 +673,11 @@ Another common filtration in TDA is the height filtration.
 
 ## Wrapping Up
 
-TODO
+Thanks for your attention to end today's workshop materials! To summarize our accomplishments
+this afternoon:
+
+> - We learned about simplicial complexes, and worked with them in R
+> - We learned about Vietoris-Rips complexes, and used them in R
+> - We learned about filtrations
+> - We learned about persistence diagrams and barcodes, and implemented them in R
+> - We learned about the height filtration
