@@ -42,7 +42,7 @@ Of course we are all familiar with triangles, and to understand the Rips filtrat
 A simplex is synonymous with an n dimensional triangle, that is it is just a triangle of any dimension.
 
 We can link simplices together to form a *simplicial complex*. In particular, a *simplicial complex*
-is a finite collection of simplices, $$K$$, such that (1) if $$\sigma \in K$$ and $$\tau\leq \sigma$$,
+is a finite collection of simplices, ```math K```, such that (1) if $$\sigma \in K$$ and $$\tau\leq \sigma$$,
 then $$\tau \in K$$, and (2) if $$\sigma, \sigma'\in K$$, then $$\sigma\cap \sigma'$$ is either empty
 or a face of both.
 
