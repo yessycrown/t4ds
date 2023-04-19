@@ -90,7 +90,7 @@ The bridges of Koenigsberg:
 
 ![bridges of Koenigsberg](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)
 
-![Koenigsberg](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges.jpg)
+![Koenigsberg](https://comptag.github.io/t4ds/assets/images/bridges.jpg)
 
 <details>
 <summary>See the Answer</summary>
