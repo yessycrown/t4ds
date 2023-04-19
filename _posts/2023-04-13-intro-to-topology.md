@@ -159,9 +159,9 @@ not include their boundaries).
 
 What is the Euler characteristic of the sphere?
 
-<details>
+<details style="color:red">
 <br>
-<summary style="color:red">See the Answer</summary>
+<summary>See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
     The Euler characteristic of the sphere is 2.  One topological model of the
