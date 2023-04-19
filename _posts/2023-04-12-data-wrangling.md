@@ -45,7 +45,7 @@ project `R-Intro`.
 
 ---
 
-### Reading data into R
+### Reading Data into R
 
 Let's get started with some basic CSV data. It turns out, there is a really easy command
 to import csv data in R, and we can even do it directly from a webpage.
@@ -181,7 +181,7 @@ we can do with them.
 
 ---
 
-### Fundamental data structures in R
+### Fundamental Data Structures in R
 
 We can get a sense of the size of our data running:
 
@@ -300,7 +300,7 @@ Therein lies R data manipulation in a nutshell!
 
 ---
 
-### Fundamental visualizations in R
+### Fundamental Visualizations in R
 
 As the language of choice for statisticians, it should come as no surprise that one can also
 easily get statistical summaries from data.
@@ -685,6 +685,7 @@ to ask. And if you have muddy points, post them!
 - For a more in depth introduction to R, check out the [software carpentries](http://swcarpentry.github.io/r-novice-inflammation/)
 tutorials, which are a big inspiration for the style of this workshop
 - The glacier CSV data was taken from [datahub.io](https://datahub.io/core/glacier-mass-balance#data) and studies the average mass balance of glaciers worldwide between 1945 and 2014. This data was sourced from the US EPA and the World Glacier Monitoring Service.
+- For more on glacier mass balance, see [www.antarcticglaciers.org](https://www.antarcticglaciers.org/glacier-processes/mass-balance/introduction-glacier-mass-balance/).
 - The Montana county shape data was sourced from the Montana state government's website with data
 on [administrative boundaries](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/)
 - The heroic mountainscape at the top of the page comes from the National Parks Service, in Glacier National Park.
