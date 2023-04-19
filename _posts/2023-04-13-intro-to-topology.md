@@ -97,9 +97,10 @@ The bridges of Koenigsberg:
 <br>
 <pre style="background-color:lightcoral">
 <br>
-![bridges with map](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges-map-and-graph.png)
-![just map](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges-graph.png)
+![bridges with map](https://comptag.github.io/t4ds/assets/images/bridges-map-and-graph.png)
+![just map](https://comptag.github.io/t4ds/assets/images/bridges-graph.png)
 <br>
+</pre>
 </details>
 
 ---
