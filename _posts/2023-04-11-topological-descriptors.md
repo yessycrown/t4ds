@@ -123,8 +123,8 @@ and other topological invaraints. Thus,
 finding a simplicial complex from data gives us the tools necessary to find topology in data.
 It turns out that there are tons of ways to study topology in point cloud data. 
 
-As a first example, we consider point cloud data.  That is, $P \subset
-\mathbb{R}^n$ is a finite set of points.  Such data sets arise in many ways.
+As a first example, we consider point cloud data.  That is, a *point cloud*, $S \subset
+\mathbb{R}^n$, is a finite set of points in (usually Euclidean) space.  Such data sets arise in many ways.
 Mathematically, maybe there is an underlying, unaccessible shape that we can
 sample from (such as the torus):
 
@@ -135,7 +135,9 @@ the torus parameterizes the configuration space of a two-arm linkage (with one
 fixed point).  
 
 Other examples of point cloud data can come from locations, such as locations of
-[speed traps](https://data.cityofchicago.org/Transportation/Map-Speed-Camera-Locations/7ajp-yjhe).
+[speed traps](https://data.cityofchicago.org/Transportation/Map-Speed-Camera-Locations/7ajp-yjhe)
+or
+[wildfires](https://www.kaggle.com/datasets/rtatman/188-million-us-wildfires).
 
 Once we have a point cloud, we need to organize it.
 You may be familiar with *contact graphs* where the represent a geometric object such as a
@@ -143,21 +145,20 @@ circle, curve, or polygon, and an edge between two vertices exists if the corres
 intersect. The Vietoris-Rips (VR) complex, which we investigate next,
 is a generalization of contact graphs.
 
-> Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The Rips complex of $S$
-> and $r$ is the abstract simplicial complex of $\text{VR}(S, r)$ consisting of all subsets
+> Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The *Vietoris-Rips (VR) complex* of $S$
+> and $r$ is the abstract simplicial complex, denoted $\text{VR}(S, r)$, consisting of all subsets
 > of diameter at most $r$:
-
-$ \text{VR}(S, r):=\\{\sigma\subset S \mid \text{ diam}(\sigma)\leq \\}, $
-
-where the *diameter* of a set of points is the maximum distance between any two points in the set.
+> $ \text{VR}(S, r):=\\{\sigma\subset S \mid \text{ diam}(\sigma)\leq \\}, $
+> where the *diameter* of a set of points is the maximum distance between any two points in the set.
 
 Geometrically, we constuct the Vietoris-Rips (VR)-complex by considering balls of radius $\frac{r}{2}$,
-centered at each point in $S$. Whenever $n$-balls pairwise intersect, we add an $n-1$
-dimensional simplex.
+centered at each point in $S$. Whenever we have a set of $n$ balls that pairwise intersect, we add an $n-1$
+dimensional simplex.  Consider the following sets and their corresponding
+simplex:
 
 ![rips complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/rips-simplex.svg)
 
-And, a simplicial complex:
+Checking all subsets of $S$, we can find our a simplicial complex:
 
 <img src="https://comptag.github.io/t4ds/assets/images/tda-rips/ripscomplex.svg" 
     height="50"
