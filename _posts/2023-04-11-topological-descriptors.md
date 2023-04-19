@@ -539,7 +539,8 @@ Is it possible
 <br>
 <pre style="background-color:lightcoral">
 <figure>
-<img src="https://comptag.github.io/t4ds/assets/images/vangogh-scales-05all.svg" alt="Starry Night barcode" style="width:100%">
+<img src="https://comptag.github.io/t4ds/assets/images/vangogh-scales-05all.jpg" 
+     alt="Starry Night barcode" style="width:100%">
 <figcaption>Barcode for select features in Starry Night. Note that in order to
 see the constellation Aries, you need to stand far away from the painting that
 you can no longer see individual brush strokes. So, one viewing distance is not
