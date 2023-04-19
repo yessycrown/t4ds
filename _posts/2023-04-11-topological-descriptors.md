@@ -181,7 +181,10 @@ dimensional simplex.
 
 Here are some examples of VR-complexes:
 
-![rips complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/ripscomplex.svg)
+<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/ripscomplex.svg" 
+    height="100"
+    alt="Example VR-Complex" 
+    style="width:100%">
 
 <details>
 <summary style="color:DarkOrange">More Info</summary>
