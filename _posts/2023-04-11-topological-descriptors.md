@@ -50,9 +50,9 @@ a two-simplex has three one-dimensional faces (edges).
 <summary style="color:DarkOrange">More Info</summary>
 <br>
 <pre style="background-color:Gold">
-We say that the set of points $\{ v_0, v_1, \ldots, v_n\}$ is *affinely
-independent*
-iff the vectors $v_1-v_0,...,v_{n}-v_0$ are *linearly independent*.
+We say that the set of points $\{ v_0, v_1, \ldots, v_n\}$ is <i>affinely
+independent</i>
+iff the vectors $v_1-v_0,...,v_{n}-v_0$ are <i>linearly independent</i>.
 </pre>
 </details>
 
