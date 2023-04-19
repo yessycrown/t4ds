@@ -33,19 +33,19 @@ After this session, we hope that you will be able to:
 For this tutorial we will use GIS data from Glacier National Park in Northwestern Montana.
 The data can be downloaded from the USGS at [this address](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542).
 
-Let's begin by downloading the data from 1966:
+If you have Google Earth Pro installed on your computer (it is free to download), you can
+view shapefiles overlayed on Earth. Consider downloading the data locally,
+and playing around with it in Google Earth:
 
 ![data](../assets/images/links.png)
 
-For fun, click around a bit with the data you've downloaded. It is in shapefile format, which can be 
-viewed with GIS software. One easy way to do this is with Google Earth. Google Earth Pro is free to 
-download, and you import shapefiles (on Mac) with
+Once downloaded, the data can be imported with:
 
 ```
 file -> import
 ```
 
-The glacier data should look something like this:
+In Google Earth, the glacier data should look something like this:
 
 ![google](../assets/images/googleearth.png)
 
