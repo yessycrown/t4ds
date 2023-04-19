@@ -47,6 +47,7 @@ each point). For example,
 a two-simplex has three one-dimensional faces (edges).
 
 <details>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <summary style="color:DarkOrange">More Info</summary>
 <br>
 <pre style="background-color:Gold">
