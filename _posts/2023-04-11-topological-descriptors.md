@@ -166,12 +166,12 @@ Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The Rips compl
 and $r$ is the abstract simplicial complex of $\text{VR}(S, r)$ consisting of all subsets
 of diameter at most $r$:
 
-$ \text{VR}(S, r):=\{\sigma\subset S \mid \text{ diam}(\sigma)\leq r\} $
+$ \text{VR}(S, r):=\left\{\sigma\subset S \mid \text{ diam}(\sigma)\leq r\right\}, $
 
 where the *diameter* of a set of points is the maximum distance between any two points in the set.
 
-Geometrically, we can constuct the Rips complex by considering balls of radius $\frac{r}{2}$,
-centered at each point in $S$. Whenever $n$-balls have pairwise intersections, we add an $n-1$
+Geometrically, we constuct the Rips complex by considering balls of radius $\frac{r}{2}$,
+centered at each point in $S$. Whenever $n$-balls pairwise intersect, we add an $n-1$
 dimensional simplex.
 
 You may be familiar with *contact graphs* where the vertices represent a geometric object such as a
