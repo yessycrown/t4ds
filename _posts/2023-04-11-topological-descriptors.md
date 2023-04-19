@@ -34,7 +34,7 @@ a type of data that holds intrinsic topological meaning.
 
 ### Triangle Appreciation
 
-Of course we are all familiar with triangles, and to understand computational topology, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from 0 to n. (Where the -1th dimensional triangle being a null value).
+Of course we are all familiar with triangles, and to understand computational topology, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from $0$ to $n$. (Where the -1th dimensional triangle being a null value).
 
 ![n dimensional triangles](https://i.stack.imgur.com/O6xtg.png)
 
@@ -195,7 +195,10 @@ $(n+1)$-way intersection of balls. To see where they differ, consider the
 two-complex above that is created when three balls pairwise intersect in the
 Rips complex.  If there is not a three-way intersection, the triangle is not
 added to the &#268;ech complex.
-![cech complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/cechrips.svg)
+<figure>
+<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/cechrips.svg" alt="cechcplx" style="width:100%">
+<figcaption>&#268;ech complex.</figcaption>
+</figure>
 </pre>
 </details>
 
@@ -204,15 +207,18 @@ added to the &#268;ech complex.
 
 ### The Vietoris-Rips Filtration
 
-A *filtration* of a simplicial complex, $K$, is a nested sequence of subcomplexes starting at the
-empty set and ending with the full simplicial complex, i.e.,
-
-$\emptyset \subset K_0 \subset K_1 \subset ... \subset K_n=K.$
-
 Going back to the Rips complex, we consider $r$ to be a free parameter. If we vary $r$, we
-get different Rips complexes. In many data analysis situations, the value of $r$ that best describes
+get different Rips complexes. So, which one do we pick?
+In many data analysis situations, the value of $r$ that best describes
 the data is unknown or does not exist, so why not look at all of them!? Observe if we increase $r$
-continuously, then we get a family of nested Rips complexes; the *Rips filtration*.
+continuously, the complex only changes a finite number of radii, say at $r_0 <
+r_1 < \ldots < r_n$. 
+Then, we get a family of nested Rips complexes; the *Rips filtration*.
+
+$\emptyset < K_0 \subset K_1 \subset \ldots \subset K_n=K.$
+
+More generall, a *filtration* of a simplicial complex, $K$, is a nested sequence of subcomplexes starting at the
+empty set and ending with the full simplicial complex.
 
 Let's work through an example. Let $S:=\{(0,0),(1,3),(2,-1),(3,2)\}\subset \mathbb{R}^2$. 
 For a visualization, this is easy to plot in R:
@@ -751,3 +757,11 @@ this afternoon:
 > - We learned about filtrations
 > - We learned about persistence diagrams and barcodes, and implemented them in R
 > - We learned about the height filtration
+
+---
+### Credits
+
+- This material was based on [other tutorials](https://comptag.github.io/rpackage_tutorials/)
+  developed by Robin Belton, Ben Holmgren (name familiar?), and Jordan Schupbach. We thank
+  them for giving us a head start on this material!
+
