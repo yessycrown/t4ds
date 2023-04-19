@@ -249,6 +249,15 @@ And then plot the resulting persistence diagram:
 plot(Diag1[["diagram"]])
 ```
 
+Let $G \subset \mathbb{R}^2$ be a grid, and let $A \subset G$ be the set of points we care about
+living within $G$. In this example, $G$ would be the grid, and $S$ would be the subset of the grid
+living on the Agassiz glacier. Recall that the grid filtration stems from a function
+$f:G \to \mathbb{R}$. If $\sigma \not \in S$, the typical approach is to consider 
+$f$ as the distance from $\sigma$ to the nearest point in $S$. Alternatively, if $\sigma \in S$,
+we typically set $\sigma$ to some maximum height. Consequently, the filtration from $f$ struggles
+to detect topological features in our data, because there is not enough discriminating
+each point in the grid.
+
 
 
 ## Wrapping Up
