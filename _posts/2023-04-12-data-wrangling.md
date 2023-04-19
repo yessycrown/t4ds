@@ -2,16 +2,19 @@
 title: Data Wrangling in R
 layout: post
 post-image: "https://www.nps.gov/npgallery/GetAsset/F28095AF-155D-451F-673713EBF5C09EE6/proxy/hires?"
-description: A basic intro to R, and the beginning of the topological data analysis pipeline with GIS data from Glacier National Park
+description: A basic intro to R, and the beginning of the topological data analysis pipeline with GIS data from Glacier National Park and Montana.
 tags:
+- R programming
 - gis
+- shapefile
+- glaciers
 ---
 
 ---
 
 ## Overview
 
-In this session we give a basic introduction to R, and its usefulness
+In this session, we give a basic introduction to R, and its usefulness
 when handling data. We cover fundamental data structures in R, 
 along with basic visualizations. We extend these techniques to work with
 larger GIS data.
