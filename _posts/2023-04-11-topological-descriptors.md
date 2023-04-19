@@ -182,6 +182,16 @@ Here are some examples of Rips complexes:
 
 ![rips complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/ripscomplex.svg)
 
+<details>
+<summary style="color:DarkOrange">More Info</summary>
+<br>
+<pre style="background-color:Gold">
+The Vietoris-Rips complex is an approximation of the &#268;ech complex.
+The *Cech complex* TODO:finish def. 
+</pre>
+</details>
+
+
 ---
 
 ### The Vietoris-Rips Filtration
