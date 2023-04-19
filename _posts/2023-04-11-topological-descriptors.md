@@ -118,16 +118,34 @@ combinatorially defined by the set $A$.
 Now, you might be wondering, "how could I go from typical data,
 like a set of points, to a simplicial complex?"
 
-This gets at a major area of study in topological data analysis: finding topology in point cloud data.
+Once we have a simplicial complex representing our data, we can compute homology
+and other topological invaraints. Thus,
+finding a simplicial complex from data gives us the tools necessary to find topology in data.
 It turns out that there are tons of ways to study topology in point cloud data. 
-You may be familiar with *contact graphs* where the vertices represent a geometric object such as a
+
+As a first example, we consider point cloud data.  That is, $P \subset
+\mathbb{R}^n$ is a finite set of points.  Such data sets arise in many ways.
+Mathematically, maybe there is an underlying, unaccessible shape that we can
+sample from (such as the torus):
+
+![torus sample](https://en.wikipedia.org/wiki/Point_cloud#/media/File:Point_cloud_torus.gif)
+
+Note that manifolds (like the torus) can represent various things. For example,
+the torus parameterizes the configuration space of a two-arm linkage (with one
+fixed point).  
+
+Other examples of point cloud data can come from locations, such as locations of
+[speed traps](https://data.cityofchicago.org/Transportation/Map-Speed-Camera-Locations/7ajp-yjhe).
+
+Once we have a point cloud, we need to organize it.
+You may be familiar with *contact graphs* where the represent a geometric object such as a
 circle, curve, or polygon, and an edge between two vertices exists if the corresponding two objects
 intersect. The Vietoris-Rips (VR) complex, which we investigate next,
 is a generalization of contact graphs.
 
-Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The Rips complex of $S$
-and $r$ is the abstract simplicial complex of $\text{VR}(S, r)$ consisting of all subsets
-of diameter at most $r$:
+> Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The Rips complex of $S$
+> and $r$ is the abstract simplicial complex of $\text{VR}(S, r)$ consisting of all subsets
+> of diameter at most $r$:
 
 $ \text{VR}(S, r):=\\{\sigma\subset S \mid \text{ diam}(\sigma)\leq \\}, $
 
