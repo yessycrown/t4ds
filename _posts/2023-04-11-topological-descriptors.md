@@ -46,9 +46,6 @@ An $n$-simplex has $n+1$ *faces* of dimension $n-1$ (namely, one for leaving out
 each point). For example,
 a two-simplex has three one-dimensional faces (edges).
 
-<head>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-</head>
 <details>
 <summary style="color:DarkOrange">More Info</summary>
 <br>
@@ -58,7 +55,6 @@ independent*
 iff the vectors $v_1-v_0,...,v_{n}-v_0$ are *linearly independent*.
 </pre>
 </details>
-
 
 
 We can link simplices together to form a *simplicial complex*. In particular, a *simplicial complex* $K$
