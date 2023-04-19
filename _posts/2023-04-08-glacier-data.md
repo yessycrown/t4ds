@@ -117,18 +117,82 @@ What options do we have? Could these options introduce error?
 
 ---
 
-With the raw glacier data in hand, we can conduct segmentation over a grid.
-Let's begin just by working with the Agassiz Glacier, at index 1.
+With the raw glacier data in hand, let's try creating a grid of points lying within the polygon.
 
-Remember, GIS data often has crazy coordinates. Let's get a sense for them
-by computing the points defining the Agassiz Glacier, and finding the bounds in
-each column.
+We'll start out just with the first glacier in GNP on our list, and then move to a bigger
+set of glaciers. As a warmup exercise, see if you can find the
+name of `glaciers1966[1,]`, the first glacier in our dataframe.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+> names(glaciers1966)
+ [1] "RECNO"      "X_COORD"    "Y_COORD"    "GLACNAME"   "CLASSIFICA"
+ [6] "YEAR"       "SOURCE_SCA" "SOURCE"     "COMMENT"    "Shape_Leng"
+[11] "Area1966"   "OWNERSHIP"  "OBJECTID"  
+> glaciers1966[1,]$GLACNAME
+[1] "Agassiz Glacier"
+</code>
+</pre>
+</details>
+
+Do you remember how to sample within a spatial polygon? Recall from yesterday,
+we sampled from within counties in Montana randomly. See if you can sample randomly
+1000 points from the Agassiz Glacier, and save this in the `randGlac` variable.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+randGlac <- spsample(glaciers1966[1,], n=1000,"random")
+</code>
+</pre>
+</details>
+
+Now, let's quickly visualize our random sample:
 
 ```
-pts <- glaciers1966[1,]@polygons[[1]]@Polygons[[1]]@coords
-bounds <- c(min(pts[,1]), max(pts[,1]), min(pts[,2]), max(pts[,2]))
-bounds
+plot(randGlac)
 ```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/agassizrandom.jpg" alt="agassiz random plot">
+</pre>
+</details>
+
+As might have arisen in your discussions, we could take a random sample from the
+Agassiz glacier. However, this would introduce additional imprecision and randomness to
+our data, which we don't necessarily want. A better idea is to get a uniform grid
+from within our polygon, and use TDA (namely, a grid filtration) on that.
+
+Let's get sample a uniform grid of 1000 points from within our polygon. Luckily, the `spsample`
+function has the option to get a `regular` sample.
+
+```
+unifGlac <- spsample(glaciers1966[1,], n=1000, "regular")
+```
+
+Indeed, if we plot this we get the desired grid:
+
+```
+plot(unifGlac, pch=20, cex=.5)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/glacgrid.jpg" alt="agassiz random plot">
+</pre>
+</details>
+
+
 
 ## Wrapping Up
 
