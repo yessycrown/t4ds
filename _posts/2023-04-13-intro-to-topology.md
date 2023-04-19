@@ -86,17 +86,21 @@ shape/data.  Topology studies the connectivity between and among data.
 ---
 ## 3. Koenigsberg
 
-The ![bridges of Koenigsberg](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)
+The bridges of Koenigsberg:
 
-![Koenigsberg](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges.jpg)
+![bridges of Koenigsberg](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)
 
+![Koenigsberg](https://comptag.github.io/t4ds/assets/images/bridges.jpg)
+
+<details>
 <summary>See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
 <br>
-![bridges with map](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges-map-and-graph.png)
-![just map](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges-graph.png)
+![bridges with map](https://comptag.github.io/t4ds/assets/images/bridges-map-and-graph.png)
+![just map](https://comptag.github.io/t4ds/assets/images/bridges-graph.png)
 <br>
+</pre>
 </details>
 
 ---
@@ -130,7 +134,7 @@ What this means is the perspective of $a \in A$ "looks like" the perspective of
 $b \in B$.  In other words, the two shapes are "the same" if all you care about
 are the neigghborhoods.
 
-[![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph_frame.png)](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
+![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
 
 ### Topological Invariants
 

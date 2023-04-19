@@ -11,24 +11,24 @@ tags:
 
 ## Overview
 
-TODO: write brief summary
+In this session, we'll combine the theoretical ideas and simple
+R tutorials with an exciting application area in GIS: the changing
+shape of glaciers. We will study the differences in shape of the
+glaciers in Glacier National Park over time, and compare our findings
+to other metrics of glacier health.
 
 This session is co-presented by Brittany and Ben.
 
 ### Objectives
 
-After this session, we hope that you will  be able to:
+After this session, we hope that you will be able to:
 
-- TODO
+- Use theoretical ideas in topology for domain-specific applications
+- Interpret the changing shape of Montana's glaciers
+- Compare and contrast shape differences with changes in glacial health
 
-## Getting Started
 
-TODO
-
-## TODO:content here
-
-## MOVED from other tutorial
-### Getting Started with GIS Data in R
+## Getting Started with Glacier Data in R
 
 For this tutorial we will use GIS data from Glacier National Park in Northwestern Montana.
 The data can be downloaded from the USGS at [this address](https://www.sciencebase.gov/catalog/item/58af7022e4b01ccd54f9f542).
@@ -49,9 +49,11 @@ The glacier data should look something like this:
 
 ![google](../assets/images/googleearth.png)
 
-After gaining some familiarity with the data that we're working with, let's start actually working with
-the data in R. Open R Studio, and begin a new R script in your desired location.
-Import the R 'Geospatial' Data Abstraction Library (RGDAL), and the Spatial Data library (SP), which we will use to upload and manipulate the shapefiles:
+After (hopefully) gaining some familiarity with the data that we're working with, let's start actually working with
+
+the data in R. Open R Studio cloud, and create a new R script in your desired location. Call it something
+like, `Glacier-TDA`.
+As before, we will use the `RGDAL` and `SP` libraries to upload and manipulate shapefiles:
 
 ```
 library(rgdal)
@@ -60,7 +62,7 @@ library(sp)
 
 Import the 1966 glacier data using the corresponding `readOGR` method from RGDAL. You must use the 
 absolute path of the directory storing the GIS data, and also give the prefix of the data in the layer 
-argument. On a Mac, this is:
+argument. On  a Mac, this is:
 
 ```
 glaciers_66 <- readOGR(dsn = "/Users/you/INSERT YOUR PATH HERE/GNPglaciers_1966",
