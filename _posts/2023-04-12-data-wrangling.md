@@ -39,12 +39,17 @@ We will be working with R online in [R Studio Cloud](https://login.rstudio.cloud
 though if you'd prefer to work in R Studio locally that is fine too. Create an account,
 this is probably easiest using your google account, and start working in the `posit cloud`.
 
+After logging in, select a workspace or create a new one.
 Once in your workspace, begin by clicking `New Project` (top right) and selecting
 a `New RStudio Project` from the dropdown menu.
-Name the project whatever you'd like, perhaps something like `T4DS-Workshop-2023`. Then use
-`File -> New File -> R Script` (or `Ctrl+Shift+N`) to create a new R script.
 Finally, at the top of the page, click `Untitled Project` and rename your
-project `R-Intro`.
+project `T4DS-Workshop-2023`. Then use
+`File -> New File -> R Script` (or `Ctrl+Shift+N`) to create a new R script. Use
+`File -> Save` to save the file. You'll be prompted to enter a file name. Use
+`session-2`.
+
+Throughout this tutorial, we will add code to session-2.R.  Be sure to use
+`Ctrl+S` to save as you go!
 
 ---
 
@@ -684,7 +689,8 @@ Thanks for following along in session 2! To look back on our accomplishments bef
 > - We extracted the core components in GIS data, the points defining polygons
 
 Enjoy a long lunch in downtown Bozeman! If you have any questions about the above topics, don't hesitate 
-to ask. And if you have muddy points, post them!
+to ask. And if you have muddy points, post them!  Before heading to lunch,
+remember to save your file.
 
 ---
 ### Credits
