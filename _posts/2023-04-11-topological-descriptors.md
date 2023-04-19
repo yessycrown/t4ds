@@ -525,7 +525,41 @@ represent the interval of distances you can see the features clearly.  For
 example, you can use Starry Night by Van Gogh:
 ![starry Night](https://www.vangoghgallery.com/catalog/image/0612/Starry-Night.jpg)
 
-Now is a good time for a quick break (if we haven't taken one already).
+**Now is a good time for a quick break (if we haven't taken one already).**
+
+Back to our Rips filtration, we can see that
+for certain $r$, homology features are either being created or going away.
+For example, when $r=0$, we vacuously have four connected components (just the vertices).
+When $r=\sqrt{5}$, we only have two connected components. When $r=\sqrt{10}$,
+we have only one connected component and a cycle. It would be nice if there
+were some clean way to keep track of this information...
+
+Fortunately, so-called *barcodes* were created to do just that.
+Barcodes denote the time at which a homology feature is "born",
+and when the same feature "dies".
+
+The R TDA package has a function `ripsDiag`
+that creates diagrams corresponding to the Rips filtration. Let's view the barcode resulting
+from our example filtration:
+
+```
+persistDiag <- ripsDiag(X, maxdimension = 4, maxscale=sqrt(17), dist = dist,
+                    printProgress = TRUE)
+plot(persistDiag[["diagram"]], barcode=TRUE)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/barcode.jpg" alt="rips barcode">
+</pre>
+</details>
+
+Here, 1d homology is represented in black, and 2d homology is in red. We can track the birth and death
+of this cycle, along with all of the other connected components, by seeing the times
+at which segments begin and end in the barcode.
+
 
 ---
 ### Introduction to Persistence Diagrams
