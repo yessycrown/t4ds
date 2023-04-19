@@ -48,6 +48,7 @@ trefoil knot and the figure 8 knot.  These are the first two knots of the
 "sixteen simplest knots":
 
 ![simple knots](https://knotplot.com/knot-theory/inlines/row1KnTb.gif)
+![simple knots](https://knotplot.com/knot-theory/inlines/row2KnTb.gif)
 
 Variants to try (in smaller groups):
 
@@ -59,13 +60,12 @@ Variants to try (in smaller groups):
 ---
 ## 2. What is Shape (in Data Science)?
 
-Write down your answer to the question: what is shape?  Write three words that
-come to mind [in this Slido poll](https://app.sli.do/event/jq8wgrEpgBwThxABcHRxja)
-
-Discuss with your neighbors.
+What comes to mind with the following question: *what is shape*?  Write three words that
+come to mind [in this Slido poll](https://app.sli.do/event/jq8wgrEpgBwThxABcHRxja), 
+then discuss the results and your thoughts with your neighbors.
 
 <details>
-<summary>See the Answer</summary>
+<summary style="color:red">See the Dictionary Definition and Brittany's Definition</summary>
 <br>
 <pre style="background-color:lightcoral">
 From Meriam Webster:
