@@ -102,12 +102,14 @@ glaciers1966[1,]
 We can also go ahead and view all of the glaciers in GNP in the same way.
 
 ```
-plot(glaciers_66)
+plot(glaciers1966)
 ```
 
 ![glacier2](../assets/images/glacier2.png)
 
+### From Raw Data to Topologically Meaningful
 
+With the raw glacier data in hand, we now conduct segmentatio
 TODO
 
 ## Wrapping Up
