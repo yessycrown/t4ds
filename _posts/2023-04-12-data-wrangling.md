@@ -383,7 +383,7 @@ plot(x=glacier_data[,1], y=glacier_data[,2], xlab="Year", ylab = "Cumulative Mas
 </details>
 
 The research does show that glaciers around the world are melting and getting
-smaller (see, e.g., [climate.gov][1]). Tomorrow, we will explore the
+smaller; see, e.g., [climate.gov][1]. Tomorrow, we will explore the
 relationship between shape and glacier health.
 
 ---
