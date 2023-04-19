@@ -166,7 +166,7 @@ Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The Rips compl
 and $r$ is the abstract simplicial complex of $\text{VR}(S, r)$ consisting of all subsets
 of diameter at most $r$:
 
-$ \text{VR}(S, r):=\left\{\sigma\subset S \mid \text{ diam}(\sigma)\leq r\right\}, $
+$ \text{VR}(S, r):=\{\sigma\subset S \mid \text{ diam}(\sigma)\leq \}, $
 
 where the *diameter* of a set of points is the maximum distance between any two points in the set.
 
