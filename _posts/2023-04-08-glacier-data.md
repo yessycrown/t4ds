@@ -171,26 +171,83 @@ Agassiz glacier. However, this would introduce additional imprecision and random
 our data, which we don't necessarily want. A better idea is to get a uniform grid
 from within our polygon, and use TDA (namely, a grid filtration) on that.
 
-Let's get sample a uniform grid of 1000 points from within our polygon. Luckily, the `spsample`
+Let's get sample a uniform grid of 4000 points from within our polygon. Luckily, the `spsample`
 function has the option to get a `regular` sample.
 
 ```
-unifGlac <- spsample(glaciers1966[1,], n=1000, "regular")
+unifGlac <- spsample(glaciers1966[1,], n=4000, "regular")
 ```
 
-Indeed, if we plot this we get the desired grid:
+Indeed, if we plot this we get a clean grid:
 
 ```
-plot(unifGlac, pch=20, cex=.5)
+plot(unifGlac, pch=20, cex=.25)
 ```
 
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre>
-<img src="https://comptag.github.io/t4ds/assets/images/glacgrid.jpg" alt="agassiz random plot">
+<img src="https://comptag.github.io/t4ds/assets/images/agassizgrid.jpg" alt="agassiz random plot">
 </pre>
 </details>
+
+
+
+And, we get something nice to do TDA with.
+That is, we can do a grid filtration by assigning the same height to each point in the grid,
+and get the resulting persistence diagram using the `gridDiag` function.
+
+The last thing we'll need before we can do this is to figure out the bounds of our 
+rid. See if you can figure out how to do this, using what you know about dataframes in R.
+Remember that you can find the points defining the corners of a polygon with the following syntax:
+
+```
+glaciers1966[1,]@polygons[[1]]@Polygons[[1]]@coords
+```
+
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+> # compute points on Agassiz Glacier
+> pts <- glaciers1966[1,]@polygons[[1]]@Polygons[[1]]@coords
+> xlim <- c(min(pts[,1]), max(pts[,1]))
+> ylim <- c(min(pts[,2]), max(pts[,2]))
+> lim <- cbind(xlim, ylim)
+> lim
+         xlim    ylim
+[1,] 268044.4 5423908
+[2,] 269715.9 5426157
+</code>
+</pre>
+</details>
+
+We also need to know the distance between points in our grid.
+Find this just by quick inspection:
+
+```
+head(unifGlac, 10)
+```
+
+It looks like our points have distance 20, meaning that the grid distance parameter
+`by` will be 40.
+
+Now we have everything we need to conduct a grid filtration on the Agassiz glacier.
+Let's see what the persistence diagram looks like when doing so.
+To start, try the following:
+
+```
+Diag1 <- gridDiag(as.data.frame(unifGlac), distFct, lim = lim, by=40, sublevel = TRUE, printProgress = TRUE)
+```
+
+And then plot the resulting persistence diagram:
+
+```
+plot(Diag1[["diagram"]])
+```
 
 
 
