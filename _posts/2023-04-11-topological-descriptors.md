@@ -32,7 +32,7 @@ a type of data that holds intrinsic topological meaning.
 
 ---
 
-### Triangle appreciation
+### Triangle Appreciation
 
 Of course we are all familiar with triangles, and to understand computational topology, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from 0 to n. (Where the -1th dimensional triangle being a null value).
 
