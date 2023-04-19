@@ -46,8 +46,10 @@ An $n$-simplex has $n+1$ *faces* of dimension $n-1$ (namely, one for leaving out
 each point). For example,
 a two-simplex has three one-dimensional faces (edges).
 
-<details>
+<head>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+</head>
+<details>
 <summary style="color:DarkOrange">More Info</summary>
 <br>
 <pre style="background-color:Gold">
