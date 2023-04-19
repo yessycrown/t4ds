@@ -34,7 +34,7 @@ a type of data that holds intrinsic topological meaning.
 
 ### Triangle Appreciation
 
-Of course we are all familiar with triangles, and to understand computational topology, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from 0 to n. (Where the -1th dimensional triangle being a null value).
+Of course we are all familiar with triangles, and to understand computational topology, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from $0$ to $n$. (Where the -1th dimensional triangle being a null value).
 
 ![n dimensional triangles](https://i.stack.imgur.com/O6xtg.png)
 
@@ -195,7 +195,10 @@ $(n+1)$-way intersection of balls. To see where they differ, consider the
 two-complex above that is created when three balls pairwise intersect in the
 Rips complex.  If there is not a three-way intersection, the triangle is not
 added to the &#268;ech complex.
-![cech complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/cechrips.svg)
+<figure>
+<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/cechrips.svg" alt="cechcplx" style="width:100%">
+<figcaption>&#268;ech complex.</figcaption>
+</figure>
 </pre>
 </details>
 
