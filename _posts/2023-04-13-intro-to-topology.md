@@ -15,7 +15,7 @@ tags:
 ---
 ## Overview
 
-In this session, we will have a light and fast introduction to the subject of
+In this session, we provide a light and fast introduction to the subject of
 topology, a field of mathematics that stems from pure mathematics, but has
 applications in data analysis that makes it an interesting subject to applied
 mathematicians, statisticians, computer scientists, data scientists, and other
@@ -24,8 +24,9 @@ data scientists alike.
 This session is presented by Brittany.
 
 ***Objectives***: After this session, we hope you will be able to:
-> - Define `shape` of data
+> - Define "shape"
 > - Describe topological and geometric properties of a space/shape
+> - Explain how to represent data as a complex
 
 ---
 ## 1. Getting Started
@@ -33,20 +34,20 @@ This session is presented by Brittany.
 We are glad that you are here with us for this workshop!  The first activity is
 hands-on, literally.
 
-We will stand in a circle.  Then, raise right hands and grab someone's hand from
-across the circle.  Then, raise left hands and grab someone else's hand.  Can we
-unknot ourselves?
+We start by standing in a circle.  Then, hold hands with two differnt people
+(both cannot be next to you).  Can we unknot ourselves?
 
-Knot theory is fun!  If we can unknot ourselves and are one connected component,
+Knot theory is fun!  If we can unknot ourselves and we have formed one connected component,
 then we have formed **the unknot**, or the most basic/fundamental of all knots.
 If we created two cycles (each an unknot or not), then we have formed a link.
 
 [![unknotting](https://img.youtube.com/vi/UmF0-Tz1oWc/hqdefault.jpg)](https://www.youtube.com/watch?v=UmF0-Tz1oWc)
 
 Other knots that are interesting (and not equivelent to the unknot) are the
-trefoil knot and the figure 8 knot.
+trefoil knot and the figure 8 knot.  These are the first two knots of the
+"sixteen simplest knots":
 
-TODO:figure
+![simple knots](https://knotplot.com/knot-theory/inlines/row1KnTb.gif)
 
 Variants to try (in smaller groups):
 
@@ -206,6 +207,8 @@ post it to the "muddy point board".
 * The human knot is a popular ice breaking game (it even has a [Wikipedia][2]
   page!)  However, most do not realize that realizing the unknot is not always
   feasible. Whoops!  See a [math blog post][3] explaining.
+* [knotplot.com](https://knotplot.com/) is a great resource for learning more
+  about knot theory!
 * Koenigsberg Bridge photo (teaser): [Wikimedia][1], CC BY-SA 3.0
 * Euler's maps: from Euler's solution to the Bridges of Koenigsberg problem in
   Solutio Problematis ad Geometriam Situs Pertinentis (The solution of a problem
