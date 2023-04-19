@@ -506,7 +506,7 @@ we now will discuss useful data structures to store and interpret filtrations.
 
 ---
 
-### Introduction to Persistence Barcodes
+### Introduction to Persistent Homology: Barcodes and Diagrams
 
 Let's step back for a moment and think of a painting.  Museums and art experts
 vary on their advice for the best distance to stand from a painting or print:
@@ -603,13 +603,29 @@ plot(persistDiag[["diagram"]], barcode=TRUE)
 </pre>
 </details>
 
+And, if you want to see the persistence diagram instead of the barcode, use:
+```
+plot(persistDiag[["diagram"]], barcode=TRUE)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/rips-barcode.jpg" 
+    alt="rips diagram">
+</pre>
+</details>
+
+
+
 Here, 1d homology is represented in black, and 2d homology is in red. We can track the birth and death
 of this cycle, along with all of the other connected components, by seeing the times
 at which segments begin and end in the barcode.
 
 
 ---
-### Introduction to Persistence Diagrams
+### More Persistence Diagrams
 
 Now, let's return to simplicial complexes.
 
