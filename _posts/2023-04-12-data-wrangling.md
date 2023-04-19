@@ -29,16 +29,19 @@ This session is presented by Ben.
 
 ## 1. Getting Started
 
-Before we really get going with topology and topological data analysis, 
+Before we really get going with topological data analysis, 
 we first need a basic understanding of how to handle data in R.
 
 We will be working with R online in [R Studio Cloud](https://login.rstudio.cloud/),
 though if you'd prefer to work in R Studio locally that is fine too. Create an account,
 this is probably easiest using your google account, and start working in the `posit cloud`.
 
-Once in your workspace, begin by clicking `new project` and selecting an `RStudio` project.
+Once in your workspace, begin by clicking `New Project` (top right) and selecting
+a `New RStudio Project` from the dropdown menu.
 Name the project whatever you'd like, perhaps something like `T4DS-Workshop-2023`. Then use
-`File -> New File -> R Script` to create a new R script, and title it `R-Intro`.
+`File -> New File -> R Script` (or `Ctrl+Shift+N`) to create a new R script.
+Finally, at the top of the page, click `Untitled Project` and rename your
+project `R-Intro`.
 
 ---
 
