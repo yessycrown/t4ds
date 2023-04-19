@@ -43,9 +43,17 @@ glaciers_66[6,]
 for (i in length(first_five)){
   plot(glaciers_66[i,])
 }
-plot(glaciers_66[5,])
+plot(glaciers_66[1,])
+class(glaciers_66[1,])
+gDistance()
+mat1.data <- c(269000,5424500)
+mat1 <- matrix(mat1.data,nrow=1,ncol=2,byrow=TRUE)
+mat1
 
-first_five[1]
+names(glaciers_66)
+
+
+plot(spsample(glaciers_66[1,], n=1000,"regular"), pch=20, cex=.5)
 
 library(TDA)
 # rips
