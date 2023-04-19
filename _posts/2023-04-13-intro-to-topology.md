@@ -88,14 +88,14 @@ shape/data.  Topology studies the connectivity between and among data.
 
 The ![bridges of Koenigsberg][1] 
 
-![Koenigsberg](https://github.com/compTAG/t4ds/blob/gh-pages/assets/images/bridges.jpg)
+![Koenigsberg](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges.jpg)
 
 <summary>See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
 <br>
-![bridges with map](https://github.com/compTAG/t4ds/blob/gh-pages/assets/images/bridges-map-and-graph.png)
-![just map](https://github.com/compTAG/t4ds/blob/gh-pages/assets/images/bridges-graph.png)
+![bridges with map](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges-map-and-graph.png)
+![just map](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges-graph.png)
 <br>
 </details>
 
