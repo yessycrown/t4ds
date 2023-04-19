@@ -187,7 +187,15 @@ Here are some examples of Rips complexes:
 <br>
 <pre style="background-color:Gold">
 The Vietoris-Rips complex is an approximation of the &#268;ech complex.
-The *Cech complex* TODO:finish def. 
+The <b>&#268;ech complex</b> is an abstract simplicial complex that is homotopy
+equivalent to a union of balls.  It is created by adding a vertex for each ball,
+an edge between vertices correspoding to intersecting balls (so far, we're in
+the same setting as the Rips filtration), and adding an $n$-simplex for each
+$(n+1)$-way intersection of balls. To see where they differ, consider the
+two-complex above that is created when three balls pairwise intersect in the
+Rips complex.  If there is not a three-way intersection, the triangle is not
+added to the &#268;ech complex.
+![cech complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/cechrips.svg)
 </pre>
 </details>
 
