@@ -510,7 +510,7 @@ vary on their advice for the best distance to stand from a painting or print:
 
 * [Lightscape Creations](https://www.lightscapecreations.co.uk/blog/2019/10/the-perfect-viewing-distance) 
   says to first "measure the diagonal of the [artwork] from bottom left corder
-  to the top right corner".  Then, the viewer should be at a distance eqaul to 1.5 to 2 times the diagonal.
+  to the top right corner".  Then, the viewer should be at a distance equal to 1.5 to 2 times the diagonal.
 * [John Paul Caponigro](https://www.johnpaulcaponigro.com/blog/93/printing-ideal-viewing-distance/)
   also uses the diagonal in his calculation, but says that the viewer should be
   three times the diagonal away.
@@ -527,7 +527,27 @@ example, you can use Starry Night by Van Gogh:
 
 ![starry Night](https://www.vangoghgallery.com/catalog/image/0612/Starry-Night.jpg)
 
-**Now is a good time for a quick break (if we haven't taken one already).**
+The strips of masking tape create a *barcode*.  The endpoints of the strip are
+placed at the minimum and maximum distances that you can view that feature.
+Is it possible 
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<figure>
+<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/vangogh-scales-05all.svg" alt="Starry Night barcode" style="width:100%">
+<figcaption>Barcode for select features in Starry Night. Note that in order to
+see the constellation Aries, you need to stand far away from the painting that
+you can no longer see individual brush strokes. So, one viewing distance is not
+enough.  And, in data, often, one scale is not enough.</figcaption>
+</figure>
+</pre>
+</details>
+
+
+
+**Now is a good time for a quick break (if we haven't taken one recently).**
 
 Back to our Rips filtration, we can see that
 for certain $r$, homology features are either being created or going away.
