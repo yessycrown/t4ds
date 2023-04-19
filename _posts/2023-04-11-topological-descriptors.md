@@ -504,14 +504,35 @@ we now will discuss useful data structures to store and interpret filtrations.
 
 ### Introduction to Persistence Barcodes
 
-TODO: Brittany, if we want to do barcodes still
+Let's step back for a moment and think of a painting.  Museums and art experts
+vary on their advice for the best distance to stand from a painting or print:
+
+* [Lightscape Creations](https://www.lightscapecreations.co.uk/blog/2019/10/the-perfect-viewing-distance) 
+  says to first "measure the diagonal of the [artwork] from bottom left corder
+  to the top right corner".  Then, the viewer should be at a distance eqaul to 1.5 to 2 times the diagonal.
+* [John Paul Caponigro](https://www.johnpaulcaponigro.com/blog/93/printing-ideal-viewing-distance/)
+  also uses the diagonal in his calculation, but says that the viewer should be
+  three times the diagonal away.
+* [Data Genetics](http://datagenetics.com/blog/december42018/index.html) uses
+  math to answer this question.
+* [J Ken Spencer](https://jkenspencer.com/blog/165155/savoring-a-painting-the-20-6-1-rule)
+  advocates for the 20-6-1 rule; that is, there are three distances: 20 feet, 6
+  feet, and 1 foot away fom the artwork.
+
+Let's give this a try.  Setup in groups of 3.  Hold up a picture.  Identify
+three features of this photo.  Mark the ground with a strip of masking tape to
+represent the interval of distances you can see the features clearly.  For
+example, you can use Starry Night by Van Gogh:
+![starry Night](https://www.vangoghgallery.com/catalog/image/0612/Starry-Night.jpg)
+
+Now is a good time for a quick break (if we haven't taken one already).
 
 ---
 ### Introduction to Persistence Diagrams
 
-TODO: Brittany and Ben jointly here
+Now, let's return to simplicial complexes.
 
-In the example above, it would be convenient if we could store the changes resulting from
+In the Rips filtration above, it would be convenient if we could store the changes resulting from
 a filtration in some way. This is the purpose of persistence diagrams, which keep track of
 the "times" at which topological features are created or destroyed. That is, persistence
 diagrams record the persistence of homology in different dimensions.
@@ -764,4 +785,4 @@ this afternoon:
 - This material was based on [other tutorials](https://comptag.github.io/rpackage_tutorials/)
   developed by Robin Belton, Ben Holmgren (name familiar?), and Jordan Schupbach. We thank
   them for giving us a head start on this material!
-
+- The photo of Starry Night is from [The VanGogh Gallery](https://www.vangoghgallery.com/catalog/Painting/508/Starry%20Night.html)
