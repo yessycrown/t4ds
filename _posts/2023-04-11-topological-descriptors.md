@@ -757,3 +757,11 @@ this afternoon:
 > - We learned about filtrations
 > - We learned about persistence diagrams and barcodes, and implemented them in R
 > - We learned about the height filtration
+
+---
+### Credits
+
+- This material was based on [other tutorials](https://comptag.github.io/rpackage_tutorials/)
+  developed by Robin Belton, Ben Holmgren (name familiar?), and Jordan Schupbach. We thank
+  them for giving us a head start on this material!
+
