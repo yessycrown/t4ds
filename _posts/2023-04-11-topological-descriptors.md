@@ -11,17 +11,14 @@ tags:
 
 ## Overview 
 
-To round off day 1, we will combine what you learned in the first two sessions to cover
+To round off day 1, we combine what you learned in the first two sessions to cover
 the basics of computational topology. After learning the requisite theory,
 we will present relevant examples in R for students to gain hands on experience.
 
 This session is presented jointly by Brittany and Ben. Brittany will cover most of the
 theory, and Ben will lead R programming sections.
 
-### Objectives
-
-After this session, we hope that you will  be able to:
-
+***Objectives***: After this session, we hope you will be able to:
 > - Understand how topological shape can exist in data
 > - Gain a working knowledge of persistence barcodes and diagrams
 > - Gain exposure to the Vietoris-Rips and other complexes
