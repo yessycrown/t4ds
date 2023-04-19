@@ -1,11 +1,13 @@
 ---
 title: Exploration of Glacier Data In R
 layout: post
-post-image: "TODO: add an image url here"
-description: TODO: add description
+post-image: "https://www.nps.gov/npgallery/GetAsset/73DEAD5F-1DD8-B71C-07D706E33BB2C5C2/proxy/hires?"
+description: Using what we've learned about topology, TDA, and data analysis more broadly, we
+study the evolving shape of glaciers in Montana's Glacier National Park.
 tags:
 - persistence
-- TODO
+- bottleneck distance
+- grid filtration
 ---
 
 ## Overview
