@@ -25,7 +25,7 @@ theory, and Ben will lead R programming sections.
 
 ---
 
-## Getting Started
+## 1.Getting Started
 
 We begin this session by introducing simplicial complexes, which are 
 a type of data that holds intrinsic topological meaning.
@@ -74,7 +74,7 @@ Then, we can interpret topological features in a computational setting.
 
 ---
 
-#### Simplicial Complexes in R
+### Simplicial Complexes in R
 
 For a quick example to drive home the intuition, let's
 create a simplicial complex in R.
@@ -208,6 +208,7 @@ added to the &#268;ech complex.
 
 
 ---
+## 2. Filtrations
 
 ### The Vietoris-Rips Filtration
 
@@ -276,7 +277,7 @@ with an example in mind.
 
 ---
 
-#### A Rips Filtration in R
+### A VR Filtration in R
 
 In R, we can use the `ripsFiltration` function in the TDA package to conduct filtrations.
 Let's try it out for $r<\sqrt{5}$, using the same 4 example points from above.
@@ -505,8 +506,56 @@ and the filtration that results treating $r>0$ as a free variable,
 we now will discuss useful data structures to store and interpret filtrations.
 
 ---
+### The Height Filtration
 
-### Introduction to Persistent Homology: Barcodes and Diagrams
+TODO: Brittany discuss the theory behind this, Ben create examples.
+
+Another common filtration in TDA is the height filtration.
+This takes a different form from the Vietoris-Rips filtration,
+in that all data is not born from the onset of the filtration.
+In contrast, we can intuitively think of the height filtration as a
+curtain rising on a simplicial complex.
+
+TODO: Brittany add theory here, and perhaps motivate the height filtration a bit
+
+TODO: Ben expand/improve this example. Maybe use toy example chosen by Brittany.
+
+One especially useful function in the TDA package is `circleunif`, which creates
+a point cloud by randomly sampling on the unit circle. This is handy when getting familiar
+with TDA as an easy way to create data with interesting topology.
+We will randomly sample in this way from the unit circle, and then create a Rips complex.
+Once we've done that, we will conduct a height filtration on the Rips complex.
+
+```
+X <- circleUnif(n=6, r=1)
+```
+
+Then we create a rips complex:
+
+```
+FltRips <- ripsFiltration(X = X, maxdimension = 2,
+                          maxscale = 1.5, dist = "euclidean", library = "Dionysus",
+                          printProgress = TRUE)
+```
+
+Assign height function values to each vertex,
+and conduct a height filtration:
+
+```
+FUNvalues <- X[, 1] + X[, 2]
+FltFun <- funFiltration(FUNvalues = FUNvalues, cmplx = FltRips[["cmplx"]])
+```
+
+Be sure to visualize your resulting simplicial complex after the filtration:
+
+```
+FltFun$cmplx
+```
+
+
+
+---
+## 3. Introduction to Persistent Homology: Barcodes and Diagrams
 
 Let's step back for a moment and think of a painting.  Museums and art experts
 vary on their advice for the best distance to stand from a painting or print:
@@ -598,49 +647,17 @@ plot(persistDiag[["diagram"]], barcode=TRUE)
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
-<pre>
+<pre style="background-color:lightblue">
 <img src="https://comptag.github.io/t4ds/assets/images/barcode.jpg" alt="rips barcode">
 </pre>
+TODO:check if barcode is correct.
 </details>
-
-And, if you want to see the persistence diagram instead of the barcode, use:
-```
-plot(persistDiag[["diagram"]], barcode=TRUE)
-```
-
-<details>
-<summary style="color:blue">Expected Output</summary>
-<br>
-<pre>
-<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/rips-barcode.jpg" 
-    alt="rips diagram">
-</pre>
-</details>
-
-
 
 Here, 1d homology is represented in black, and 2d homology is in red. We can track the birth and death
-of this cycle, along with all of the other connected components, by seeing the times
-at which segments begin and end in the barcode.
-
-
----
-### More Persistence Diagrams
-
-Now, let's return to simplicial complexes.
-
-In the Rips filtration above, it would be convenient if we could store the changes resulting from
-a filtration in some way. This is the purpose of persistence diagrams, which keep track of
-the "times" at which topological features are created or destroyed. That is, persistence
-diagrams record the persistence of homology in different dimensions.
-
-If we wanted to record the filtration from earlier in a persistence diagram, we can 
-do so in R using the `ripsDiag` function, where `X` is the dataset of four points and maxscale
-is $\sqrt{17}$:
+of the connected components as well as the one-cycle, by seeing the times at which segments begin and end in the barcode.
+TODO:introduce this code
 
 ```
-persistDiag <- ripsDiag(X, maxdimension, maxscale=maxscale, dist = dist,
-                    printProgress = TRUE)
 persistDiag
 ```
 
@@ -665,29 +682,25 @@ $diagram
 </pre>
 </details>
 
-As an object this is not particularly helpful, though we can get insight into birth/death times.
-Let's use the built in plotting functionality for persistence diagrams to get a better look:
-
+And, if you want to see the persistence diagram instead of the barcode, use:
 ```
 plot(persistDiag[["diagram"]])
 ```
-
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
-<pre>
+<pre style="background-color:lightblue">
 <img src="https://comptag.github.io/t4ds/assets/images/persistdiag1.jpg" alt="rips pts">
 </pre>
 </details>
 
-We can see that the persistence diagram picks up on the birth and death of
-all four individual points, as well as the cycle created at $r=\sqrt{10}$
-and destroyed at $r=\sqrt{13}$. By the end of the filtration,
-there is one 0-dimensional homology group (connected component) persisting as well.
+The barcode and the diagram are visualizations of the same information: the
+persistence of homoology generators as a parameter changes. Some researchers
+prefer one over an another, but they're ultimately the same object
+mathematically.
 
 ---
-
-#### A Rips Filtration On GIS Data
+### An Example with the County Data
 
 So far, we have mostly only been working with toy examples. Let's work now with a
 big data set, which will illuminate some of the considerations that data scientists
@@ -812,60 +825,12 @@ If we set maxdimension=1 and maxscale=20000, we should be able to compute this o
 </pre>
 </details>
 
----
-
-### The Height Filtration
-
-TODO: Brittany discuss the theory behind this, Ben create examples.
-
-Another common filtration in TDA is the height filtration.
-This takes a different form from the Vietoris-Rips filtration,
-in that all data is not born from the onset of the filtration.
-In contrast, we can intuitively think of the height filtration as a
-curtain rising on a simplicial complex.
-
-TODO: Brittany add theory here, and perhaps motivate the height filtration a bit
-
-TODO: Ben expand/improve this example. Maybe use toy example chosen by Brittany.
-
-One especially useful function in the TDA package is `circleunif`, which creates
-a point cloud by randomly sampling on the unit circle. This is handy when getting familiar
-with TDA as an easy way to create data with interesting topology.
-We will randomly sample in this way from the unit circle, and then create a Rips complex.
-Once we've done that, we will conduct a height filtration on the Rips complex.
-
-```
-X <- circleUnif(n=6, r=1)
-```
-
-Then we create a rips complex:
-
-```
-FltRips <- ripsFiltration(X = X, maxdimension = 2,
-                          maxscale = 1.5, dist = "euclidean", library = "Dionysus",
-                          printProgress = TRUE)
-```
-
-Assign height function values to each vertex,
-and conduct a height filtration:
-
-```
-FUNvalues <- X[, 1] + X[, 2]
-FltFun <- funFiltration(FUNvalues = FUNvalues, cmplx = FltRips[["cmplx"]])
-```
-
-Be sure to visualize your resulting simplicial complex after the filtration:
-
-```
-FltFun$cmplx
-```
-
 
 
 
 ---
 
-## Wrapping Up
+## 4. Wrapping Up
 
 Thanks for your attention to end today's workshop materials! To summarize our accomplishments
 this afternoon:
