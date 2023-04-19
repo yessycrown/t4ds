@@ -12,7 +12,7 @@ tags:
 ## Overview 
 
 To round off day 1, we combine what you learned in the first two sessions to cover
-the basics of topological data analysis (TDA). After learning the requisite theory,
+the basics of topological data analysis (TDA). While learning the requisite theory,
 we present relevant examples in R in order to gain hands-on experience with TDA.
 
 This session is presented jointly by Brittany and Ben. Brittany will cover most of the
@@ -20,8 +20,11 @@ theory, and Ben will lead R programming sections.
 
 ***Objectives***: After this session, we hope you will be able to:
 > - Recognize topological shape in data
-> - Explain persistence barcodes/diagrams at a high leve
+> - Define a filtration, and give at least two examples of different
+>   filtrations
+> - Explain persistence barcodes/diagrams at a high level
 > - Create the Vietoris-Rips and other complexes in R
+> - Compute a persistence diagram in R
 
 ---
 
