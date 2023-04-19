@@ -41,10 +41,22 @@ Of course we are all familiar with triangles, and to understand computational to
 Intuitively, we call an $n$-dimensional triangle an *n-simplex*.
 
 More rigorously,
-an *n-simplex* is the smallest convex set of $n+1$ points,
-$v_0,...,v_{n}$ where $v_1-v_0,...,v_{n}-v_0$ are linearly independent.
-An $n$-simplex has $n+1$ *faces* of dimension $n-1$. For example,
-a 2-simplex has three 1-dimensional faces (edges).
+an *n-simplex* is the smallest convex set of $n+1$ affinely independent points.
+An $n$-simplex has $n+1$ *faces* of dimension $n-1$ (namely, one for leaving out
+each point). For example,
+a two-simplex has three one-dimensional faces (edges).
+
+<details>
+<summary style="color:DarkOrange">More Info</summary>
+<br>
+<pre style="background-color:Gold">
+We say that the set of points $\{ v_0, v_1, \ldots, v_n\}$ is *affinely
+independent*
+iff the vectors $v_1-v_0,...,v_{n}-v_0$ are *linearly independent*.
+</pre>
+</details>
+
+
 
 We can link simplices together to form a *simplicial complex*. In particular, a *simplicial complex* $K$
 is a finite collection of simplices, such that:
