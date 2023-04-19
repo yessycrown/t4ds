@@ -27,7 +27,7 @@ theory, and Ben will lead R programming sections.
 > - Compute a persistence diagram in R
 
 ---
-
+---
 ## 1.Getting Started
 
 We begin this session by introducing simplicial complexes in R.
