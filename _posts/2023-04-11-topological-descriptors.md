@@ -207,15 +207,18 @@ added to the &#268;ech complex.
 
 ### The Vietoris-Rips Filtration
 
-A *filtration* of a simplicial complex, $K$, is a nested sequence of subcomplexes starting at the
-empty set and ending with the full simplicial complex, i.e.,
-
-$\emptyset \subset K_0 \subset K_1 \subset ... \subset K_n=K.$
-
 Going back to the Rips complex, we consider $r$ to be a free parameter. If we vary $r$, we
-get different Rips complexes. In many data analysis situations, the value of $r$ that best describes
+get different Rips complexes. So, which one do we pick?
+In many data analysis situations, the value of $r$ that best describes
 the data is unknown or does not exist, so why not look at all of them!? Observe if we increase $r$
-continuously, then we get a family of nested Rips complexes; the *Rips filtration*.
+continuously, the complex only changes a finite number of radii, say at $r_0 <
+r_1 < \ldots < r_n$. 
+Then, we get a family of nested Rips complexes; the *Rips filtration*.
+
+$\emptyset < K_0 \subset K_1 \subset \ldots \subset K_n=K.$
+
+More generall, a *filtration* of a simplicial complex, $K$, is a nested sequence of subcomplexes starting at the
+empty set and ending with the full simplicial complex.
 
 Let's work through an example. Let $S:=\{(0,0),(1,3),(2,-1),(3,2)\}\subset \mathbb{R}^2$. 
 For a visualization, this is easy to plot in R:
