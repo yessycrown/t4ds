@@ -503,7 +503,7 @@ names(counties)
 Knowing this, we can get the name of every County using the following syntax:
 
 ```
-counties$NAME
+counties\$NAME
 ```
 
 <details>
@@ -511,7 +511,7 @@ counties$NAME
 <br>
 <pre style="background-color:lightblue">
 <code>
-> counties$NAME
+> counties\$NAME
  [1] "CARBON"          "POWDER RIVER"    "MADISON"         "BEAVERHEAD"     
  [5] "BIG HORN"        "STILLWATER"      "PARK"            "GALLATIN"       
  [9] "SWEET GRASS"     "SILVER BOW"      "CARTER"          "DEER LODGE"     
@@ -541,7 +541,7 @@ Knowing an attribute of data, we can also find its index. For example, we can fi
 Choteau county by:
 
 ```
-which(counties$NAME=="CHOUTEAU")
+which(counties\$NAME=="CHOUTEAU")
 ```
 
 <details>
@@ -549,7 +549,7 @@ which(counties$NAME=="CHOUTEAU")
 <br>
 <pre style="background-color:lightblue">
 <code>
-> which(counties$NAME=="CHOUTEAU")
+> which(counties\$NAME=="CHOUTEAU")
 [1] 40
 </code>
 </pre>
@@ -558,7 +558,7 @@ which(counties$NAME=="CHOUTEAU")
 The `which` function also has attributes `max` and `min`. This allows us to find polygons maximizing and minimizing different attributes. For instance, the index of the county in Montana with smallest perimeter is:
 
 ```
-counties$NAME[which.min(counties$PERIMETER)]
+counties\$NAME[which.min(counties\$PERIMETER)]
 ```
 
 <details>
@@ -566,7 +566,7 @@ counties$NAME[which.min(counties$PERIMETER)]
 <br>
 <pre style="background-color:lightblue">
 <code>
-> counties$NAME[which.min(counties$PERIMETER)]
+> counties\$NAME[which.min(counties\$PERIMETER)]
 [1] "WHEATLAND"
 </code>
 </pre>
@@ -581,7 +581,7 @@ county (by acres) in Montana.
 <br>
 <pre style="background-color:lightcoral">
 <code>
-> counties$NAME[which.max(counties$ACRES)]
+> counties\$NAME[which.max(counties\$ACRES)]
 [1] "BEAVERHEAD"
 </code>
 </pre>
@@ -601,7 +601,7 @@ gallatin <- # HINT: Get the index of Gallatin county, which corresponds to a row
 <br>
 <pre style="background-color:lightcoral">
 <code>
-gallatin <- counties[which(counties$NAME=="GALLATIN"),]
+gallatin <- counties[which(counties\$NAME=="GALLATIN"),]
 </code>
 </pre>
 </details>
