@@ -160,7 +160,10 @@ like a set of points, to a simplicial complex?"
 
 This gets at a major area of study in topological data analysis: finding topology in point cloud data.
 It turns out that there are tons of ways to study topology in point cloud data. 
-One simple method uses what is called the Vietoris-Rips complex.
+You may be familiar with *contact graphs* where the vertices represent a geometric object such as a
+circle, curve, or polygon, and an edge between two vertices exists if the corresponding two objects
+intersect. The Vietoris-Rips (VR) complex, which we investigate next,
+is a generalization of contact graphs.
 
 Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The Rips complex of $S$
 and $r$ is the abstract simplicial complex of $\text{VR}(S, r)$ consisting of all subsets
@@ -174,9 +177,7 @@ Geometrically, we constuct the Vietoris-Rips (VR)-complex by considering balls o
 centered at each point in $S$. Whenever $n$-balls pairwise intersect, we add an $n-1$
 dimensional simplex.
 
-You may be familiar with *contact graphs* where the vertices represent a geometric object such as a
-circle, curve, or polygon, and an edge between two vertices exists if the corresponding two objects
-intersect. The VR-complex is a generalization of contact graphs.
+![rips complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/rips-simplex.svg)
 
 Here are some examples of VR-complexes:
 
