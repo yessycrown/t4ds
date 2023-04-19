@@ -41,7 +41,9 @@ Of course we are all familiar with triangles, and to understand computational to
 Intuitively, we call an $n$-dimensional triangle an *n-simplex*.
 
 More rigorously,
-an *n-simplex* is the smallest convex set of $n+1$ affinely independent points.
+a *geometric n-simplex* is the smallest convex set of $n+1$ affinely independent points.
+An *abstract $n$-simplex* is a set of $n+1$ elements (here, the elements
+represent the points).
 An $n$-simplex has $n+1$ *faces* of dimension $n-1$ (namely, one for leaving out
 each point). For example,
 a two-simplex has three one-dimensional faces (edges).
@@ -57,7 +59,7 @@ iff the vectors $v_1-v_0,...,v_{n}-v_0$ are <i>linearly independent</i>.
 </details>
 
 
-We can link simplices together to form a *simplicial complex*. In particular, a *simplicial complex* $K$
+We can collect simplices together to form a *simplicial complex*. In particular, a *simplicial complex* $K$
 is a finite collection of simplices, such that:
 1. If $\sigma \in K$ and $\tau \subset \sigma$, then $\tau \in K$.
 2. If $\sigma, \sigma'\in K$, then $\sigma \cap \sigma'$ is either empty or a face of both $\sigma, \sigma'$.
@@ -67,7 +69,8 @@ is a finite collection of simplices, such that:
 ![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/asc.svg)
 
 
-Using a simplicial complex, we can interpret topological features in a computational setting.
+We can use a simplicial complex to represent shapes (and data). 
+Then, we can interpret topological features in a computational setting.
 
 ---
 
