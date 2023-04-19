@@ -27,53 +27,9 @@ theory, and Ben will lead R programming sections.
 
 ## 1.Getting Started
 
-We begin this session by introducing simplicial complexes, which are 
-a type of data that holds intrinsic topological meaning.
+We begin this session by introducing simplicial complexes in R.
 
 ---
-
-### Triangle Appreciation
-
-Of course we are all familiar with triangles, and to understand computational topology, we must first conceptualize triangles of differing dimensions. That is, triangles of increasing dimension ranging from $0$ to $n$. (Where the -1th dimensional triangle being a null value).
-
-![n dimensional triangles](https://i.stack.imgur.com/O6xtg.png)
-
-Intuitively, we call an $n$-dimensional triangle an *n-simplex*.
-
-More rigorously,
-a *geometric n-simplex* is the smallest convex set of $n+1$ affinely independent points.
-An *abstract $n$-simplex* is a set of $n+1$ elements (here, the elements
-represent the points).
-An $n$-simplex has $n+1$ *faces* of dimension $n-1$ (namely, one for leaving out
-each point). For example,
-a two-simplex has three one-dimensional faces (edges).
-
-<details>
-<summary style="color:DarkOrange">More Info</summary>
-<br>
-<pre style="background-color:Gold">
-We say that the set of points $\{ v_0, v_1, \ldots, v_n\}$ is <i>affinely
-independent</i>
-iff the vectors $v_1-v_0,...,v_{n}-v_0$ are <i>linearly independent</i>.
-</pre>
-</details>
-
-
-We can collect simplices together to form a *simplicial complex*. In particular, a *simplicial complex* $K$
-is a finite collection of simplices, such that:
-1. If $\sigma \in K$ and $\tau \subset \sigma$, then $\tau \in K$.
-2. If $\sigma, \sigma'\in K$, then $\sigma \cap \sigma'$ is either empty or a face of both $\sigma, \sigma'$.
-
-
-
-![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/asc.svg)
-
-
-We can use a simplicial complex to represent shapes (and data). 
-Then, we can interpret topological features in a computational setting.
-
----
-
 ### Simplicial Complexes in R
 
 For a quick example to drive home the intuition, let's
