@@ -134,7 +134,7 @@ What this means is the perspective of $a \in A$ "looks like" the perspective of
 $b \in B$.  In other words, the two shapes are "the same" if all you care about
 are the neigghborhoods.
 
-[![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph_frame.png)](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
+![isotopic](https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif#/media/File:Mug_and_Torus_morph.gif)
 
 ### Topological Invariants
 
