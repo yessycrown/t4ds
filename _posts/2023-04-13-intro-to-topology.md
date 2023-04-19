@@ -86,7 +86,7 @@ shape/data.  Topology studies the connectivity between and among data.
 ---
 ## 3. Koenigsberg
 
-The ![bridges of Koenigsberg][1] 
+The ![bridges of Koenigsberg](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)
 
 ![Koenigsberg](https://github.com/compTAG/t4ds/blog/gh-pages/assets/images/bridges.jpg)
 
