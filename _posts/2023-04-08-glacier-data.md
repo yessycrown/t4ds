@@ -107,10 +107,28 @@ plot(glaciers1966)
 
 ![glacier2](../assets/images/glacier2.png)
 
-### From Raw Data to Topologically Meaningful
+---
 
-With the raw glacier data in hand, we now conduct segmentatio
-TODO
+### Segmentation of Raw GIS Data
+
+For 5-10 minutes, using what you know about filtrations,
+discuss amongst yourselves how we might transform our GIS data in order to study its topology.
+What options do we have? Could these options introduce error?
+
+---
+
+With the raw glacier data in hand, we can conduct segmentation over a grid.
+Let's begin just by working with the Agassiz Glacier, at index 1.
+
+Remember, GIS data often has crazy coordinates. Let's get a sense for them
+by computing the points defining the Agassiz Glacier, and finding the bounds in
+each column.
+
+```
+pts <- glaciers1966[1,]@polygons[[1]]@Polygons[[1]]@coords
+bounds <- c(min(pts[,1]), max(pts[,1]), min(pts[,2]), max(pts[,2]))
+bounds
+```
 
 ## Wrapping Up
 

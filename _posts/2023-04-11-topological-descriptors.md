@@ -523,6 +523,7 @@ Let's give this a try.  Setup in groups of 3.  Hold up a picture.  Identify
 three features of this photo.  Mark the ground with a strip of masking tape to
 represent the interval of distances you can see the features clearly.  For
 example, you can use Starry Night by Van Gogh:
+
 ![starry Night](https://www.vangoghgallery.com/catalog/image/0612/Starry-Night.jpg)
 
 **Now is a good time for a quick break (if we haven't taken one already).**
