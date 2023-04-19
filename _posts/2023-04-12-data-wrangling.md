@@ -201,33 +201,7 @@ dim(glacier_data)
 </details>
 
 
-
-Telling us that our data has 70 rows, and 3 columns. We can grab
-entries by row, column index as follows:
-
-```
-# row 1, column 1
-glacier_data[1,1]
-
-# row 27, column 3
-glacier_data[27,3]
-```
-<details>
-<summary style="color:blue">Expected Output</summary>
-<br>
-<pre style="background-color:lightblue">
-<code>
-> glacier_data[1,1]
-[1] 1945
-> # row 27, column 3
-> glacier_data[27,3]
-[1] 32
-</code>
-</pre>
-</details>
-
-
-
+This told us that our data has 70 rows, and 3 columns. 
 Note that in R, indices start at 1, and not at 0!
 If we're working with large data and want to get a feel for things, the
 `head` function is quite useful:
@@ -249,6 +223,33 @@ head(glacier_data, 5)
 3 1947                        -3.19                      1
 4 1948                        -3.19                      1
 5 1949                        -3.82                      3
+</code>
+</pre>
+</details>
+
+Wasn't that easier to digest than looking at the whole thing?
+
+We can also grab
+entries by row, column index as follows:
+
+```
+# row 1, column 1
+glacier_data[1,1]
+
+# row 27, column 3
+glacier_data[27,3]
+```
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> # row 1, column 1
+> glacier_data[1,1]
+[1] 1945
+> # row 27, column 3
+> glacier_data[27,3]
+[1] 32
 </code>
 </pre>
 </details>
@@ -302,10 +303,10 @@ Therein lies R data manipulation in a nutshell!
 
 ### Fundamental Visualizations in R
 
-As the language of choice for statisticians, it should come as no surprise that one can also
+As the programming language of choice for statisticians, it should come as no surprise that one can also
 easily get statistical summaries from data.
 
-Basic functions like `min`, `max`, `sd`, and `mean` allow us to grab statistical properties from our
+Basic functions like `min`, `max`, `sd` (for standard deviation), and `mean` allow us to grab statistical properties from our
 data. For example:
 
 ```
@@ -378,18 +379,21 @@ plot(x=glacier_data[,1], y=glacier_data[,2], xlab="Year", ylab = "Cumulative Mas
 </pre>
 </details>
 
----
+The research does show that glaciers around the world are melting and getting
+smaller (see, e.g., [climate.gov][1]). Tomorrow, we will explore the
+relationship between shape and glacier health.
 
+---
 ## 2. Working with GIS Data in R
 
-Now that we have some basic data analysis in R under our belt, we'll start working with GIS data,
+Now that we have some basic data analysis in R under our belt, we start working with GIS data,
 which is a bit more complex!
 
 ---
 
 ### Some GIS Data to Play With: Montana Counties
 
-For this tutorial we'll work with GIS data coming from Montana County boundaries.
+For this tutorial, we will work with GIS data coming from Montana County boundaries.
 We will download the data directly into R as before, which comes from
 [Montana.gov](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/).
 
@@ -465,7 +469,7 @@ plot(counties)
 </details>
 
 Let's get a better feel for the data. Intuitively, with this shapefile data there should be, well, a 
-shape... defining each County.
+shape ... defining each county.
 
 We can get the attributes of spatial polygons data (and most labelled data in R) as follows:
 
@@ -678,8 +682,8 @@ Thanks for following along in session 2! To look back on our accomplishments bef
 
 Enjoy a long lunch in downtown Bozeman! If you have any questions about the above topics, don't hesitate 
 to ask. And if you have muddy points, post them!
----
 
+---
 ### Credits
 
 - For a more in depth introduction to R, check out the [software carpentries](http://swcarpentry.github.io/r-novice-inflammation/)
@@ -690,3 +694,4 @@ tutorials, which are a big inspiration for the style of this workshop
 on [administrative boundaries](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/)
 - The heroic mountainscape at the top of the page comes from the National Parks Service, in Glacier National Park.
 
+[1] <https://www.climate.gov/news-features/understanding-climate/climate-change-mountain-glaciers>
