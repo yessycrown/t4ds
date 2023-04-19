@@ -35,11 +35,12 @@ We begin this session by introducing simplicial complexes in R.
 ---
 ### Simplicial Complexes in R
 
-For a quick example to drive home the intuition, let's
+For a quick example to drive home the intuition 
+on [simplicial complexes from Session 1](https://comptag.github.io/t4ds/blog/intro-to-topology), let's
 create a simplicial complex in R.
 
-Create a new R script for this session in your project, and call it something like
-`TDA-Intro`. This afternoon we're getting our feet wet with topological data analysis,
+Create a new R script for this session in your project, and name it 
+`session-3`. This afternoon we're getting our feet wet with topological data analysis,
 so we'll need to install and import the R TDA package.
 
 ```
@@ -138,10 +139,10 @@ dimensional simplex.
 
 ![rips complexes](https://comptag.github.io/t4ds/assets/images/tda-rips/rips-simplex.svg)
 
-Here are some examples of VR-complexes:
+And, a simplicial complex:
 
 <img src="https://comptag.github.io/t4ds/assets/images/tda-rips/ripscomplex.svg" 
-    height="100"
+    height="50"
     alt="Example VR-Complex" 
     style="width:100%">
 
