@@ -388,7 +388,9 @@ plot(x=glacier_data[,1], y=glacier_data[,2], xlab="Year", ylab = "Cumulative Mas
 </details>
 
 The research does show that glaciers around the world are melting and getting
-smaller; see, e.g., [climate.gov][1]. Tomorrow, we will explore the
+smaller; see, e.g.,
+[climate.gov](https://www.climate.gov/news-features/understanding-climate/climate-change-mountain-glaciers). 
+Tomorrow, we will explore the
 relationship between shape and glacier health.
 
 ---
@@ -703,4 +705,3 @@ tutorials, which are a big inspiration for the style of this workshop
 on [administrative boundaries](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/)
 - The heroic mountainscape at the top of the page comes from the National Parks Service, in Glacier National Park.
 
-[1] <https://www.climate.gov/news-features/understanding-climate/climate-change-mountain-glaciers>
