@@ -23,9 +23,9 @@ This session is co-presented by Brittany and Ben.
 
 After this session, we hope that you will be able to:
 
-- Use theoretical ideas in topology for domain-specific applications
-- Interpret the changing shape of Montana's glaciers
-- Compare and contrast shape differences with changes in glacial health
+> - Use theoretical ideas in topology for domain-specific applications
+> - Interpret the changing shape of Montana's glaciers
+> - Compare and contrast shape differences with changes in glacial health
 
 
 ## Getting Started with Glacier Data in R
@@ -49,9 +49,8 @@ In Google Earth, the glacier data should look something like this:
 
 ![google](../assets/images/googleearth.png)
 
-After (hopefully) gaining some familiarity with the data that we're working with, let's start actually working with
-
-the data in R. Open R Studio cloud, and create a new R script in your desired location. Call it something
+After (hopefully) gaining some familiarity with the data, let's start actually working with
+the data in R. Open R Studio cloud, and create a new R script. Call it something
 like, `Glacier-TDA`.
 As before, we will use the `RGDAL` and `SP` libraries to upload and manipulate shapefiles:
 
@@ -60,38 +59,41 @@ library(rgdal)
 library(sp)
 ```
 
-Import the 1966 glacier data using the corresponding `readOGR` method from RGDAL. You must use the 
-absolute path of the directory storing the GIS data, and also give the prefix of the data in the layer 
-argument. On  a Mac, this is:
+Import the 1966 glacier data directly from the internet using `download.file` and then `system`
+to unzip the .zip file.
 
 ```
-glaciers_66 <- readOGR(dsn = "/Users/you/INSERT YOUR PATH HERE/GNPglaciers_1966",
-layer = "GNPglaciers_1966", verbose = FALSE)
+download.file("https://www.sciencebase.gov/catalog/file/get/58af7532e4b01ccd54f9f5d3?facet=GNPglaciers_1966",destfile = "/cloud/project/Glaciers.zip")
+system("unzip /cloud/project/MontanaCounties.zip")
 ```
 
-(Note that the relative path `~/GNPglaciers_1966` won't work for the dsn argument)
+Then read in the downloaded `.shp` file using `readOGR`.
+
+```
+glaciers1966 <- readOGR(dsn="/cloud/project/GNPglaciers_1966.shp")
+```
+
 
 View the first glacier you've uploaded using the `head` method:
 
 ```
-first <- head(county, 1)
-first
+glaciers1966[1,]
 ```
 
-Notice that the data is pretty big! We have uploaded every glacier in GNP, so there's a lot in there.
+Notice that the data is pretty big! We have uploaded every glacier in GNP, so there's a lot going on.
 You can view the first 5 glaciers if you want to get more of a sense of the complexity of our data.
 
 ```
-first_five <- head(county, 5)
+first_five <- head(glaciers1966, 5)
 first_five
 ```
 
 Notice that the fundamental glacier shape data is stored in polygon format.
 The standard R command for plotting is carried along with GIS data as well.
-Plot the first glacier to visualize it, it should look familiar to what you saw on Google Earth.
+Plot the first glacier to visualize it.(If you have Google Earth, it should look familiar to what you saw there.)
 
 ```
-plot(first)
+glaciers1966[1,]
 ```
 
 ![glacier1](../assets/images/glacier1.png)
@@ -105,35 +107,6 @@ plot(glaciers_66)
 
 ![glacier2](../assets/images/glacier2.png)
 
-Now, we can't do topological data analysis using polygon objects. Rather, we need to somehow obtain a 
-point cloud indicative of each glacier. To do this, we can randomly sample 1000 points within each 
-polygon using the SP library.
-
-Let's try sampling points within the first glacier.
-
-```
-pts <- spsample(first,n=1000,"random")
-pts
-```
-
-To plot this, we can convert the sampled points to a data frame format, and view the resulting point 
-cloud. For ease of visibility, each point will be plotted as a small, filled in circle.
-
-```
-X <- as.data.frame(pts)
-plot(X, pch=20, cex=.5)
-```
-
-Notice that we are starting to see the shape of the first glacier. Let's make a denser point cloud 
-by sampling 10000 points instead.
-
-```
-pts <- spsample(first,n=10000,"random")
-X <- as.data.frame(pts)
-plot(X, pch=20, cex=.5)
-```
-
-![glacier3](../assets/images/glacier3.png)
 
 TODO
 
