@@ -535,13 +535,13 @@ placed at the minimum and maximum distances that you can view that feature.
 Is it possible 
 
 <details>
-<summary style="color:red">See the Answer</summary>
+<summary style="color:red">See Example Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
 <figure>
 <img src="https://comptag.github.io/t4ds/assets/images/vangogh-scales-05all.jpg" 
      alt="Starry Night barcode" style="width:100%">
-<figcaption>Barcode for select features in Starry Night. Note that in order to
+<figcaption>Example barcode for select features in Starry Night. Note that in order to
 see the constellation Aries, you need to stand far away from the painting that
 you can no longer see individual brush strokes. So, one viewing distance is not
 enough.  And, in data, often, one scale is not enough.</figcaption>
@@ -554,15 +554,36 @@ enough.  And, in data, often, one scale is not enough.</figcaption>
 **Now is a good time for a quick break (if we haven't taken one recently).**
 
 Back to our Rips filtration, we can see that
-for certain $r$, homology features are either being created or going away.
-For example, when $r=0$, we vacuously have four connected components (just the vertices).
-When $r=\sqrt{5}$, we only have two connected components. When $r=\sqrt{10}$,
-we have only one connected component and a cycle. It would be nice if there
-were some clean way to keep track of this information...
+for certain $r$, homology features are either being created (e.g., loop forming) or going away (e.g., loop being filled in). Let's look more closely at the example from before.
 
-Fortunately, so-called *barcodes* were created to do just that.
-Barcodes denote the time at which a homology feature is "born",
-and when the same feature "dies".
+![rips filtration](https://comptag.github.io/t4ds/assets/images/tda-rips/ripsfilt.svg)
+
+For example, when $r=0$, we have four connected components (just the vertices).
+When $r=\sqrt{5}$, we only have two connected components. When $r=\sqrt{10}$,
+we have only one connected component, but also note that a nontrivial one-cycle appears. It would be nice if there
+were some clean way to keep track of this information ...
+
+Fortunately, *persistence barcodes* and *persistence diagrams* can do just that!
+Persistence tracks the parameters (time, distance, height) at which a homology feature is "born" $b$
+as well as when the same feature "dies" $d$.  Barcodes encode this as an
+interval $(b,d) \subset \mathbb{R}$.  Persistence diagrams encode this as a
+point $(b,d) \in \mathbb{R}2$.
+
+<details>
+<summary style="color:DarkOrange">More Info</summary>
+<br>
+<pre style="background-color:Gold">
+There is more to it than we say here. A feature of the underlying topological
+space ($K$) is called an *essential class* and will never die.  Thus, the death
+parameter can be infinite.  For this reason, we often use the extended real
+plane $\overline{\mathbb{R}}^2$, where $\overline{\mathbb{R}}=\mathbb{R} \cub
+\\{ \infty \\}$.  Even more generally, the parameter space can be an arbitrary
+poset.  But, that is more than we need in T4DS.
+</pre>
+</details>
+
+
+
 
 The R TDA package has a function `ripsDiag`
 that creates diagrams corresponding to the Rips filtration. Let's view the barcode resulting
