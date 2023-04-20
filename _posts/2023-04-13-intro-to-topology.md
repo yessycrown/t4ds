@@ -279,9 +279,21 @@ bit in our exploration.
 
 > TODO: define homology
 
-TODO: a question on homology
+![connected components, loops, voids, and more](https://comptag.github.io/t4ds/assets/images/homology.svg)
 
-![Koenigsberg](https://comptag.github.io/t4ds/assets/images/homology.svg)
+We may already be familiar with homology in the zeroth dimension: 
+two zero-cycles (vertices) are equivalent if there exists a one-chain for which
+they are the boundary. Such a one chain exists connecting two vertices if and
+only if (iff) the two vertices are in the same path-connected component of
+our complex.
+
+Things get trickier to understand even for one-dimensional homology.  Let's
+consider the question: when are two loops equivalent (up to homology)?  Well,
+they are equivalent if there exists a two-chain or surface such that the
+boundary of the surface is exactly those two loops.
+With this in mind, which of the following one-cycles are equivalent and why?
+
+![torus](https://comptag.github.io/t4ds/assets/images/tda-rips/asc.svg)
 
 ---
 ## 5. Wrapping Up
