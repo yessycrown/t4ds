@@ -503,7 +503,7 @@ smaller squares called pixels and assigns a color.  We'll restrict ourselves to
 monochromatic images, so we can think of the color as a number between $0$ and
 $1$.
 
-In R, let's create a random image:
+In R, let's create and plot a random image:
 
 ```
 n=20
@@ -515,11 +515,14 @@ image(vals)
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre style="background-color:lightblue">
-<img src="https://comptag.github.io/t4ds/assets/images/barcode.jpg" alt="rips barcode">
+<img src="https://comptag.github.io/t4ds/assets/images/beautiful-image.png" alt="random image">
 </pre>
 </details>
 
-TODO:more description here
+To construct a complex that represents an image, 
+Here's a small example:
+
+![image to grid](https://comptag.github.io/t4ds/assets/images/grids.svg)
 
 ```
 pd=gridDiag(FUNvalues = vals)
@@ -678,7 +681,7 @@ plot(persistDiag[["diagram"]], barcode=TRUE)
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre style="background-color:lightblue">
-<img src="https://comptag.github.io/t4ds/assets/images/beautiful-image.png" alt="random image">
+<img src="https://comptag.github.io/t4ds/assets/images/barcode.jpg" alt="rips barcode">
 </pre>
 </details>
 
