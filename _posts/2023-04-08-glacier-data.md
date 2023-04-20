@@ -501,6 +501,12 @@ plot(Diag2015[["diagram"]])
 You should see some noticeable changes in shape. We can quantify these more rigorously using
 the bottleneck distance, from Session 4.
 
+---
+
+
+### Changes in the Agassiz Glacier Over Time
+
+
 
 
 TODO: Do filtration
