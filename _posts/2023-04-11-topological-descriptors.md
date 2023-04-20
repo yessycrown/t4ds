@@ -539,68 +539,73 @@ your neighbors.
 There are various ways that we can do this, actually.  The one that we will use
 today assigns to each cell the maximum value assigned to any of the vertices
 defining the cell.  By doing so, every lower-level set (collection of cells
-below a given value) is a complex.
+below a given value) is a complex.  By considering the increasing sequence of
+such subcomplexes, we arrive at the <b>lower-star filtration</b>.
 </pre>
 </details>
 
-```
-pd=gridDiag(FUNvalues = vals)
-plot(pd[["diagram"]])
-```
-
-TODO: now go into directional / other height functions
-For example, we
-have an [3d scanned object](http://graphics.stanford.edu/data/3Dscanrep/), or
-another shape embedded in $\mathbb{R}^n$. Let's consider embedded shapes next. 
-
-So, what does this look like?
-
-TODO: Brittany discuss the theory behind this, Ben create examples.
-
-Another common filtration in TDA is the lower-star filtration.
-This takes a different form from the Vietoris-Rips filtration: rather than
-growing balls around each of our data points, have a surface that we gradually
-unveil.  As we unveil, once the entire simplex is visible, we add the simplex to
-our growing subcomplex.
-
-![rips filtration](https://comptag.github.io/t4ds/assets/images/tda-rips/ripsfilt.svg)
-
-TODO: Brittany add theory here, and perhaps motivate the height filtration a bit
-
-TODO: Ben expand/improve this example. Maybe use toy example chosen by Brittany.
-
-One especially useful function in the TDA package is `circleunif`, which creates
-a point cloud by randomly sampling on the unit circle. This is handy when getting familiar
-with TDA as an easy way to create data with interesting topology.
-We will randomly sample in this way from the unit circle, and then create a Rips complex.
-Once we've done that, we will conduct a height filtration on the Rips complex.
+We can contruct the lower-star filtration from the values in our image as
+follows:
 
 ```
-X <- circleUnif(n=6, r=1)
+myfilt <- gridFiltration(FUNvalues=vals, sublevel = TRUE, printProgress = TRUE)
 ```
 
-Then we create a rips complex:
+The output is a complex of 11 simplices, along with a function value assigned to
+each simplex.  Can you find what those simplices and function values are?
+(Hint: the output of `gridFiltration` has attributes `$cmplx` and
+`$values` that stores the simplicial complex and function values for each
+simplex, respectively). 
 
-```
-FltRips <- ripsFiltration(X = X, maxdimension = 2,
-                          maxscale = 1.5, dist = "euclidean", library = "Dionysus",
-                          printProgress = TRUE)
-```
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+To see the list of simplices in the complex:
+<code>
+> myfilt$cmplx
+[[1]]
+[1] 4
 
-Assign height function values to each vertex,
-and conduct a height filtration:
+[[2]]
+[1] 3
 
-```
-FUNvalues <- X[, 1] + X[, 2]
-FltFun <- funFiltration(FUNvalues = FUNvalues, cmplx = FltRips[["cmplx"]])
-```
+[[3]]
+[1] 4 3
 
-Be sure to visualize your resulting simplicial complex after the filtration:
+[[4]]
+[1] 2
 
-```
-FltFun$cmplx
-```
+[[5]]
+[1] 4 2
 
+[[6]]
+[1] 1
+
+[[7]]
+[1] 2 1
+
+[[8]]
+[1] 3 1
+
+[[9]]
+[1] 4 1
+
+[[10]]
+[1] 4 1 2
+
+[[11]]
+[1] 4 3 1
+</code>
+
+And the function values:
+<code>
+> myfilt$values
+ [1] 0.1952117 0.4001437 0.4001437 0.5358404 0.5358404 0.6333039
+ [7] 0.6333039 0.6333039 0.6333039 0.6333039 0.6333039
+</code>
+</pre>
+</details>
 
 
 ---
@@ -647,11 +652,9 @@ enough.  And, in data, often, one scale is not enough.</figcaption>
 </pre>
 </details>
 
-
-
 **Now is a good time for a quick break (if we haven't taken one recently).**
 
-## Diagram for a Rips Filtration
+### Diagram for a Rips Filtration
 
 Back to our Rips filtration, we can see that
 for certain $r$, homology features are either being created (e.g., loop forming) or going away (e.g., loop being filled in). Let's look more closely at the example from before.
@@ -751,7 +754,22 @@ prefer one over an another, but they're ultimately the same object
 mathematically.
 
 ---
-## Diagram for a Lower-Star Filtration
+### Diagram for a Lower-Star Filtration
+
+TODO: diagram for grid LSF
+```
+pd=gridDiag(FUNvalues = vals)
+plot(pd[["diagram"]])
+```
+
+### Other Filtrations and Diagrams
+
+TODO: now go into directional / other height functions
+For example, we
+have an [3d scanned object](http://graphics.stanford.edu/data/3Dscanrep/), or
+another shape embedded in $\mathbb{R}^n$. Let's consider embedded shapes next. 
+
+
 
 TODO: update to use lower-star filtration
 
