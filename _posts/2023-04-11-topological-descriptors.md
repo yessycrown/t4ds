@@ -816,10 +816,11 @@ The general framework of persistence is this: there is an underlying topological
 space, $K$, and a "nice" function $f : K \to \mathbb{R}$.  The co-domain is our
 *parameter space* and can represent various things: height (in a particular
 direction), distance (away from a point or set), time, etc.  As the parameter
-$t$ increases, we consider all sublevel sets: $f^{-1}(\-infty,t]$.  These are
-subcomplexes of $K$ (or else $f$ was not "nice").  Here's another example:
+$t$ increases, we consider all sublevel sets: $f^{-1}(-\infty,t]$.  These are
+subcomplexes of $K$ (or else $f$ was not "nice").  Here's another example that
+we call "the (upside down) V example":
 
-![Height and LS Filtrations](https://comptag.github.io/t4ds/assets/images/lakeneighbors.jpg)
+![Height and LS Filtrations](https://comptag.github.io/t4ds/assets/images/lsfilt.svg)
 
 In our example, we have a simplicial complex in $\mathbb{R}^2$ and the function
 $f$ takes a simplex $\sigma$ to the maximum height of any vertex in the simplex:
@@ -831,33 +832,9 @@ direction $d \in \mathbb{S}^{n-1}$ is simply the dot product $v \cdot d$.
 Examples to consider are polygons (representing county boundaries, for example)
 and [3d scanned object](http://graphics.stanford.edu/data/3Dscanrep/).
 
-So far, we have mostly only been working with toy examples. Let's work now with a
-big data set, which illuminate some of the considerations that data scientists
-must make in practice. 
+Create a complex in R to match the V-example above.
 
-We again use the Montana County data from this morning. You should be able to access
-it while working in the same project, even if you are working in a different R script.
-Try accessing it in your current script.
-
-```
-names(counties)
-```
-
-<details>
-<summary style="color:blue">Expected Output</summary>
-<br>
-<pre style="background-color:lightblue">
-<code>
-> names(counties)
- [1] "NAME"       "NAMEABBR"   "COUNTYNUMB" "PKEY"      
- [5] "SQMILES"    "PERIMETER"  "ACRES"      "ALLFIPS"   
- [9] "FIPS"       "LAST_UPDAT" "NAMELABEL"  "BAS_ID"    
-[13] "ID_UK"      "Shape_Leng" "Shape_Area"
-</code>
-</pre>
-</details>
-
-
+Next, TODO:height function 
 
 ---
 
