@@ -128,7 +128,7 @@ As a first example, we consider point cloud data.  That is, a *point cloud*, $S 
 Mathematically, maybe there is an underlying, unaccessible shape that we can
 sample from (such as the torus):
 
-![torus sample](https://en.wikipedia.org/wiki/Point_cloud#/media/File:Point_cloud_torus.gif)
+![torus sample](https://upload.wikimedia.org/wikipedia/commons/4/4c/Point_cloud_torus.gif)
 
 Note that manifolds (like the torus) can represent various things. For example,
 the torus parameterizes the configuration space of a two-arm linkage (with one
