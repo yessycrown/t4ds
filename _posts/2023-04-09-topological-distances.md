@@ -163,13 +163,24 @@ optimal pairing between $A$ and $B$?
 </pre>
 </details>
 
+Finally, the *weight* of such a pairing is the largest distance between pairs.
+See if you can pick this out in our example.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<img src="https://comptag.github.io/t4ds/assets/images/pts-weight.jpg " alt="pts pairs">
+</pre>
+</details>
+
 
 ### Incorporating Persistence Diagrams
 
 We can use the same idea for persistence diagrams.
-That is, given 
+That is, given two persistence diagrams `PD1` and `PD2`,
 
-TODO
+
 
 ## Wrapping Up
 
