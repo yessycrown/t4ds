@@ -117,7 +117,40 @@ vidag$diagram
 </pre>
 </details>
 
+Pause for a moment and think about the result of this filtration.
+The example is simple enough; try walking through it. Does
+it match what you expected?
 
+---
+
+## Distances in Topological Data Analysis
+
+Now that we have our hands on two different filtrations,
+a natural question emerges. How do I differentiate between them?
+Indeed, the shape in these two sets of data is clearly topologically different!
+
+The main focus of this session will be defining distance in TDA.
+Namely, we will define a distance between persistence diagrams.
+
+Let's briefly think about what a persistence diagram is.
+Really, it's nothing more than a set of points, and a diagonal.
+
+---
+
+### Distance Between Sets of Points
+
+First, we will think about distance between two sets of points in $\mathbb{R}^2$.
+Consider the finite sets $A,B \subset \mathbb{R}^2$. If we wanted to define distance between
+$A$ and $B$, we could think about the weight of the optimal pairing between points in $A$
+and points in $B$.
+
+That is, for $\Gamma$, the set of all bijections $f: A \to B$,
+
+$d(A,B) := \min_{f\in \Gamma} \max_{a \in A}||a-f(a)||_2$.
+
+Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
+
+TODO make fig
 
 ## TODO:content here
 
