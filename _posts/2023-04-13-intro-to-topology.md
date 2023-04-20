@@ -174,10 +174,7 @@ We can collect simplices together to form a *simplicial complex*.
 > 1. If $\sigma \in K$ and $\tau \subset \sigma$, then $\tau \in K$.
 > 2. If $\sigma, \sigma'\in K$, then $\sigma \cap \sigma'$ is either empty or a face of both $\sigma, \sigma'$.
 
-
-
 ![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/asc.svg)
-
 
 We can use a simplicial complex to represent shapes (and data). 
 Then, we can interpret topological features in a computational setting.
@@ -186,8 +183,16 @@ Then, we can interpret topological features in a computational setting.
 ---
 #### Cubical Complexes
 
-TODO:short intro to cubical complexes
+An $n$-cube is a copy of $I^n$, where $I$ is the unit interval $[0,1]$.  A
+cubical complex is a topological space created by glueing cubes together along
+sub-cubes.  A common cubical complex forms a regular grid:
 
+![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/cube-complex.svg)
+
+A cubical complex can always be transformed into a simplicial one (namely, by
+adding "diagonals" to each cube).  Nonetheless, quite a bit of data comes in
+cubical form (e.g., digital photos). So, they are also nice structures to work
+with.
 
 ---
 ### Maps and Homeomorphisms
