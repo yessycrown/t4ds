@@ -146,7 +146,7 @@ and points in $B$.
 
 That is, for $\Gamma$, the set of all bijections $f: A \to B$,
 
-$d(A,B) = \text{min}_{f\in \Gamma} \text{max}_{a \in A}||a-f(a)||_2$
+$d(A,B) = \text{min}_{f \in \Gamma} \text{max}_{a \in A}d(a-f(a))$
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
