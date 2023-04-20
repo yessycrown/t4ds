@@ -85,9 +85,22 @@ whose heights correspond to the following figure:
 
 ![]("https://comptag.github.io/t4ds/assets/images/simp2.jpg")
 
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+# create vertices
+a <- 1; b=2; c=3; d=4
+# edges
+ac <- c(1,2); cb=c(2,3)
+# a complex is a list of simplices
+vcplx <- list(a,b,c,d,ac,cb)
 
-
-
+vvals <- c(0,0,1,2)
+</code>
+</pre>
+</details>
 
 
 
