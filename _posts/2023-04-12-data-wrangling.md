@@ -621,6 +621,21 @@ plot(gallatin)
 </pre>
 </details>
 
+<details>
+<summary style="color:DarkOrange">More Info</summary>
+<br>
+<pre style="background-color:Gold">
+Another popular library for plotting is ggplot2.  It has additional parameters
+you can set to customize the output.
+<code>
+install.packages("ggplot2")
+library(ggplot2)
+ggplot() + geom_polygon(data = gallatin, aes( x = long, y = lat, group = group), fill="#B9975B", color="#00205B")
+</code>
+<img src="https://comptag.github.io/t4ds/assets/images/gallatin-ggplot.png" alt="gallatin coords">
+</pre>
+</details>
+
 There are tons of things we can do now with an isolated spatial polygon.
 It should be noted that polygons are defined just as a set of points and a set of edges.
 We can extract the set of points defining a polygon using some careful syntax:
@@ -704,4 +719,4 @@ tutorials, which are a big inspiration for the style of this workshop
 - The Montana county shape data was sourced from the Montana state government's website with data
 on [administrative boundaries](https://ftpgeoinfo.msl.mt.gov/Data/Spatial/MSDI/AdministrativeBoundaries/)
 - The heroic mountainscape at the top of the page comes from the National Parks Service, in Glacier National Park.
-
+- [The R Graph Gallery](https://r-graph-gallery.com/168-load-a-shape-file-into-r.html) has additional tutorials on how to work with shape files in R.
