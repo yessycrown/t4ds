@@ -145,8 +145,7 @@ $A$ and $B$, we could think about the weight of the optimal pairing between poin
 and points in $B$.
 
 That is, for $\Gamma$, the set of all bijections $f: A \to B$, we have
-
-$d(A,B) = \text{min}_{f \in \Gamma} \text{max}_{a \in A}d(a-f(a))$
+$d(A,B) = \min_{f \in \Gamma} \max_{a \in A}d(a-f(a))$
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
