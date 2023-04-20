@@ -498,8 +498,8 @@ The Rips filtration is great for creating connections within a point cloud.
 However, sometimes, we already know what these connections are.  And, many times
 there is a function defined over the topological space that is of interest.  A
 simple example to start is an image.  The underlying topological space is a
-square (pretty boring topologically).  Images decompose this square domain into
-smaller squares called pixels and assigns a color.  We'll restrict ourselves to
+square or a rectangle (pretty boring topologically).  Images decompose this square domain into
+smaller squares called pixels and assign a color to each pixel.  We'll restrict ourselves to
 monochromatic images, so we can think of the color as a number between $0$ and
 $1$.
 
@@ -519,20 +519,39 @@ image(vals)
 </pre>
 </details>
 
-To construct a complex that represents an image, 
+To construct a complex that represents an image, we create a vertex for each
+pixel, add an edge between vertices if their pixels are adjacent.  From here, we
+can add squares to get a cubical complex, and draw diagonals in the squares if
+we want a simplicial complex.
 Here's a small example:
 
 ![image to grid](https://comptag.github.io/t4ds/assets/images/grids.svg)
+
+What you might notice is that we started with a discrete set of function vales,
+one for each pixel.  The vertices of our complex can inherit that value.  But,
+what value do we assign to the edges and two-cells?  Discuss some ideas with
+your neighbors.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+There are various ways that we can do this, actually.  The one that we will use
+today assigns to each cell the maximum value assigned to any of the vertices
+defining the cell.  By doing so, every lower-level set (collection of cells
+below a given value) is a complex.
+</pre>
+</details>
 
 ```
 pd=gridDiag(FUNvalues = vals)
 plot(pd[["diagram"]])
 ```
 
-
+TODO: now go into directional / other height functions
 For example, we
 have an [3d scanned object](http://graphics.stanford.edu/data/3Dscanrep/), or
-another shape embedded in $\R^n$. Let's consider embedded shapes next. 
+another shape embedded in $\mathbb{R}^n$. Let's consider embedded shapes next. 
 
 So, what does this look like?
 
@@ -881,4 +900,7 @@ this afternoon:
 - This material was based on [other tutorials](https://comptag.github.io/rpackage_tutorials/)
   developed by Robin Belton, Ben Holmgren (name familiar?), and Jordan Schupbach. We thank
   them for giving us a head start on this material!
+- The illustration of representing an image with a cubical or simplicial complex
+  is from an upcoming paper by Brittany and her colleagues, Jessi Cisewski-Kehe
+  and Dhanush Giriyan.
 - The photo of Starry Night is from [The VanGogh Gallery](https://www.vangoghgallery.com/catalog/Painting/508/Starry%20Night.html)
