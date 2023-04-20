@@ -144,7 +144,7 @@ Consider the finite sets $A,B \subset \mathbb{R}^2$. If we wanted to define dist
 $A$ and $B$, we could think about the weight of the optimal pairing between points in $A$
 and points in $B$.
 
-That is, for $\Gamma$, the set of all bijections $f: A \to B$,
+That is, for $\Gamma$, the set of all bijections $f: A \to B$, we have
 
 $d(A,B) = \text{min}_{f \in \Gamma} \text{max}_{a \in A}d(a-f(a))$
 
@@ -179,8 +179,18 @@ See if you can pick this out in our example.
 
 We can use the same idea for persistence diagrams.
 That is, given two persistence diagrams `PD1` and `PD2`,
+we compute the optimal matching between points, and find its weight.
 
+However, there should be one glaring issue that comes to mind in doing this.
+*What if PD1 and PD2 have a different number of points?* Indeed, then a bijection
+would not be possible, and our distance is not well-defined.
 
+To handle this issue, we consider the diagonal on persistence diagrams
+as having infinite cardinality. If a bijection is not possible, "leftover"
+points are paired with the diagonal. Then, the so-called *bottleneck distance*
+between persistence diagrams is defined as follows:
+
+$d_B(PD1, PD2) = 
 
 ## Wrapping Up
 
