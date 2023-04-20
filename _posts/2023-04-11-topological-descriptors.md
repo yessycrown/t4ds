@@ -492,15 +492,20 @@ and the filtration that results treating $r>0$ as a free variable,
 we now will discuss useful data structures to store and interpret filtrations.
 
 ---
-### The Height Filtration
+### The Lower-Star Filtration
+
+The Rips filtration is great for creating connections within a point cloud.
+However, sometimes, we already know what these connections are.
 
 TODO: Brittany discuss the theory behind this, Ben create examples.
 
-Another common filtration in TDA is the height filtration.
-This takes a different form from the Vietoris-Rips filtration,
-in that all data is not born from the onset of the filtration.
-In contrast, we can intuitively think of the height filtration as a
-curtain rising on a simplicial complex.
+Another common filtration in TDA is the lower-star filtration.
+This takes a different form from the Vietoris-Rips filtration: rather than
+growing balls around each of our data points, have a surface that we gradually
+unveil.  As we unveil, once the entire simplex is visible, we add the simplex to
+our growing subcomplex.
+
+![rips filtration](https://comptag.github.io/t4ds/assets/images/tda-rips/ripsfilt.svg)
 
 TODO: Brittany add theory here, and perhaps motivate the height filtration a bit
 
@@ -587,6 +592,8 @@ enough.  And, in data, often, one scale is not enough.</figcaption>
 
 
 **Now is a good time for a quick break (if we haven't taken one recently).**
+
+## Diagram for a Rips Filtration
 
 Back to our Rips filtration, we can see that
 for certain $r$, homology features are either being created (e.g., loop forming) or going away (e.g., loop being filled in). Let's look more closely at the example from before.
@@ -686,7 +693,9 @@ prefer one over an another, but they're ultimately the same object
 mathematically.
 
 ---
-### An Example with the County Data
+## Diagram for a Lower-Star Filtration
+
+TODO: update to use lower-star filtration
 
 So far, we have mostly only been working with toy examples. Let's work now with a
 big data set, which illuminate some of the considerations that data scientists
