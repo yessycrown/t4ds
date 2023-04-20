@@ -82,27 +82,42 @@ From Brittany: shape is a way of putting meaning or interpretability to a set.
 
 Often, when we think of shapes, we think of their **geometry**: length, witdth,
 angles, curvature, area, etc.  In this workshop, we explore the **topology** of
-shape/data.  Topology studies the connectivity between and among data.
+shape/data as well.  Topology studies the connectivity between and among data.
 
 ---
 ## 3. Koenigsberg
 
-The bridges of Koenigsberg:
-
-![bridges of Koenigsberg](https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png)
+The bridges of Koenigsberg was an old problem: is it possible to walk on a path
+that crosses each of the seven bridges of Koenigsberg exactly once?  Of course,
+one is not allowed to fly or swim in order to accompish this task.  For the
+three cities shown below, discuss with your neighbors if such a path is
+possible.  (Note: the top city is Koenigsberg).
 
 ![Koenigsberg](https://comptag.github.io/t4ds/assets/images/bridges.jpg)
+
+How can we solve such a question?  We turn it into a topological question, of
+course! We do this by turning it into a graph problem.  Create a graph by
+creating a node for each land mass or island, and creating an edge for each
+bridge. (This may be a multi-graph).  Now, we have a graph theory problem: does
+there exist a path through the graph that visits every edge exactly once? Such a
+path is called an Eulerian path.
+
+> A Eulerian path through a graph is possible iff there exists exactly two or zero
+> vertices of odd degree.
+
+For each of the graphs above, can you find the corresponding graphs?
 
 <details>
 <summary>See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
 <br>
-![bridges with map](https://comptag.github.io/t4ds/assets/images/bridges-map-and-graph.png)
-![just map](https://comptag.github.io/t4ds/assets/images/bridges-graph.png)
+<img src="https://comptag.github.io/t4ds/assets/images/bridges-map-and-graph.png" alt="bridges with graphs">
+<img src="https://comptag.github.io/t4ds/assets/images/bridges-graph.png" alt="just the graphs">
 <br>
 </pre>
 </details>
+
 
 ---
 ## 4. Are Two Shapes the Same or Different?
