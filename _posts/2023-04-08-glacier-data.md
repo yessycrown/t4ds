@@ -593,4 +593,13 @@ area reduction in glaciers.
 
 ## Wrapping Up
 
+And that's a wrap on the T4DS Workshop! It was such a joy to have you join us! In this final session, we hope that
+you have taken away:
+
+> - A topological frame of thinking when approaching data
+> - A fun application of what you learned about data wrangling in R
+> - An idea of the full topological data analysis pipeline, from raw data to topological shape comparison
+> - The ability to use TDA (mostly) independently 
+> - To juxtapose topological methods with standard domain-specific techniques.
+
 
