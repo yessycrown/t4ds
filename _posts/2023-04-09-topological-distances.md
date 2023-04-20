@@ -150,7 +150,19 @@ $d(A,B) := \min_{f\in \Gamma} \max_{a \in A}||a-f(a)||_2$.
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
-TODO make fig
+![]("https://comptag.github.io/t4ds/assets/images/pts.jpg")
+
+With this example, can you visualize what we might do to find the
+optimal pairing between $A$ and $B$?
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightblue">
+<img src="https://comptag.github.io/t4ds/assets/images/pts-pairs.jpg " alt="pts pairs">
+</pre>
+</details>
+
 
 ## TODO:content here
 
