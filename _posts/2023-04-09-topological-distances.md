@@ -145,7 +145,9 @@ $A$ and $B$, we could think about the weight of the optimal pairing between poin
 and points in $B$.
 
 That is, for $\Gamma$, the set of all bijections $f: A \to B$, we have
-$d(A,B) = \min_{f \in \Gamma} \max_{a \in A}d(a-f(a))$
+$d(A,B) = \min_{f \in \Gamma} \max_{a \in A}||a-f(a)||_2$.
+
+(Recall that $||x-y||_2$ denotes the Euclidean distance between $x$ and $y$.)
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
@@ -188,8 +190,7 @@ To handle this issue, we consider the diagonal on persistence diagrams
 as having infinite cardinality. If a bijection is not possible, "leftover"
 points are paired with the diagonal. Let $\Gamma$ be the set of all
 bijections from $PD_1$ to $PD_2$. Then, the so-called *bottleneck distance*
-between persistence diagrams can be defined as follows:
-
+between persistence diagrams can be defined by
 $d_B(PD_1, PD_2) = \inf_{f \in \Gamma} \sup_{p \in PD_1}||p - f(p)||_{2}$
 
 TODO: Add a note about infinity norms here
