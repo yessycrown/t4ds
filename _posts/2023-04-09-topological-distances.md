@@ -102,6 +102,21 @@ vvals <- c(0,0,1,2)
 </pre>
 </details>
 
+Now that we have our second simplicial complex, and a function on its vertices,
+you can do one more height filtration!
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+vfilt <- funFiltration(vvals,vcplx)
+vdiag <- filtrationDiag(vfilt,maxdimension=2)
+vidag$diagram
+</code>
+</pre>
+</details>
+
 
 
 ## TODO:content here
