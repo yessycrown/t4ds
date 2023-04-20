@@ -63,8 +63,8 @@ Import the 1966 glacier data directly from the internet using `download.file` an
 to unzip the .zip file.
 
 ```
-download.file("https://www.sciencebase.gov/catalog/file/get/58af7532e4b01ccd54f9f5d3?facet=GNPglaciers_1966",destfile = "/cloud/project/Glaciers.zip")
-system("unzip /cloud/project/MontanaCounties.zip")
+download.file("https://www.sciencebase.gov//catalog/file/get/58af7532e4b01ccd54f9f5d3?f=__disk__22%2Ff9%2Fcb%2F22f9cbd1692cdf43dc1785b232913b4c6e1dabaa",destfile = "/cloud/project/Glaciers1966.shp")
+
 ```
 
 Then read in the downloaded `.shp` file using `readOGR`.
@@ -336,7 +336,7 @@ arguments mean here:
 ```
 # normalize each distance in our function
 colors <- distances/max(distances)
-plot(dfGlac[,1], dfGlac[,2], pch=20, col= rgb(0, 0, colors), cex=1)
+plot(dfGlac[,1], dfGlac[,2], pch=20, col= rgb(0, 0, colors), cex=1.5)
 ```
 
 <details>
@@ -352,6 +352,51 @@ plot(dfGlac[,1], dfGlac[,2], pch=20, col= rgb(0, 0, colors), cex=1)
 ### A Grid Filtration for Glacier Data
 
 At last, we can compute a grid filtration on our data.
+Having seen grid filtrations before, as a challenge, see if you can
+compute the persistence diagram of the grid filtration resulting from
+thresholding the values stored in `distances` with respect to
+our grid (as a dataframe), `dfGlac`.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+Diag1 <- gridDiag(X=dfGlac, FUNvalues = distances, maxdimension = 1, sublevel = TRUE, printProgress = TRUE)
+</code>
+</pre>
+</details>
+
+Of course, be sure to plot your findings:
+```
+plot(Diag1[["diagram"]])
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/pdglacier1.jpg" alt="glacial grid pd">
+</pre>
+</details>
+
+With this in hand, let's take a look at the Agassiz glacier later in life.
+We will now download glacier data from 1998, 2005, and 2015.
+
+```
+# Download 1998 data
+download.file("https://www.sciencebase.gov/catalog/file/get/58af765ce4b01ccd54f9f5e7?f=__disk__76%2Fc5%2F10%2F76c510342d63a7872aef11fa367c2b063620d8ad",destfile = "/cloud/project/Glaciers1998.shp")
+
+
+# Download 2005 data
+download.file("https://www.sciencebase.gov/catalog/file/get/58af76bce4b01ccd54f9f5ea?f=__disk__21%2Ff2%2F94%2F21f294868f1ddb88423069357ceea75b00b8f5dc",destfile = "/cloud/project/Glaciers2005.shp")
+
+
+# Download 2015 data
+download.file("https://www.sciencebase.gov/catalog/file/get/58af7988e4b01ccd54f9f608?f=__disk__56%2F3c%2F91%2F563c917c4ba143fee3da5b929fd6625eccac18ae",destfile = "/cloud/project/Glaciers2015.shp")
+
+
+```
 
 TODO: Do filtration
 TODO: Compute distances over time
