@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="1384.2857"
-     inkscape:cy="378.57143"
+     inkscape:zoom="0.175"
+     inkscape:cx="731.42857"
+     inkscape:cy="385.71429"
      inkscape:document-units="mm"
      inkscape:current-layer="layer5"
      showgrid="false"
@@ -1541,7 +1541,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="index-filt"
-     style="display:none">
+     style="display:inline">
     <g
        sodipodi:insensitive="true"
        inkscape:groupmode="layer"

@@ -550,7 +550,7 @@ For images, the function is actually a surface created by raising each vertex up
 to the height equal to it's function value.  Then, edges and two-cells are
 interpolated.  The lower-star filtration is exactly the one that arises
 by raising our ``height'' parameter and considering subcomplex of the
-triangulated surface that appears entirely at or below the current height
+surface that appears entirely at or below the current height
 parameter.  Here's a quick example to demonstrate:
 
 ```
@@ -712,9 +712,6 @@ poset.  But, that is more than we need in T4DS.
 </pre>
 </details>
 
-
-
-
 The R TDA package has a function `ripsDiag`
 that creates diagrams corresponding to the Rips filtration. Let's view the barcode resulting
 from our example filtration:
@@ -782,148 +779,62 @@ How you might be inclined to work with them might differ based on your choice.
 ---
 ### Diagram for a Lower-Star Filtration
 
-TODO: diagram for grid LSF
+Recall the image `vals` that we created above.  There is a function in the R
+package TDA that computes the persistence diagram:
+
 ```
 pd=gridDiag(FUNvalues = vals)
 plot(pd[["diagram"]])
 ```
 
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<img src="https://comptag.github.io/t4ds/assets/images/image-diagram.jpg" alt="diagram of a random image">
+</pre>
+</details>
+
+Change $n$ and recompute the diagram.  What pattern do you see?
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+Overall, the zero-dimensional persistence points (black dots) are to the left
+and below the one-dimensional ones (red triangles).  This makes sense, as in
+order for loops to form, there have to be connected components first. The
+pattern that arises here is something that has been studied, and can be used for
+hypothesis testing (is my image just pure random noise, or is there a feature
+hidden in there?)
+</pre>
+</details>
+
 ### Other Filtrations and Diagrams
 
-TODO: now go into directional / other height functions
-For example, we
-have an [3d scanned object](http://graphics.stanford.edu/data/3Dscanrep/), or
-another shape embedded in $\mathbb{R}^n$. Let's consider embedded shapes next. 
+The general framework of persistence is this: there is an underlying topological
+space, $K$, and a "nice" function $f : K \to \mathbb{R}$.  The co-domain is our
+*parameter space* and can represent various things: height (in a particular
+direction), distance (away from a point or set), time, etc.  As the parameter
+$t$ increases, we consider all sublevel sets: $f^{-1}(-\infty,t]$.  These are
+subcomplexes of $K$ (or else $f$ was not "nice").  Here's another example that
+we call "the (upside down) V example":
 
+![Height and LS Filtrations](https://comptag.github.io/t4ds/assets/images/lsfilt.svg)
 
+In our example, we have a simplicial complex in $\mathbb{R}^2$ and the function
+$f$ takes a simplex $\sigma$ to the maximum height of any vertex in the simplex:
 
-TODO: update to use lower-star filtration
+$ f(\sigma) = \max_{\text{vertex} v \preceq \sigma} f(v).$
 
-So far, we have mostly only been working with toy examples. Let's work now with a
-big data set, which illuminate some of the considerations that data scientists
-must make in practice. 
+Note that the height of a point (or vertex) $p \in \mathbb{R}^n$ in
+direction $d \in \mathbb{S}^{n-1}$ is simply the dot product $v \cdot d$.
+Examples to consider are polygons (representing county boundaries, for example)
+and [3d scanned object](http://graphics.stanford.edu/data/3Dscanrep/).
 
-We again use the Montana County data from this morning. You should be able to access
-it while working in the same project, even if you are working in a different R script.
-Try accessing it in your current script.
+Create a complex in R to match the V-example above.
 
-```
-names(counties)
-```
-
-<details>
-<summary style="color:blue">Expected Output</summary>
-<br>
-<pre style="background-color:lightblue">
-<code>
-> names(counties)
- [1] "NAME"       "NAMEABBR"   "COUNTYNUMB" "PKEY"      
- [5] "SQMILES"    "PERIMETER"  "ACRES"      "ALLFIPS"   
- [9] "FIPS"       "LAST_UPDAT" "NAMELABEL"  "BAS_ID"    
-[13] "ID_UK"      "Shape_Leng" "Shape_Area"
-</code>
-</pre>
-</details>
-
-On your own, try selecting the spatial data corresponding to Flathead, Missoula, and Sanders county.
-(HINT: Remember we can use the `which()` function to get the index of a given element)
-
-```
-# get the three counties surrounding Lake county, and Flathead lake.
-lakeNeighbors <- # select Flathead, Missoula, and Sanders county
-```
-
-<details>
-<summary style="color:red">See the Answer</summary>
-<br>
-<pre style="background-color:lightcoral">
-<code>
-lakeNeighbors <- counties[c(which(counties$NAME=="FLATHEAD"), which(counties$NAME=="MISSOULA"), which(counties$NAME=="SANDERS")), ]
-</code>
-</pre>
-</details>
-
-If you did this correctly, you should be able to achieve the following plot:
-
-```
-plot(lakeNeighbors)
-```
-
-<details>
-<summary style="color:blue">Expected Output</summary>
-<br>
-<pre style="background-color:lightblue">
-<img src="https://comptag.github.io/t4ds/assets/images/lakeneighbors.jpg" alt="lake">
-</pre>
-</details>
-
-Now that we have these counties selected, use the `spsample` function to sample 4000
-points at random from the three counties, and save the sample in a new variable
-`lakeSample`.
-
-<details>
-<summary style="color:red">See the Answer</summary>
-<br>
-<pre style="background-color:lightcoral">
-<code>
-lakeSample <- spsample(lakeNeighbors, n=4000, "random")
-</code>
-</pre>
-</details>
-
-You can plot the result, which should match the shape of the three counties you've selected.
-
-```
-plot(lakeSample, pch=20, cex=.5)
-```
-
-<details>
-<summary style="color:blue">Expected Output</summary>
-<br>
-<pre style="background-color:lightblue" >
-<img src="https://comptag.github.io/t4ds/assets/images/lakesample.jpg" alt="lake">
-</pre>
-</details>
-
-Now let's try a Rips filtration on this GIS data. Intuitively, we should expect to find
-a cycle in the place of Lake County. Though, now we are working with huge data!
-This is where the parameters we've set really come into play. For a few minutes,
-discuss shortcomings of the Rips filtration in this setting, and potential remedies.
-
-```
-# be sure to cast lakeSample as a data frame
-X <- as.data.frame(lakeSample)
-persistDiag <- ripsDiag(X, ... ) # how should we compute this?
-```
-
-<details>
-<summary style="color:red">See Possible R Solution</summary>
-<br>
-One remedy is to cap the size of r, as well as the dimension that we're allowed to compute.
-If we set maxdimension=1 and maxscale=20000, we should be able to compute this ok, while still detecting a cycle. There is no perfect solution!
-
-<pre style="background-color:lightcoral">
-<code>
-> X <- as.data.frame(lakeSample)
-> persistDiag <- ripsDiag(X, maxdimension=1, maxscale=20000, dist = "euclidean",
-+                         printProgress = TRUE)
-# Generated complex of size: 9907872 
-# Persistence timer: Elapsed time [ 0.000000 ] seconds
-> plot(persistDiag[["diagram"]])
-</code>
-</pre>
-</details>
-
-<details>
-<summary style="color:red">See Resulting Persistence Diagram</summary>
-<br>
-<pre  style="background-color:lightcoral">
-<img src="https://comptag.github.io/t4ds/assets/images/bigripspd.jpg" alt="rips pts">
-</pre>
-</details>
-
-
-
+Next, TODO:height function 
 
 ---
 
