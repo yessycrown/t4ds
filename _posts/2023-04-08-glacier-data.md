@@ -303,8 +303,9 @@ it should be sufficient.
 </pre>
 </details>
 
+---
 
-### Assigning a Function on a Grid
+### Assigning a Function to a Grid
 
 Now that we're equipped with the required sets, we can use the `distFct` function in
 the R TDA package to compute distances from our grid to its boundary.
@@ -312,7 +313,8 @@ the R TDA package to compute distances from our grid to its boundary.
 We do so as follows:
 
 ```
-distances <- distFct(perimeter, as.data.frame(unifGlac))
+dfGlac <- as.data.frame(unifGlac)
+distances <- distFct(perimeter, dfGlac)
 ```
 
 <details>
@@ -325,8 +327,32 @@ different abstractions of matrices.
 </pre>
 </details>
 
+That was a decent amount of code flying around! Let's visualize what we've done,
+adding in some color to our grid. To do so, we will push the `plot` function
+in R to its limit, interpolating in shades of blue to designate grid cells with the highest
+ditance to the boundary. Make sure you understand what the
+arguments mean here:
 
-TODO: Use boundary and grid for distance function, 
+```
+# normalize each distance in our function
+colors <- distances/max(distances)
+plot(dfGlac[,1], dfGlac[,2], pch=20, col= rgb(0, 0, colors), cex=1)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/coolglaciersegmentation.jpg" alt="agassiz perimeter">
+</pre>
+</details>
+
+---
+
+### A Grid Filtration for Glacier Data
+
+At last, we can compute a grid filtration on our data.
+
 TODO: Do filtration
 TODO: Compute distances over time
 
