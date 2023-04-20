@@ -235,7 +235,7 @@ by computing the distance from each cell to the boundary.
 To do this, we're going to need to compute distance between sets of points.
 Given two sets $A, B \subset \mathbb{R}^2$, let $a \in A, b^* \in B$.
 For every $a \in A$, `distFcn` computes the Euclidean
-distance $d(a, b^*)$, where  $b^*$ is the nearest point to $a$ in $B$.
+distance $d(a, b^*)$ where  $b^*$ is the nearest point to $a$ in $B$.
 
 In our example, what are the sets $A$ and $B$?
 We take $A$ to be the grid stored in `unifGlac`, and
