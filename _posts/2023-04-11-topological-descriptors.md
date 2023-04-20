@@ -539,9 +539,74 @@ your neighbors.
 There are various ways that we can do this, actually.  The one that we will use
 today assigns to each cell the maximum value assigned to any of the vertices
 defining the cell.  By doing so, every lower-level set (collection of cells
-below a given value) is a complex.
+below a given value) is a complex.  By considering the increasing sequence of
+such subcomplexes, we arrive at the <b>lower-star filtration</b>.
 </pre>
 </details>
+
+We can contruct the lower-star filtration from the values in our image as
+follows:
+
+```
+myfilt <- gridFiltration(FUNvalues=vals, sublevel = TRUE, printProgress = TRUE)
+```
+
+The output is a complex of 11 simplices, along with a function value assigned to
+each simplex.  Can you find what those simplices and function values are?
+(Hint: the output of `gridFiltration` has attributes `$cmplx` and
+`$values` that stores the simplicial complex and function values for each
+simplex, respectively). 
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+To see the list of simplices in the complex:
+<code>
+> myfilt$cmplx
+[[1]]
+[1] 4
+
+[[2]]
+[1] 3
+
+[[3]]
+[1] 4 3
+
+[[4]]
+[1] 2
+
+[[5]]
+[1] 4 2
+
+[[6]]
+[1] 1
+
+[[7]]
+[1] 2 1
+
+[[8]]
+[1] 3 1
+
+[[9]]
+[1] 4 1
+
+[[10]]
+[1] 4 1 2
+
+[[11]]
+[1] 4 3 1
+</code>
+
+And the function values:
+<code>
+> myfilt$values
+ [1] 0.1952117 0.4001437 0.4001437 0.5358404 0.5358404 0.6333039
+ [7] 0.6333039 0.6333039 0.6333039 0.6333039 0.6333039
+</code>
+</details>
+
+
+
 
 ```
 pd=gridDiag(FUNvalues = vals)
