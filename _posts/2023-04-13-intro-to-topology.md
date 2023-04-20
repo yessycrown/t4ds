@@ -113,7 +113,6 @@ For each of the graphs above, can you find the corresponding graphs?
 <pre style="background-color:lightcoral">
 <br>
 <img src="https://comptag.github.io/t4ds/assets/images/bridges-map-and-graph.png" alt="bridges with graphs">
-<img src="https://comptag.github.io/t4ds/assets/images/bridges-graph.png" alt="just the graphs">
 <br>
 </pre>
 </details>
@@ -124,24 +123,22 @@ For each of the graphs above, can you find the corresponding graphs?
 
 This is a question that we will come back to tomorrow.
 
-First, we need to understand what a **topological space** is.  It is a set
-(e.g., the real line) with a notion of what **open sets** are that follow the
-following two rules:
+First, we need to understand what a *topological space* is.  
 
-1. The intersection of a finite number of open sets is open.
-2. Any (potentially infinite) union of open sets is open.
+> A topological space $(X,T)$ is a set $X$
+> (e.g., the real line) with a set of sets $T \subseteq 2^X$ (elements of $T$
+> are called *open sets*) that follows the
+> following two rules:
+> 
+> 1. The intersection of a finite number of open sets is open.
+> 2. Any (potentially infinite) union of open sets is open.
 
 An example is the real line, with open sets as we know them (in fact, this is
 called the standard topology on the reals).  From now on, when we say "shape",
-we mean a topological space.
+we mean a topological space.  Often the shapes we talk about come from data.
 
 ---
 ### Representing Shapes
-
----
-#### Cubical Complexes
-
-TODO:short intro to cubical complexes
 
 ---
 #### Simplicial Complexes 
@@ -171,10 +168,11 @@ iff the vectors $v_1-v_0,...,v_{n}-v_0$ are <i>linearly independent</i>.
 </details>
 
 
-We can collect simplices together to form a *simplicial complex*. In particular, a *simplicial complex* $K$
-is a finite collection of simplices, such that:
-1. If $\sigma \in K$ and $\tau \subset \sigma$, then $\tau \in K$.
-2. If $\sigma, \sigma'\in K$, then $\sigma \cap \sigma'$ is either empty or a face of both $\sigma, \sigma'$.
+We can collect simplices together to form a *simplicial complex*. 
+
+> A *simplicial complex* $K$ is a finite collection of simplices, such that:
+> 1. If $\sigma \in K$ and $\tau \subset \sigma$, then $\tau \in K$.
+> 2. If $\sigma, \sigma'\in K$, then $\sigma \cap \sigma'$ is either empty or a face of both $\sigma, \sigma'$.
 
 
 
@@ -185,7 +183,13 @@ We can use a simplicial complex to represent shapes (and data).
 Then, we can interpret topological features in a computational setting.
 
 
+---
+#### Cubical Complexes
 
+TODO:short intro to cubical complexes
+
+
+---
 ### Maps and Homeomorphisms
 
 If we have an understanding of open sets, we can define a **continuous map** as:
@@ -199,10 +203,11 @@ The strongest form of shape equivalence is that of a homeomorphism:
 
 What this means is the perspective of $a \in A$ "looks like" the perspective of
 $b \in B$.  In other words, the two shapes are "the same" if all you care about
-are the neigghborhoods.
+are the neighborhoods.
 
 ![isotopic](https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif?20070302005604)
 
+---
 ### Topological Invariants
 
 Can we explore every map $A \to B$? Nope!  Instead, we study topological
@@ -221,13 +226,19 @@ Herea are a couple examples:
 * [homotopy between two curves](https://www.youtube.com/watch?v=o7p9AJ5VCHo)
 
 The problem with classifying shapes up to homotopy is that they are $\#P$-hard
-to compute.  So, we need to be able to compute some things.
+to compute.  So, we turn to equivalence classes defined by topological invarians.
+
+> A topologocial invariant $I$ is a function that takes in as input a topological
+> space and returns a property of that space.  If two spaces $A$ and $B$ are
+> homeomorphic, then $I(A)=I(B)$.  But, the reverse need to not be true.
 
 The **Euler characteristic** of a shape is found by first representing the shape
-as a cellular structure (for us, this means finding a parttition into vertices,
-edges (that do not include their endpoints), and triangles or squares (that do
-not include their boundaries). 
-TODO:rephrase now that complexes introduced above
+as a cellular structure (e.g., simplicial complex or cubical complex). Then, the
+Euler characteristic is the alternating sum of the number of $i$-cells:
+
+$
+\chi(K) = \sum_{i=0}^{\infty} (-1)^i \#K_i.
+$
 
 What is the Euler characteristic of the sphere?
 
@@ -241,9 +252,9 @@ What is the Euler characteristic of the sphere?
     Alternatively, we can think of it as the surface of a tetrahedron, which has
     4 vertices, 6 edges, and 4 triangles. 4-6+4+2.
 
-    Fun fact: the sphwere is the one-point "compactification" of the plane
+    Fun fact: the sphere is the one-point "compactification" of the plane
     $\mathbb{R}^2$.  Add one point (equal to the limit point in every direction) and we
-    can construct a homeomorphism between $\mathbb{S}^2$ and $\mathbb{R}^1$.
+    can construct a homeomorphism between $\mathbb{S}^2$ and $\mathbb{R}^2$.
 </pre>
 <br>
 </details>
@@ -254,6 +265,8 @@ bit in our exploration.
 > TODO: define homology
 
 TODO: a question on homology
+
+![Koenigsberg](https://comptag.github.io/t4ds/assets/images/homology.svg)
 
 ---
 ## 5. Wrapping Up
