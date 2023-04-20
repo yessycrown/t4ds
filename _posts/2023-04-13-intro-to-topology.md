@@ -213,6 +213,15 @@ are the neighborhoods.
 Can we explore every map $A \to B$? Nope!  Instead, we study topological
 invariants.
 
+> A topologocial invariant $I$ is a function that takes in as input a topological
+> space and returns a property of that space.  If two spaces $A$ and $B$ are
+> homeomorphic, then $I(A)=I(B)$.  But, the reverse need to not be true.
+
+After we introduce different invariants, see `More Info` for an example of two
+shapes that are indistinguishable up to that invariant.
+
+#### Homotopy
+
 The first invariant we consider is that of a homotopy.
 
 > TODO: define homotopy
@@ -225,20 +234,24 @@ Herea are a couple examples:
 * [deformation retract of a punctured torus](https://www.youtube.com/watch?v=j2HxBUaoaPU)
 * [homotopy between two curves](https://www.youtube.com/watch?v=o7p9AJ5VCHo)
 
+<details>
+<summary style="color:DarkOrange">More Info: Indistinguishable up to Homotopy</summary>
+<br>
+<pre style="background-color:Gold">
+A circle and an annulus are indistinguishable by homotopy equivalence alone.
+</pre>
+</details>
+
 The problem with classifying shapes up to homotopy is that they are $\#P$-hard
-to compute.  So, we turn to equivalence classes defined by topological invarians.
+to compute.  So, we turn to topological invariants that are easier to compute.
 
-> A topologocial invariant $I$ is a function that takes in as input a topological
-> space and returns a property of that space.  If two spaces $A$ and $B$ are
-> homeomorphic, then $I(A)=I(B)$.  But, the reverse need to not be true.
+#### Euler Characeteristic
 
-The **Euler characteristic** of a shape is found by first representing the shape
+The *Euler characteristic* of a shape is found by first representing the shape
 as a cellular structure (e.g., simplicial complex or cubical complex). Then, the
 Euler characteristic is the alternating sum of the number of $i$-cells:
 
-$
-\chi(K) = \sum_{i=0}^{\infty} (-1)^i \#K_i.
-$
+$\chi(K) = \sum_{i=0}^{\infty} (-1)^i \#K_i.$
 
 What is the Euler characteristic of the sphere?
 
@@ -258,6 +271,8 @@ What is the Euler characteristic of the sphere?
 </pre>
 <br>
 </details>
+
+#### Homology
 
 Finally, we come to **homology**, a topological invaraint that we'll use quite a
 bit in our exploration.
