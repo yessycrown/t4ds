@@ -362,14 +362,14 @@ our grid (as a dataframe), `dfGlac`.
 <br>
 <pre style="background-color:lightcoral">
 <code>
-Diag1 <- gridDiag(X=dfGlac, FUNvalues = distances, maxdimension = 1, sublevel = TRUE, printProgress = TRUE)
+Diag1966 <- gridDiag(X=dfGlac, FUNvalues = distances, maxdimension = 1, sublevel = TRUE, printProgress = TRUE)
 </code>
 </pre>
 </details>
 
 Of course, be sure to plot your findings:
 ```
-plot(Diag1[["diagram"]])
+plot(Diag1966[["diagram"]])
 ```
 
 <details>
@@ -506,15 +506,40 @@ the bottleneck distance, from Session 4.
 
 ### Changes in the Agassiz Glacier Over Time
 
+Recall the definition of the bottleneck distance, the cost of the optimal matching between points
+of the two diagrams. This provides a succinct summary of the change in shape of the
+Agassiz Glacier over time.
 
+```
+d1 <- bottleneck(Diag1 = Diag1966$diagram, Diag2 = Diag1998$diagram, dimension = 0)
+d2 <- bottleneck(Diag1 = Diag1998$diagram, Diag2 = Diag2005$diagram, dimension = 0)
+d3 <- bottleneck(Diag1 = Diag2005$diagram, Diag2 = Diag2015$diagram, dimension = 0)
+```
 
+These bottleneck distances are informative, but of course are not scaled to the corresponding intervals of 
+time. Scaling them more faithfully illustrates the rate at which the shape of the Agassiz Glacier is 
+changing. Try plotting the scaled distances with respect to their time intervals.
 
-TODO: Do filtration
-TODO: Compute distances over time
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+plot(x=c(1,2,3), y=c(d1/(1998-1966), d2/(2005-1998), d3/(2015-2005)), ylab="Bottleneck Distance", xlab="Measurement Interval", main="Change in Bottleneck Distance over Time")
+# with this plot, we can even add segments for visualization
+segments(x0 = 1, y0 = d1/(1998-1966), x1 = 2, y1 = d2/(2005-1998), col = "black") 
+segments(x0 = 2, y0 = d2/(2005-1998), x1 = 3,  y1 = d3/(2015-2005), col = "black")
 
-TODO: Compute distances over big data
+</code>
+<img src="https://comptag.github.io/t4ds/assets/images/bottledist.jpg" alt="changing bottleneck distance">
+</pre>
+</details>
 
+This is informative, and consistent to what our intuition might tell us about the
+changing shape of glaciers. Moreover, it is consistent with the data 
 
+However, this is of course much too small of a sample to tell us the full story.
+In the remaining time
 
 ## Wrapping Up
 
