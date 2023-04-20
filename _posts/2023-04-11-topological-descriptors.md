@@ -222,7 +222,7 @@ plot(x=x, y=y)
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
-<pre>
+<pre style="background-color:lightblue">
 <img src="https://comptag.github.io/t4ds/assets/images/rips-pts-basic.jpg" alt="rips pts">
 </pre>
 </details>
@@ -255,7 +255,7 @@ with an example in mind.
 <details>
 <summary style="color:blue">If not, we also made a movie:</summary>
 <br>
-<pre>
+<pre style="background-color:lightblue">
 <img src="https://comptag.github.io/t4ds/assets/images/tda-rips/rips_example.gif" alt="gallatin plot">
 </pre>
 </details>
@@ -741,7 +741,7 @@ plot(lakeNeighbors)
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
-<pre>
+<pre style="background-color:lightblue">
 <img src="https://comptag.github.io/t4ds/assets/images/lakeneighbors.jpg" alt="lake">
 </pre>
 </details>
@@ -769,7 +769,7 @@ plot(lakeSample, pch=20, cex=.5)
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
-<pre>
+<pre style="background-color:lightblue" >
 <img src="https://comptag.github.io/t4ds/assets/images/lakesample.jpg" alt="lake">
 </pre>
 </details>
@@ -806,7 +806,7 @@ If we set maxdimension=1 and maxscale=20000, we should be able to compute this o
 <details>
 <summary style="color:red">See Resulting Persistence Diagram</summary>
 <br>
-<pre>
+<pre  style="background-color:lightcoral">
 <img src="https://comptag.github.io/t4ds/assets/images/bigripspd.jpg" alt="rips pts">
 </pre>
 </details>
