@@ -262,10 +262,11 @@ with an example in mind.
 
 ---
 
-### A VR Filtration in R
+### A Rips Filtration in R
 
 In R, we can use the `ripsFiltration` function in the TDA package to conduct filtrations.
-Let's try it out for $r<\sqrt{5}$, using the same 4 example points from above.
+Let's try it out for $r<\sqrt{5}$, using the same four example points from above.  If $r<\sqrt{5}$, 
+above, we noted that the complex is simply four points.
 
 ```
 # create our cloud of four points
@@ -302,7 +303,7 @@ FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
 
 
 Try on your own to view the resulting Rips complex, and see if it confirms what
-we thought the complex should be above. (HINT: to view the Rips complex, you will need
+we thought the final complex should be above. (HINT: to view the Rips complex, you will need
 to use the `$` syntax for attributes of the filtration)
 
 <details>
