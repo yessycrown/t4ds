@@ -535,12 +535,30 @@ segments(x0 = 2, y0 = d2/(2005-1998), x1 = 3,  y1 = d3/(2015-2005), col = "black
 </pre>
 </details>
 
-This is informative, and consistent to what our intuition might tell us about the
-changing shape of glaciers. Moreover, it is consistent with the data 
+This is consistent to what our intuition might tell us about the
+changing shape of glaciers. Moreover, it is consistent with the [data presented
+by the USGS](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/Table%20of%20Area%20of%20the%20Named%20Glaciers-II.pdf), which shows
+the fastest area reduction of the Agassiz Glacier occuring most recently.
+Indeed, hopefully you had the chance to plot the Agassiz Glacier at each timestamp:
 
-However, this is of course much too small of a sample to tell us the full story.
-In the remaining time
+1966             |  1998            | 2005          | 2015
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://comptag.github.io/t4ds/assets/images/agassiz1966.jpg)  |  ![](https://comptag.github.io/t4ds/assets/images/agassiz1998.jpg) | ![](https://comptag.github.io/t4ds/assets/images/agassiz2005.jpg) | ![](https://comptag.github.io/t4ds/assets/images/agassiz2015.jpg) 
+
+However, examining the Agassiz Glacier alone is of course much too small of a
+sample to tell us the full story.
+You will now investigate the changing
+shape of other glaciers in Glacier National Park.
+
+### A Final Activity
+
+In the remaining time in this workshop, using what you know about R, data analysis, and TDA,
+see if you can replicate or contradict some of the the findings in the area reduction study linked above. 
+Create a new R Script, which you will submit to us with the concluding survey. Be sure to consider
+cases in which this study's findings may be consistent with changing topological shape, and also
+consider inconsistencies (if you can find any), where perhaps shape may correlate less with
+area reduction in glaciers.
 
 ## Wrapping Up
 
-TODO
+
