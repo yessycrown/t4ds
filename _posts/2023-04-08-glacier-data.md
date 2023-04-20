@@ -63,8 +63,8 @@ Import the 1966 glacier data directly from the internet using `download.file` an
 to unzip the .zip file.
 
 ```
-download.file("https://www.sciencebase.gov//catalog/file/get/58af7532e4b01ccd54f9f5d3?f=__disk__22%2Ff9%2Fcb%2F22f9cbd1692cdf43dc1785b232913b4c6e1dabaa",destfile = "/cloud/project/Glaciers1966.shp")
-
+download.file("https://www.sciencebase.gov/catalog/file/get/58af7532e4b01ccd54f9f5d3?facet=GNPglaciers_1966",destfile = "/cloud/project/GNPglaciers_1966.zip")
+system("unzip /cloud/project/GNPglaciers_1966.zip")
 ```
 
 Then read in the downloaded `.shp` file using `readOGR`.
@@ -385,18 +385,123 @@ We will now download glacier data from 1998, 2005, and 2015.
 
 ```
 # Download 1998 data
-download.file("https://www.sciencebase.gov/catalog/file/get/58af765ce4b01ccd54f9f5e7?f=__disk__76%2Fc5%2F10%2F76c510342d63a7872aef11fa367c2b063620d8ad",destfile = "/cloud/project/Glaciers1998.shp")
+download.file("https://www.sciencebase.gov/catalog/file/get/58af765ce4b01ccd54f9f5e7?facet=GNPglaciers_1998",destfile = "/cloud/project/Glaciers1998.zip")
+system("unzip /cloud/project/Glaciers1998.zip")
 
 
 # Download 2005 data
-download.file("https://www.sciencebase.gov/catalog/file/get/58af76bce4b01ccd54f9f5ea?f=__disk__21%2Ff2%2F94%2F21f294868f1ddb88423069357ceea75b00b8f5dc",destfile = "/cloud/project/Glaciers2005.shp")
+download.file("https://www.sciencebase.gov/catalog/file/get/58af76bce4b01ccd54f9f5ea?facet=GNPglaciers_2005",destfile = "/cloud/project/Glaciers2005.zip")
+system("unzip /cloud/project/Glaciers2005.zip")
 
 
 # Download 2015 data
-download.file("https://www.sciencebase.gov/catalog/file/get/58af7988e4b01ccd54f9f608?f=__disk__56%2F3c%2F91%2F563c917c4ba143fee3da5b929fd6625eccac18ae",destfile = "/cloud/project/Glaciers2015.shp")
+download.file("https://www.sciencebase.gov/catalog/file/get/58af7988e4b01ccd54f9f608?facet=GNPglaciers_2015",destfile = "/cloud/project/Glaciers2015.zip")
+system("unzip /cloud/project/Glaciers2015.zip")
+```
 
+Then, import the data as you did before:
 
 ```
+glaciers1998 <- readOGR(dsn="/cloud/project/GNPglaciers_1998.shp")
+glaciers2005 <- readOGR(dsn="/cloud/project/GNPglaciers_2005.shp")
+glaciers2015 <- readOGR(dsn="/cloud/project/GNPglaciers_2015.shp")
+```
+
+You now have all of the tools to carry out the bulk of the TDA pipeline on your own.
+As a challenge, try to compute a grid filtration starting from scratch
+for the Agassiz glacier in 1998, 2005, and 2015. (Be sure to plot along the way to build intuition!)
+
+It may be easiest if you break up the tasks into steps, such as:
+1. Create a grid and points on the boundary
+2. Compute a distance function on each grid
+3. Compute a grid filtration on each grid
+
+<details>
+<summary style="color:red">Solution to Step 1: Create Grid and Points on Boundary</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+unifGlac1998 <- spsample(glaciers1998[1,], n=4000, "regular")
+unifGlac2005 <- spsample(glaciers2005[1,], n=4000, "regular")
+unifGlac2015 <- spsample(glaciers2015[1,], n=4000, "regular")
+
+perimeter1998 <- rPointOnPerimeter(2000, glaciers1998[1,]@polygons[[1]]@Polygons[[1]])
+perimeter2005 <- rPointOnPerimeter(2000, glaciers2005[1,]@polygons[[1]]@Polygons[[1]])
+perimeter2015 <- rPointOnPerimeter(2000, glaciers2015[1,]@polygons[[1]]@Polygons[[1]])
+</code>
+</pre>
+</details>
+
+
+<details>
+<summary style="color:red">Solution to Step 2: Compute a Distance Function on Each Grid</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+distances1998 <- distFct(perimeter1998, as.data.frame(unifGlac1998))
+distances2005 <- distFct(perimeter2005, as.data.frame(unifGlac2005))
+distances2015 <- distFct(perimeter2015, as.data.frame(unifGlac2015))
+
+</code>
+</pre>
+</details>
+
+
+<details>
+<summary style="color:red">Solution to Step 3: Compute a Grid Filtration</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+Diag1998 <- gridDiag(X=as.data.frame(unifGlac1998), FUNvalues = distances1998, maxdimension = 1, sublevel = TRUE, printProgress = TRUE)
+Diag2005 <- gridDiag(X=as.data.frame(unifGlac2005), FUNvalues = distances2005, maxdimension = 1, sublevel = TRUE, printProgress = TRUE)
+Diag2015 <- gridDiag(X=as.data.frame(unifGlac2015), FUNvalues = distances2015, maxdimension = 1, sublevel = TRUE, printProgress = TRUE)
+
+</code>
+</pre>
+</details>
+
+Once you've completed each grid filtration, plot the resulting persistence diagrams!
+
+```
+plot(Diag1998[["diagram"]])
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/glacierpd2.jpg" alt="glacial grid pd">
+</pre>
+</details>
+
+```
+plot(Diag2005[["diagram"]])
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/glacierpd3.jpg" alt="glacial grid pd">
+</pre>
+</details>
+
+```
+plot(Diag2015[["diagram"]])
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/glacierpd4.jpg" alt="glacial grid pd">
+</pre>
+</details>
+
+You should see some noticeable changes in shape. We can quantify these more rigorously using
+the bottleneck distance, from Session 4.
+
+
 
 TODO: Do filtration
 TODO: Compute distances over time
