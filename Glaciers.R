@@ -52,6 +52,9 @@ mat1
 
 names(glaciers_66)
 
+library(sf)
+poly_points <- st_segmentize(glaciers_66[1,], dfMaxLength = 5)
+
 
 plot(spsample(glaciers_66[1,], n=1000,"regular"), pch=20, cex=.5)
 
@@ -113,4 +116,7 @@ for (i in seq(along = one)) {
   for (j in seq_len(dim(Diag2[["cycleLocation"]][[one[i]]])[1])) {
     lines(Diag2[["cycleLocation"]][[one[i]]][j, , ], pch = 19, cex = 1, col = i)
   }
+  
+  
+  
 }

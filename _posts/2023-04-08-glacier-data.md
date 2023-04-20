@@ -140,7 +140,7 @@ plot(glaciers1966)
 
 ---
 
-### Segmentation of Raw GIS Data
+### Transforming Raw GIS Data
 
 For 5 to 10 minutes, using what you know about filtrations,
 discuss amongst yourselves how we might transform our GIS data in order to study its topology.
@@ -226,78 +226,112 @@ plot(unifGlac, pch=20, cex=.25)
 
 
 And, we get something nice to do TDA with.
-That is, we can do a grid filtration by assigning the same height to each point in the grid,
-and get the resulting persistence diagram using the `gridDiag` function.
+That is, we can do a grid filtration! 
+Recall that a grid filtration requires
+(1) a grid, and (2) a function on that grid.
+One simple way to assign a function to our grid is
+by computing the distance from each cell to the boundary.
 
-The last thing we'll need before we can do this is to figure out the bounds of our 
-rid. See if you can figure out how to do this, using what you know about dataframes in R.
-Remember that you can find the points defining the corners of a polygon with the following syntax:
+To do this, we're going to need to compute distance between sets of points.
+Given two sets $A, B \subset \mathbb{R}^2$, let $a \in A, b^* \in B$.
+For every $a \in A$, `distFct` computes the Euclidean
+distance $d(a, b^*)$ where  $b^*$ is the nearest point to $a$ in $B$.
 
-```
-glaciers1966[1,]@polygons[[1]]@Polygons[[1]]@coords
-```
+In our example, what are the sets $A$ and $B$?
+We take $A$ to be the grid stored in `unifGlac`, and
+$B$ to be the boundary of the polygon `glaciers1966[1,]`.
 
-
-<details>
-<summary style="color:red">See the Answer</summary>
-<br>
-<pre style="background-color:lightcoral">
-<code>
-> # compute points on Agassiz Glacier
-> pts <- glaciers1966[1,]@polygons[[1]]@Polygons[[1]]@coords
-> xlim <- c(min(pts[,1]), max(pts[,1]))
-> ylim <- c(min(pts[,2]), max(pts[,2]))
-> lim <- cbind(xlim, ylim)
-> lim
-         xlim    ylim
-[1,] 268044.4 5423908
-[2,] 269715.9 5426157
-</code>
-</pre>
-</details>
-
-We also need to know the distance between points in our grid.
-Find this just by quick inspection:
+However, `distFct` requires two *finite* sets as input.
+To represent the glacier boundary as a finite set, we
+define a set of points living on the edge of the polygon
+in the following helper function.
 
 ```
-head(unifGlac, 10)
+rPointOnPerimeter <- function(n, poly) {
+    xy <- poly@coords
+    dxy <- diff(xy)
+    # hypot depends on the pracma library, make sure it's installed
+    h <- hypot(dxy[,"x"], dxy[,"y"])
+
+    e <- sample(nrow(dxy), n,replace=TRUE, prob=h)
+
+    u <- runif(n)
+    p <- xy[e,] + u * dxy[e,]
+
+    p
+  }
 ```
 
-It looks like our points have distance 20, meaning that the grid distance parameter
-`by` will be 40.
-
-Now we have everything we need to conduct a grid filtration on the Agassiz glacier.
-Let's see what the persistence diagram looks like when doing so.
-To start, try the following:
+This function has one dependency we haven't installed yet, the `pracma` package.
+Make sure you install and import it before running the function.
 
 ```
-Diag1 <- gridDiag(as.data.frame(unifGlac), distFct, lim = lim, by=40, sublevel = TRUE, printProgress = TRUE)
+install.packages("pracma")
+library(pracma)
 ```
 
-And then plot the resulting persistence diagram:
+We can now define a set for the boundary by running this helper function
+on the polygon representing the Agassiz glacier.
 
 ```
-plot(Diag1[["diagram"]])
+poly <- glaciers1966[1,]@polygons[[1]]@Polygons[[1]]
+perimeter <- rPointOnPerimeter(2000, poly)
 ```
 
-TODO: Make this description better, and check that it's actually right.
+Let's see how the helper function worked for us by plotting the result.
 
-Let $G \subset \mathbb{R}^2$ be a grid, and let $A \subset G$ be the set of points we care about
-living within $G$. In this example, $G$ would be the grid, and $S$ would be the subset of the grid
-living on the Agassiz glacier. Recall that the grid filtration stems from a function
-$f:G \to \mathbb{R}$. If $\sigma \not \in S$, the typical approach is to consider 
-$f$ as the distance from $\sigma$ to the nearest point in $S$. Alternatively, if $\sigma \in S$,
-we typically set $\sigma$ to some maximum height. Consequently, the filtration from $f$ struggles
-to detect topological features in our data, because there is not enough discriminating
-each point in the grid.
+```
+plot(perimeter)
+```
 
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre>
-<img src="https://comptag.github.io/t4ds/assets/images/badpd.jpg" alt="agassiz poor filtration">
+<img src="https://comptag.github.io/t4ds/assets/images/perimeter.jpg" alt="agassiz perimeter">
 </pre>
 </details>
+
+
+<details>
+<summary style="color:DarkOrange">A Note on our Helper Function</summary>
+<br>
+<pre style="background-color:Gold">
+Note that due to varying lengths of edges on the polygon, our helper function
+does not perfectly compute points along edges. However, in the interest of simplicity,
+it should be sufficient.
+</pre>
+</details>
+
+
+### Assigning a Function on a Grid
+
+Now that we're equipped with the required sets, we can use the `distFct` function in
+the R TDA package to compute distances from our grid to its boundary.
+
+We do so as follows:
+
+```
+distances <- distFct(perimeter, as.data.frame(unifGlac))
+```
+
+<details>
+<summary style="color:DarkOrange">More Info</summary>
+<br>
+<pre style="background-color:Gold">
+Here, we need to cast the our grid as a dataframe. 
+This is an incredibly common procedure in R, as different applications use
+different abstractions of matrices.
+</pre>
+</details>
+
+
+TODO: Use boundary and grid for distance function, 
+TODO: Do filtration
+TODO: Compute distances over time
+
+TODO: Compute distances over big data
+
 
 
 ## Wrapping Up
