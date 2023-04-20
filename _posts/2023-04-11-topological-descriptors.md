@@ -492,10 +492,46 @@ and the filtration that results treating $r>0$ as a free variable,
 we now will discuss useful data structures to store and interpret filtrations.
 
 ---
-### The Lower-Star Filtration
+### Height and Lower-Star Filtrations
 
 The Rips filtration is great for creating connections within a point cloud.
-However, sometimes, we already know what these connections are.
+However, sometimes, we already know what these connections are.  And, many times
+there is a function defined over the topological space that is of interest.  A
+simple example to start is an image.  The underlying topological space is a
+square (pretty boring topologically).  Images decompose this square domain into
+smaller squares called pixels and assigns a color.  We'll restrict ourselves to
+monochromatic images, so we can think of the color as a number between $0$ and
+$1$.
+
+In R, let's create a random image:
+
+```
+n=20
+vals <- array(runif(n*n),c(n,n))
+image(vals)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<img src="https://comptag.github.io/t4ds/assets/images/pretty-image.png" alt="rips barcode">
+</pre>
+</details>
+
+TODO:more description here
+
+```
+pd=gridDiag(FUNvalues = vals)
+plot(pd[["diagram"]])
+```
+
+
+For example, we
+have an [3d scanned object](http://graphics.stanford.edu/data/3Dscanrep/), or
+another shape embedded in $\R^n$. Let's consider embedded shapes next. 
+
+So, what does this look like?
 
 TODO: Brittany discuss the theory behind this, Ben create examples.
 
