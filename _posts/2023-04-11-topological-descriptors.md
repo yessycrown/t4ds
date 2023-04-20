@@ -148,7 +148,9 @@ is a generalization of contact graphs.
 > Let $S$ be finite set of points in $\mathbb{R}^n$. Let $r\geq 0$. The *Vietoris-Rips (VR) complex* of $S$
 > and $r$ is the abstract simplicial complex, denoted $\text{VR}(S, r)$, consisting of all subsets
 > of diameter at most $r$:
-> $ \text{VR}(S, r):=\\{\sigma\subset S \mid \text{ diam}(\sigma)\leq \\}, $
+>
+> $ \text{VR}(S, r):=\\{\sigma\subset S \mid \text{ diam}(\sigma)\leq r \\}, $
+>
 > where the *diameter* of a set of points is the maximum distance between any two points in the set.
 
 Geometrically, we constuct the Vietoris-Rips (VR)-complex by considering balls of radius $\frac{r}{2}$,
