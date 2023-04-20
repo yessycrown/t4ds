@@ -74,36 +74,67 @@ glaciers1966 <- readOGR(dsn="/cloud/project/GNPglaciers_1966.shp")
 ```
 
 
-View the first glacier you've uploaded using the `head` method:
+Try to view the first glacier you've uploaded using the dataframe indexing syntax.
 
-```
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
 glaciers1966[1,]
-```
+</code>
+</pre>
+</details>
 
-Notice that the data is pretty big! We have uploaded every glacier in GNP, so there's a lot going on.
-You can view the first 5 glaciers if you want to get more of a sense of the complexity of our data.
 
-```
+Notice that the data is pretty big! Each glacier individually (like the county data
+we saw earlier) is
+fairly involved. Plus, altogether we have uploaded every glacier in GNP, so there's a lot going on.
+Use the `head` command to view the first 5 glaciers if you want to
+get more of a sense of the complexity of our data.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
 first_five <- head(glaciers1966, 5)
 first_five
-```
+</code>
+</pre>
+</details>
 
-Notice that the fundamental glacier shape data is stored in polygon format.
-The standard R command for plotting is carried along with GIS data as well.
-Plot the first glacier to visualize it.(If you have Google Earth, it should look familiar to what you saw there.)
 
-```
-glaciers1966[1,]
-```
+Notice that the fundamental glacier shape data is stored in polygon format,
+which is the same as the county GIS data we used before. Try plotting the first
+glacier in our dataset.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+plot(glaciers1966[1,])
+</code>
+</pre>
+</details>
+
 
 ![glacier1](../assets/images/glacier1.png)
 
 
-We can also go ahead and view all of the glaciers in GNP in the same way.
+For fun, try viewing all of the glaciers in GNP in the same way.
 
-```
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
 plot(glaciers1966)
-```
+</code>
+</pre>
+</details>
+
 
 ![glacier2](../assets/images/glacier2.png)
 
@@ -111,7 +142,7 @@ plot(glaciers1966)
 
 ### Segmentation of Raw GIS Data
 
-For 5-10 minutes, using what you know about filtrations,
+For 5 to 10 minutes, using what you know about filtrations,
 discuss amongst yourselves how we might transform our GIS data in order to study its topology.
 What options do we have? Could these options introduce error?
 
@@ -249,6 +280,8 @@ And then plot the resulting persistence diagram:
 plot(Diag1[["diagram"]])
 ```
 
+TODO: Make this description better, and check that it's actually right.
+
 Let $G \subset \mathbb{R}^2$ be a grid, and let $A \subset G$ be the set of points we care about
 living within $G$. In this example, $G$ would be the grid, and $S$ would be the subset of the grid
 living on the Agassiz glacier. Recall that the grid filtration stems from a function
@@ -258,6 +291,13 @@ we typically set $\sigma$ to some maximum height. Consequently, the filtration f
 to detect topological features in our data, because there is not enough discriminating
 each point in the grid.
 
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/badpd.jpg" alt="agassiz poor filtration">
+</pre>
+</details>
 
 
 ## Wrapping Up
