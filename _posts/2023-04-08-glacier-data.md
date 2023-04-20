@@ -63,8 +63,8 @@ Import the 1966 glacier data directly from the internet using `download.file` an
 to unzip the .zip file.
 
 ```
-download.file("https://www.sciencebase.gov/catalog/file/get/58af7532e4b01ccd54f9f5d3?facet=GNPglaciers_1966",destfile = "/cloud/project/Glaciers.zip")
-system("unzip /cloud/project/MontanaCounties.zip")
+download.file("https://www.sciencebase.gov//catalog/file/get/58af7532e4b01ccd54f9f5d3?f=__disk__22%2Ff9%2Fcb%2F22f9cbd1692cdf43dc1785b232913b4c6e1dabaa",destfile = "/cloud/project/Glaciers1966.shp")
+
 ```
 
 Then read in the downloaded `.shp` file using `readOGR`.
@@ -380,7 +380,23 @@ plot(Diag1[["diagram"]])
 </pre>
 </details>
 
+With this in hand, let's take a look at the Agassiz glacier later in life.
+We will now download glacier data from 1998, 2005, and 2015.
 
+```
+# Download 1998 data
+download.file("https://www.sciencebase.gov/catalog/file/get/58af765ce4b01ccd54f9f5e7?f=__disk__76%2Fc5%2F10%2F76c510342d63a7872aef11fa367c2b063620d8ad",destfile = "/cloud/project/Glaciers1998.shp")
+
+
+# Download 2005 data
+download.file("https://www.sciencebase.gov/catalog/file/get/58af76bce4b01ccd54f9f5ea?f=__disk__21%2Ff2%2F94%2F21f294868f1ddb88423069357ceea75b00b8f5dc",destfile = "/cloud/project/Glaciers2005.shp")
+
+
+# Download 2015 data
+download.file("https://www.sciencebase.gov/catalog/file/get/58af7988e4b01ccd54f9f608?f=__disk__56%2F3c%2F91%2F563c917c4ba143fee3da5b929fd6625eccac18ae",destfile = "/cloud/project/Glaciers2015.shp")
+
+
+```
 
 TODO: Do filtration
 TODO: Compute distances over time
