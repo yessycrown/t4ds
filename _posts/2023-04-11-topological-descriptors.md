@@ -832,9 +832,76 @@ direction $d \in \mathbb{S}^{n-1}$ is simply the dot product $v \cdot d$.
 Examples to consider are polygons (representing county boundaries, for example)
 and [3d scanned object](http://graphics.stanford.edu/data/3Dscanrep/).
 
-Create a complex in R to match the V-example above.
+Create a complex in R to match the V-example above. (Hint: remember from earlier that a
+complex is a list of simplices, and a simplex is a "combination" of vertices).
 
-Next, TODO:height function 
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+# create vertices
+a <- 1; b=2; c=3
+# edges
+ac <- c(1,2); cb=c(2,3)
+# a complex is a list of simplices
+vcplx <- list(a,b,c,ac,cb)
+</code>
+</pre>
+</details>
+
+Next, let's use `cbind` to create a data structure to store the coordiantes
+(note: you can make up coordinates).
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+x <-c(0,0,1)
+y <- c(0,1,0)
+vcoords <- cbind(x,y)
+</code>
+</pre>
+</details>
+
+And, the final piece left is to compute the function values for the vertices!
+Like above, we can use the z-coordinate of the highest vertex.  For now, we can
+do this by hand and create a numeric array.  (Challenge: compute this from
+vcoords!)
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+vvals <- c(0,0,1)
+</code>
+</pre>
+</details>
+
+
+Once we have these elements, we can use the `funFiltration` to create our
+filtration and compute the diagram as follows:
+```
+vfilt <- funFiltration(vvals,vcplx)
+vdiag <- filtrationDiag(vfilt,maxdimension=2)
+vidag$diagram
+```
+
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> vdiag$diagram
+     dimension Birth Death
+[1,]         0     0   Inf
+[2,]         0     0     1
+</code>
+</pre>
+</details>
 
 ---
 
