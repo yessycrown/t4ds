@@ -140,7 +140,7 @@ plot(glaciers1966)
 
 ---
 
-### Segmentation of Raw GIS Data
+### Transforming Raw GIS Data
 
 For 5 to 10 minutes, using what you know about filtrations,
 discuss amongst yourselves how we might transform our GIS data in order to study its topology.
@@ -234,14 +234,14 @@ by computing the distance from each cell to the boundary.
 
 To do this, we're going to need to compute distance between sets of points.
 Given two sets $A, B \subset \mathbb{R}^2$, let $a \in A, b^* \in B$.
-For every $a \in A$, `distFcn` computes the Euclidean
+For every $a \in A$, `distFct` computes the Euclidean
 distance $d(a, b^*)$ where  $b^*$ is the nearest point to $a$ in $B$.
 
 In our example, what are the sets $A$ and $B$?
 We take $A$ to be the grid stored in `unifGlac`, and
 $B$ to be the boundary of the polygon `glaciers1966[1,]`.
 
-However, `distFcn` requires two *finite* sets as input.
+However, `distFct` requires two *finite* sets as input.
 To represent the glacier boundary as a finite set, we
 define a set of points living on the edge of the polygon
 in the following helper function.
@@ -275,7 +275,7 @@ on the polygon representing the Agassiz glacier.
 
 ```
 poly <- glaciers1966[1,]@polygons[[1]]@Polygons[[1]]
-perimeter <- rPointOnPerimeter(10000, poly)
+perimeter <- rPointOnPerimeter(2000, poly)
 ```
 
 Let's see how the helper function worked for us by plotting the result.
@@ -297,9 +297,31 @@ plot(perimeter)
 <summary style="color:DarkOrange">A Note on our Helper Function</summary>
 <br>
 <pre style="background-color:Gold">
-Note that due to varying lengths of edges on the polygon, our simple helper function
+Note that due to varying lengths of edges on the polygon, our helper function
 does not perfectly compute points along edges. However, in the interest of simplicity,
 it should be sufficient.
+</pre>
+</details>
+
+
+### Assigning a Function on a Grid
+
+Now that we're equipped with the required sets, we can use the `distFct` function in
+the R TDA package to compute distances from our grid to its boundary.
+
+We do so as follows:
+
+```
+distances <- distFct(perimeter, as.data.frame(unifGlac))
+```
+
+<details>
+<summary style="color:DarkOrange">More Info</summary>
+<br>
+<pre style="background-color:Gold">
+Here, we need to cast the our grid as a dataframe. 
+This is an incredibly common procedure in R, as different applications use
+different abstractions of matrices.
 </pre>
 </details>
 
