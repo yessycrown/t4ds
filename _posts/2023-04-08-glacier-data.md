@@ -202,7 +202,7 @@ Agassiz glacier. However, this would introduce additional imprecision and random
 our data, which we don't necessarily want. A better idea is to get a uniform grid
 from within our polygon, and use TDA (namely, a grid filtration) on that.
 
-Let's get sample a uniform grid of 4000 points from within our polygon. Luckily, the `spsample`
+Let's get a uniform grid of 4000 points from within our polygon. Luckily, the `spsample`
 function has the option to get a `regular` sample.
 
 ```
@@ -233,9 +233,9 @@ One simple way to assign a function to our grid is
 by computing the distance from each cell to the boundary.
 
 To do this, we're going to need to compute distance between sets of points.
-Given two sets $A, B \subset \mathbb{R}^2$, let $a \in A, b^* \in B$.
+Given two sets $A, B \subset \mathbb{R}^2$, let $a \in A, b' \in B$.
 For every $a \in A$, `distFct` computes the Euclidean
-distance $d(a, b^*)$ where  $b^*$ is the nearest point to $a$ in $B$.
+distance $d(a, b')$ where  $b'$ is the nearest point to $a$ in $B$.
 
 In our example, what are the sets $A$ and $B$?
 We take $A$ to be the grid stored in `unifGlac`, and
