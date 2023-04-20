@@ -195,18 +195,20 @@ added to the &#268;ech complex.
 
 ### The Vietoris-Rips Filtration
 
-Going back to the VR-complex, we consider $r$ to be a free parameter. If we vary $r$, we
+In the VR-complex, $r$ is a parameter. If we vary $r$, we
 get different VR-complexes. So, which one do we pick?
 In many data analysis situations, the value of $r$ that best describes
 the data is unknown or does not exist, so why not look at all of them!? Observe if we increase $r$
 continuously, the complex only changes a finite number of radii, say at $r_0 <
 r_1 < \ldots < r_n$. 
-Then, we get a family of nested VR-complexes; the *Vietoris-Rips filtration*.
+Then, we get a family of nested VR-complexes that we call the *Vietoris-Rips filtration* (or simply the Rips filtration).
 
-$\emptyset < K_0 \subset K_1 \subset \ldots \subset K_n=K.$
+$\emptyset < K_0 \subset K_1 \subset \ldots \subset K_n=K,$
+
+where $K_i=\text{VR}(S,r_i)$
 
 More generall, a *filtration* of a simplicial complex, $K$, is a nested sequence of subcomplexes starting at the
-empty set and ending with the full simplicial complex.
+empty set $\emtpyset$ and ending with the $K$.
 
 Let's work through an example. Let $S:=\{(0,0),(1,3),(2,-1),(3,2)\}\subset \mathbb{R}^2$. 
 For a visualization, this is easy to plot in R:
@@ -281,7 +283,7 @@ library <- "Dionysus"
 
 # conduct Rips filtration
 FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
-                          maxscale = maxscale, dist = "euclidean", library = "Dionysus",
+                          maxscale = maxscale, dist = dist, library = library,
                           printProgress = TRUE)
 ```
 
