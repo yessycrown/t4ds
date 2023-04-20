@@ -181,7 +181,9 @@ two-complex above that is created when three balls pairwise intersect in the
 VR-complex.  If there is not a three-way intersection, the triangle is not
 added to the &#268;ech complex.
 <figure>
-<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/cechrips.svg" alt="cechcplx" style="width:100%">
+<img src="https://comptag.github.io/t4ds/assets/images/tda-rips/cechrips.svg" 
+    height="50"
+    alt="cechcplx" style="width:100%">
 <figcaption>&#268;ech complex.</figcaption>
 </figure>
 </pre>
