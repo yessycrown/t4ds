@@ -293,6 +293,17 @@ plot(perimeter)
 </details>
 
 
+<details>
+<summary style="color:DarkOrange">A Note on our Helper Function</summary>
+<br>
+<pre style="background-color:Gold">
+Note that due to varying lengths of edges on the polygon, our simple helper function
+does not perfectly compute points along edges. However, in the interest of simplicity,
+it should be sufficient.
+</pre>
+</details>
+
+
 TODO: Use boundary and grid for distance function, 
 TODO: Do filtration
 TODO: Compute distances over time
