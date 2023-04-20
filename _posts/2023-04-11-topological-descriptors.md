@@ -491,8 +491,10 @@ Now that we have a good sense of Vietoris-Rips complexes,
 and the filtration that results treating $r>0$ as a free variable,
 we now will discuss useful data structures to store and interpret filtrations.
 
+Keep this example in your workspace, as we will come back to it shortly.
+
 ---
-### Height and Lower-Star Filtrations
+### Images and Lower-Star Filtrations
 
 The Rips filtration is great for creating connections within a point cloud.
 However, sometimes, we already know what these connections are.  And, many times
@@ -541,6 +543,28 @@ today assigns to each cell the maximum value assigned to any of the vertices
 defining the cell.  By doing so, every lower-level set (collection of cells
 below a given value) is a complex.  By considering the increasing sequence of
 such subcomplexes, we arrive at the <b>lower-star filtration</b>.
+</pre>
+</details>
+
+For images, the function is actually a surface created by raising each vertex up
+to the height equal to it's function value.  Then, edges and two-cells are
+interpolated.  The lower-star filtration is exactly the one that arises
+by raising our ``height'' parameter and considering subcomplex of the
+triangulated surface that appears entirely at or below the current height
+parameter.  Here's a quick example to demonstrate:
+
+```
+newfcn <- function(x, y){jitter(-2*x^2+y^2+x+3*y-6*x+x*y,30)}
+x <- seq(-5,5)
+y <- seq(-5,5)
+persp(x,y,outer(x,y,newfcn),zlab="height",theta=55,phi=25,col="palegreen1",shade=0.5)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<img src="https://comptag.github.io/t4ds/assets/images/surface.png" alt="a surface">
 </pre>
 </details>
 
@@ -607,6 +631,8 @@ And the function values:
 </pre>
 </details>
 
+
+Again, keep this example in your workspace, as we will come back to it shortly.
 
 ---
 ## 3. Introduction to Persistent Homology: Barcodes and Diagrams
@@ -680,7 +706,7 @@ There is more to it than we say here. A feature of the underlying topological
 space ($K$) is called an <b>essential class</b> and never dies.  Thus, the death
 parameter can be infinite.  For this reason, we often use the extended real
 plane $\overline{\mathbb{R}}^2$,
-where $\overline{\mathbb{R}}=\mathbb{R} \cup\\{ \infty \\}$.  
+where $\overline{\mathbb{R}}=\mathbb{R} \cup \{ \infty \}$.  
 Even more generally, the parameter space can be an arbitrary
 poset.  But, that is more than we need in T4DS.
 </pre>
@@ -707,9 +733,13 @@ plot(persistDiag[["diagram"]], barcode=TRUE)
 </pre>
 </details>
 
-Here, 1d homology is represented in black, and 2d homology is in red. We can track the birth and death
-of the connected components as well as the one-cycle, by seeing the times at which segments begin and end in the barcode.
-TODO:introduce this code
+Here, 1d homology (corresponding to the connected components) is represented in black,
+and 2d homology (corresponding to the one-cycles) is in red. We can track the birth and death
+of the connected components as well as the one-cycle, by seeing the parameters at which segments begin and end in the barcode.
+
+So, being able to plot it is great, but what if we want to work with the
+function values (e.g., in order to compare two diagrams)?  We do have direct
+access to the coordinates of all points.
 
 ```
 persistDiag
@@ -720,10 +750,6 @@ persistDiag
 <br>
 <pre style="background-color:lightblue">
 <code>
-> persistDiag <- ripsDiag(X, maxdimension, maxscale=maxscale, dist = dist,
-+                     printProgress = TRUE)
-# Generated complex of size: 15 
-# Persistence timer: Elapsed time [ 0.000000 ] seconds
 > persistDiag
 $diagram
      dimension    Birth    Death
@@ -736,7 +762,7 @@ $diagram
 </pre>
 </details>
 
-And, if you want to see the persistence diagram instead of the barcode, use:
+Finally, if you want to see the persistence diagram instead of the barcode, use:
 ```
 plot(persistDiag[["diagram"]])
 ```
@@ -750,8 +776,8 @@ plot(persistDiag[["diagram"]])
 
 The barcode and the diagram are visualizations of the same information: the
 persistence of homoology generators as a parameter changes. Some researchers
-prefer one over an another, but they're ultimately the same object
-mathematically.
+prefer one visualization over an another, but they're ultimately the same object.
+How you might be inclined to work with them might differ based on your choice.
 
 ---
 ### Diagram for a Lower-Star Filtration
