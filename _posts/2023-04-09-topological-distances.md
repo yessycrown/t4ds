@@ -178,7 +178,7 @@ See if you can pick this out in our example.
 ### Incorporating Persistence Diagrams
 
 We can use the same idea for persistence diagrams.
-That is, given two persistence diagrams `PD1` and `PD2`,
+That is, given two persistence diagrams $PD_1$ and $PD_2$,
 we compute the optimal matching between points, and find its weight.
 
 However, there should be one glaring issue that comes to mind in doing this.
@@ -187,10 +187,13 @@ would not be possible, and our distance is not well-defined.
 
 To handle this issue, we consider the diagonal on persistence diagrams
 as having infinite cardinality. If a bijection is not possible, "leftover"
-points are paired with the diagonal. Then, the so-called *bottleneck distance*
-between persistence diagrams is defined as follows:
+points are paired with the diagonal. Let $\Gamma$ be the set of all
+bijections from $PD_1$ to $PD_2$. Then, the so-called *bottleneck distance*
+between persistence diagrams can be defined as follows:
 
-$d_B(PD1, PD2) = 
+$d_B(PD_1, PD_2) = \inf_{f \in \Gamma} \sup_{p \in PD_1}||p - f(p)||_{2}$
+
+TODO: Add a note about infinity norms here
 
 ## Wrapping Up
 
