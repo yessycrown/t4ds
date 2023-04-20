@@ -584,7 +584,8 @@ shape of other glaciers in Glacier National Park.
 ### A Final Activity
 
 In the remaining time in this workshop, using what you know about R, data analysis, and TDA,
-see if you can replicate or contradict some of the the findings in the area reduction study linked above. 
+see if you can replicate or contradict the findings in the [USGS area reduction study](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/Table%20of%20Area%20of%20the%20Named%20Glaciers-II.pdf)
+also linked above. 
 Create a new R Script, which you will submit to us with the concluding survey. Be sure to consider
 cases in which this study's findings may be consistent with changing topological shape, and also
 consider inconsistencies (if you can find any), where perhaps shape may correlate less with
