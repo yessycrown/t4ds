@@ -515,7 +515,7 @@ image(vals)
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre style="background-color:lightblue">
-<img src="https://comptag.github.io/t4ds/assets/images/pretty-image.png" alt="rips barcode">
+<img src="https://comptag.github.io/t4ds/assets/images/barcode.jpg" alt="rips barcode">
 </pre>
 </details>
 
@@ -678,7 +678,7 @@ plot(persistDiag[["diagram"]], barcode=TRUE)
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre style="background-color:lightblue">
-<img src="https://comptag.github.io/t4ds/assets/images/barcode.jpg" alt="rips barcode">
+<img src="https://comptag.github.io/t4ds/assets/images/beautiful-image.png" alt="random image">
 </pre>
 </details>
 
