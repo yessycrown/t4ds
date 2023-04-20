@@ -541,9 +541,40 @@ by the USGS](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/product
 the fastest area reduction of the Agassiz Glacier occuring most recently.
 Indeed, hopefully you had the chance to plot the Agassiz Glacier at each timestamp:
 
-1966             |  1998            | 2005          | 2015
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](https://comptag.github.io/t4ds/assets/images/agassiz1966.jpg)  |  ![](https://comptag.github.io/t4ds/assets/images/agassiz1998.jpg) | ![](https://comptag.github.io/t4ds/assets/images/agassiz2005.jpg) | ![](https://comptag.github.io/t4ds/assets/images/agassiz2015.jpg) 
+
+<details>
+<summary style="color:blue">Agassiz Glacier in 1966</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/agassiz1966.jpg" alt="glacier 1966">
+</pre>
+</details>
+
+<details>
+<summary style="color:blue">Agassiz Glacier in 1998</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/agassiz1998.jpg" alt="glacier 1998">
+</pre>
+</details>
+
+<details>
+<summary style="color:blue">Agassiz Glacier in 2005</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/agassiz2005.jpg" alt="glacier 2005">
+</pre>
+</details>
+
+
+<details>
+<summary style="color:blue">Agassiz Glacier in 2015</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/agassiz2015.jpg" alt="glacier 2015">
+</pre>
+</details>
+
 
 However, examining the Agassiz Glacier alone is of course much too small of a
 sample to tell us the full story.
