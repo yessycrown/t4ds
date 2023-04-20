@@ -694,6 +694,43 @@ If a point is assigned a 1, then the point lies within the polygon, and if it is
 outside of the polygon. This will be of great importance later on, when we conduct segmentation tasks
 for topological data analysis. Stay tuned!
 
+### Bonus: Multiple Counties
+
+On your own, try selecting the spatial data corresponding to Flathead, Missoula, and Sanders county.
+(HINT: Remember we can use the `which()` function to get the index of a given element)
+
+```
+# get the three counties surrounding Lake county, and Flathead lake.
+lakeNeighbors <- # select Flathead, Missoula, and Sanders county
+```
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+lakeNeighbors <- counties[c(which(counties$NAME=="FLATHEAD"), which(counties$NAME=="MISSOULA"), which(counties$NAME=="SANDERS")), ]
+</code>
+</pre>
+</details>
+
+If you did this correctly, you should be able to achieve the following plot:
+
+```
+plot(lakeNeighbors)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<img src="https://comptag.github.io/t4ds/assets/images/lakeneighbors.jpg" alt="lake">
+</pre>
+</details>
+
+It may look like there are five regions, but the middle one is not a county; it
+is Flathead Lake!
+
 ---
 
 ## 3. Wrapping Up
