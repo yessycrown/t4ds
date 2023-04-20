@@ -275,16 +275,16 @@ y <- c(0,3,-1,2)
 X <- cbind(x,y)
 
 # set largest allowed radius of balls < sqrt(5)
-maxscale <- 2
+mymaxscale <- 2
 
 # set other necessary parameters (more on those to come)
-maxdimension <- 4
-dist <- "euclidean"
-library <- "Dionysus"
+mymaxdimension <- 4
+mydist <- "euclidean"
+mylibrary <- "Dionysus"
 
 # conduct Rips filtration
-FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
-                          maxscale = maxscale, dist = dist, library = library,
+FltRips <- ripsFiltration(X = X, maxdimension = mymaxdimension,
+                          maxscale = mymaxscale, dist = mydist, library = mylibrary,
                           printProgress = TRUE)
 ```
 
@@ -293,8 +293,8 @@ FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
 <br>
 <pre style="background-color:lightblue">
 <code>
-> FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
-+                           maxscale = maxscale, dist = dist, library = library,
+> FltRips <- ripsFiltration(X = X, maxdimension = mymaxdimension,
++                           maxscale = mymaxscale, dist = mydist, library = mylibrary,
 +                           printProgress = TRUE)
 # Generated complex of size: 4 
 </code>
@@ -335,8 +335,8 @@ radius further:
 maxscale <- sqrt(5)
 
 # conduct Rips filtration
-FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
-                          maxscale = maxscale, dist = "euclidean", library = "Dionysus",
+FltRips <- ripsFiltration(X = X, maxdimension = mymaxdimension,
+                          maxscale = mymaxscale, dist = "euclidean", library = "Dionysus",
                           printProgress = TRUE)
 FltRips$cmplx
 ```
@@ -348,7 +348,7 @@ FltRips$cmplx
 <code>
 > maxscale <- sqrt(5)
 > # conduct Rips filtration
-> FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
+> FltRips <- ripsFiltration(X = X, maxdimension = mymaxdimension,
 +                           maxscale = maxscale, dist = "euclidean", library = "Dionysus",
 +                           printProgress = TRUE)
 # Generated complex of size: 6 
@@ -384,7 +384,7 @@ the same results that we found by hand.
 <code>
 > maxscale <- sqrt(13)
 > # conduct Rips filtration
-> FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
+> FltRips <- ripsFiltration(X = X, maxdimension = mymaxdimension,
 +                           maxscale = maxscale, dist = "euclidean", library = "Dionysus",
 +                           printProgress = TRUE)
 # Generated complex of size: 11 
@@ -433,7 +433,7 @@ the same results that we found by hand.
 <code>
 > maxscale <- sqrt(17)
 > # conduct Rips filtration
-> FltRips <- ripsFiltration(X = X, maxdimension = maxdimension,
+> FltRips <- ripsFiltration(X = X, maxdimension = mymaxdimension,
 +                           maxscale = maxscale, dist = "euclidean", library = "Dionysus",
 +                           printProgress = TRUE)
 # Generated complex of size: 15 
@@ -602,17 +602,18 @@ Fortunately, *persistence barcodes* and *persistence diagrams* can do just that!
 Persistence tracks the parameters (time, distance, height) at which a homology feature is "born" $b$
 as well as when the same feature "dies" $d$.  Barcodes encode this as an
 interval $(b,d) \subset \mathbb{R}$.  Persistence diagrams encode this as a
-point $(b,d) \in \mathbb{R}2$.
+point $(b,d) \in \mathbb{R}^2$.
 
 <details>
 <summary style="color:DarkOrange">More Info</summary>
 <br>
 <pre style="background-color:Gold">
 There is more to it than we say here. A feature of the underlying topological
-space ($K$) is called an *essential class* and will never die.  Thus, the death
+space ($K$) is called an <b>essential class</b> and never dies.  Thus, the death
 parameter can be infinite.  For this reason, we often use the extended real
-plane $\overline{\mathbb{R}}^2$, where $\overline{\mathbb{R}}=\mathbb{R} \cub
-\\{ \infty \\}$.  Even more generally, the parameter space can be an arbitrary
+plane $\overline{\mathbb{R}}^2$,
+where $\overline{\mathbb{R}}=\mathbb{R} \cup\\{ \infty \\}$.  
+Even more generally, the parameter space can be an arbitrary
 poset.  But, that is more than we need in T4DS.
 </pre>
 </details>
@@ -636,7 +637,6 @@ plot(persistDiag[["diagram"]], barcode=TRUE)
 <pre style="background-color:lightblue">
 <img src="https://comptag.github.io/t4ds/assets/images/barcode.jpg" alt="rips barcode">
 </pre>
-TODO:check if barcode is correct.
 </details>
 
 Here, 1d homology is represented in black, and 2d homology is in red. We can track the birth and death
@@ -689,10 +689,10 @@ mathematically.
 ### An Example with the County Data
 
 So far, we have mostly only been working with toy examples. Let's work now with a
-big data set, which will illuminate some of the considerations that data scientists
+big data set, which illuminate some of the considerations that data scientists
 must make in practice. 
 
-We will again use the Montana County data from this morning. You should be able to access
+We again use the Montana County data from this morning. You should be able to access
 it while working in the same project, even if you are working in a different R script.
 Try accessing it in your current script.
 
