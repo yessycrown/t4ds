@@ -336,7 +336,7 @@ arguments mean here:
 ```
 # normalize each distance in our function
 colors <- distances/max(distances)
-plot(dfGlac[,1], dfGlac[,2], pch=20, col= rgb(0, 0, colors), cex=1)
+plot(dfGlac[,1], dfGlac[,2], pch=20, col= rgb(0, 0, colors), cex=1.5)
 ```
 
 <details>
@@ -352,6 +352,35 @@ plot(dfGlac[,1], dfGlac[,2], pch=20, col= rgb(0, 0, colors), cex=1)
 ### A Grid Filtration for Glacier Data
 
 At last, we can compute a grid filtration on our data.
+Having seen grid filtrations before, as a challenge, see if you can
+compute the persistence diagram of the grid filtration resulting from
+thresholding the values stored in `distances` with respect to
+our grid (as a dataframe), `dfGlac`.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+Diag1 <- gridDiag(X=dfGlac, FUNvalues = distances, maxdimension = 1, sublevel = TRUE, printProgress = TRUE)
+</code>
+</pre>
+</details>
+
+Of course, be sure to plot your findings:
+```
+plot(Diag1[["diagram"]])
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre>
+<img src="https://comptag.github.io/t4ds/assets/images/pdglacier1.jpg" alt="glacial grid pd">
+</pre>
+</details>
+
+
 
 TODO: Do filtration
 TODO: Compute distances over time
