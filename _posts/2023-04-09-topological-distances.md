@@ -31,24 +31,29 @@ After this session, we hope that you will be able to:
 
 To start day 2, we'll begin with a warm-up exercise to refresh on the topics we covered on day 1.
 
-Let's create a toy example, similar to the one we saw at the end of session 3, and conduct a height filtration.
+Let's create a simple example, similar to the one we saw at the end of session 3, and conduct a height filtration.
 
 Recall at the end of yesterday, we did a directional filtration (with respect to height) on the following simplicial complex,
 that had three vertices and two edges:
 
 ![]("https://comptag.github.io/t4ds/assets/images/simp.jpg")
 
-Let's create a new R script for this session, and call it `TDA-Distance`. We'll get started by creating that
-original example simplicial complex in R.
+Let's create a new R script for this session, and call it `TDA-Distance`. We'll get started by creating an example
+simplicial complex in R.
 
 ```
-# create vertices
-a <- 1; b<-2; c<-3;
-# edges
-ac <- c(1,2); cb=c(2,3)
-# a complex is a list of simplices
-vcplx1 <- list(a,b,c,ac,cb)
+cplx <- list(1,2,3,4,5,6,c(1,2),c(2,3),c(3,4),c(4,5),c(5,6),c(3,4,5))
 ```
+
+As a warm up exercise, try drawing the simplicial complex that results from the above code.
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+<img src="https://comptag.github.io/t4ds/assets/images/pts-pairs.jpg " alt="pts pairs">
+</pre>
+</details>
 
 We'll assign coordinates to this simplicial complex, like the example we saw yesterday.
 
@@ -258,6 +263,18 @@ plot(vdiag2[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <img src="https://comptag.github.io/t4ds/assets/images/pdheight2.jpg " alt="pts pairs">
+</pre>
+</details>
+
+Clearly, the findings differ between `vdiag1` and `vdiag2`. See if you can figure out what the optimal matching would
+be in this simple example. (HINT: Make sure you remember that the point on the persistence diagram born at time 0 and
+dying at time 1 has multiplicity 2.)
+
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+The optimal matching in this setting will pair 
 </pre>
 </details>
 

@@ -276,7 +276,7 @@ to compute.  So, we turn to topological invariants that are easier to compute.
 The *Euler characteristic* of a shape is found by first representing the shape
 as a cellular structure (e.g., simplicial complex or cubical complex). Then, the
 Euler characteristic is the alternating sum of the number of i-cells
-$\chi(K) = \sum_{i=0}^{\infty} (-1)^i \#K_i$.
+$\chi(K) = \sum_{i=0}^{\infty} (-1)^i |K_i|$.
 
 What is the Euler characteristic of the sphere?
 
