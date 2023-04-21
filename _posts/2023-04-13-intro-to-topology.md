@@ -187,7 +187,7 @@ An $n$-cube is a copy of $I^n$, where $I$ is the unit interval $[0,1]$.  A
 cubical complex is a topological space created by glueing cubes together along
 sub-cubes.  A common cubical complex forms a regular grid:
 
-![complex subsets](https://comptag.github.io/t4ds/assets/images/tda-rips/cube-complex.svg)
+![cubical complexes](https://comptag.github.io/t4ds/assets/images/cube-complex.svg)
 
 A cubical complex can always be transformed into a simplicial one (namely, by
 adding "diagonals" to each cube).  Nonetheless, quite a bit of data comes in
