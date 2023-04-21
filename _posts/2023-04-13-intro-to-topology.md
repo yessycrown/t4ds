@@ -227,23 +227,44 @@ shapes that are indistinguishable up to that invariant.
 
 #### Homotopy
 
-The first invariant we consider is that of a homotopy.
+The first invariant we consider is that of a homotopy. We'll give the formal
+definition, but don't worry too much about it if you haven't seen it before.
 
-> TODO: define homotopy
+> Two continuous functions $f,g : A \to B$ are *homotopic* iff there exists a
+> continuous function $H \colon A \times I \to B$ such that $H(a,0)=f(a)$ and
+> $H(a,1)=g(a)$ for all $a \in A$.
 
-The isotopy we saw above of the donut and the coffee mug is a homotopy.  Also,
-deformation retracts (think: continuously morphing by contracting) are homotopies!
+We think of the unit interval $I$ as *time* and so $f$ is "morphing" into $g$.
+A common example is a homotopy between two curves in the plane.  Here, $A=I$ and
+$B=\mathbb{R}^2$:
 
-Herea are a couple examples:
+![homotopy](https://upload.wikimedia.org/wikipedia/commons/8/81/Homotopy_curves.png)
 
-* [deformation retract of a punctured torus](https://www.youtube.com/watch?v=j2HxBUaoaPU)
-* [homotopy between two curves](https://www.youtube.com/watch?v=o7p9AJ5VCHo)
+Seeing the homotopy as the curves continuously changing with respect to time,
+see [this YouTube vide](https://www.youtube.com/watch?v=o7p9AJ5VCHo).
+The isotopy we saw above of the donut and the coffee mug is a homotopy of two
+functions from the torus to $\mathbb{R}^3$.  But, this is all about functions.
+We typically care about spaces/shapes.
+
+> We say that two topological spaces $A$ and $B$ are *homotopy equivalent* iff
+> there exists continuous functions $f : A \to B$ and $g : B \to A$ such that
+> $f\circ g \simeq \mathbb{1}$ and $g \circ f \simeq \mathbb{1}$, where $\simeq$
+> means that the two maps are homotopic.
+
+We won't dig into details here, but this roughly means that you can map $A$ to
+$B$ and back to $A$ in a `nice` way.  If $f,g$ are bijections with $f=g^{-1}$
+this is particularly nice (but not always possible).
 
 <details>
 <summary style="color:DarkOrange">More Info: Indistinguishable up to Homotopy</summary>
 <br>
 <pre style="background-color:Gold">
-A circle and an annulus are indistinguishable by homotopy equivalence alone.
+A circle and an annulus are indistinguishable by homotopy equivalence alone.  
+So are a [punctured torus and the wedge of two circles](https://www.youtube.com/watch?v=j2HxBUaoaPU).
+In
+fact, if we have two spaces $A$ and $B$ such that $B$ is a deformation retract
+(think: continuously morphing by contracting) 
+of $A$, then $A$ and $B$ are indistinguishable up to homotopy type.
 </pre>
 </details>
 
