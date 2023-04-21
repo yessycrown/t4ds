@@ -43,25 +43,25 @@ original example simplicial complex in R.
 
 ```
 # create vertices
-a <- 1; b=2; c=3;
+a <- 1; b<-2; c<-3;
 # edges
 ac <- c(1,2); cb=c(2,3)
 # a complex is a list of simplices
-vcplx <- list(a,b,c,ac,cb)
+vcplx1 <- list(a,b,c,ac,cb)
 ```
 
 We'll assign coordinates to this simplicial complex, like the example we saw yesterday.
 
 ```
-x <-c(0,1/2,1)
-y <- c(0,1,0)
-vcoords <- cbind(x,y)
+x1 <-c(0,1/2,1)
+y1 <- c(0,1,0)
+vcoords1 <- cbind(x,y)
 ```
 
 And then assign function values on the vertices.
 
 ```
-vvals <- c(0,0,1)
+vvals1 <- c(0,0,1)
 ```
 
 Do you remember how to compute a directional filtration on this data, with respect to the
@@ -72,9 +72,9 @@ function we just assigned? Do that now.
 <br>
 <pre style="background-color:lightcoral">
 <code>
-vfilt <- funFiltration(vvals,vcplx)
-vdiag <- filtrationDiag(vfilt,maxdimension=2)
-vidag$diagram
+vfilt1 <- funFiltration(vvals1,vcplx1)
+vdiag1 <- filtrationDiag(vfilt1,maxdimension=2)
+vidag1$diagram
 </code>
 </pre>
 </details>
@@ -91,13 +91,13 @@ whose heights correspond to the following figure:
 <pre style="background-color:lightcoral">
 <code>
 # create vertices
-a <- 1; b=2; c=3; d=4
+a <- 1; b <- 2; c <- 3; d <- 4
 # edges
-ac <- c(1,2); cb=c(2,3)
+ac <- c(1,2); cb <- c(2,3)
 # a complex is a list of simplices
-vcplx <- list(a,b,c,d,ac,cb)
+vcplx2 <- list(a,b,c,d,ac,cb)
 
-vvals <- c(0,0,1,2)
+vvals2 <- c(0,0,1,2)
 </code>
 </pre>
 </details>
@@ -110,9 +110,9 @@ you can do one more height filtration!
 <br>
 <pre style="background-color:lightcoral">
 <code>
-vfilt <- funFiltration(vvals,vcplx)
-vdiag <- filtrationDiag(vfilt,maxdimension=2)
-vidag$diagram
+vfilt2 <- funFiltration(vvals2, vcplx2)
+vdiag2 <- filtrationDiag(vfilt2, maxdimension=2)
+vidag2$diagram
 </code>
 </pre>
 </details>
@@ -206,11 +206,63 @@ Let's take a look at our example from before.
 With these two height filtrations in hand, we can define the bottleneck
 distance between them in R.
 
-Begin by plotting each persistence diagram.
+Begin by taking a look at each persistence diagram.
 
 ```
+vdiag1$diagram
+plot(vdiag1[["diagram"]])
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> vdiag1$diagram
+     dimension Birth Death
+[1,]         0     0   Inf
+[2,]         0     0     1
+</code>
+</pre>
+</details>
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<img src="https://comptag.github.io/t4ds/assets/images/pdheight1.jpg " alt="pts pairs">
+</pre>
+</details>
 
 ```
+vdiag2$diagram
+plot(vdiag2[["diagram"]])
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> vdiag2$diagram
+     dimension Birth Death
+[1,]         0     2   Inf
+[2,]         0     0   Inf
+[3,]         0     0     1
+</code>
+</pre>
+</details>
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<img src="https://comptag.github.io/t4ds/assets/images/pdheight2.jpg " alt="pts pairs">
+</pre>
+</details>
+
+
+
 
 ### An Example with GIS Data
 
