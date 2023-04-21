@@ -146,7 +146,7 @@ Recall that $x-y_2$ denotes the Euclidean distance between $x$ and $y$.
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
-![](https://comptag.github.io/t4ds/assets/images/pts.jpg)
+![points](https://comptag.github.io/t4ds/assets/images/pts.jpg)
 
 With this example, can you visualize what we might do to find the
 optimal pairing between $A$ and $B$?
@@ -177,16 +177,29 @@ We can use the same idea for persistence diagrams.
 That is, given two persistence diagrams $PD_1$ and $PD_2$,
 we compute the optimal matching between points, and find its weight.
 
-However, there should be one glaring issue that comes to mind in doing this.
-*What if PD1 and PD2 have a different number of points?* Indeed, then a bijection
-would not be possible, and our distance is not well-defined.
+If we think of the points in the diagram as simply points in $\mathbb{R}^2$,
+then we can find a matching just as before:
 
-To handle this issue, we consider the diagonal on persistence diagrams.
-If a bijection is not possible, any "leftover"
-points are paired with the diagonal. Let $\Gamma$ be the set of all
-partial matchings from $PD_1$ to $PD_2$. Then, the so-called *bottleneck distance*
-between persistence diagrams can be defined by
-$d_B(PD_1, PD_2) = \inf_{f \in \Gamma} \sup_{p \in PD_1}||p - f(p)||_{\infty}$
+![matching diagram as points](https://comptag.github.io/t4ds/assets/images/vangogh-dali-badmatch1.jpg)
+
+However, there should be one glaring issue that comes to mind in doing this.
+
+> What if PD1 and PD2 have a different number of points? 
+
+And, perhaps a more subtle issue:
+
+> What if the matched points are far away, but have low persistence?
+
+Indeed, then a bijection
+would not be possible or reasonable, and our distance is not well-defined.
+
+To handle this issue, we consider partial matchings and charge separately for
+unmatched points. 
+Let $\Gamma$ be the set of all
+partial matchings from $PD_1$ to $PD_2$. Then, the *bottleneck distance*
+between persistence diagrams is 
+
+$d_B(PD_1, PD_2) = \inf_{f \in \Gamma} \left( \sup_{(p,q) \in \Gamma}||p - q||_{\infty} , \sup_{x \notin \Gamma} \frac{1}{2} ||x||_{1} \right) $
 
 <details>
 <summary style="color:blue">A Quick Refresher on Infinity Norms</summary>
@@ -196,6 +209,11 @@ If you haven't seen the infinity norm or need a refresher, it is defined by taki
 the maximum element in a vector: $||X||_{\infty} = \max_{x \in X}$.
 </pre>
 </details>
+
+So, in a way, we can think of the unmatched points as being charged the distance
+to the diagonal (the line $x=y$).
+
+![matching diagram as points](https://comptag.github.io/t4ds/assets/images/vangogh-dali-goodmatch.jpg)
 
 Let's take a look at our example from before.
 With these two height filtrations in hand, we can define the bottleneck
