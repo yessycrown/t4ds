@@ -63,7 +63,7 @@ takes lexical scoping from Scheme, and it allows for array-programming
 style like Matlab and APL. It is an object-oriented programming
 language, and list objects serve as a fundamental storage object in
 which many other objects derive from. It is also a functional
-programming language, and so functions are first-class citezens that
+programming language, and so functions are first-class citizens that
 can be passed around like any other object. We will begin by showing 
 some of these basics.
 
@@ -127,10 +127,10 @@ my_list
 <pre style="background-color:lightblue">
 <code>
 > my_list
-$a
+\$a
 [1] 1 2 3
 
-$b
+\$b
 [1] 52
 </code>
 </pre>
@@ -151,7 +151,7 @@ my_list[['a']]
 <br>
 <pre style="background-color:lightblue">
 <code>
-> my_list$a
+> my_list\$a
 [1] 1 2 3
 > my_list[['a']]
 [1] 1 2 3
@@ -209,7 +209,7 @@ my_fun(2.3)
 <br>
 <pre style="background-color:lightblue">
 <code>
-> my_list$f(2.3)
+> my_list\$f(2.3)
 [1] 3.3
 > my_fun(2.3)
 [1] 3.3
@@ -233,9 +233,9 @@ str(my_list)
 <code>
 > str(my_list)
 List of 3
- $ a: num [1:3] 1 2 3
- $ b: num 52
- $ f:function (x)  
+ \$ a: num [1:3] 1 2 3
+ \$ b: num 52
+ \$ f:function (x)  
   ..- attr(*, "srcref")= 'srcref' int [1:8] 1 11 4 1 11 1 1 4
   .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x5582689d7c08> 
 </code>
@@ -398,8 +398,8 @@ Examples:
      ## environment->list coercion
      
      e1 <- new.env()
-     e1$a <- 10
-     e1$b <- 20
+     e1\$a <- 10
+     e1\$b <- 20
      as.list(e1)
 </code>
 </pre>
@@ -637,10 +637,7 @@ glacier_csv <- 'https://pkgstore.datahub.io/core/glacier-mass-balance/glaciers_c
 
 # this data has a header, so we set header=TRUE to keep it out of the rest of our data
 glacier_data <- read.csv(file=glacier_csv, header = TRUE)
-
 ```
-
-
 
 Go ahead and take a look at the result by running:
 
