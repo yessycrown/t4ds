@@ -146,7 +146,7 @@ Recall that $x-y_2$ denotes the Euclidean distance between $x$ and $y$.
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
-![](https://comptag.github.io/t4ds/assets/images/pts.jpg)
+![points](https://comptag.github.io/t4ds/assets/images/pts.jpg)
 
 With this example, can you visualize what we might do to find the
 optimal pairing between $A$ and $B$?
