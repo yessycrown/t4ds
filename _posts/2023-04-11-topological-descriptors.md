@@ -843,7 +843,7 @@ complex is a list of simplices, and a simplex is a "combination" of vertices).
 # create vertices
 a <- 1; b=2; c=3
 # edges
-ac <- c(1,2); cb=c(2,3)
+ac <- c(1,3); cb=c(2,3)
 # a complex is a list of simplices
 vcplx <- list(a,b,c,ac,cb)
 </code>
@@ -858,8 +858,8 @@ Next, let's use `cbind` to create a data structure to store the coordiantes
 <br>
 <pre style="background-color:lightcoral">
 <code>
-x <-c(0,0,1)
-y <- c(0,1,0)
+x <-c(0,2,1)
+y <- c(0,0,1)
 vcoords <- cbind(x,y)
 </code>
 </pre>
@@ -886,7 +886,7 @@ filtration and compute the diagram as follows:
 ```
 vfilt <- funFiltration(vvals,vcplx)
 vdiag <- filtrationDiag(vfilt,maxdimension=2)
-vidag$diagram
+vdiag$diagram
 ```
 
 
