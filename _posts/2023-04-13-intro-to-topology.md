@@ -268,7 +268,7 @@ of $A$, then $A$ and $B$ are indistinguishable up to homotopy type.
 </pre>
 </details>
 
-The problem with classifying shapes up to homotopy is that they are $ \#P-hard
+The problem with classifying shapes up to homotopy is that they are \#P-hard
 to compute.  So, we turn to topological invariants that are easier to compute.
 
 #### Euler Characeteristic
