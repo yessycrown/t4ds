@@ -49,7 +49,7 @@ library(TDA)
 ```
 
 In the R TDA package, simplicial complexes are typically represented as lists.
-We haven't seen lists yet, but they are quite simple to create:
+Remember they are quite simple to create:
 
 ```
 myFirstList <- list(1, TRUE, "There's a string in my list too!")
