@@ -147,7 +147,7 @@ and points in $B$.
 That is, for $\Gamma$, the set of all bijections $f: A \to B$, we have
 $d(A,B) = \min_{f \in \Gamma} \max_{a \in A}||a-f(a)||_2$.
 
-(Recall that $||x-y||_2$ denotes the Euclidean distance between $x$ and $y$.)
+Recall that $||x-y||_2$ denotes the Euclidean distance between $x$ and $y$.
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
@@ -194,6 +194,18 @@ between persistence diagrams can be defined by
 $d_B(PD_1, PD_2) = \inf_{f \in \Gamma} \sup_{p \in PD_1}||p - f(p)||_{2}$
 
 TODO: Add a note about infinity norms here
+
+Let's take a look at our example from before.
+With these two height filtrations in hand, we can define the bottleneck
+distance between them in R.
+
+Begin by plotting each persistence diagram.
+
+```
+
+```
+
+### An Example with GIS Data
 
 ## Wrapping Up
 
