@@ -303,9 +303,22 @@ What is the Euler characteristic of the sphere?
 Finally, we come to **homology**, a topological invaraint that we'll use quite a
 bit in our exploration.
 
-> TODO: define homology
+First, we give an intuitive explanation.  The homology of a space is a sequence
+of homology groups (one for each dimension) that captures the "holes."  Zeroth
+dimensional homology captures connected components (the "holes" here being the
+gaps between the clusters), and is closely related to clustering. Dimension-one
+homology captures loop-like structures.  And, when your shapes are embedded in
+$\mathbb{R}^3$, two-dimensional homology captures the "voids" in space or the
+number of "insides" we have.
 
 ![connected components, loops, voids, and more](https://comptag.github.io/t4ds/assets/images/homology.svg)
+
+> An $k$-chain is a collection of $k$-cells (for today, we'll use
+> $\mathbb{Z}_2$-coeficients, so we can think of each cell as being present or
+> not). A $k$-cycle is a $k$-chain that has no boundary.  Two $k$ cycles, $a$
+> and $b$, are
+> equivalent if there exists a $(k+1)$-chain $c$ such that the boundary of $c$,
+> which we write as $\partial c = a + b$.
 
 We may already be familiar with homology in the zeroth dimension: 
 two zero-cycles (vertices) are equivalent if there exists a one-chain for which
@@ -315,11 +328,11 @@ our complex.
 
 Things get trickier to understand even for one-dimensional homology.  Let's
 consider the question: when are two loops equivalent (up to homology)?  Well,
-they are equivalent if there exists a two-chain or surface such that the
+they are equivalent if there exists a two-chain (or surface with boundary) such that the
 boundary of the surface is exactly those two loops.
 With this in mind, which of the following one-cycles are equivalent and why?
 
-![torus](https://comptag.github.io/t4ds/assets/images/tda-rips/asc.svg)
+![torus](https://comptag.github.io/t4ds/assets/images/torus.svg)
 
 ---
 ## 5. Wrapping Up
