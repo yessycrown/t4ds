@@ -127,10 +127,10 @@ my_list
 <pre style="background-color:lightblue">
 <code>
 > my_list
-$a
+\$a
 [1] 1 2 3
 
-$b
+\$b
 [1] 52
 </code>
 </pre>
