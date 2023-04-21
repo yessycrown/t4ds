@@ -717,7 +717,7 @@ that creates diagrams corresponding to the Rips filtration. Let's view the barco
 from our example filtration:
 
 ```
-persistDiag <- ripsDiag(X, maxdimension = 4, maxscale=sqrt(17), dist = dist,
+persistDiag <- ripsDiag(X, maxdimension = 4, maxscale=sqrt(17), dist = mydist,
                     printProgress = TRUE)
 plot(persistDiag[["diagram"]], barcode=TRUE)
 ```
