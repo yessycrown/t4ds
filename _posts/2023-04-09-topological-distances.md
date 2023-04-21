@@ -33,9 +33,6 @@ To start day 2, we'll begin with a warm-up exercise to refresh on the topics we 
 
 Let's create a simple example, similar to the one we saw at the end of session 3, and conduct a height filtration.
 
-Recall at the end of yesterday, we did a directional filtration (with respect to height) on the following simplicial complex,
-that had three vertices and two edges:
-
 ![]("https://comptag.github.io/t4ds/assets/images/simp.jpg")
 
 We'll start out by doing something similar, but on a new complex.
@@ -113,6 +110,7 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 </code>
 </pre>
 </details>
+
 
 Pause for a moment and check your work. Does your filtration by hand match the result we computed?
 
