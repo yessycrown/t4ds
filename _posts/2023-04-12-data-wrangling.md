@@ -22,6 +22,7 @@ larger GIS data.
 This session is presented by Ben.
 
 ***Objectives***: After this session, we hope you will be able to:
+> - Learn basic fundamentals about R
 > - Learn how to read data into R
 > - Learn basic R functionalities and data structures
 > - Visualize data with R
@@ -52,6 +53,577 @@ Throughout this tutorial, we will add code to session-2.R.  Be sure to use
 `Ctrl+S` to save as you go!
 
 ---
+
+### Fundamentals of R
+
+R is a multi-paradigm (object-oriented, functional, array) language
+developed for statistical computing. It is heavily influenced from S,
+Scheme (a dialect of lisp), and APL. It's syntax comes from its predecessor S, it
+takes lexical scoping from Scheme, and it allows for array-programming
+style like Matlab and APL. It is an object-oriented programming
+language, and list objects serve as a fundamental storage object in
+which many other objects derive from. It is also a functional
+programming language, and so functions are first-class citezens that
+can be passed around like any other object. We will begin by showing 
+some of these basics.
+
+First, anything in R is an object. For example a vector with elements
+1, 2, and 3 can be instantiated using the concatenate function `c()`:
+
+```r
+c(1, 2, 3)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> c(1, 2, 3)
+[1] 1 2 3
+</code>
+</pre>
+</details>
+
+We can assign this to an object named `a` using the assignment operator `<-`
+and then print out the object by running the line with the object on it or by making a
+call to the `print()` function.
+
+```r
+a <- c(1, 2, 3)
+a
+print(a)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> a
+[1] 1 2 3
+
+> print(a)
+[1] 1 2 3
+</code>
+</pre>
+</details>
+
+You can use the `=` sign like in other languages for object
+assignment, but it is typically frowned upon from a style perspective,
+as that is typically reserved for named arguments in a function.
+
+As stated previously, lists are a fundamental object type in R, in which
+many objects derive from. We can construct a list in the following way:
+
+```r
+my_list <- list(a = a, b = 52)
+my_list
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> my_list
+$a
+[1] 1 2 3
+
+$b
+[1] 52
+</code>
+</pre>
+</details>
+
+Here, we created a list, named `my_list` with two elements named `a`
+and `b`. We can now access these elements one of two equivalent ways,
+using the `$` operator or the double square-bracket operator `[[]]`:
+
+```r
+my_list$a
+
+my_list[['a']]
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> my_list$a
+[1] 1 2 3
+> my_list[['a']]
+[1] 1 2 3
+> 
+</code>
+</pre>
+</details>
+
+
+We can define a simple add-one function in the following way:
+
+```r
+my_fun <- function(x) {
+    ret <- x + 1
+    return(ret)
+}
+
+my_fun(3)
+```
+
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> my_fun(3)
+[1] 4
+</code>
+</pre>
+</details>
+
+Since functions are objects like any other object, notice we assign
+them like any other object. We can also add them as an element (named
+`f`) in our list in the following way: 
+
+```r
+my_list$f <- my_fun
+
+# Equivalently:
+# my_list[['f']] <- my_fun
+```
+
+Since both objects (`my_list$f` and `my_fun`) are in scope, we can
+call either function and expect the same output:
+
+```r
+my_list$f(2.3)
+
+my_fun(2.3)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> my_list$f(2.3)
+[1] 3.3
+> my_fun(2.3)
+[1] 3.3
+</code>
+</pre>
+</details>
+
+When programming in R, you are often faced with the situation that you
+have been handed an object, but do not know what is insided the
+object. To find out what is in the object, we can conduct 'object
+introspection' using the `str()` function:
+
+```r
+str(my_list)
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> str(my_list)
+List of 3
+ $ a: num [1:3] 1 2 3
+ $ b: num 52
+ $ f:function (x)  
+  ..- attr(*, "srcref")= 'srcref' int [1:8] 1 11 4 1 11 1 1 4
+  .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x5582689d7c08> 
+</code>
+</pre>
+</details>
+
+Notice that the `str()` function has told us that the object `my_list`
+is a list object with 3 elements, `a`, `b` and `f`. It also tells us
+that `a` is a numeric vector with 3 elements and lists those elements
+out, `b` is a numeric value, and `f` is a function.
+
+### Getting help
+
+We have already used a couple of functions, namely `c()` and
+`list()`. How do we know how these functions work you may ask?
+We can find out in two way. First, every function that comes from a
+library (or base R) likely has good documentation. You can access
+that documentation by running the `help()` function or equivalently
+by putting a question mark before the name of the function:
+
+```r
+?list
+
+# Equivalently:
+# help(list)
+```
+
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> ?list
+list                   package:base                    R Documentation
+
+Lists - Generic and Dotted Pairs
+
+Description:
+
+     Functions to construct, coerce and check for both kinds of R
+     lists.
+
+Usage:
+
+     list(...)
+     pairlist(...)
+     
+     as.list(x, ...)
+     ## S3 method for class 'environment'
+     as.list(x, all.names = FALSE, sorted = FALSE, ...)
+     as.pairlist(x)
+     
+     is.list(x)
+     is.pairlist(x)
+     
+     alist(...)
+     
+Arguments:
+
+     ...: objects, possibly named.
+
+       x: object to be coerced or tested.
+
+all.names: a logical indicating whether to copy all values or (default)
+          only those whose names do not begin with a dot.
+
+  sorted: a logical indicating whether the ‘names’ of the resulting
+          list should be sorted (increasingly).  Note that this is
+          somewhat costly, but may be useful for comparison of
+          environments.
+
+Details:
+
+     Almost all lists in R internally are _Generic Vectors_, whereas
+     traditional _dotted pair_ lists (as in LISP) remain available but
+     rarely seen by users (except as ‘formals’ of functions).
+
+     The arguments to ‘list’ or ‘pairlist’ are of the form ‘value’ or
+     ‘tag = value’.  The functions return a list or dotted pair list
+     composed of its arguments with each value either tagged or
+     untagged, depending on how the argument was specified.
+
+     ‘alist’ handles its arguments as if they described function
+     arguments.  So the values are not evaluated, and tagged arguments
+     with no value are allowed whereas ‘list’ simply ignores them.
+     ‘alist’ is most often used in conjunction with ‘formals’.
+
+     ‘as.list’ attempts to coerce its argument to a list.  For
+     functions, this returns the concatenation of the list of formal
+     arguments and the function body.  For expressions, the list of
+     constituent elements is returned.  ‘as.list’ is generic, and as
+     the default method calls ‘as.vector(mode = "list")’ for a
+     non-list, methods for ‘as.vector’ may be invoked.  ‘as.list’ turns
+     a factor into a list of one-element factors, keeping ‘names’.
+     Other attributes may be dropped unless the argument already is a
+     list or expression.  (This is inconsistent with functions such as
+     ‘as.character’ which always drop attributes, and is for efficiency
+     since lists can be expensive to copy.)
+
+     ‘is.list’ returns ‘TRUE’ if and only if its argument is a ‘list’
+     _or_ a ‘pairlist’ of ‘length’ > 0.  ‘is.pairlist’ returns ‘TRUE’
+     if and only if the argument is a pairlist or ‘NULL’ (see below).
+
+     The ‘"environment"’ method for ‘as.list’ copies the name-value
+     pairs (for names not beginning with a dot) from an environment to
+     a named list.  The user can request that all named objects are
+     copied.  Unless ‘sorted = TRUE’, the list is in no particular
+     order (the order depends on the order of creation of objects and
+     whether the environment is hashed).  No enclosing environments are
+     searched.  (Objects copied are duplicated so this can be an
+     expensive operation.)  Note that there is an inverse operation,
+     the ‘as.environment()’ method for list objects.
+
+     An empty pairlist, ‘pairlist()’ is the same as ‘NULL’.  This is
+     different from ‘list()’: some but not all operations will promote
+     an empty pairlist to an empty list.
+
+     ‘as.pairlist’ is implemented as ‘as.vector(x, "pairlist")’, and
+     hence will dispatch methods for the generic function ‘as.vector’.
+     Lists are copied element-by-element into a pairlist and the names
+     of the list used as tags for the pairlist: the return value for
+     other types of argument is undocumented.
+
+     ‘list’, ‘is.list’ and ‘is.pairlist’ are primitive functions.
+
+References:
+
+     Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988) _The New S
+     Language_.  Wadsworth & Brooks/Cole.
+
+See Also:
+
+     ‘vector("list", length)’ for creation of a list with empty
+     components; ‘c’, for concatenation; ‘formals’.  ‘unlist’ is an
+     approximate inverse to ‘as.list()’.
+
+     ‘plotmath’ for the use of ‘list’ in plot annotation.
+
+Examples:
+
+     require(graphics)
+     
+     # create a plotting structure
+     pts <- list(x = cars[,1], y = cars[,2])
+     plot(pts)
+     
+     is.pairlist(.Options)  # a user-level pairlist
+     
+     ## "pre-allocate" an empty list of length 5
+     vector("list", 5)
+     
+     # Argument lists
+     f <- function() x
+     # Note the specification of a "..." argument:
+     formals(f) <- al <- alist(x = , y = 2+3, ... = )
+     f
+     al
+     
+     ## environment->list coercion
+     
+     e1 <- new.env()
+     e1$a <- 10
+     e1$b <- 20
+     as.list(e1)
+</code>
+</pre>
+</details>
+     
+This documentation can be a lot to look at the first time, but the
+important sections to pay attention to are the function signature,
+argument descriptions, and example code at the end. If you don't know
+what a function does, looking at the help documentation is the first
+thing you should do.
+
+A more involved way to find out what a function does is to read its
+source code, which you can do by calling the name of the function. Both
+`list()` and `c()` are primative functions, and so we won't get much information
+about these objects in this way:
+
+```r
+list
+```
+
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> list
+function (...)  .Primitive("list")
+</code>
+</pre>
+</details>
+
+However, a function that we will use later `data.frame()` will show us its source code:
+
+```r
+data.frame
+```
+
+<details>
+<summary style="color:blue">Expected Output</summary>
+<br>
+<pre style="background-color:lightblue">
+<code>
+> data.frame
+function (..., row.names = NULL, check.rows = FALSE, check.names = TRUE, 
+    fix.empty.names = TRUE, stringsAsFactors = FALSE) 
+{
+    data.row.names <- if (check.rows && is.null(row.names)) 
+        function(current, new, i) {
+            if (is.character(current)) 
+                new <- as.character(new)
+            if (is.character(new)) 
+                current <- as.character(current)
+            if (anyDuplicated(new)) 
+                return(current)
+            if (is.null(current)) 
+                return(new)
+            if (all(current == new) || all(current == "")) 
+                return(new)
+            stop(gettextf("mismatch of row names in arguments of 'data.frame', item %d", 
+                i), domain = NA)
+        }
+    else function(current, new, i) {
+        if (is.null(current)) {
+            if (anyDuplicated(new)) {
+                warning(gettextf("some row.names duplicated: %s --> row.names NOT used", 
+                  paste(which(duplicated(new)), collapse = ",")), 
+                  domain = NA)
+                current
+            }
+            else new
+        }
+        else current
+    }
+    object <- as.list(substitute(list(...)))[-1L]
+    mirn <- missing(row.names)
+    mrn <- is.null(row.names)
+    x <- list(...)
+    n <- length(x)
+    if (n < 1L) {
+        if (!mrn) {
+            if (is.object(row.names) || !is.integer(row.names)) 
+                row.names <- as.character(row.names)
+            if (anyNA(row.names)) 
+                stop("row names contain missing values")
+            if (anyDuplicated(row.names)) 
+                stop(gettextf("duplicate row.names: %s", paste(unique(row.names[duplicated(row.names)]), 
+                  collapse = ", ")), domain = NA)
+        }
+        else row.names <- integer()
+        return(structure(list(), names = character(), row.names = row.names, 
+            class = "data.frame"))
+    }
+    vnames <- names(x)
+    if (length(vnames) != n) 
+        vnames <- character(n)
+    no.vn <- !nzchar(vnames)
+    vlist <- vnames <- as.list(vnames)
+    nrows <- ncols <- integer(n)
+    for (i in seq_len(n)) {
+        xi <- if (is.character(x[[i]]) || is.list(x[[i]])) 
+            as.data.frame(x[[i]], optional = TRUE, stringsAsFactors = stringsAsFactors)
+        else as.data.frame(x[[i]], optional = TRUE)
+        nrows[i] <- .row_names_info(xi)
+        ncols[i] <- length(xi)
+        namesi <- names(xi)
+        if (ncols[i] > 1L) {
+            if (length(namesi) == 0L) 
+                namesi <- seq_len(ncols[i])
+            vnames[[i]] <- if (no.vn[i]) 
+                namesi
+            else paste(vnames[[i]], namesi, sep = ".")
+        }
+        else if (length(namesi)) {
+            vnames[[i]] <- namesi
+        }
+        else if (fix.empty.names && no.vn[[i]]) {
+            tmpname <- deparse(object[[i]], nlines = 1L)[1L]
+            if (startsWith(tmpname, "I(") && endsWith(tmpname, 
+                ")")) {
+                ntmpn <- nchar(tmpname, "c")
+                tmpname <- substr(tmpname, 3L, ntmpn - 1L)
+            }
+            vnames[[i]] <- tmpname
+        }
+        if (mirn && nrows[i] > 0L) {
+            rowsi <- attr(xi, "row.names")
+            if (any(nzchar(rowsi))) 
+                row.names <- data.row.names(row.names, rowsi, 
+                  i)
+        }
+        nrows[i] <- abs(nrows[i])
+        vlist[[i]] <- xi
+    }
+    nr <- max(nrows)
+    for (i in seq_len(n)[nrows < nr]) {
+        xi <- vlist[[i]]
+        if (nrows[i] > 0L && (nr%%nrows[i] == 0L)) {
+            xi <- unclass(xi)
+            fixed <- TRUE
+            for (j in seq_along(xi)) {
+                xi1 <- xi[[j]]
+                if (is.vector(xi1) || is.factor(xi1)) 
+                  xi[[j]] <- rep(xi1, length.out = nr)
+                else if (is.character(xi1) && inherits(xi1, "AsIs")) 
+                  xi[[j]] <- structure(rep(xi1, length.out = nr), 
+                    class = class(xi1))
+                else if (inherits(xi1, "Date") || inherits(xi1, 
+                  "POSIXct")) 
+                  xi[[j]] <- rep(xi1, length.out = nr)
+                else {
+                  fixed <- FALSE
+                  break
+                }
+            }
+            if (fixed) {
+                vlist[[i]] <- xi
+                next
+            }
+        }
+        stop(gettextf("arguments imply differing number of rows: %s", 
+            paste(unique(nrows), collapse = ", ")), domain = NA)
+    }
+    value <- unlist(vlist, recursive = FALSE, use.names = FALSE)
+    vnames <- as.character(unlist(vnames[ncols > 0L]))
+    if (fix.empty.names && any(noname <- !nzchar(vnames))) 
+        vnames[noname] <- paste0("Var.", seq_along(vnames))[noname]
+    if (check.names) {
+        if (fix.empty.names) 
+            vnames <- make.names(vnames, unique = TRUE)
+        else {
+            nz <- nzchar(vnames)
+            vnames[nz] <- make.names(vnames[nz], unique = TRUE)
+        }
+    }
+    names(value) <- vnames
+    if (!mrn) {
+        if (length(row.names) == 1L && nr != 1L) {
+            if (is.character(row.names)) 
+                row.names <- match(row.names, vnames, 0L)
+            if (length(row.names) != 1L || row.names < 1L || 
+                row.names > length(vnames)) 
+                stop("'row.names' should specify one of the variables")
+            i <- row.names
+            row.names <- value[[i]]
+            value <- value[-i]
+        }
+        else if (!is.null(row.names) && length(row.names) != 
+            nr) 
+            stop("row names supplied are of the wrong length")
+    }
+    else if (!is.null(row.names) && length(row.names) != nr) {
+        warning("row names were found from a short variable and have been discarded")
+        row.names <- NULL
+    }
+    class(value) <- "data.frame"
+    if (is.null(row.names)) 
+        attr(value, "row.names") <- .set_row_names(nr)
+    else {
+        if (is.object(row.names) || !is.integer(row.names)) 
+            row.names <- as.character(row.names)
+        if (anyNA(row.names)) 
+            stop("row names contain missing values")
+        if (anyDuplicated(row.names)) 
+            stop(gettextf("duplicate row.names: %s", paste(unique(row.names[duplicated(row.names)]), 
+                collapse = ", ")), domain = NA)
+        row.names(value) <- row.names
+    }
+    value
+}
+<bytecode: 0x558269060ce0>
+<environment: namespace:base>
+</code>
+</pre>
+</details>
+
+Finally, most objects you encounter in R will be of one of two
+classes, either `S3` or `S4`. If you want to specifically create class
+objects, there are relevant details which we con't cover. However,
+when working with objects, just know that for `S3` class objects, you
+access elements of the object with the `$` operator and with `S4` class objects, 
+you access elements with the `@` operator. If you run the `str()` function on
+an object and see `@` symbols instated of `$` symbols, just know that
+you are dealing with an `S4` class object.
 
 ### Reading Data into R
 
