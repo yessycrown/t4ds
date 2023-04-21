@@ -147,7 +147,7 @@ and points in $B$.
 That is, for $\Gamma$, the set of all bijections $f: A \to B$, we have
 $d(A,B) = \min_{f \in \Gamma} \max_{a \in A}||a-f(a)||_2$.
 
-Recall that $||x-y||_2$ denotes the Euclidean distance between $x$ and $y$.
+Recall that $x-y_2$ denotes the Euclidean distance between $x$ and $y$.
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
