@@ -100,12 +100,12 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 <br>
 <pre style="background-color:lightcoral">
 <code>
-> diag1$diagram
+> diag1\$diagram
      dimension Birth Death
 [1,]         0     0   Inf
 [2,]         0     0     1
 
-> diag2$diagram
+> diag2\$diagram
      dimension Birth Death
 [1,]         0     1   Inf
 [2,]         0     1     3
@@ -213,7 +213,7 @@ plot(vdiag1[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <code>
-> vdiag1$diagram
+> vdiag1\$diagram
      dimension Birth Death
 [1,]         0     0   Inf
 [2,]         0     0     1
@@ -239,7 +239,7 @@ plot(vdiag2[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <code>
-> vdiag2$diagram
+> vdiag2\$diagram
      dimension Birth Death
 [1,]         0     2   Inf
 [2,]         0     0   Inf
