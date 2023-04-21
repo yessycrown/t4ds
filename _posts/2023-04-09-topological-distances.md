@@ -201,7 +201,8 @@ Let's take a look at our example from before.
 With these two height filtrations in hand, we can define the bottleneck
 distance between them in R.
 
-Begin by taking a look at each persistence diagram.
+Recall each persistence diagram, and think for a moment about the optimal pairing
+defining the bottleneck distance.
 
 ```
 vdiag1$diagram
