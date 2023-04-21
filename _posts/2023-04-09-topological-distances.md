@@ -55,14 +55,6 @@ should've received paper)
 </pre>
 </details>
 
-We'll assign coordinates to this simplicial complex, like the example we saw yesterday.
-
-```
-x <-c(0,1,2,3,4,5,6)
-y <- c(0,0,1,0,0,0)
-cplxcoords <- cbind(x,y)
-```
-
 And then assign function values on the vertices.
 
 ```
@@ -107,6 +99,15 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 [1,]         0     1   Inf
 [2,]         0     1     3
 [3,]         0     2     4
+</code>
+</pre>
+</details>
+
+<summary style="color:red">Plot the Resulting Diagrams</summary>
+<br>
+<pre style="background-color:lightcoral">
+<code>
+
 </code>
 </pre>
 </details>
