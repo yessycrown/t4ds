@@ -127,10 +127,10 @@ my_list
 <pre style="background-color:lightblue">
 <code>
 > my_list
-$a
+\$a
 [1] 1 2 3
 
-$b
+\$b
 [1] 52
 </code>
 </pre>
@@ -209,7 +209,7 @@ my_fun(2.3)
 <br>
 <pre style="background-color:lightblue">
 <code>
-> my_list$f(2.3)
+> my_list\$f(2.3)
 [1] 3.3
 > my_fun(2.3)
 [1] 3.3
@@ -233,9 +233,9 @@ str(my_list)
 <code>
 > str(my_list)
 List of 3
- $ a: num [1:3] 1 2 3
- $ b: num 52
- $ f:function (x)  
+ \$ a: num [1:3] 1 2 3
+ \$ b: num 52
+ \$ f:function (x)  
   ..- attr(*, "srcref")= 'srcref' int [1:8] 1 11 4 1 11 1 1 4
   .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x5582689d7c08> 
 </code>
@@ -1072,7 +1072,7 @@ names(counties)
 Knowing this, we can get the name of every County using the following syntax:
 
 ```
-counties\$NAME
+counties$NAME
 ```
 
 <details>
@@ -1110,7 +1110,7 @@ Knowing an attribute of data, we can also find its index. For example, we can fi
 Choteau county by:
 
 ```
-which(counties\$NAME=="CHOUTEAU")
+which(counties$NAME=="CHOUTEAU")
 ```
 
 <details>
@@ -1127,7 +1127,7 @@ which(counties\$NAME=="CHOUTEAU")
 The `which` function also has attributes `max` and `min`. This allows us to find polygons maximizing and minimizing different attributes. For instance, the index of the county in Montana with smallest perimeter is:
 
 ```
-counties\$NAME[which.min(counties\$PERIMETER)]
+counties\$NAME[which.min(counties$PERIMETER)]
 ```
 
 <details>

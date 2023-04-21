@@ -223,8 +223,8 @@ Recall each persistence diagram, and think for a moment about the optimal pairin
 defining the bottleneck distance.
 
 ```
-vdiag1$diagram
-plot(vdiag1[["diagram"]])
+diag1$diagram
+plot(diag1[["diagram"]])
 ```
 
 <details>
@@ -232,7 +232,7 @@ plot(vdiag1[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <code>
-> vdiag1\$diagram
+> diag1\$diagram
      dimension Birth Death
 [1,]         0     0   Inf
 [2,]         0     0     1
@@ -249,8 +249,8 @@ plot(vdiag1[["diagram"]])
 </details>
 
 ```
-vdiag2$diagram
-plot(vdiag2[["diagram"]])
+diag2$diagram
+plot(diag2[["diagram"]])
 ```
 
 <details>
@@ -258,11 +258,11 @@ plot(vdiag2[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <code>
-> vdiag2\$diagram
+> diag2\$diagram
      dimension Birth Death
-[1,]         0     2   Inf
-[2,]         0     0   Inf
-[3,]         0     0     1
+[1,]         0     1   Inf
+[2,]         0     1     3
+[3,]         0     2     4
 </code>
 </pre>
 </details>
@@ -275,19 +275,27 @@ plot(vdiag2[["diagram"]])
 </pre>
 </details>
 
-Clearly, the findings differ between `vdiag1` and `vdiag2`. See if you can figure out what the optimal matching would
-be in this simple example. (HINT: Make sure you remember that the point on the persistence diagram born at time 0 and
-dying at time 1 has multiplicity 2.)
+Clearly, the findings differ between `diag1` and `diag2`. See if you can figure out what the optimal matching would
+be in this example.
 
 <details>
 <summary style="color:red">See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
-The optimal matching in this setting will pair 
+The optimal matching in this example will pair the two points dying at time infinity, the birth-death pair in diagram 1 (0,1) will
+pair with (1,3) in diagram 2, and the "leftover" birth death pair (2,4) in diagram 2 will pair with the diagonal.
 </pre>
 </details>
 
+Knowing the optimal matching, what should the bottleneck distance be in this example?
 
+<details>
+<summary style="color:red">See the Answer</summary>
+<br>
+<pre style="background-color:lightcoral">
+TODO
+</pre>
+</details>
 
 
 ### An Example with GIS Data
