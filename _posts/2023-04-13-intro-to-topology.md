@@ -230,26 +230,27 @@ shapes that are indistinguishable up to that invariant.
 The first invariant we consider is that of a homotopy. We'll give the formal
 definition, but don't worry too much about it if you haven't seen it before.
 
-> Two continuous functions $f,g : A \to B$ are *homotopic* iff there exists a
+> Two continuous functions $\gamma_0,\gamma_1 : A \to B$ are *homotopic* iff there exists a
 > continuous function $H \colon A \times I \to B$ such that $H(a,0)=f(a)$ and
-> $H(a,1)=g(a)$ for all $a \in A$.
+> $H(a,1)=g(a)$ for all $a \in A$. To denote $\gamma_0$ and $\gamma_1$ are
+> homotopyic, we write $\gamma_0 \simeq \gamma_1$.
 
-We think of the unit interval $I$ as *time* and so $f$ is "morphing" into $g$.
+We think of the unit interval $I$ as *time* and so $\gamma_0$ is "morphing" into $\gamma_1$.
 A common example is a homotopy between two curves in the plane.  Here, $A=I$ and
 $B=\mathbb{R}^2$:
 
 ![homotopy](https://upload.wikimedia.org/wikipedia/commons/8/81/Homotopy_curves.png)
 
-Seeing the homotopy as the curves continuously changing with respect to time,
-see [this YouTube vide](https://www.youtube.com/watch?v=o7p9AJ5VCHo).
+A nice visualization of a homotopy between two curves can be obtained by viewing
+$H(\cdot,t)$ as time changes with $t$, as shown in
+[this YouTube vide](https://www.youtube.com/watch?v=o7p9AJ5VCHo).
 The isotopy we saw above of the donut and the coffee mug is a homotopy of two
 functions from the torus to $\mathbb{R}^3$.  But, this is all about functions.
 We typically care about spaces/shapes.
 
 > We say that two topological spaces $A$ and $B$ are *homotopy equivalent* iff
 > there exists continuous functions $f : A \to B$ and $g : B \to A$ such that
-> $f\circ g \simeq \mathbb{1}$ and $g \circ f \simeq \mathbb{1}$, where $\simeq$
-> means that the two maps are homotopic.
+> $f\circ g \simeq \mathbb{1}$ and $g \circ f \simeq \mathbb{1}$.
 
 We won't dig into details here, but this roughly means that you can map $A$ to
 $B$ and back to $A$ in a `nice` way.  If $f,g$ are bijections with $f=g^{-1}$
@@ -302,9 +303,22 @@ What is the Euler characteristic of the sphere?
 Finally, we come to **homology**, a topological invaraint that we'll use quite a
 bit in our exploration.
 
-> TODO: define homology
+First, we give an intuitive explanation.  The homology of a space is a sequence
+of homology groups (one for each dimension) that captures the "holes."  Zeroth
+dimensional homology captures connected components (the "holes" here being the
+gaps between the clusters), and is closely related to clustering. Dimension-one
+homology captures loop-like structures.  And, when your shapes are embedded in
+$\mathbb{R}^3$, two-dimensional homology captures the "voids" in space or the
+number of "insides" we have.
 
 ![connected components, loops, voids, and more](https://comptag.github.io/t4ds/assets/images/homology.svg)
+
+> An $k$-chain is a collection of $k$-cells (for today, we'll use
+> $\mathbb{Z}_2$-coeficients, so we can think of each cell as being present or
+> not). A $k$-cycle is a $k$-chain that has no boundary.  Two $k$ cycles, $a$
+> and $b$, are
+> equivalent if there exists a $(k+1)$-chain $c$ such that the boundary of $c$,
+> which we write as $\partial c = a + b$.
 
 We may already be familiar with homology in the zeroth dimension: 
 two zero-cycles (vertices) are equivalent if there exists a one-chain for which
@@ -314,11 +328,11 @@ our complex.
 
 Things get trickier to understand even for one-dimensional homology.  Let's
 consider the question: when are two loops equivalent (up to homology)?  Well,
-they are equivalent if there exists a two-chain or surface such that the
+they are equivalent if there exists a two-chain (or surface with boundary) such that the
 boundary of the surface is exactly those two loops.
 With this in mind, which of the following one-cycles are equivalent and why?
 
-![torus](https://comptag.github.io/t4ds/assets/images/tda-rips/asc.svg)
+![torus](https://comptag.github.io/t4ds/assets/images/torus.svg)
 
 ---
 ## 5. Wrapping Up

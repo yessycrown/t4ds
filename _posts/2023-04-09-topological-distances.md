@@ -289,4 +289,16 @@ The optimal matching in this setting will pair
 
 ## Wrapping Up
 
-TODO
+We're deep into the heart of this workshop now.  In this session we:
+
+> - Learned about distances between persistence diagrams.
+> - Computed the bottleneck distance in R. 
+
+If you have any muddy points, please post them, then go stretch your legs before
+the last session.
+
+### Credits
+
+* The [teaser image](https://www.nps.gov/npgallery/GetAsset/F7EDAA43-1DD8-B71C-07722F94F9AAEB4C/proxy/hires?)
+  for this session is again from the National Park Services.  This is a picture
+  of the Harding Ice Field in Alaska.
