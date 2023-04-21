@@ -791,7 +791,7 @@ plot(pd[["diagram"]])
 <summary style="color:blue">Expected Output</summary>
 <br>
 <pre style="background-color:lightblue">
-<img src="https://comptag.github.io/t4ds/assets/images/image-diagram.jpg" alt="diagram of a random image">
+<img src="https://comptag.github.io/t4ds/assets/images/image-diagram.png" alt="diagram of a random image">
 </pre>
 </details>
 
