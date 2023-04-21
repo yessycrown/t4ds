@@ -127,10 +127,10 @@ my_list
 <pre style="background-color:lightblue">
 <code>
 > my_list
-\$a
+$a
 [1] 1 2 3
 
-\$b
+$b
 [1] 52
 </code>
 </pre>
@@ -151,7 +151,7 @@ my_list[['a']]
 <br>
 <pre style="background-color:lightblue">
 <code>
-> my_list\$a
+> my_list$a
 [1] 1 2 3
 > my_list[['a']]
 [1] 1 2 3
@@ -209,7 +209,7 @@ my_fun(2.3)
 <br>
 <pre style="background-color:lightblue">
 <code>
-> my_list\$f(2.3)
+> my_list$f(2.3)
 [1] 3.3
 > my_fun(2.3)
 [1] 3.3
@@ -233,9 +233,9 @@ str(my_list)
 <code>
 > str(my_list)
 List of 3
- \$ a: num [1:3] 1 2 3
- \$ b: num 52
- \$ f:function (x)  
+ $ a: num [1:3] 1 2 3
+ $ b: num 52
+ $ f:function (x)  
   ..- attr(*, "srcref")= 'srcref' int [1:8] 1 11 4 1 11 1 1 4
   .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x5582689d7c08> 
 </code>
@@ -398,8 +398,8 @@ Examples:
      ## environment->list coercion
      
      e1 <- new.env()
-     e1\$a <- 10
-     e1\$b <- 20
+     e1$a <- 10
+     e1$b <- 20
      as.list(e1)
 </code>
 </pre>
