@@ -38,48 +38,52 @@ that had three vertices and two edges:
 
 ![]("https://comptag.github.io/t4ds/assets/images/simp.jpg")
 
-Let's create a new R script for this session, and call it `TDA-Distance`. We'll get started by creating an example
+We'll start out by doing something similar, but on a new complex.
+
+Let's create a new R script for this session, and call it `TDA-Distance`. Begin by creating an example
 simplicial complex in R.
 
 ```
-cplx <- list(1,2,3,4,5,6,c(1,2),c(2,3),c(3,4),c(4,5),c(5,6),c(3,4,5))
+cplx <- list(1,2,3,4,5,6,c(1,2),c(2,3),c(2,4),c(3,4),c(4,5),c(5,6))
 ```
 
-As a warm up exercise, try drawing the simplicial complex that results from the above code.
+As a warm up exercise, try drawing the simplicial complex that results from the above code. (You hopefully
+should've received paper)
 
 <details>
 <summary style="color:red">See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
-<img src="https://comptag.github.io/t4ds/assets/images/pts-pairs.jpg " alt="pts pairs">
+<img src="https://comptag.github.io/t4ds/assets/images/cplx.jpg " alt="complex">
 </pre>
 </details>
 
 We'll assign coordinates to this simplicial complex, like the example we saw yesterday.
 
 ```
-x1 <-c(0,1/2,1)
-y1 <- c(0,1,0)
-vcoords1 <- cbind(x,y)
+x <-c(0,1,2,3,4,5,6)
+y <- c(0,0,1,0,0,0)
+cplxcoords <- cbind(x,y)
 ```
 
 And then assign function values on the vertices.
 
 ```
-vvals1 <- c(0,0,1)
+cplxf1 <- c(0,0,2,0,1,0)
+cplxf2 <- c(2,4,1,3,1,5)
 ```
 
-Do you remember how to compute a directional filtration on this data, with respect to the
-function we just assigned? Do that now.
+Now that we have a a function on a complex, do you remember how to compute a directional filtration on this data? Try doing that now
+for each function on the vertices, `cplxf1` and `cplxf2`.
 
 <details>
 <summary style="color:red">See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
 <code>
-vfilt1 <- funFiltration(vvals1,vcplx1)
-vdiag1 <- filtrationDiag(vfilt1,maxdimension=2)
-vidag1$diagram
+filt1 <- funFiltration(cplxf1,cplx)
+diag1 <- filtrationDiag(filt1,maxdimension=2)
+diag1$diagram
 </code>
 </pre>
 </details>
