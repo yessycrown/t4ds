@@ -247,16 +247,14 @@ A circle and an annulus are indistinguishable by homotopy equivalence alone.
 </pre>
 </details>
 
-The problem with classifying shapes up to homotopy is that they are $\#P$-hard
+The problem with classifying shapes up to homotopy is that they are $\#P-$hard
 to compute.  So, we turn to topological invariants that are easier to compute.
 
 #### Euler Characeteristic
 
 The *Euler characteristic* of a shape is found by first representing the shape
 as a cellular structure (e.g., simplicial complex or cubical complex). Then, the
-Euler characteristic is the alternating sum of the number of $i$-cells:
-
-$\chi(K) = \sum_{i=0}^{\infty} (-1)^i \#K_i.$
+Euler characteristic is the alternating sum of the number of $i$-cells: $\chi(K) = \sum_{i=0}^{\infty} (-1)^i \#K_i.$
 
 What is the Euler characteristic of the sphere?
 
