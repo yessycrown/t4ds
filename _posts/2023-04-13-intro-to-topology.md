@@ -230,26 +230,27 @@ shapes that are indistinguishable up to that invariant.
 The first invariant we consider is that of a homotopy. We'll give the formal
 definition, but don't worry too much about it if you haven't seen it before.
 
-> Two continuous functions $f,g : A \to B$ are *homotopic* iff there exists a
+> Two continuous functions $\gamma_0,\gamma_1 : A \to B$ are *homotopic* iff there exists a
 > continuous function $H \colon A \times I \to B$ such that $H(a,0)=f(a)$ and
-> $H(a,1)=g(a)$ for all $a \in A$.
+> $H(a,1)=g(a)$ for all $a \in A$. To denote $\gamma_0$ and $\gamma_1$ are
+> homotopyic, we write $\gamma_0 \simeq \gamma_1$.
 
-We think of the unit interval $I$ as *time* and so $f$ is "morphing" into $g$.
+We think of the unit interval $I$ as *time* and so $\gamma_0$ is "morphing" into $\gamma_1$.
 A common example is a homotopy between two curves in the plane.  Here, $A=I$ and
 $B=\mathbb{R}^2$:
 
 ![homotopy](https://upload.wikimedia.org/wikipedia/commons/8/81/Homotopy_curves.png)
 
-Seeing the homotopy as the curves continuously changing with respect to time,
-see [this YouTube vide](https://www.youtube.com/watch?v=o7p9AJ5VCHo).
+A nice visualization of a homotopy between two curves can be obtained by viewing
+$H(\cdot,t)$ as time changes with $t$, as shown in
+[this YouTube vide](https://www.youtube.com/watch?v=o7p9AJ5VCHo).
 The isotopy we saw above of the donut and the coffee mug is a homotopy of two
 functions from the torus to $\mathbb{R}^3$.  But, this is all about functions.
 We typically care about spaces/shapes.
 
 > We say that two topological spaces $A$ and $B$ are *homotopy equivalent* iff
 > there exists continuous functions $f : A \to B$ and $g : B \to A$ such that
-> $f\circ g \simeq \mathbb{1}$ and $g \circ f \simeq \mathbb{1}$, where $\simeq$
-> means that the two maps are homotopic.
+> $f\circ g \simeq \mathbb{1}$ and $g \circ f \simeq \mathbb{1}$.
 
 We won't dig into details here, but this roughly means that you can map $A$ to
 $B$ and back to $A$ in a `nice` way.  If $f,g$ are bijections with $f=g^{-1}$
