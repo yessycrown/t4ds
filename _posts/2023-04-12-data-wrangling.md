@@ -1127,7 +1127,7 @@ which(counties$NAME=="CHOUTEAU")
 The `which` function also has attributes `max` and `min`. This allows us to find polygons maximizing and minimizing different attributes. For instance, the index of the county in Montana with smallest perimeter is:
 
 ```
-counties$NAME[which.min(counties$PERIMETER)]
+counties\$NAME[which.min(counties$PERIMETER)]
 ```
 
 <details>
