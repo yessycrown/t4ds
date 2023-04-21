@@ -233,9 +233,9 @@ str(my_list)
 <code>
 > str(my_list)
 List of 3
- $ a: num [1:3] 1 2 3
- $ b: num 52
- $ f:function (x)  
+ \$ a: num [1:3] 1 2 3
+ \$ b: num 52
+ \$ f:function (x)  
   ..- attr(*, "srcref")= 'srcref' int [1:8] 1 11 4 1 11 1 1 4
   .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x5582689d7c08> 
 </code>
