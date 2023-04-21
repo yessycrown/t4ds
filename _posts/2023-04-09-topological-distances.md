@@ -186,14 +186,21 @@ However, there should be one glaring issue that comes to mind in doing this.
 *What if PD1 and PD2 have a different number of points?* Indeed, then a bijection
 would not be possible, and our distance is not well-defined.
 
-To handle this issue, we consider the diagonal on persistence diagrams
-as having infinite cardinality. If a bijection is not possible, "leftover"
+To handle this issue, we consider the diagonal on persistence diagrams.
+If a bijection is not possible, any "leftover"
 points are paired with the diagonal. Let $\Gamma$ be the set of all
-bijections from $PD_1$ to $PD_2$. Then, the so-called *bottleneck distance*
+partial matchings from $PD_1$ to $PD_2$. Then, the so-called *bottleneck distance*
 between persistence diagrams can be defined by
-$d_B(PD_1, PD_2) = \inf_{f \in \Gamma} \sup_{p \in PD_1}||p - f(p)||_{2}$
+$d_B(PD_1, PD_2) = \inf_{f \in \Gamma} \sup_{p \in PD_1}||p - f(p)||_{\infty}$
 
-TODO: Add a note about infinity norms here
+<details>
+<summary style="color:blue">A Quick Refresher on Infinity Norms</summary>
+<br>
+<pre style="background-color:lightblue">
+If you haven't seen the infinity norm or need a refresher, it is defined by taking
+the maximum element in a vector: $||X||_{\infty} = \max_{x \in X}$.
+</pre>
+</details>
 
 Let's take a look at our example from before.
 With these two height filtrations in hand, we can define the bottleneck

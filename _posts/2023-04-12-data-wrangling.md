@@ -63,7 +63,7 @@ takes lexical scoping from Scheme, and it allows for array-programming
 style like Matlab and APL. It is an object-oriented programming
 language, and list objects serve as a fundamental storage object in
 which many other objects derive from. It is also a functional
-programming language, and so functions are first-class citezens that
+programming language, and so functions are first-class citizens that
 can be passed around like any other object. We will begin by showing 
 some of these basics.
 
@@ -637,10 +637,7 @@ glacier_csv <- 'https://pkgstore.datahub.io/core/glacier-mass-balance/glaciers_c
 
 # this data has a header, so we set header=TRUE to keep it out of the rest of our data
 glacier_data <- read.csv(file=glacier_csv, header = TRUE)
-
 ```
-
-
 
 Go ahead and take a look at the result by running:
 
