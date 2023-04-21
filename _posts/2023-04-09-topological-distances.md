@@ -76,59 +76,45 @@ cplxf2 <- c(2,4,1,3,1,5)
 Now that we have a a function on a complex, do you remember how to compute a directional filtration on this data? Try doing that now
 for each function on the vertices, `cplxf1` and `cplxf2`.
 
+Try this first by hand. Then, write the corresponding code for the filtration in R using the `funFiltration`
+and `filtrationDiag` functions, which computes the filtration and its diagram, respectively.
+
 <details>
-<summary style="color:red">See the Answer</summary>
+<summary style="color:red">See the Answer Code</summary>
 <br>
 <pre style="background-color:lightcoral">
 <code>
+# for f1
 filt1 <- funFiltration(cplxf1,cplx)
 diag1 <- filtrationDiag(filt1,maxdimension=2)
-diag1$diagram
+
+# for f2
+filt2 <- funFiltration(cplxf2,cplx)
+diag2 <- filtrationDiag(filt2,maxdimension=2)
 </code>
 </pre>
 </details>
 
-Next, we'll create one more simplicial complex to work with as an example.
-You know how to do it! Try creating a simplicial complex with 4 vertices and two edges,
-whose heights correspond to the following figure:
-
-![]("https://comptag.github.io/t4ds/assets/images/simp2.jpg")
-
 <details>
-<summary style="color:red">See the Answer</summary>
+<summary style="color:red">See the Resulting Diagrams</summary>
 <br>
 <pre style="background-color:lightcoral">
 <code>
-# create vertices
-a <- 1; b <- 2; c <- 3; d <- 4
-# edges
-ac <- c(1,2); cb <- c(2,3)
-# a complex is a list of simplices
-vcplx2 <- list(a,b,c,d,ac,cb)
+> diag1\$diagram
+     dimension Birth Death
+[1,]         0     0   Inf
+[2,]         0     0     1
 
-vvals2 <- c(0,0,1,2)
+> diag2\$diagram
+     dimension Birth Death
+[1,]         0     1   Inf
+[2,]         0     1     3
+[3,]         0     2     4
 </code>
 </pre>
 </details>
 
-Now that we have our second simplicial complex, and a function on its vertices,
-you can do one more height filtration!
-
-<details>
-<summary style="color:red">See the Answer</summary>
-<br>
-<pre style="background-color:lightcoral">
-<code>
-vfilt2 <- funFiltration(vvals2, vcplx2)
-vdiag2 <- filtrationDiag(vfilt2, maxdimension=2)
-vidag2$diagram
-</code>
-</pre>
-</details>
-
-Pause for a moment and think about the result of this filtration.
-The example is simple enough; try walking through it. Does
-it match what you expected?
+Pause for a moment and check your work. Does your filtration by hand match the result we computed?
 
 ---
 
@@ -227,7 +213,7 @@ plot(vdiag1[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <code>
-> vdiag1$diagram
+> vdiag1\$diagram
      dimension Birth Death
 [1,]         0     0   Inf
 [2,]         0     0     1
@@ -253,7 +239,7 @@ plot(vdiag2[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <code>
-> vdiag2$diagram
+> vdiag2\$diagram
      dimension Birth Death
 [1,]         0     2   Inf
 [2,]         0     0   Inf
