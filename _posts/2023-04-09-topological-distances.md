@@ -89,7 +89,7 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 <br>
 <pre style="background-color:lightcoral">
 <code>
-> diag1\$diagram
+> diag1$diagram
      dimension Birth Death
 [1,]         0     0   Inf
 [2,]         0     0     1
@@ -103,17 +103,16 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 </pre>
 </details>
 
-<summary style="color:red">Plot the Resulting Diagrams</summary>
-<br>
-<pre style="background-color:lightcoral">
-<code>
+
+Verify that this output matches yours! For a nicer visualization,
+be sure to plot the diagrams.
+
+```
 plot(diag1[["diagram"]])
 plot(diag2[["diagram"]])
 plot(diag1[["diagram"]], barcode=TRUE)
 plot(diag2[["diagram"]], barcode=TRUE)
-</code>
-</pre>
-</details>
+```
 
 <summary style="color:red">Plot the Resulting Barcodes</summary>
 <br>
