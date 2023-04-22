@@ -58,8 +58,8 @@ should've received paper)
 And then assign function values on the vertices.
 
 ```
-cplxf1 <- c(0,0,2,0,1,0)
-cplxf2 <- c(2,4,1,3,1,5)
+cplxf1 <- c(0,1,2,3,9,0)
+cplxf2 <- c(1,12,2,0,1,0)
 ```
 
 Now that we have a a function on a complex, do you remember how to compute a directional filtration on this data? Try doing that now
@@ -92,13 +92,14 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 > diag1$diagram
      dimension Birth Death
 [1,]         0     0   Inf
-[2,]         0     0     1
-
-> diag2\$diagram
+[2,]         0     0     9
+> filt2 <- funFiltration(cplxf2, cplx)
+> diag2 <- filtrationDiag(filt2,maxdimension=2)
+> diag2$diagram
      dimension Birth Death
-[1,]         0     1   Inf
-[2,]         0     1     3
-[3,]         0     2     4
+[1,]         0     0   Inf
+[2,]         0     1    12
+[3,]         0     0     1
 </code>
 </pre>
 </details>
@@ -159,7 +160,7 @@ and points in $B$.
 That is, for $\Gamma$, the set of all bijections $f: A \to B$, we have
 $d(A,B) = \min_{f \in \Gamma} \max_{a \in A}||a-f(a)||_2$.
 
-Recall that $x-y_2$ denotes the Euclidean distance between $x$ and $y$.
+Recall that $||x-y||_2$ denotes the Euclidean distance between $x$ and $y$.
 
 Let's visualize this with an example, where $A$ is in red and $B$ is in blue:
 
