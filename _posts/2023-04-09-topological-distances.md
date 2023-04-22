@@ -89,7 +89,7 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 <br>
 <pre style="background-color:lightcoral">
 <code>
-> diag1$diagram
+> diag1\$diagram
      dimension Birth Death
 [1,]         0     0   Inf
 [2,]         0     0     9
