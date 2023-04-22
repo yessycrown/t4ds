@@ -283,6 +283,7 @@ Let's see how the helper function worked for us by plotting the result.
 plot(perimeter)
 ```
 
+
 <details>
 <summary style="color:blue">Expected Output</summary>
 <br>
@@ -296,9 +297,14 @@ plot(perimeter)
 <summary style="color:DarkOrange">A Note on our Helper Function</summary>
 <br>
 <pre style="background-color:Gold">
-Note that due to varying lengths of edges on the polygon, our helper function
-does not perfectly compute points along edges. However, in the interest of simplicity,
-it should be sufficient.
+Technically, this sampling is actually not precisely the right thing to use
+for our data, but it is what we use in the interest of simplicity.
+
+This is because (1) the sample is technically random and not scaled
+for edge length, and (2) the sampling neglects holes within the polygon.
+
+We leave it as an exercise to come up with a more representative set on the
+boundary to use in the distance function.
 </pre>
 </details>
 
