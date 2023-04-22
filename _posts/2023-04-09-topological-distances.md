@@ -197,7 +197,7 @@ we compute the optimal matching between points, and find its weight.
 If we think of the points in the diagram as simply points in $\mathbb{R}^2$,
 then we can find a matching just as before:
 
-![matching diagram as points](https://comptag.github.io/t4ds/assets/images/vangogh-dali-badmatch1.jpg)
+![matching diagram as points](https://comptag.github.io/t4ds/assets/images/vangogh-dali-badmatch-1.jpg)
 
 However, there should be one glaring issue that comes to mind in doing this.
 
