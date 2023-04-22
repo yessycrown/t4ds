@@ -253,7 +253,7 @@ plot(diag1[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <code>
-> diag1\$diagram
+> diag1$diagram
      dimension Birth Death
 [1,]         0     0   Inf
 [2,]         0     0     1
@@ -279,7 +279,7 @@ plot(diag2[["diagram"]])
 <br>
 <pre style="background-color:lightblue">
 <code>
-> diag2\$diagram
+> diag2$diagram
      dimension Birth Death
 [1,]         0     1   Inf
 [2,]         0     1     3
