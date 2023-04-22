@@ -319,12 +319,58 @@ Knowing the optimal matching, what should the bottleneck distance be in this exa
 </details>
 
 
-### An Example with GIS Data
+### The Bottleneck Distance on a Grid Filtration
+
+From yesterday, remember that we can conduct a directional filtration on a grid,
+starting from an image. Let's create another example image, and do a grid filtration.
+
+```
+n=20
+vals <- array(runif(n*n),c(n,n))
+image(vals)
+```
+
+With this image in hand, it is simple to conduct and view a grid filtration (in the same manner as
+yesterday).
+
+```
+myfilt <- gridFiltration(FUNvalues=vals, sublevel = TRUE, printProgress = TRUE)
+diag1 <- gridDiag(FUNvalues=vals, sublevel = TRUE, printProgress = TRUE)
+plot(diag1[["diagram"]])
+```
+
+Altering the randomly assigned function values on the grid, we can do a seperate grid filtration
+on a totally new image.
+
+```
+vals <- array(runif(n*n),c(n,n))
+image(vals)
+
+myfilt <- gridFiltration(FUNvalues=vals, sublevel = TRUE, printProgress = TRUE)
+diag2 <- gridDiag(FUNvalues=vals, sublevel = TRUE, printProgress = TRUE)
+plot(diag2[["diagram"]])
+```
+
+And finally, we can compute the resulting bottleneck distance between the two
+persistence diagrams. (Note, the bottleneck distance works in the same way for
+homological components in each dimension.)
+
+```
+bottleneck(Diag1 = diag1$diagram, Diag2 = diag2$diagram, dimension = 1)
+```
+
+Before we end this session, discuss briefly with your neighbors
+what desirable properties the bottleneck distance might have.
+What happens to the bottleneck distance when birth-death
+pairs on a persistance diagram only change a small amount?
+
+---
 
 ## Wrapping Up
 
 We're deep into the heart of this workshop now.  In this session we:
 
+> - Reviewed directional filtrations, and their corresponding diagrams.
 > - Learned about distances between persistence diagrams.
 > - Computed the bottleneck distance in R. 
 
