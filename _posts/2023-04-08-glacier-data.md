@@ -142,10 +142,9 @@ plot(glaciers1966)
 
 ### Transforming Raw GIS Data
 
-For 5 to 10 minutes, using what you know about filtrations,
+For 5ish minutes, using what you know about filtrations,
 discuss amongst yourselves how we might transform our GIS data in order to study its topology.
-What options do we have? Could these options introduce error?
-
+What options do we have? 
 ---
 
 With the raw glacier data in hand, let's try creating a grid of points lying within the polygon.

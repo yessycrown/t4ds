@@ -380,5 +380,5 @@ the last session.
 ### Credits
 
 * The [teaser image](https://www.nps.gov/npgallery/GetAsset/F7EDAA43-1DD8-B71C-07722F94F9AAEB4C/proxy/hires?)
-  for this session is again from the National Park Services.  This is a picture
-  of the Harding Ice Field in Alaska.
+  for this session is again from the National Park Services. This is a picture
+  of the mighty Harding Ice Field in Kenai Fjords National Park, Alaska.
