@@ -216,7 +216,7 @@ Let $\Gamma$ be the set of all
 partial matchings from $PD_1$ to $PD_2$. Then, the bottleneck distance
 between persistence diagrams is 
 
-$$d_B(PD_1, PD_2) = \inf_{f \in \Gamma} ( \sup_{(p,q) \in \Gamma}||p - q||_{\infty} , \sup_{x \notin \Gamma} \frac{1}{2} ||x||_{1})$$
+$$d\_B(PD\_1, PD\_2) = \inf_{f \in \Gamma} ( \sup_{(p,q) \in \Gamma}||p - q||\_{\infty} , \sup\_{x \notin \Gamma} \frac{1}{2} ||x||\_{1})$$
 
 <details>
 <summary style="color:blue">A Quick Refresher on Infinity Norms</summary>
