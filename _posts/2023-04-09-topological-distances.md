@@ -303,8 +303,8 @@ be in this example.
 <summary style="color:red">See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
-The optimal matching in this example will pair the two points dying at time infinity, the birth-death pair in diagram 1 (0,1) will
-pair with (1,3) in diagram 2, and the "leftover" birth death pair (2,4) in diagram 2 will pair with the diagonal.
+The optimal matching in this example will pair the two points dying at time infinity, the birth-death pair in diagram 1 (0,1) with
+the diagonal, and (1,12) with (0,9).
 </pre>
 </details>
 
@@ -314,7 +314,7 @@ Knowing the optimal matching, what should the bottleneck distance be in this exa
 <summary style="color:red">See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
-3 (Taking the pair )
+3 (Taking the pair (1,12) and (0,9) and applying the infinity norm.)
 </pre>
 </details>
 
