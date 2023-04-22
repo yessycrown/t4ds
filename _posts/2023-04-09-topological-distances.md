@@ -109,21 +109,20 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 <code>
 plot(diag1[["diagram"]])
 plot(diag2[["diagram"]])
-</code>
-<img src="https://comptag.github.io/t4ds/assets/images/pdeg2.jpg " alt="complex">
-<img src="https://comptag.github.io/t4ds/assets/images/pdeg1.jpg " alt="complex">
-</pre>
-</details>
-
-<summary style="color:red">Plot the Resulting Diagrams</summary>
-<br>
-<pre style="background-color:lightcoral">
-<code>
 plot(diag1[["diagram"]], barcode=TRUE)
 plot(diag2[["diagram"]], barcode=TRUE)
 </code>
+
+</pre>
+</details>
+
+<summary style="color:red">Plot the Resulting Barcodes</summary>
+<br>
+<pre style="background-color:lightcoral">
 <img src="https://comptag.github.io/t4ds/assets/images/barcodeeg1.jpg " alt="complex">
 <img src="https://comptag.github.io/t4ds/assets/images/barcodeeg2.jpg " alt="complex">
+<img src="https://comptag.github.io/t4ds/assets/images/pdeg2.jpg " alt="complex">
+<img src="https://comptag.github.io/t4ds/assets/images/pdeg1.jpg " alt="complex">
 </pre>
 </details>
 
