@@ -213,7 +213,7 @@ would not be possible or reasonable, and our distance is not well-defined.
 To handle this issue, we consider partial matchings and charge separately for
 unmatched points. 
 Let $\Gamma$ be the set of all
-partial matchings from $PD_1$ to $PD_2$. Then, the *bottleneck distance*
+partial matchings from $PD_1$ to $PD_2$. Then, the bottleneck distance
 between persistence diagrams is $d_B(PD_1, PD_2) = \inf_{f \in \Gamma} ( \sup_{(p,q) \in \Gamma}||p - q||_{\infty} , \sup_{x \notin \Gamma} \frac{1}{2} ||x||_{1}) $
 
 <details>
