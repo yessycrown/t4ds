@@ -301,7 +301,8 @@ Technically, this sampling is actually not precisely the right thing to use
 for our data, but it is what we use in the interest of simplicity.
 
 This is because (1) the sample is technically random and not scaled
-for edge length, and (2) the sampling neglects holes within the polygon.
+for edge length, and (2) the sampling neglects holes within the polygon
+(although distance from the outer boundary is also a justified function).
 
 We leave it as an exercise to come up with a more representative set on the
 boundary to use in the distance function.
