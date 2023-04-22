@@ -112,7 +112,6 @@ plot(diag2[["diagram"]])
 plot(diag1[["diagram"]], barcode=TRUE)
 plot(diag2[["diagram"]], barcode=TRUE)
 </code>
-
 </pre>
 </details>
 
@@ -133,12 +132,12 @@ Pause for a moment and check your work. Does your filtration by hand match the r
 
 ## Distances in Topological Data Analysis
 
-Now that we have our hands on two different filtrations,
-a natural question emerges. How do I differentiate between them?
-Indeed, the shape in these two sets of data is clearly topologically different!
+Now that we have our hands on two filtrations with different persistence diagrams,
+a natural question emerges. How do I measure distance between them?
+Indeed, each filtration is clearly doing something different!
 
-The main focus of this session will be defining distance in TDA.
-Namely, we will define a distance between persistence diagrams.
+The main new concept we'll introduce in this session will be defining distance in TDA.
+This is done by defining distance between persistence diagrams.
 
 Let's briefly think about what a persistence diagram is.
 Really, it's nothing more than a set of points, and a diagonal.
