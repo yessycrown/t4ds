@@ -250,7 +250,7 @@ rPointOnPerimeter <- function(n, poly) {
     xy <- poly@coords
     dxy <- diff(xy)
     # hypot depends on the pracma library, make sure it's installed
-    h <- hypot(dxy[,"x"], dxy[,"y"])
+    h <- hypot(dxy[,1], dxy[,2])
 
     e <- sample(nrow(dxy), n,replace=TRUE, prob=h)
 
@@ -517,9 +517,9 @@ of the two diagrams. This provides a succinct summary of the change in shape of 
 Agassiz Glacier over time.
 
 ```
-d1 <- bottleneck(Diag1 = Diag1966\$diagram, Diag2 = Diag1998\$diagram, dimension = 0)
-d2 <- bottleneck(Diag1 = Diag1998\$diagram, Diag2 = Diag2005\$diagram, dimension = 0)
-d3 <- bottleneck(Diag1 = Diag2005\$diagram, Diag2 = Diag2015\$diagram, dimension = 0)
+d1 <- bottleneck(Diag1 = Diag1966$diagram, Diag2 = Diag1998$diagram, dimension = 0)
+d2 <- bottleneck(Diag1 = Diag1998$diagram, Diag2 = Diag2005$diagram, dimension = 0)
+d3 <- bottleneck(Diag1 = Diag2005$diagram, Diag2 = Diag2015$diagram, dimension = 0)
 ```
 
 These bottleneck distances are informative, but of course are not scaled to the corresponding intervals of 
