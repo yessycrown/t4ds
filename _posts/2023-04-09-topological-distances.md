@@ -89,7 +89,7 @@ diag2 <- filtrationDiag(filt2,maxdimension=2)
 <br>
 <pre style="background-color:lightcoral">
 <code>
-> diag1\$diagram
+> diag1$diagram
      dimension Birth Death
 [1,]         0     0   Inf
 [2,]         0     0     9
@@ -314,7 +314,7 @@ Knowing the optimal matching, what should the bottleneck distance be in this exa
 <summary style="color:red">See the Answer</summary>
 <br>
 <pre style="background-color:lightcoral">
-TODO
+3 (Taking the pair )
 </pre>
 </details>
 
