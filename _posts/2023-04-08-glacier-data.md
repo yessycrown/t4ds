@@ -1,7 +1,7 @@
 ---
 title: Exploration of Glacier Data In R
 layout: post
-post-image: "https://www.nps.gov/npgallery/GetAsset/73DEAD5F-1DD8-B71C-07D706E33BB2C5C2/proxy/hires?"
+post-image: "https://www.nps.gov/npgallery/GetAsset/F296222F-155D-451F-676B896BCB82BD1E/proxy/hires?"
 description: Using what we've learned about topology, TDA, and data analysis more broadly, we study the evolving shape of glaciers in Montana's Glacier National Park.
 tags:
 - persistence
@@ -602,3 +602,10 @@ you have taken away:
 > - To juxtapose topological methods with standard domain-specific techniques.
 
 
+### Credits
+
+* The [teaser image](https://www.nps.gov/npgallery/GetAsset/F296222F-155D-451F-676B896BCB82BD1E/proxy/hires?)
+  for this session is again from the National Park Services.  We end out the workshop with a classic view
+  in Glacier National Park, of St. Mary Lake.
+
+* The rpointonperimeter function was taken from a helpful [stack overflow post](https://stackoverflow.com/questions/24496143/sample-points-on-polygon-edge-in-r) and adopted for our application.
