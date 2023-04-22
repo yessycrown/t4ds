@@ -41,7 +41,7 @@ Let's create a new R script for this session, and call it `TDA-Distance`. Begin 
 simplicial complex in R.
 
 ```
-cplx <- list(1,2,3,4,5,6,c(1,2),c(2,3),c(2,4),c(3,4),c(4,5),c(5,6))
+cplx <- list(1,2,3,4,5,6,c(1,2),c(2,3),c(3,4),c(4,5),c(5,6))
 ```
 
 As a warm up exercise, try drawing the simplicial complex that results from the above code. (You hopefully
