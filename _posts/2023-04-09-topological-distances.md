@@ -109,8 +109,11 @@ Verify that this output matches yours! For a nicer visualization,
 be sure to plot the diagrams.
 
 ```
+# plot the persistence diagrams from each filtration
 plot(diag1[["diagram"]])
 plot(diag2[["diagram"]])
+
+#plot the barcodes from each filtration
 plot(diag1[["diagram"]], barcode=TRUE)
 plot(diag2[["diagram"]], barcode=TRUE)
 ```
@@ -119,8 +122,8 @@ plot(diag2[["diagram"]], barcode=TRUE)
 <summary style="color:red">Plot the Resulting Diagrams</summary>
 <br>
 <pre style="background-color:lightcoral">
-<img src="https://comptag.github.io/t4ds/assets/images/pdeg2.jpg " alt="complex">
 <img src="https://comptag.github.io/t4ds/assets/images/pdeg1.jpg " alt="complex">
+<img src="https://comptag.github.io/t4ds/assets/images/pdeg2.jpg " alt="complex">
 </pre>
 </details>
 
