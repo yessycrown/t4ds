@@ -22,11 +22,10 @@ larger GIS data.
 This session is presented by Ben.
 
 ***Objectives***: After this session, we hope you will be able to:
-> - Learn basic fundamentals about R
-> - Learn how to read data into R
-> - Learn basic R functionalities and data structures
-> - Visualize data with R
-> - Be able to use R on GIS data
+> - Learn basic R functions and data structures
+> - Learn how to read and visualize data in R
+> - Get help in R
+> - Use R on GIS data
 > - Understand early stages of the data analysis pipeline by playing with data
 
 ---
@@ -47,9 +46,9 @@ Finally, at the top of the page, click `Untitled Project` and rename your
 project `T4DS-Workshop-2023`. Then use
 `File -> New File -> R Script` (or `Ctrl+Shift+N`) to create a new R script. Use
 `File -> Save` to save the file. You'll be prompted to enter a file name. Use
-`session-2`.
+`R-Intro`.
 
-Throughout this tutorial, we will add code to session-2.R.  Be sure to use
+Throughout this tutorial, we will add code to R-Intro.R.  Be sure to use
 `Ctrl+S` to save as you go!
 
 ---
@@ -127,10 +126,10 @@ my_list
 <pre style="background-color:lightblue">
 <code>
 > my_list
-\$a
+$a
 [1] 1 2 3
 
-\$b
+$b
 [1] 52
 </code>
 </pre>
@@ -209,7 +208,7 @@ my_fun(2.3)
 <br>
 <pre style="background-color:lightblue">
 <code>
-> my_list\$f(2.3)
+> my_list$f(2.3)
 [1] 3.3
 > my_fun(2.3)
 [1] 3.3
@@ -233,9 +232,9 @@ str(my_list)
 <code>
 > str(my_list)
 List of 3
- \$ a: num [1:3] 1 2 3
- \$ b: num 52
- \$ f:function (x)  
+ $ a: num [1:3] 1 2 3
+ $ b: num 52
+ $ f:function (x)  
   ..- attr(*, "srcref")= 'srcref' int [1:8] 1 11 4 1 11 1 1 4
   .. ..- attr(*, "srcfile")=Classes 'srcfilecopy', 'srcfile' <environment: 0x5582689d7c08> 
 </code>
@@ -1080,7 +1079,7 @@ counties$NAME
 <br>
 <pre style="background-color:lightblue">
 <code>
-> counties\$NAME
+> counties$NAME
  [1] "CARBON"          "POWDER RIVER"    "MADISON"         "BEAVERHEAD"     
  [5] "BIG HORN"        "STILLWATER"      "PARK"            "GALLATIN"       
  [9] "SWEET GRASS"     "SILVER BOW"      "CARTER"          "DEER LODGE"     
@@ -1118,7 +1117,7 @@ which(counties$NAME=="CHOUTEAU")
 <br>
 <pre style="background-color:lightblue">
 <code>
-> which(counties\$NAME=="CHOUTEAU")
+> which(counties$NAME=="CHOUTEAU")
 [1] 40
 </code>
 </pre>
@@ -1127,7 +1126,7 @@ which(counties$NAME=="CHOUTEAU")
 The `which` function also has attributes `max` and `min`. This allows us to find polygons maximizing and minimizing different attributes. For instance, the index of the county in Montana with smallest perimeter is:
 
 ```
-counties\$NAME[which.min(counties$PERIMETER)]
+counties$NAME[which.min(counties$PERIMETER)]
 ```
 
 <details>
@@ -1135,7 +1134,7 @@ counties\$NAME[which.min(counties$PERIMETER)]
 <br>
 <pre style="background-color:lightblue">
 <code>
-> counties\$NAME[which.min(counties\$PERIMETER)]
+> counties$NAME[which.min(counties$PERIMETER)]
 [1] "WHEATLAND"
 </code>
 </pre>
@@ -1150,7 +1149,7 @@ county (by acres) in Montana.
 <br>
 <pre style="background-color:lightcoral">
 <code>
-> counties\$NAME[which.max(counties\$ACRES)]
+> counties$NAME[which.max(counties$ACRES)]
 [1] "BEAVERHEAD"
 </code>
 </pre>
@@ -1170,7 +1169,7 @@ gallatin <- # HINT: Get the index of Gallatin county, which corresponds to a row
 <br>
 <pre style="background-color:lightcoral">
 <code>
-gallatin <- counties[which(counties\$NAME=="GALLATIN"),]
+gallatin <- counties[which(counties$NAME=="GALLATIN"),]
 </code>
 </pre>
 </details>
