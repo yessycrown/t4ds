@@ -208,7 +208,7 @@ $\emptyset < K_0 \subset K_1 \subset \ldots \subset K_n=K,$
 where $K_i=\text{VR}(S,r_i)$
 
 More generall, a *filtration* of a simplicial complex, $K$, is a nested sequence of subcomplexes starting at the
-empty set $\emtpyset$ and ending with the $K$.
+empty set $\emptyset$ and ending with the entire complex $K$.
 
 Let's work through an example. Let $S:=\{(0,0),(1,3),(2,-1),(3,2)\}\subset \mathbb{R}^2$. 
 For a visualization, this is easy to plot in R:
@@ -549,7 +549,7 @@ such subcomplexes, we arrive at the <b>lower-star filtration</b>.
 For images, the function is actually a surface created by raising each vertex up
 to the height equal to it's function value.  Then, edges and two-cells are
 interpolated.  The lower-star filtration is exactly the one that arises
-by raising our ``height'' parameter and considering subcomplex of the
+by raising our "height" parameter and considering subcomplex of the
 surface that appears entirely at or below the current height
 parameter.  Here's a quick example to demonstrate:
 
