@@ -57,7 +57,7 @@ Throughout this tutorial, we will add code to R-Intro.R.  Be sure to use
 
 R is a multi-paradigm (object-oriented, functional, array) language
 developed for statistical computing. It is heavily influenced from S,
-Scheme (a dialect of lisp), and APL. It's syntax comes from its predecessor S, it
+Scheme (a dialect of lisp), and APL. Its syntax comes from its predecessor S, it
 takes lexical scoping from Scheme, and it allows for array-programming
 style like Matlab and APL. It is an object-oriented programming
 language, and list objects serve as a fundamental storage object in
@@ -85,8 +85,8 @@ c(1, 2, 3)
 </details>
 
 We can assign this to an object named `a` using the assignment operator `<-`
-and then print out the object by running the line with the object on it or by making a
-call to the `print()` function.
+and then print out the object by running the line with the object on it or by making 
+a call to the `print()` function.
 
 ```r
 a <- c(1, 2, 3)
