@@ -9,7 +9,7 @@ tags:
 - grid filtration
 ---
 
-## The Overview
+## Overview
 
 In this session, we'll combine the theoretical ideas and simple
 R tutorials with an exciting application area in GIS: the changing
