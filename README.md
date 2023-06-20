@@ -2,7 +2,7 @@
 
 ## Instructions for Contribution:
 
-1. After cloning the repo, add tutorials in the `_posts/` directory. Posts are in markdown and built into the site automatically.
+1. After forking the repo, add tutorials in the `_posts/` directory. Posts are in markdown and built into the site automatically.
 2. Title posts in the format: `yyyy-mm-dd-postname.md` For example, `2023-04-17-awesome-topology-stuff.md`
 3. When you're happy with your changes, push to the `gh-pages` directory
 
